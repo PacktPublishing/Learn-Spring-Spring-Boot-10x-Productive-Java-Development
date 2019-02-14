@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.730 --> 00:06.730
+We're now on a great milestone of our spring and spring ball journey we'll start building ourselves
+
+00:06.790 --> 00:14.250
+a full featured springboard and with secret application while Deuel hoping this application will be
+
+00:14.250 --> 00:18.100
+making use of all the awesome technologies that we learned along the way.
+
+00:19.290 --> 00:26.910
+These technologies include spring boot spring NBC spring rest spring data and this time will actually
+
+00:26.910 --> 00:33.840
+be developing ourselves a web application so I'll also be using a Steimle five CSSA 3 bootstrap and
+
+00:33.840 --> 00:36.010
+much more.
+
+00:36.150 --> 00:42.270
+By the end of the section you'll understand how everything works together and how you can get the maximum
+
+00:42.270 --> 00:49.130
+value out of all these building blocks in any application that you're going to build enough talking.
+
+00:49.140 --> 00:55.020
+And let's take a look at what we're going to be building and what it's going to look like when we finish
+
+00:55.020 --> 00:57.120
+our development.
+
+00:57.250 --> 01:01.930
+So I'll switch back to Firefox.
+
+01:02.100 --> 01:09.370
+And here we have the application we're going to be building this application as we just talked in a
+
+01:09.370 --> 01:10.690
+minute ago.
+
+01:10.780 --> 01:15.780
+There's going to be a spring and we see application with this application.
+
+01:15.940 --> 01:23.620
+We're going to be developing ourselves an interface a UI that UI we're going to be managing our products
+
+01:23.860 --> 01:28.090
+from an interface within that interface.
+
+01:28.160 --> 01:35.550
+We can list all the products that we have and we can add new products to our inventory to our repository.
+
+01:35.560 --> 01:39.040
+So let's take out our application and navigate around it.
+
+01:39.990 --> 01:44.410
+In the navigation bar we're going to have three sections.
+
+01:44.520 --> 01:50.460
+The first one is the home section which redirects us back to this interface.
+
+01:50.460 --> 01:56.700
+And the second button we have is the products and if we click the products button we're going to be
+
+01:56.790 --> 02:00.300
+having all the products display it from our repository.
+
+02:00.300 --> 02:08.850
+As you can see here and in the right hand side of the products table that we have here we have the button
+
+02:08.940 --> 02:10.460
+and the edit button.
+
+02:10.590 --> 02:18.950
+If we go to our button we're going to be shown the details of our product and if we go back and check
+
+02:18.950 --> 02:27.760
+out the edit button we're going to be able to edit our product in our repository and we can then simply
+
+02:27.760 --> 02:37.080
+say our edited product and the last functionality that we're going to have is the create product functionality.
+
+02:37.080 --> 02:44.450
+And if we go to create section we'll do it this way with the new product screen that we can add our
+
+02:44.450 --> 02:47.120
+new product with the data that we provide.
+
+02:48.590 --> 02:52.970
+This is the application that we're going to be building in the section.
+
+02:53.130 --> 02:59.700
+And as I discussed before we're going to be using a lot of different technologies and see how they work
+
+02:59.700 --> 03:00.940
+together.
+
+03:01.020 --> 03:05.190
+So to start building our application I'll be seeing you on the next video.

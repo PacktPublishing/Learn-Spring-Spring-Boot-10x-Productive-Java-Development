@@ -1,0 +1,553 @@
+WEBVTT
+
+00:00.510 --> 00:09.040
+Know it's time that we start working on the line from Netflix client is the ultimate way to make requests
+
+00:09.210 --> 00:12.820
+within applications within services.
+
+00:12.830 --> 00:20.240
+The main purpose of the Frank line is that next to it build it itself in its all assess so that they
+
+00:20.240 --> 00:23.300
+can use it within their micro services architecture.
+
+00:24.580 --> 00:30.970
+Calling other applications within the cloud environment would inclined is super easy.
+
+00:30.970 --> 00:34.740
+In a cloud environment of course you have the beauty of distempered.
+
+00:34.870 --> 00:43.240
+However feyne client has various advantages that we can prefer against the rest template to actually
+
+00:43.240 --> 00:47.270
+make use of the client and exploit it.
+
+00:47.350 --> 00:51.510
+We have to be talking about the Eureka project from Netflix also.
+
+00:53.080 --> 00:58.730
+Yuka is the service registry service discovery application from Netflix.
+
+00:58.810 --> 01:05.980
+It's actually a server in on itself and with just a couple of configuration within the annotations and
+
+01:05.980 --> 01:12.520
+application properties you could connect to Eureka and talk to your other applications and services
+
+01:12.520 --> 01:13.560
+very easily.
+
+01:13.720 --> 01:18.800
+And considering that scenario in a cloud environment it's priceless.
+
+01:19.550 --> 01:23.360
+So in this section we're going to be developing two things.
+
+01:23.360 --> 01:28.890
+First thing is that we're going to be creating a Eureka server with that Eureka server.
+
+01:29.120 --> 01:36.120
+We can register our applications first all those application as this application API application.
+
+01:36.380 --> 01:42.950
+And also I'm going to be creating another project that I'm going to also register with Eureka with the
+
+01:43.010 --> 01:44.610
+registration to Eureka.
+
+01:44.690 --> 01:51.810
+We can easily call our applications with client so to start off with Eureka and tell you more about
+
+01:51.810 --> 01:52.750
+it.
+
+01:52.890 --> 01:54.560
+I'm going to create a new project now
+
+02:00.280 --> 02:08.430
+I'll hit next and of course I'm going to be naming this project as Eureka server.
+
+02:10.770 --> 02:15.780
+Let's will name the artifact to and here we go.
+
+02:15.810 --> 02:23.100
+I'll hit next and this time we're going to be picking up a couple of different dependencies within the
+
+02:23.100 --> 02:24.140
+dependencies.
+
+02:24.150 --> 02:31.500
+Let's go to cloud and see what we can add and what actually we need is within the discovery tab and
+
+02:31.500 --> 02:36.970
+the discovery tab as you can see we have Eureka's server and Eureka discovery.
+
+02:37.050 --> 02:44.310
+Let's check them out for a second as you know there's Sprint clock Netflix Eureka's server Eureka's
+
+02:44.380 --> 02:51.080
+server as quite a respected project from Netflix for spring developers because it makes your work fairly
+
+02:51.080 --> 02:54.870
+easy if you're working in a multi application environment.
+
+02:55.730 --> 03:01.610
+So in our project we're going to be making use of the Eureka's server so I'll hit that.
+
+03:01.610 --> 03:07.730
+And also I want the discovery functionality of Eureka so I'll hit that too.
+
+03:07.730 --> 03:08.510
+All right.
+
+03:08.510 --> 03:10.220
+We have two dependencies.
+
+03:10.220 --> 03:14.000
+One is the Eureka discovery and the other one is Eureka's server.
+
+03:15.200 --> 03:21.920
+So of course we should not forget to get the Web dependency because we're going to be needing the Tom-Kat
+
+03:21.920 --> 03:24.720
+functionality for our application to start up.
+
+03:24.740 --> 03:26.040
+All right.
+
+03:26.220 --> 03:27.230
+I'll hit next.
+
+03:28.800 --> 03:40.970
+And I'll simply create my project now and I'm using new window all right and of course I'm going to
+
+03:40.970 --> 03:45.590
+make this project full screen so that I can work with my applications easily.
+
+03:45.590 --> 03:52.910
+Let's take out the structure of our application so I'll go to left pain and I'll first start by the
+
+03:52.910 --> 03:59.050
+poem that Exham L in the pundit example you should notice there are a couple of different annotations
+
+03:59.060 --> 04:03.200
+different dependencies that we're going to be needing in our application.
+
+04:03.200 --> 04:12.040
+And first of those is the spring outrider Eureka and the other one is sprinkle out Eureka's server.
+
+04:12.230 --> 04:18.320
+These dependencies are going to be providing us the basic functionality for you because server.
+
+04:18.590 --> 04:25.280
+So let's go to our application class and actually say that we're going to be using this application
+
+04:25.280 --> 04:26.440
+as you recall sir.
+
+04:26.690 --> 04:35.020
+So to do that I'm going to open up the application in class and end up Main class.
+
+04:35.020 --> 04:44.600
+I'm going to be annotating my project as Nabl Eureka server.
+
+04:44.760 --> 04:48.280
+That's all there is I should do about the application class.
+
+04:49.160 --> 04:56.450
+And the other thing that I should do is I should view the Eureka a port and I should disable this actual
+
+04:56.450 --> 05:05.370
+application from discoloring itself because this application as also a client for Eureka Eureka's server
+
+05:05.390 --> 05:11.530
+and it isn't as creating a server within this actual server application.
+
+05:11.530 --> 05:19.870
+So consider that as this you have Tomcat to run your application and by sight of that tomcat you have
+
+05:19.930 --> 05:25.580
+another container that runs the eureka eureka or annotation actually does that.
+
+05:25.960 --> 05:32.830
+So to exclude the actual Eureka's server application from discoloring itself we're going to be using
+
+05:32.830 --> 05:36.040
+a property in application properties.
+
+05:36.040 --> 05:49.000
+So let's switch back there and I'm going to say Eureka that client and register with Eureka is going
+
+05:49.000 --> 05:54.800
+to be false because I actually going to be using just the Eurekas server functionality.
+
+05:54.970 --> 05:57.660
+I don't want to register this application with Reka.
+
+05:57.670 --> 05:58.290
+All right.
+
+05:59.090 --> 06:07.150
+And also let's give this application a port and the default port for Eureka is 87 61.
+
+06:07.250 --> 06:13.420
+So I'll give it that way and I'm ready to run my Eureka application.
+
+06:13.550 --> 06:20.240
+So let's run our Eureka's over and see what's going to happen and check out our Eureka.
+
+06:20.280 --> 06:23.700
+So I'll go to run on my application.
+
+06:23.730 --> 06:30.160
+Our application is starting up now and let's make this a little bit bigger so that we can see easily
+
+06:30.160 --> 06:32.290
+what's going on within the console
+
+06:36.410 --> 06:38.150
+or applications turning up.
+
+06:38.150 --> 06:44.470
+And you should notice that default Eureka's server context is initialized within these laws and after
+
+06:44.480 --> 06:48.150
+that Eureka is adding the note for itself.
+
+06:48.260 --> 06:54.830
+It is under HTP localhost 87 61 and Slusher Rica.
+
+06:54.830 --> 07:00.200
+And after that Eureka is going to take more action for itself.
+
+07:00.740 --> 07:04.660
+And let's go down to our logs and see what's happening.
+
+07:06.350 --> 07:11.540
+In the logs as you can see Eureka is printing out some default ports for itself.
+
+07:12.420 --> 07:20.200
+And as you can see from the line here it's up and we can use this Eureka's So right away.
+
+07:20.330 --> 07:27.840
+And and also you Ricka is printing out all kinds of laws for itself because it's always listening for
+
+07:27.960 --> 07:30.500
+other applications to register with itself.
+
+07:31.340 --> 07:37.100
+So now we have our Eureka's are up and running and we can connect to it to connect to it.
+
+07:37.310 --> 07:42.280
+Let's open up Firefox and see what we have in Eureka.
+
+07:42.380 --> 07:54.690
+So I'll go to local HAUST and 87 61 and this is the application I'm going to see the Eureka's or let's
+
+07:54.690 --> 07:56.780
+hit enter and here we go.
+
+07:56.880 --> 07:58.500
+We How are you Rica's.
+
+07:58.510 --> 07:59.970
+So we're up and running.
+
+08:00.180 --> 08:02.650
+And let's look at what we have here.
+
+08:04.070 --> 08:09.860
+The left brain we have the system status in the system so that as you can see the environment that you're
+
+08:09.870 --> 08:15.710
+running the Eurekas are an data center that you're running it on the right side of the screen.
+
+08:15.810 --> 08:23.700
+We have the timings of Eureka and after that we have the instances currently registered with Eureka.
+
+08:23.700 --> 08:28.270
+And of course we don't have registered anything with Eureka.
+
+08:28.340 --> 08:35.330
+And after that we have some other environment variables and information about the instance and the state
+
+08:35.410 --> 08:37.190
+is up again.
+
+08:37.190 --> 08:40.470
+All right we have our Eureka so we're up and running.
+
+08:41.410 --> 08:48.450
+So let's connect our application to Eureka's or so that we can make requests with inclined to the rest
+
+08:48.580 --> 08:49.950
+by application.
+
+08:50.350 --> 08:53.410
+So I'll switch back to I the API application now
+
+08:56.210 --> 08:58.190
+in API application.
+
+08:58.190 --> 09:01.740
+We should give the application the unique functionality.
+
+09:01.760 --> 09:09.030
+So what we need in this case is that we're wanting to be a eureka client and we also want the client
+
+09:09.050 --> 09:13.830
+functionality within our application so to do that.
+
+09:13.840 --> 09:21.250
+I'll go to Maybin global repository and try to get our artifacts within our application so to do that.
+
+09:21.370 --> 09:27.300
+I'll switch back to Firefox and I'll go to Mabon repository.
+
+09:27.520 --> 09:29.550
+I'll make a simple search for it.
+
+09:29.620 --> 09:33.360
+And let's go.
+
+09:33.410 --> 09:40.220
+All right what we're looking now here is the split cloud starter Eureka project.
+
+09:40.400 --> 09:48.010
+So let's start typing springe clout Stalder.
+
+09:48.490 --> 09:49.630
+BASH Eureka.
+
+09:51.830 --> 09:53.060
+Here we go.
+
+09:53.210 --> 10:02.310
+We have the artifact so I'll go to the latest release the latest stable release so this is one that
+
+10:02.320 --> 10:11.720
+2.6 and I'll simply copy the dependency so that I can add it to my application I'll copy it and switch
+
+10:11.720 --> 10:19.350
+back to my project and in my project I'll go to my Palm file and in my palm file right after the Web
+
+10:19.350 --> 10:20.380
+dependency.
+
+10:20.820 --> 10:24.620
+I'll paste it go.
+
+10:25.040 --> 10:31.490
+And as you can see applications as result our dependency on new dependency.
+
+10:31.520 --> 10:33.610
+The other thing that we need is the Fank line.
+
+10:33.620 --> 10:44.810
+So let's switch back to Firefox one more and what we're looking for now is spring cloud starter and
+
+10:45.300 --> 10:48.410
+fayn.
+
+10:48.430 --> 10:49.100
+Here we go.
+
+10:49.120 --> 10:51.350
+We have the feyne artifact.
+
+10:51.550 --> 10:52.750
+Let's take it also.
+
+10:53.080 --> 11:01.970
+And as you see it's the same release with the Rica's server so I'll hit that and I'll get to dependency
+
+11:03.580 --> 11:09.690
+and let's switch back to our application and let's paste it right love.
+
+11:09.790 --> 11:10.940
+Here we go.
+
+11:11.170 --> 11:17.530
+Our application just resolve the dependency and we have the feyne functionality right now.
+
+11:17.550 --> 11:22.800
+So what we're going to do is we're going to configure our application so that it can find its way to
+
+11:22.800 --> 11:24.810
+Eureka and connect to it.
+
+11:25.350 --> 11:31.500
+So to start off with I'm going to go to my rest API application class and in that class I'm going to
+
+11:31.500 --> 11:39.190
+be using a couple of annotations and the first annotation is going to say that I want to connect Eureka
+
+11:39.190 --> 11:44.020
+server and so my application is going to be a client of Eureka.
+
+11:44.100 --> 11:49.760
+So I'll say enable Eureka client.
+
+11:49.810 --> 11:50.480
+All right.
+
+11:51.350 --> 11:58.730
+And the other thing that I need as the fayn client functionality for my application so that our clients
+
+11:58.730 --> 12:04.010
+can find and connect to me and make requests with my application.
+
+12:04.220 --> 12:08.920
+So to do that also enable the Fank alliance.
+
+12:08.960 --> 12:10.180
+All right.
+
+12:10.550 --> 12:17.660
+Our application is almost ready to connect to Eureka but of course we have to see some other configuration
+
+12:17.690 --> 12:26.220
+within our application properties to do that let's go to our application properties and in our application
+
+12:26.270 --> 12:31.020
+our properties we're going to enable Eureka client for his application.
+
+12:31.260 --> 12:39.330
+So to do that Eureka that client that enabled is going to be true.
+
+12:40.200 --> 12:49.760
+And also we want the records striation for this application and I'm also going to set it to true.
+
+12:49.870 --> 12:51.940
+So what else do we need.
+
+12:51.940 --> 12:57.970
+We need the Eureka registry so that we can find the applications that we're going to connect to and
+
+12:58.150 --> 13:02.410
+we can actually make requests with in fayn client.
+
+13:02.410 --> 13:14.900
+So to do that I'm going to say eureka client and fetch registry is going to be true because the other
+
+13:14.950 --> 13:18.540
+way our application is going to go to Eureka.
+
+13:18.580 --> 13:22.900
+So all the time and that's not going to be very efficient.
+
+13:22.900 --> 13:25.710
+We want it to be fetching the registry for itself.
+
+13:26.640 --> 13:33.240
+And after that we have to be enabling the non-secure Porphyrion application because we're running our
+
+13:33.240 --> 13:38.730
+application within a local environment and in that local environment we want to be connecting to our
+
+13:38.730 --> 13:40.620
+application anytime we want.
+
+13:40.620 --> 13:42.230
+We don't want to be disrupted.
+
+13:42.570 --> 13:43.190
+All right.
+
+13:43.380 --> 13:54.230
+So I'll say eureka dot instance dot non-secure pork is going to be enabled.
+
+13:54.420 --> 14:03.350
+All right we're actually ready to connect our application to Eureka server so let's give it a try and
+
+14:03.350 --> 14:06.540
+try our application to connect to Eureka server.
+
+14:06.830 --> 14:08.730
+So I'll start my application now.
+
+14:10.620 --> 14:12.690
+Our application is starting up.
+
+14:13.230 --> 14:17.720
+And let's bring up a little bit so that we can see it more clearly.
+
+14:20.130 --> 14:25.250
+And it's almost there we should be seeing Eureka Lokes right about now.
+
+14:26.640 --> 14:29.390
+And it's coming.
+
+14:29.440 --> 14:30.160
+Here we go.
+
+14:31.540 --> 14:33.990
+Our application is registered.
+
+14:33.990 --> 14:41.020
+The Eureka but we have a problem with the registration our application registers itself as unknown because
+
+14:41.320 --> 14:44.160
+we forgot to give our application a name.
+
+14:44.410 --> 14:48.060
+So let's fix that and restart our application.
+
+14:49.560 --> 14:57.180
+To do that I'm going to use springs properties to bring down application name and what I'm going to
+
+14:57.180 --> 15:04.250
+name this application is going to be rest's API application.
+
+15:04.290 --> 15:16.220
+All right let's start our application and have it connected correctly.
+
+15:16.250 --> 15:25.910
+It's almost there and we should be seeing the correct registration this time.
+
+15:25.920 --> 15:26.550
+All right.
+
+15:26.550 --> 15:27.780
+Here we go.
+
+15:27.840 --> 15:30.630
+Our application is registered with Eureka.
+
+15:30.690 --> 15:34.960
+As we said before the rest AAPI application.
+
+15:35.070 --> 15:38.300
+And let's take a look at these logs for a minute.
+
+15:38.640 --> 15:44.790
+In these logs as you can see the skurried client is initializing itself and then trying to register
+
+15:44.790 --> 15:47.050
+the rest API application with Eureka.
+
+15:47.310 --> 15:54.590
+And then it says it's up and registered to Eureka and also you can notice from the 200 successful H.T.
+
+15:54.600 --> 15:55.820
+to be code here.
+
+15:56.840 --> 15:57.830
+All right.
+
+15:57.830 --> 16:00.470
+Our application is registered to Eureka.
+
+16:00.560 --> 16:05.720
+So let's take out in the dashboard of Eureka so we can verify its registration.
+
+16:05.720 --> 16:11.060
+I'll switch back to Firefox and I'll refresh my Eureka's server.
+
+16:12.220 --> 16:19.990
+Here we go ARIST API application as registered at Eureka so that it can now accept requests in other
+
+16:19.990 --> 16:20.890
+applications.

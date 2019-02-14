@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00.750 --> 00:04.890
+Now let's take an overview of what we learned so far in this section.
+
+00:05.740 --> 00:12.170
+And this section we took a look at what is a restful API and understood the principles behind it.
+
+00:12.970 --> 00:21.100
+Then we moved on to the request types that we can use with HDTV or namely HTP methods.
+
+00:21.130 --> 00:27.730
+We looked at four main methods and those were GET POST put and delete.
+
+00:27.730 --> 00:32.590
+We also looked at two less commonly used methods and those were had and options
+
+00:40.350 --> 00:44.210
+that brought us to response code that we received when we made any
+
+00:47.690 --> 00:54.050
+that brought us to response codes that we received when we made any request types that we discussed.
+
+00:54.050 --> 01:00.440
+And the response codes were enjoying from 200 to five hundreds with a descriptor status of requests
+
+01:01.790 --> 01:06.480
+that we checked out the strategic lines that we can use to make requests.
+
+01:06.520 --> 01:11.060
+Those include any web browser or the programmatic ones.
+
+01:11.270 --> 01:15.570
+And in the next step we started building our own respites API.
+
+01:15.730 --> 01:23.530
+We've created our model service and finally a controller where we actually find our restful API in the
+
+01:23.530 --> 01:24.600
+next section.
+
+01:24.640 --> 01:30.040
+We've gone over the rest for way PCs that were built and explained everything one by one so that we
+
+01:30.040 --> 01:33.190
+can deeply understand what each and every element does.
+
+01:36.300 --> 01:42.390
+Before we started implementing HTP lines in our code we took an important step and affected our code
+
+01:42.660 --> 01:46.870
+so it can be easily maintainable in the future for doing that.
+
+01:46.920 --> 01:52.560
+We upgraded our service methods for interacting with a repository and then removed the tight coupling
+
+01:52.590 --> 01:55.810
+of our control over to repository implementation.
+
+01:55.830 --> 01:59.170
+We also handled.
+
+02:00.270 --> 02:02.580
+We also handled exceptions that might occur.
+
+02:02.580 --> 02:08.100
+And of course we've done a couple of other things to improve our code for any developer and the users
+
+02:08.100 --> 02:13.900
+we're going to use our API for the claims that we can use to make HTB requests.
+
+02:13.920 --> 02:21.450
+We'll look at a good alternative and we looked at a good alternative we could use and that was Springs
+
+02:21.570 --> 02:24.650
+template right after this template.
+
+02:24.840 --> 02:29.890
+We checked out another awesome client that we could use to implement that in our application.
+
+02:29.970 --> 02:36.840
+And that was for incline from Netflix again with different client making requests were easier creating
+
+02:36.840 --> 02:45.030
+an interface for the producer application and Kellan and then calling the interface methods by working
+
+02:45.030 --> 02:46.130
+on fayn client.
+
+02:46.140 --> 02:52.020
+We also learned about another project and other great project from Netflix which was Eureka's server
+
+02:52.500 --> 02:58.260
+Yuriko was a service registry and discovery for managing multi application environments so that you
+
+02:58.260 --> 03:01.230
+could get the application talking to each other were easily
+
+03:05.180 --> 03:11.770
+when we finished all.
+
+03:12.020 --> 03:16.820
+When we finished discovering the world of restfully eyes you had an assignment that you can work on
+
+03:16.820 --> 03:18.710
+your restfully API.
+
+03:18.950 --> 03:23.990
+You could have used either the project that I made available for you on guitar dot com or you could
+
+03:24.100 --> 03:31.090
+start from scratch either way I hope you do well on your exercise and let all these concepts sink in.
+
+03:32.930 --> 03:40.440
+All right we've come to the end of another great section we're read very written a lot of code.
+
+03:40.570 --> 03:45.730
+I hope you enjoy this section and if you have any problems with your own restful API implementation
+
+03:46.270 --> 03:49.280
+don't hesitate to ask me about it so I can help you.
+
+03:50.450 --> 03:57.060
+In the next section we'll bring all these awesome will bring all these awesome information together
+
+03:57.270 --> 03:59.560
+to create a full fledged web application.
+
+03:59.590 --> 04:06.090
+Will use time we've restful API as spring data and of course much more.
+
+04:06.320 --> 04:08.240
+It's going to be an amazing section.
+
+04:08.240 --> 04:12.510
+Before I talk about it more I'll be waiting to see on the next section.

@@ -1,0 +1,118 @@
+WEBVTT
+
+00:00.420 --> 00:05.370
+We already know and understand how dependency injection is handled by spring.
+
+00:05.370 --> 00:10.620
+Now let's talk about how we provide properties and configuration to our applications.
+
+00:12.730 --> 00:18.280
+Our first and probably the most important way of providing configuration to our application is by using
+
+00:18.280 --> 00:23.380
+application properties files with application properties files.
+
+00:23.520 --> 00:29.950
+You can configure almost anything in your application from application name so report database your
+
+00:30.450 --> 00:32.460
+credentials and so on.
+
+00:32.520 --> 00:39.340
+You have thousands of properties that you can use to configure your app depending on your setup it looks
+
+00:39.340 --> 00:40.450
+like this.
+
+00:40.510 --> 00:45.040
+It has a very clean and intuitive syntax for providing configuration.
+
+00:45.040 --> 00:51.640
+You can even comment on your properties application properties will be the way of application configuration
+
+00:51.830 --> 00:53.320
+through out to tutorials.
+
+00:53.410 --> 00:54.440
+So hold on.
+
+00:54.480 --> 01:00.260
+We'll be digging into more of it in the next sections.
+
+01:00.260 --> 01:06.920
+Next up is application that UML application e-mail is another important option for configuring your
+
+01:06.920 --> 01:08.020
+application.
+
+01:09.070 --> 01:15.010
+If you're developing for the cloud or intending to do all of cloud native applications YAML files are
+
+01:15.010 --> 01:20.660
+a good option because they are already being used by cloud providers for the purpose of manifestation
+
+01:21.750 --> 01:25.290
+a typical application that YAML file looks like this.
+
+01:25.410 --> 01:32.100
+As you notice it has a very intuitive syntax for declaring properties in a real world application.
+
+01:32.130 --> 01:36.870
+You would of course have supper that will open to moment and production environment.
+
+01:37.350 --> 01:42.380
+This is yet the simplest representation of what it looks like in a normal configuration file.
+
+01:43.290 --> 01:46.110
+And here's what this YAML configuration looks like.
+
+01:46.110 --> 01:53.310
+As the properties file for a clear comparison basically same wearables represented with a different
+
+01:53.310 --> 01:56.030
+syntax.
+
+01:56.130 --> 01:59.610
+There is more to it than just properties and YAML files.
+
+01:59.940 --> 02:05.450
+Spring enables us lots of other ways of providing configuration to our applications.
+
+02:05.550 --> 02:10.080
+We can inject properties directly to our wearables.
+
+02:10.080 --> 02:18.380
+We can use command line arguments we can use JVM arguments we can make use of and Wymans variables.
+
+02:18.570 --> 02:23.850
+If we're running our application in a cloud environment then we can use weak Web services by the help
+
+02:23.850 --> 02:28.880
+of spring cloud or if we need a specific configuration of our application.
+
+02:28.950 --> 02:34.600
+We can take advantage of property injection and configuration classes of spring.
+
+02:34.600 --> 02:37.510
+This is also the subject of our next section.
+
+02:38.320 --> 02:40.980
+As you can see it's a huge list of alternatives.
+
+02:40.990 --> 02:46.420
+In spring world just to configure your application it all depends on the environment that you run your
+
+02:46.420 --> 02:49.580
+application and your specific needs.
+
+02:49.660 --> 02:54.310
+You should know that all these alternatives are interchangeable.
+
+02:54.450 --> 03:00.580
+All right I think you're now aware of your options when developing with spring in any and wireman to
+
+03:00.660 --> 03:03.210
+talk more about configuration in spring.
+
+03:03.280 --> 03:04.560
+I'll see you on the next video.

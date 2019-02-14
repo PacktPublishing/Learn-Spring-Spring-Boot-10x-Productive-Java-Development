@@ -1,0 +1,349 @@
+WEBVTT
+
+00:00.300 --> 00:02.440
+So what actually is spring.
+
+00:02.880 --> 00:09.840
+Let's start with a brief history of why Joe developers preferred against the Jowa family's own implementation
+
+00:09.840 --> 00:10.400
+itself.
+
+00:10.440 --> 00:19.620
+And most importantly what makes spring so popular Well we have to take a step back and look what was
+
+00:19.620 --> 00:27.430
+the life like before spring EJB and Jubba it all up and is really hard.
+
+00:27.650 --> 00:33.500
+In Joe's own world of enterprise application development even the simplest tasks were very painful to
+
+00:33.500 --> 00:34.810
+implement.
+
+00:34.820 --> 00:41.120
+You had to be adhering to the ECB specification and that's another complicated story.
+
+00:41.120 --> 00:48.410
+So the good old EJB specification you had to be writing a lot of boilerplate code and configuring hundreds
+
+00:48.410 --> 00:50.260
+of lines of example.
+
+00:50.540 --> 00:56.420
+You also had to do well up all the different parts of your application as components and had to deploy
+
+00:56.420 --> 00:58.800
+them to application containers.
+
+00:58.900 --> 01:01.960
+So to expose them to your end user on our application
+
+01:04.710 --> 01:13.470
+components in the sense would be either a Jowa archive or a jar web archive or a war or an enterprise
+
+01:13.530 --> 01:15.270
+archive or namely ear
+
+01:18.140 --> 01:23.100
+containers would be containing web contacts or enterprise jellybeans.
+
+01:26.190 --> 01:33.920
+Services would be security transactional resource pooling persistence and so on.
+
+01:33.960 --> 01:41.120
+Of course you needed the meta data for all that deployment you need which is basically an XML file but
+
+01:41.130 --> 01:47.610
+those problems in mind Rob Johnson probably said to himself Well this is not a good way to work on Java
+
+01:47.610 --> 01:49.770
+Enterprise application development.
+
+01:49.800 --> 01:51.790
+This has to be simplified somehow.
+
+01:52.800 --> 02:00.910
+Spring Framework project started by Ron Johnson in 2002 and released under Apache license in 2003.
+
+02:00.960 --> 02:06.580
+Initial idea was a lightweight container for all kinds of services to serve POJO.
+
+02:06.900 --> 02:12.780
+So what this means is that you'll be developing your application as always defining models with plain
+
+02:12.780 --> 02:14.930
+old chala objects or Poll shows.
+
+02:14.940 --> 02:20.860
+And when you need a business logic presentation layer gateway or basically anything in theory Springville
+
+02:20.910 --> 02:25.390
+make it tremendously easy for you to invoke actions on those protocols that you created.
+
+02:27.020 --> 02:31.990
+Spring takes advantage of dependency injection design pattern for most of it's heavy lifting.
+
+02:34.110 --> 02:40.440
+Spring also embraces inversion of control principle which basically says that you give the control to
+
+02:40.440 --> 02:48.710
+the container and never worry about managing dependencies subring also embraces convention over configuration
+
+02:49.250 --> 02:55.100
+which says that without even configuring anything you could have a working application.
+
+02:55.190 --> 03:01.910
+Probably the most important part of spring has to offer is is that it allows you to focus more on your
+
+03:01.910 --> 03:05.090
+implementation in the early days.
+
+03:05.150 --> 03:07.490
+There were no notation at all.
+
+03:07.490 --> 03:08.510
+How about that.
+
+03:08.780 --> 03:14.330
+Well developers who needed spring have to be creating a Supreme Being definition Exham else where they
+
+03:14.330 --> 03:16.550
+said things like the name of the bean.
+
+03:16.610 --> 03:23.020
+What other beings makes use of and a lot more I guess at this point.
+
+03:23.110 --> 03:27.330
+You might be wondering what is being Let's talk about that for a moment
+
+03:30.960 --> 03:32.620
+into plain old Joe world.
+
+03:32.790 --> 03:37.200
+A being is an object conforming to a couple of per requisites.
+
+03:37.200 --> 03:44.040
+The first is that it should have a no or constructor as you might guess it says should.
+
+03:44.060 --> 03:48.160
+So you can have as many constructors as you want with there being.
+
+03:48.170 --> 03:51.260
+Second it should be serializable.
+
+03:51.440 --> 03:58.330
+So this object is being basically has to be transportable through the network file system etc..
+
+03:58.370 --> 04:00.580
+One way to conform to our policy.
+
+04:00.590 --> 04:07.730
+You might implements Serializable interface to your being and the third is that it should provide methods
+
+04:07.730 --> 04:13.720
+to set and get the values of the properties known as getters and setters methods.
+
+04:13.910 --> 04:21.230
+While this is one of the most fundamental rules of Apoyo really easy to come from that one as you can
+
+04:21.230 --> 04:21.830
+see.
+
+04:21.830 --> 04:26.510
+Basically these three rules qualify Apoyo to be named as a being.
+
+04:26.660 --> 04:28.560
+So how about a Supreme Being.
+
+04:28.610 --> 04:29.880
+What is it then.
+
+04:31.360 --> 04:37.990
+Spring beans are not far from the jello bean definition but there is this kind of major difference.
+
+04:38.180 --> 04:42.500
+Spring beans are created contained and managed completely by spring.
+
+04:42.500 --> 04:45.360
+Inversion of control container.
+
+04:45.530 --> 04:50.360
+That might not seem like a big deal but that makes all the difference.
+
+04:50.370 --> 04:52.550
+Don't worry about the IOC container for now.
+
+04:52.560 --> 04:54.500
+We'll get to that in a moment.
+
+04:54.600 --> 04:58.890
+As you can see subring has its own way of managing its beans.
+
+04:58.920 --> 05:04.590
+The only thing separates spring beans from giallo beans is that spring beans either have to be defined
+
+05:04.620 --> 05:12.150
+within an X somehow or annotated with an appropriate one only that way subring IOC containers can understand
+
+05:12.150 --> 05:15.720
+that it's a supreme being and then do the work.
+
+05:15.720 --> 05:17.960
+We're using the IOC container a lot.
+
+05:18.000 --> 05:21.880
+So what about it.
+
+05:22.130 --> 05:25.680
+Before we start I want you to look at the diagram.
+
+05:25.760 --> 05:27.760
+It really is telling the whole story.
+
+05:29.100 --> 05:35.580
+Basically you first start by creating your class that class or POJO will be are being so you should
+
+05:35.580 --> 05:40.310
+conform to the requirements just as we saw a couple of slides before.
+
+05:40.530 --> 05:48.920
+You know our constructor make it Serializable and provide getters and setters after having been at hand
+
+05:49.390 --> 05:52.550
+and they do it with an appropriate spring annotation.
+
+05:52.550 --> 05:53.510
+There you go.
+
+05:53.540 --> 05:55.810
+You just create the spring being for yourself.
+
+05:56.760 --> 06:03.310
+Now if you execute your up with that being in any way spring will scan and find the bean and created
+
+06:03.360 --> 06:03.980
+for you.
+
+06:05.270 --> 06:07.700
+Then spring starts doing its magic.
+
+06:07.800 --> 06:12.070
+It creates the IOC container and then it's constructs.
+
+06:12.070 --> 06:17.810
+That means that you annotate it simply makes them ready for you to be used by your application.
+
+06:18.010 --> 06:26.110
+In the end of this process spring finishes the IOC lifecycle spring will create a singleton for your
+
+06:26.110 --> 06:27.610
+beans by default.
+
+06:27.670 --> 06:30.420
+You must note that it's singleton by default.
+
+06:30.640 --> 06:34.550
+It can be overridden with a couple of different alternatives.
+
+06:34.960 --> 06:41.820
+After all these actions as you might have figured sping prepares everything to serve the application.
+
+06:42.040 --> 06:47.770
+When spring initialises the context as you'll see later on when we start the implementation you won't
+
+06:47.770 --> 06:50.020
+be constructing Europeans anymore.
+
+06:50.020 --> 06:51.960
+You'll just add an annotation in there.
+
+06:51.960 --> 06:56.170
+That said basically that is the magic of spring framework.
+
+06:56.170 --> 06:59.500
+Spring does all these so beautifully and so efficiently.
+
+06:59.740 --> 07:04.250
+All you have to do is just worry about your business logic already implementation.
+
+07:04.300 --> 07:06.800
+Spring takes care of everything under the hood.
+
+07:07.510 --> 07:12.270
+Hope this gives you a good understanding of what spring is and how it works.
+
+07:12.280 --> 07:16.220
+Now let's take a moment to view the timeline for spring release history three
+
+07:19.580 --> 07:21.890
+here we have the timeline for spring ways.
+
+07:21.950 --> 07:30.600
+Up until now as we noted earlier Rob Johnson started the project in 2002 and released a preview in 2003.
+
+07:31.440 --> 07:40.240
+And we had the one point to our release in 2004 but 2006 was the year of the spotlight for spring project.
+
+07:40.310 --> 07:42.350
+Was granted a jolt award.
+
+07:42.370 --> 07:47.130
+And David also gave the famous speech on how amazing spring is.
+
+07:47.870 --> 07:55.540
+In the speech David also said and I quote tired of gluing application letters by hand to spring framework
+
+07:55.540 --> 08:00.550
+uses dependency injection to tie components together for simplifying JMS.
+
+08:00.690 --> 08:09.800
+GM X hibernate and AOP spring also increases testability by making parts of the application easily interchangeable
+
+08:09.800 --> 08:13.840
+with Mark or alternative implementations.
+
+08:13.840 --> 08:20.720
+The framework integrates neatly with others such as Krutz and an eclipse plugin makes it manipulation
+
+08:21.160 --> 08:30.540
+human friendly discolored or even 10 years ago says a lot about what spring was and then and what actually
+
+08:30.540 --> 08:31.950
+it solves.
+
+08:31.950 --> 08:36.150
+Since that day sprint kept adding up to what it really has done great.
+
+08:36.330 --> 08:40.370
+And the fact is that it only keeps getting better.
+
+08:40.390 --> 08:45.370
+All right let's move on to the 2.5 release in 2007.
+
+08:45.640 --> 08:52.600
+This was another important moment in spring history and rotation base being Sopore initially made available
+
+08:52.600 --> 08:59.460
+with this version and 2009s 3. release added more annotations support on to it.
+
+08:59.470 --> 09:07.390
+Moving on to the year 2012 and here we hit another break point in spring history spring boot was being
+
+09:07.390 --> 09:10.360
+developed and a milestone was available.
+
+09:10.360 --> 09:17.290
+Then in 2013 we had the spring cloud project coming up to the scene which is another awesome set of
+
+09:17.290 --> 09:20.670
+tools for cloud development and deployment.
+
+09:20.690 --> 09:26.990
+Here we are in 2017 and we're about to be receiving 50 major release of spring framework.
+
+09:27.200 --> 09:33.470
+It will contain Java 9 support for Jigsaw modules and many more awesome features are being developed
+
+09:33.550 --> 09:41.270
+and as we speak that's enough of a history lesson that's over we what we learn so far in the next video.

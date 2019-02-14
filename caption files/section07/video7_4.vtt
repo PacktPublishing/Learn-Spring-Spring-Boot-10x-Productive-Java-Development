@@ -1,0 +1,262 @@
+WEBVTT
+
+00:01.590 --> 00:07.970
+HTP clients are a key player in the client server architecture as being the client itself.
+
+00:08.580 --> 00:10.620
+Let's check out what those clients are
+
+00:13.440 --> 00:14.280
+mainly.
+
+00:14.340 --> 00:17.870
+There are two types of clients.
+
+00:17.900 --> 00:26.640
+The first one is the one that we use practically every day and that is simply a web browser most popular
+
+00:26.640 --> 00:38.490
+ones are Google Chrome Firefox Safari Microsoft ad Shudra web browsers are deep integrators of HTP and
+
+00:38.700 --> 00:45.090
+even the simplest things happening on a browser from loading an image to displaying a text are all based
+
+00:45.090 --> 00:47.570
+on a request and responses.
+
+00:48.060 --> 00:54.360
+You type your all that you want to visit and then the browser makes NHT requests and get requests for
+
+00:54.360 --> 00:56.460
+you to display your web page for you.
+
+00:57.690 --> 01:03.400
+It was all the necessary resources along the requests incrementally and then you were being shown to
+
+01:03.390 --> 01:08.320
+a page that you requested just like that in the end of this video.
+
+01:08.340 --> 01:14.710
+I'll show you how you can check out the requests going around when you request a web page in a browser.
+
+01:14.710 --> 01:21.430
+Next up is the CTP protocol implementor's which are either libraries or the ones that are built into
+
+01:21.430 --> 01:25.380
+the languages that use to develop your H2B clients.
+
+01:25.420 --> 01:33.770
+In our case we're going to take a look at why we use Java HTP clients all of us want in our list there's
+
+01:34.260 --> 01:41.440
+Apache's HTP client library Apache library has been used for a very long time by Joe Otwell operas.
+
+01:41.470 --> 01:49.280
+However in order to even make a simple get requests you have to be writing lots of boilerplate code.
+
+01:49.280 --> 01:56.450
+Next up is the rest template from spring itself rust template is heavily used with spring projects from
+
+01:56.600 --> 02:00.410
+smallest ones to large enterprise applications.
+
+02:00.710 --> 02:05.850
+As with the spring simplicity principal risk temple is a delight to use.
+
+02:06.050 --> 02:09.250
+All you have to do is just write a single line of code.
+
+02:09.440 --> 02:12.740
+Yes just a single line of code will definitely check it out.
+
+02:12.740 --> 02:19.600
+When we start developing our application and you'll see how easy it is and the last one in our list
+
+02:19.630 --> 02:27.640
+is fine Klein from Netflix all access Frank line is the result of a struggle within cloud environments
+
+02:27.640 --> 02:34.720
+where most of the components are loosely coupled and of course within a cloud environment we're talking
+
+02:34.720 --> 02:44.230
+about services for inclined is designed to work with other Netflix RSS projects and the main project
+
+02:44.230 --> 02:49.690
+that is combined with is Eureka to Blumen to friend client.
+
+02:49.710 --> 02:54.970
+All you have to do is create an interface for the rest endpoint that you need to request.
+
+02:55.440 --> 02:56.940
+That's the first step.
+
+02:57.060 --> 03:05.520
+The second step is to otherwhile to interface as simply call the exchange method when clients are out
+
+03:05.520 --> 03:06.950
+of the scope for this course.
+
+03:07.020 --> 03:11.170
+However I'm planning to release micro services training with spring.
+
+03:11.370 --> 03:14.970
+So of course you'll definitely see a lot of Fame clients.
+
+03:15.270 --> 03:19.440
+So make sure to check out that course when it's out.
+
+03:19.440 --> 03:25.680
+Now let's switch back to Firefox and investigate what happens during a request and what we see as a
+
+03:25.680 --> 03:28.310
+response.
+
+03:28.330 --> 03:29.540
+All right.
+
+03:29.540 --> 03:38.000
+I have firefox opened up so I'm going to go to spring that I know you are l to the address bar and see
+
+03:38.000 --> 03:44.000
+what's going on in the browser to actually see what's happening behind the scenes.
+
+03:44.060 --> 03:52.310
+I have to open up the developer tools and checkout network activity in MECO us to bring up the developer
+
+03:52.310 --> 03:53.350
+tools.
+
+03:53.360 --> 04:02.840
+You either go to options and select developer tools or you can use the shortcut for that and the shortcut
+
+04:02.870 --> 04:06.780
+is all command and I.
+
+04:07.130 --> 04:08.200
+Right.
+
+04:08.570 --> 04:17.320
+We have our Inspektor tools our developer tools opened up so let's go to spring that I go and see what's
+
+04:17.320 --> 04:22.480
+going on and make sure that you have the network tap selected.
+
+04:22.690 --> 04:26.630
+So I'm going to go to Spring dot I know.
+
+04:27.460 --> 04:28.990
+And here we go.
+
+04:30.070 --> 04:37.450
+We have springs official website over and up and as you can see we have lots of requests going on.
+
+04:37.450 --> 04:39.290
+Let's check out what those are.
+
+04:40.670 --> 04:46.300
+Before we dark and says it was a hot topic we how response quotes.
+
+04:46.310 --> 04:54.500
+Here we have two hundreds which is OK as you can see with the tooltip and the request method that is
+
+04:54.500 --> 05:02.380
+used to bring up the page is get as you can see and is the root directory of the Web site.
+
+05:02.420 --> 05:07.000
+Let's check out that request and see what's going on in our requests.
+
+05:07.160 --> 05:12.050
+We have lots of data going on around we have requests.
+
+05:12.050 --> 05:14.320
+You're all asked Springle I know.
+
+05:14.490 --> 05:21.570
+And as the method we get and as you can see we have a removed address which is the IP address of the
+
+05:21.570 --> 05:30.840
+Web site and the status quo the response code for this Web site is 200 which is OK and the A C to be
+
+05:30.840 --> 05:33.270
+worse than that is used to make these requests.
+
+05:33.320 --> 05:35.460
+Is 1.1.
+
+05:36.030 --> 05:43.150
+And we have response headers added by the spring that Web site and are returned to us.
+
+05:43.150 --> 05:51.950
+And right below that we have requests Helders added by Mozilla Firefox and let's take our other tabs
+
+05:52.010 --> 05:55.550
+and see what we have in the cookies.
+
+05:55.550 --> 06:04.390
+We have the cookies received from the Springboro Web site and indep Param that we don't have any parameters
+
+06:05.550 --> 06:06.570
+in the response.
+
+06:06.650 --> 06:08.870
+And this is the tricky part.
+
+06:08.990 --> 06:16.880
+We have the complete HDMI website as you can see it starting with the DML task.
+
+06:16.960 --> 06:26.980
+It has had an all the data that it requires to display his web page to render it in the browser.
+
+06:27.010 --> 06:28.000
+Isn't that cool.
+
+06:29.050 --> 06:29.740
+All right.
+
+06:30.540 --> 06:39.810
+And in the next step we have timings these timings are indicators of the request timeouts and all the
+
+06:39.810 --> 06:45.260
+things going around with them the request from its starting point to its ending point.
+
+06:45.780 --> 06:48.790
+Let's take out another one and see what's going on with it.
+
+06:50.160 --> 06:59.700
+And as you can see we have javascript I requested with the web page and in the request we have again
+
+06:59.700 --> 07:01.720
+I get requests and 200.
+
+07:01.740 --> 07:02.500
+OK.
+
+07:03.410 --> 07:04.530
+And response.
+
+07:04.610 --> 07:08.720
+We have a minute why javascript file.
+
+07:08.820 --> 07:17.630
+Lots of code and right below that we have an image requested by a web page.
+
+07:17.800 --> 07:19.370
+And again it's 200.
+
+07:19.420 --> 07:30.630
+OK as you can see with the status code here and here in response we have the image itself.
+
+07:30.680 --> 07:42.860
+Set in the spring logo and we have lots of other images brought by the browser used by the spring that
+
+07:42.970 --> 07:44.600
+Iowa website.
+
+07:44.600 --> 07:45.680
+All right.
+
+07:46.130 --> 07:53.610
+Now we were aware of the clients that we use to make requests to start developing our own race API.
+
+07:53.930 --> 07:55.490
+I'll see you on the next video.

@@ -1,0 +1,73 @@
+WEBVTT
+
+00:00.420 --> 00:05.600
+Let's talk about the ways of requests met with HTP.
+
+00:05.840 --> 00:09.060
+There are four basic types of requests for HGP.
+
+00:09.410 --> 00:14.840
+Let's take a look at what those are and what's important about these four requests is that they represent
+
+00:14.960 --> 00:18.640
+crud or create read update and delete operations.
+
+00:22.620 --> 00:28.970
+First we have get as the name implies yet provides us the present nation of the resource.
+
+00:29.130 --> 00:35.270
+Thinking about a method with a return type in Java yet will be providing us a return type of objects.
+
+00:37.390 --> 00:43.570
+Second one is put put generally use to either update or modify a resource.
+
+00:43.570 --> 00:47.620
+However in some rare cases it can even be used to create a new resource
+
+00:51.400 --> 00:58.830
+toward one as post purpose of the post is t create a new resource from scratch depending on the type
+
+00:58.830 --> 01:05.510
+of post and point you prepared to data that you want to be created and simply posted the form.
+
+01:05.530 --> 01:10.070
+And the last one in our four basic methods is delete.
+
+01:10.130 --> 01:16.360
+It's all clear and yet it's used to delete an existing resource.
+
+01:16.370 --> 01:20.980
+Now we come to the less commonly use HGP methods first.
+
+01:20.980 --> 01:28.120
+We have had head is short for header and is used to fetch meta data or header data for the resource
+
+01:28.120 --> 01:29.590
+that we're interested in.
+
+01:31.550 --> 01:34.210
+And the second one is options.
+
+01:34.260 --> 01:40.490
+Let's assume that you want to know what 80 to be operations that you can use on a particular resource.
+
+01:40.510 --> 01:42.780
+That's where options comes in.
+
+01:42.780 --> 01:52.110
+You make a request of the resource with HTP options and resource gives you back the possible operations.
+
+01:52.130 --> 01:58.810
+That's all we need to know about HTP request types available to us for various operations on resources.
+
+01:58.820 --> 02:04.340
+Now we know the request types and of course the server around our rest interface will return a response
+
+02:04.340 --> 02:11.850
+with headers resource when requested and most importantly our response code so to analyze the response
+
+02:11.850 --> 02:14.020
+code with HTP requests.
+
+02:14.020 --> 02:15.400
+I'll see you on the next video.

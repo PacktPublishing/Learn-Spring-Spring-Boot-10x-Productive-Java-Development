@@ -1,0 +1,109 @@
+WEBVTT
+
+00:08.800 --> 00:15.800
+This with you what I want to do is show you more about spring initialiser.
+
+00:15.830 --> 00:26.100
+So now let's just click Create new project and there we have spring initialiser spring initialiser is
+
+00:26.100 --> 00:30.000
+a very very convenient way to create spring applications.
+
+00:30.030 --> 00:37.910
+Since spring Butte spring initialiser has all the dependencies listed in its interface so that you can
+
+00:37.910 --> 00:45.410
+just check and include in your project but how things work with that as we cowered in the previous video.
+
+00:45.440 --> 00:52.420
+You define your JDK and you say your services are out but you don't have to do anything about.
+
+00:52.460 --> 00:59.180
+This is already provided by spring and Intel AJ for when we click next.
+
+00:59.180 --> 01:05.870
+As you can see subring initialiser is retrieving options for us how it does that.
+
+01:05.990 --> 01:14.120
+To understand it more let's just go to do you are al that spring initialiser is using and understand
+
+01:14.120 --> 01:16.470
+what's going on behind the scenes.
+
+01:16.940 --> 01:28.780
+OK so I'm just going to open up my browser and let's go to start dot sprinklered IO as you can see we
+
+01:28.780 --> 01:31.960
+have a web interface for spring initialiser.
+
+01:32.080 --> 01:38.850
+It's basically a restful API that you can query to create spring application templates isn't that great.
+
+01:39.070 --> 01:47.870
+And what Intel does calls this you r l calls respites API to create the project that you desire.
+
+01:47.890 --> 01:51.400
+So let's just take a look how it works like here.
+
+01:51.550 --> 01:58.980
+You can choose to create either a Grettel or Mavin project and you can specify the spring boot version.
+
+01:59.080 --> 02:04.260
+And as we've seen before you provide other details for different kinds of projects.
+
+02:04.270 --> 02:10.310
+This is the actual dependencies part that we need with this web interface.
+
+02:10.330 --> 02:12.840
+You just type a dependency that you need.
+
+02:12.910 --> 02:22.780
+So let's say we're going to use the JPA and here we go and click to add it to your list of dependencies
+
+02:23.290 --> 02:24.160
+as you seen.
+
+02:24.190 --> 02:31.270
+This is a very basic interface we can how more options we can how advanced options with this interface
+
+02:31.510 --> 02:35.630
+so we can just go to full version just like this.
+
+02:35.650 --> 02:43.580
+You can see the packaging Java version language type and you have all the dependencies listed here.
+
+02:43.780 --> 02:54.790
+You can either go here check out the dependencies that you need and click generate a project or you
+
+02:54.790 --> 03:02.290
+can switch back to the simple version and type out the dependencies and add them to your project so
+
+03:02.320 --> 03:04.680
+you can click generate project again.
+
+03:04.960 --> 03:10.130
+Let's just create a demo project here and see what it's like to do it from here.
+
+03:10.150 --> 03:17.030
+So let's leave everything as is and click generate we have then zip file.
+
+03:17.030 --> 03:25.760
+So you extract it as you can see we have a template project we can easily include this project in intelligence
+
+03:25.880 --> 03:27.950
+and use it from there.
+
+03:27.950 --> 03:32.090
+This is another cool feature of spring initialiser.
+
+03:32.180 --> 03:41.090
+You can either use the web interface just like this or you can go to intelligent idea and use the spring
+
+03:41.090 --> 03:47.920
+initialiser from there you have two different options which are actually basically the same thing because
+
+03:48.340 --> 03:53.660
+they're using this Ural cell that's almost there is to spring initialiser.
+
+03:53.910 --> 03:57.700
+I'll see you on the next video where we talk about May 1 in general.

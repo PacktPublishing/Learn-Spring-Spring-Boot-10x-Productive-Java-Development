@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.500 --> 00:09.060
+For doing math it we're going to be adding a new button to our products table and from there we're simply
+
+00:09.060 --> 00:11.210
+going to delete our product.
+
+00:11.370 --> 00:18.000
+And after that we're going to be redirecting our users to Products table again so that they can see
+
+00:18.000 --> 00:22.530
+the product is excluded from the list and actually delete it.
+
+00:23.910 --> 00:32.550
+So to do that I'll first include a table header and Date header is going to be for delete.
+
+00:33.090 --> 00:41.730
+And after that I'll go to my table data and for that table data I'm going to be actually providing my
+
+00:42.390 --> 00:54.770
+action my ATAC in that ATAC I'm going to be referencing my delete operation as dollar and curly braces
+
+00:55.730 --> 01:02.860
+and slash products and slash tweet.
+
+01:02.870 --> 01:08.120
+All right so that we can simply understand what's going on.
+
+01:08.390 --> 01:17.400
+And after that I'm going to be providing the ID of the actual product in the table for the class I'm
+
+01:17.400 --> 01:27.330
+going to say button and Button danger so that our button is going to be the Red One of the bootstrap
+
+01:27.370 --> 01:29.770
+classis.
+
+01:29.900 --> 01:38.780
+And after that I'm simply going to close my ATAC and within the text part of the ATAC I'm going to say
+
+01:39.050 --> 01:40.640
+this is delete button.
+
+01:40.680 --> 01:45.100
+All right.
+
+01:45.190 --> 01:49.150
+So tell our controller I'm going to copy my path.
+
+01:49.420 --> 01:59.010
+And after that path and let's also add the slash right here so that we won't crash when we try it.
+
+01:59.290 --> 02:06.330
+And in our controller I'm going to add my delete method for at least myrth it.
+
+02:06.670 --> 02:14.140
+I'm going to first start by request mapping and in the request mapping I'm going to provide the copied
+
+02:14.170 --> 02:15.110
+path.
+
+02:15.310 --> 02:24.250
+And after that I'm also retaking an ID from UI for that ID for the request method.
+
+02:24.520 --> 02:31.890
+We're going to use get because otherwise spring time we can interact with us.
+
+02:32.110 --> 02:40.450
+The two end points that we can interact with timely is the get and post after that information.
+
+02:40.750 --> 02:43.470
+I'm going to be moving on with my method.
+
+02:43.600 --> 02:52.060
+And again I'm going to be returning a string the name of my method is going to be to leave product in
+
+02:52.060 --> 02:53.200
+my method.
+
+02:53.200 --> 02:58.870
+I'm going to be taking a path variable and the name of that variable is ID.
+
+02:59.110 --> 03:00.640
+As I said whoa.
+
+03:01.030 --> 03:09.540
+And after that I'm going to be taking a reference of that ID and moving on to my method body in my method
+
+03:09.550 --> 03:16.700
+body I'm simply going to my product repository and use the delete method with ID.
+
+03:16.720 --> 03:18.870
+All right.
+
+03:18.980 --> 03:25.790
+And when I'm finished I'm going to redirect my users to my products table products table page.
+
+03:25.790 --> 03:34.850
+So for doing that I'm going to use a direct and then I'm going to say products.
+
+03:35.020 --> 03:35.890
+All right.
+
+03:38.620 --> 03:40.630
+So the actual test it out.
+
+03:41.050 --> 03:44.240
+Let's rerun our application and see what's going on.
+
+03:58.780 --> 04:05.410
+Our application is starting up and we have it up and running.
+
+04:06.600 --> 04:13.090
+Let's go back to Firefox and go to our products page in our products page.
+
+04:13.200 --> 04:22.170
+We how our delete button and as you can see from the your elbow on the left bottom of the page we have
+
+04:22.170 --> 04:25.410
+the correct path mapping for our delete method.
+
+04:26.510 --> 04:30.150
+So if we click our sweep method here we go.
+
+04:30.590 --> 04:37.400
+We're only left with a product in our products repository and our table is fetching the data from the
+
+04:37.460 --> 04:40.250
+repository as you remember.
+
+04:40.350 --> 04:46.850
+So we could successfully delete our product from our obligatory which are UI interactions.
+
+04:46.860 --> 04:53.250
+Now we're almost finished with our products and we see application and we see Kreta application.
+
+04:53.250 --> 05:00.210
+But before we finish and take a review let's make a final touch with our success and have a much better
+
+05:00.210 --> 05:02.300
+working navigation bar.
+
+05:02.490 --> 05:13.590
+So to do that I'll get back to my ID and in my ID I'm going to go to my style that see SS in the style
+
+05:13.590 --> 05:21.640
+of CSSA I'm going to be giving a couple of styles for my navigation bar and to start off it I'm going
+
+05:21.640 --> 05:30.730
+to use no bar default class and for that class I'm going to be saying that I want the springs official
+
+05:30.730 --> 05:39.210
+color as the background so to say that I'm going to use 60 B tree tree f.
+
+05:39.910 --> 05:49.730
+And as you can see that color can be seen right here and after that I'm going to be using the white
+
+05:49.730 --> 05:59.240
+color as the text for now bar Brant and for that I'm going to say no bar default and no bar brand.
+
+05:59.480 --> 06:03.550
+And then color is going to be white.
+
+06:03.560 --> 06:04.480
+Here we go.
+
+06:05.570 --> 06:12.640
+And after that I'm also going to provide the same style for products and create product links.
+
+06:12.920 --> 06:27.020
+So to say that all start with No our default and then no bar now and the list tag and then the ATAC
+
+06:27.770 --> 06:35.500
+after my ATAC I can provide my style and style is going to be color of white.
+
+06:35.540 --> 06:48.680
+All right now we run our application and see our changes in the UI.
+
+06:48.860 --> 06:54.280
+Our application is starting up and here we go.
+
+06:54.800 --> 07:03.600
+Let's go to Firefox and let's go to our home and refresh our application.
+
+07:04.660 --> 07:06.180
+And here we go.
+
+07:06.430 --> 07:10.990
+We have a much great looking navigation bar for our application.
+
+07:11.410 --> 07:18.880
+As you can see we have the green screen color background and our tax color as white as you can see.
+
+07:18.880 --> 07:21.970
+And when we Hallward it it's gray.
+
+07:21.970 --> 07:26.400
+This one is looking much better than the previous one right.
+
+07:26.590 --> 07:33.400
+So we're also finished with the bleed actions of UI and a little bit of styling for our navigation bar
+
+07:33.400 --> 07:35.700
+as you can see here.
+
+07:35.780 --> 07:42.890
+So to take your real spring and secret application and talk about it in general I'll be seeing you in
+
+07:42.890 --> 07:43.870
+the next video.

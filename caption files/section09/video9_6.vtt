@@ -1,0 +1,709 @@
+WEBVTT
+
+00:00.900 --> 00:07.620
+In this video we're going to be developing a email client so that we can use time we have to template
+
+00:07.650 --> 00:16.030
+that email with him alive and deliver it with springs email capabilities to do that.
+
+00:16.090 --> 00:23.620
+I'm going to create a new project and move from there so I'll create a new project right now and I'm
+
+00:23.620 --> 00:28.710
+going to use Spring initialiser in the initialiser.
+
+00:28.710 --> 00:36.500
+I'm going to name the project as e-mail and of course the artifact is going to be e-mailed to.
+
+00:37.170 --> 00:42.990
+And let's say timely email project.
+
+00:43.000 --> 00:45.660
+All right let's hit next.
+
+00:45.820 --> 00:54.330
+And the dependencies what we need is web and we need the timely template engine.
+
+00:54.480 --> 01:00.080
+That's all we need and I'm going to hit next and that's great.
+
+01:00.080 --> 01:00.810
+Our project
+
+01:04.740 --> 01:06.620
+our project is created.
+
+01:06.630 --> 01:13.530
+Now let's take out the structure and start building our application in our application.
+
+01:13.530 --> 01:20.430
+Well we're going to build as we're going to build a email service as the service and spring and then
+
+01:20.610 --> 01:27.810
+call that service from our application class and make it deliver an email message and asked him out
+
+01:27.840 --> 01:30.280
+email message actually.
+
+01:30.310 --> 01:37.600
+So for doing that I'll start off with email service so to do that I'm going to create a new package
+
+01:38.380 --> 01:42.890
+and name it as service in the service package.
+
+01:43.060 --> 01:50.770
+I'm going to have a class named email service in the e-mail service class of course.
+
+01:50.770 --> 01:55.540
+I'm going to annotate it as Cirus from Spring.
+
+01:55.680 --> 02:01.470
+And what we're going to do in this class is we're going to take the context and template engine of time
+
+02:01.470 --> 02:10.260
+leave and make it process are a similar template so that them what we're going to be injecting some
+
+02:10.260 --> 02:16.890
+variables into it into our XT himself while and then we're going to simply delivered the message to
+
+02:16.890 --> 02:18.020
+the recipients.
+
+02:19.430 --> 02:26.000
+So what we're going to start off with is the template engine and context so that we can make use of
+
+02:26.000 --> 02:26.690
+them.
+
+02:26.720 --> 02:35.240
+So I'm starting off at private static and template engine from time leave.
+
+02:36.020 --> 02:42.920
+And also I'm going to take the context of time we've.
+
+02:43.030 --> 02:46.920
+Let's check out what we're going to use for a second.
+
+02:47.410 --> 02:50.000
+And here we go.
+
+02:50.030 --> 02:59.200
+We have the time leave context and lets me name it as context and then we're going to be of course using
+
+02:59.200 --> 03:01.090
+a email sender.
+
+03:01.090 --> 03:05.580
+So I'm going to use the Jawa email sender from spring
+
+03:10.100 --> 03:16.990
+and as you can see our idea could not resolve the general mail sender sort of thing that we're going
+
+03:16.990 --> 03:21.580
+to do is we're going to take the dependency from the main repository.
+
+03:21.580 --> 03:27.450
+So let's move on to Firefox and go to our main repository
+
+03:31.680 --> 03:38.790
+spring boot start starter and Mail.
+
+03:38.900 --> 03:46.880
+And let's go to dependency and ended that then we have 1.5 that to as the latest one.
+
+03:46.910 --> 03:56.180
+So let's copy that and switch back to our ID in our palm file I'm going to put the dependency right
+
+03:56.230 --> 03:58.160
+below the web dependency.
+
+03:58.340 --> 03:59.730
+And here we go.
+
+04:00.320 --> 04:02.090
+Let's import for changes with Mabon
+
+04:05.800 --> 04:07.370
+and we're done.
+
+04:07.690 --> 04:15.960
+Let's switch back to our e-mail Cirus and check out the dependency and see if the ID can resolve it
+
+04:15.970 --> 04:16.710
+right now.
+
+04:16.750 --> 04:17.970
+And here we go.
+
+04:18.040 --> 04:26.710
+We have it right now and I'm going to say e-mail sender and we're all set now.
+
+04:27.820 --> 04:35.590
+Let's also have a lager so that we can track these tattoos on the console and I'm going to create a
+
+04:35.920 --> 04:45.560
+cell phone a locker and then I'm going to use the logger factory and get lager in the lager.
+
+04:45.850 --> 04:49.630
+I'm going to use e-mail service class.
+
+04:50.170 --> 04:57.290
+And here we go let's order wire our e-mail center first and start from there.
+
+04:57.550 --> 05:07.560
+To do that I'm going to create a solder injection and let's use the email sender and or wire it.
+
+05:07.780 --> 05:12.210
+Erica read it to Move-On sort of.
+
+05:12.210 --> 05:17.750
+First up we're going to do is we're going to initialize the template engine.
+
+05:17.940 --> 05:27.000
+So for doing that I'm going to create a static method and private's Tadic would initialize
+
+05:29.430 --> 05:33.690
+template engine Rigaud.
+
+05:34.080 --> 05:41.490
+And within this method what I'm going to do is I'm going to create a classloader template resolver so
+
+05:41.490 --> 05:48.110
+that we can get the gym elth while and reload as an AGM M-file actually.
+
+05:48.120 --> 05:57.450
+So for doing that I'm going to say classloader template resolver resolver and new class little girl
+
+05:57.450 --> 05:58.650
+template resolver.
+
+05:59.130 --> 06:08.470
+And this result I'm going to set the template mode as a steam L5 just like this.
+
+06:10.680 --> 06:12.130
+Here we go.
+
+06:12.330 --> 06:21.660
+And the other thing that I'm going to do is I'm going to set the suffix the file extension as Dot h
+
+06:21.660 --> 06:22.210
+tim L.
+
+06:24.850 --> 06:27.050
+and we're done it.
+
+06:27.550 --> 06:33.250
+And let's also set the character encoding.
+
+06:33.950 --> 06:39.000
+So that's going to be as UTF 8.
+
+06:39.000 --> 06:43.640
+All right so now let's initialize our template engine.
+
+06:44.710 --> 06:52.030
+And in our template engine what we're going to do is we're going to set the resolver to the result that
+
+06:52.030 --> 06:53.510
+we just create it.
+
+06:53.920 --> 07:04.120
+So template engine set temperate resolver is resolved that we just create it and then let's also initialize
+
+07:04.120 --> 07:07.630
+a template contacts so that we can make use of it.
+
+07:07.630 --> 07:20.710
+So what I'm going to do is I'm going to say template context is going to be no context and the locale
+
+07:20.740 --> 07:26.020
+for that context is us.
+
+07:26.110 --> 07:27.230
+All right.
+
+07:27.550 --> 07:32.050
+So I'm going to be sending an English language text English language.
+
+07:32.050 --> 07:41.050
+E-mail So the next step is going to be send email Methot And so that we can use that sound email method
+
+07:41.170 --> 07:45.770
+to send e-mail that we want for doing that.
+
+07:45.790 --> 07:55.180
+I'm going to go up a little and provide my metric right here so I'll say private Woit and send email
+
+07:56.910 --> 07:58.560
+within that send email.
+
+07:58.560 --> 08:01.180
+I'm going to be taking a couple of things.
+
+08:01.200 --> 08:09.840
+The first thing I'm going to take is the mail to the who is the mail recipient and the next thing is
+
+08:10.620 --> 08:18.590
+the subject and the final thing that I'm going to use as the male body.
+
+08:18.590 --> 08:21.570
+All right.
+
+08:21.660 --> 08:29.160
+And within this matter that what I'm going to do is I'm going to create a my message the multimedia
+
+08:29.160 --> 08:36.370
+message so that I can set this type of the message to a steam owl and deliver it as I desire.
+
+08:37.290 --> 08:44.580
+So what I'm going to do is I'm going to create a my message and that message is going to be created
+
+08:44.580 --> 08:49.370
+by our e-mail sender as the create my message.
+
+08:49.770 --> 08:59.220
+And after that I'm going to use my message helper and with that helper I'm going to create my actual
+
+08:59.220 --> 09:00.570
+my message.
+
+09:00.570 --> 09:08.910
+So I'll say Neal my message helper and within the constructor I'm going to provide the message and I'll
+
+09:08.910 --> 09:14.160
+say the multi-part mode as true.
+
+09:14.300 --> 09:21.680
+So as you notice that we have a small problem right here and that is the on handle the exception.
+
+09:21.980 --> 09:30.250
+So to handle that what I'm going to do is I'm going to throw the exception in the method body.
+
+09:30.390 --> 09:38.640
+So for doing that I'll say and take the exception from here which is Joe oxcart mailed out messaging
+
+09:38.670 --> 09:46.240
+ception and I'll say trows messaging exception.
+
+09:46.240 --> 09:48.140
+Here we go.
+
+09:48.460 --> 10:00.490
+And after our helper what I'm going to do is I'm going to set two of the male as male two from the method
+
+10:00.520 --> 10:09.340
+parameters and after that I'm going to set the subject as the subject that I receive again from the
+
+10:09.370 --> 10:10.990
+parameters.
+
+10:11.080 --> 10:19.600
+And finally I'm going to set the text as the text that I receive from the method parameters and this
+
+10:19.600 --> 10:27.070
+time as you can see here I'm going to set the Boullion of h d m l l to true so that my mail can be an
+
+10:27.070 --> 10:35.360
+actual HTL file so that it can be rendered and displayed as an h m l at just like a web page so I'll
+
+10:35.360 --> 10:40.450
+say male body and all pro-lie true.
+
+10:40.490 --> 10:41.520
+All right.
+
+10:42.050 --> 10:48.790
+And in the last part I'm going to use our email sender and deliver that message.
+
+10:48.920 --> 10:54.640
+So I'll say email sound or send And my message that I create it.
+
+10:54.740 --> 11:01.580
+And let's also log the statement that we send the message to the recipient email
+
+11:04.560 --> 11:07.220
+sent to.
+
+11:07.440 --> 11:13.500
+And what I'm going to do is I'm going to provide the recipient.
+
+11:13.500 --> 11:14.430
+Here we go.
+
+11:16.070 --> 11:21.320
+And the last thing that we're going to do is we're going to provide the utility method that we're going
+
+11:21.320 --> 11:26.430
+to call from our application through the e-mail service that we just created.
+
+11:26.870 --> 11:39.800
+So for doing that I'm going up again and I'm going to say public and avoid prepare and send e-mail just
+
+11:39.800 --> 11:40.900
+to be descriptive.
+
+11:42.250 --> 11:48.370
+And what I'm going to do in this method is I'm going to initialize my e-mail template.
+
+11:48.520 --> 11:53.550
+And with that template I'm going to call my send e-mail message method.
+
+11:54.010 --> 12:02.020
+So the first thing that I'm going to do is I'm going to take an HTML file from my resources.
+
+12:02.260 --> 12:15.570
+So for doing that I'm going to say a similar template and I'll insert my template under templates an
+
+12:16.530 --> 12:17.910
+email template.
+
+12:18.240 --> 12:19.800
+All right.
+
+12:19.800 --> 12:21.250
+We'll do that in a moment.
+
+12:21.570 --> 12:31.700
+So please hang up in the mail to what I'm going to provide is my personal e-mail.
+
+12:31.980 --> 12:39.960
+So I'll say my personal e-mail as does.
+
+12:40.560 --> 12:41.460
+All right.
+
+12:41.460 --> 12:45.740
+This is the recipient of my mail message.
+
+12:45.800 --> 12:53.420
+So let's call our initialize template engine method and after that I'm going to be injecting two variables
+
+12:53.420 --> 13:03.130
+into my mail template the first thing that I'm going to inject is what the context got set variable
+
+13:04.090 --> 13:11.600
+and the variable is going to be sender and the actual value is going to be timely.
+
+13:13.210 --> 13:26.730
+Email and the second thing that I'm going to insert is set variable and mailed to and on as mailed to
+
+13:26.730 --> 13:32.100
+actually the mail that I'm using to deliver this message.
+
+13:32.100 --> 13:38.400
+And after that I'm going to take the actual edge to my body of the message.
+
+13:38.430 --> 13:47.470
+So for doing that I'm going to go to my template engine and make it process e-mail.
+
+13:47.580 --> 13:55.920
+So for processing I'm going to be providing my template which is a DML template and also I'm going to
+
+13:55.920 --> 13:58.700
+provide the context that I created.
+
+13:58.710 --> 14:00.100
+Here we go.
+
+14:00.210 --> 14:06.990
+The last thing that we're going to do is we're going to be calling the send e-mail message and an e-mail
+
+14:06.990 --> 14:07.760
+message.
+
+14:07.890 --> 14:15.750
+We're going to use the recipient as mail to and then we're going to be providing the message subject
+
+14:16.680 --> 14:28.800
+and I'm going to provide timely e-mail demo and for the message body I'm going to say to a male body
+
+14:29.730 --> 14:30.860
+just like that.
+
+14:30.960 --> 14:33.760
+And we're of course again have to be trowing.
+
+14:33.790 --> 14:38.620
+Another exception here and I'm going to add it to my method signature.
+
+14:38.700 --> 14:39.730
+And here we go.
+
+14:41.780 --> 14:46.750
+We're almost finished with our e-mail service.
+
+14:46.780 --> 14:54.920
+The next thing that we're going to do is we're going to be creating a stem cell template to do that.
+
+14:54.920 --> 15:02.990
+I'm going to go to my resources folder and under templates I'm going to create a new a steam file and
+
+15:03.260 --> 15:05.940
+name it as e-mail template.
+
+15:06.350 --> 15:13.250
+Here we go and this file what I'm first going to do is I'm going to get the name space of time wave
+
+15:14.000 --> 15:21.940
+and it's going to be like HTP and slash slash.
+
+15:21.970 --> 15:25.920
+W w w timely.
+
+15:26.320 --> 15:27.650
+Dot org.
+
+15:27.650 --> 15:28.420
+Here we go.
+
+15:29.250 --> 15:36.630
+And after that I'm going to close the murder tax so that it can be rendered in any browser and in the
+
+15:36.630 --> 15:37.430
+title.
+
+15:37.590 --> 15:43.090
+What I'm going to provide is e-mail message from time leave.
+
+15:43.380 --> 15:49.890
+And as you know this this is going to be an important because we're providing an e-mail message as the
+
+15:49.890 --> 15:50.580
+ashed him.
+
+15:50.610 --> 15:53.780
+We're not going to render a web page with this template.
+
+15:54.060 --> 15:58.100
+So whatever you provide here is not going to be relevant.
+
+15:58.320 --> 16:04.380
+So let's move on with our message and in our body I'm going to create a division.
+
+16:04.710 --> 16:12.540
+And in that division I'm going to be providing an image from the web so that my image can be displayed
+
+16:12.930 --> 16:14.430
+as I expect it.
+
+16:14.430 --> 16:21.480
+So for the source of that image I'm going to use an image that I took from the web so I'll post the
+
+16:21.670 --> 16:25.200
+URL here which is a simple spring boot image.
+
+16:25.440 --> 16:35.220
+And after that I'm going to close my image tag and move on with my coat and after my division I'm going
+
+16:35.220 --> 16:40.760
+to create a header with one so that it can be big enough that I can see.
+
+16:41.220 --> 16:50.490
+And in this H-1 tech I'm going to say this email was sent to.
+
+16:50.610 --> 16:57.510
+And what I'm going to do is I'm going to use the injected variable that I provided in my coat and I'm
+
+16:57.510 --> 17:09.960
+going to say th text and that text is going to be dollar and curly braces and mail to just like that.
+
+17:10.380 --> 17:19.920
+And after that I'm going to close my span and I'm going to say again in the next part with and this
+
+17:19.920 --> 17:26.610
+time I'm going to be providing my other injected variable and that injected variable is going to be
+
+17:27.360 --> 17:28.960
+th text.
+
+17:28.980 --> 17:35.030
+And what I provided as the injected variable was sender.
+
+17:35.340 --> 17:44.800
+So let's use that one in our template and let's say dollar and curly braces and sender.
+
+17:44.880 --> 17:46.200
+Here we go.
+
+17:46.290 --> 17:51.330
+We're almost ready and let's add some commas right here.
+
+17:51.330 --> 17:56.060
+Some inflammation points so that we can understand this is coming from us.
+
+17:56.460 --> 18:01.740
+So let's say our template and let's work out what we're missing.
+
+18:02.860 --> 18:06.390
+We how everything created to deliver our message.
+
+18:06.570 --> 18:10.260
+We have our template and we have our template resolvers.
+
+18:10.460 --> 18:17.210
+But what we're missing is we're missing the male configuration to actually deliver this message through
+
+18:17.390 --> 18:22.710
+spring's email sender.
+
+18:22.740 --> 18:29.370
+So for Dad what I'm going to do is I'm going to go to my application up properties and configure my
+
+18:29.370 --> 18:30.870
+email sender.
+
+18:30.870 --> 18:36.560
+So let's open up our application properties and our application properties.
+
+18:36.900 --> 18:38.610
+What I'm first going to say.
+
+18:38.610 --> 18:49.980
+Spring dot mail dot host is going to be SMPTE P dot gmail dot com and make sure that this is the mail
+
+18:49.980 --> 18:54.440
+sender that you're going to use the account that you're going to send the e-mail message.
+
+18:54.810 --> 19:03.390
+Otherwise if you're using a Hotmail or Yahoo mail or say you can use the same T.P. of that mail provider.
+
+19:03.430 --> 19:06.730
+Otherwise your message could not be delivered.
+
+19:06.780 --> 19:17.070
+So let's move on and provide the port for at Spring dot mail that port is going to be 500 eighty 87
+
+19:17.130 --> 19:26.790
+for Gmail and that's provide the user name for e-mail and the username I'm going to provide is some
+
+19:26.790 --> 19:28.320
+other mail I'm using.
+
+19:28.380 --> 19:30.840
+So I'm going to be blurring out this part.
+
+19:31.050 --> 19:40.290
+And there's also pro-ID password for that account and the password is also be going to blurred out and
+
+19:40.290 --> 19:45.380
+I'm putting it right now and you can use the password for your own account.
+
+19:45.540 --> 19:52.650
+And the other things that I'm going to provide is spring dot mailed out properties and into properties
+
+19:52.940 --> 20:00.130
+I'll say mail that S.M. T.P. dot off is true.
+
+20:03.490 --> 20:09.970
+So that went this way I can be delivering my emails with a secure channel.
+
+20:10.200 --> 20:16.630
+And the other thing is I'm going to be enabling the DNS for my mail delivery.
+
+20:16.860 --> 20:25.050
+So to do that I'm going to say spring got mailed out properties and into properties I'll say mail dot
+
+20:25.470 --> 20:37.150
+S-M T.P. dot start t ls and enable it's true.
+
+20:37.320 --> 20:39.860
+Here we go.
+
+20:39.970 --> 20:42.980
+We're finished with our configuration.
+
+20:43.060 --> 20:48.980
+Now it's time to run our application and see if our message is actually delivered.
+
+20:50.600 --> 20:52.790
+So I'm running my application right now.
+
+21:13.410 --> 21:17.200
+And as you can see we don't have any email delivery in our logs.
+
+21:17.460 --> 21:22.100
+That's because we missed the call our e-mail service from our application.
+
+21:22.380 --> 21:24.420
+So let's fix that now.
+
+21:24.420 --> 21:33.360
+And for fixing that I'm going to create a private variable for e-mail service and I'm going to use a
+
+21:33.360 --> 21:35.270
+separate injection for that.
+
+21:37.090 --> 21:40.720
+Let's also although wire it so that we can use it.
+
+21:41.320 --> 21:51.570
+And in my class I'm going to say I will use a command line runner and with that command line runner
+
+21:51.800 --> 21:57.770
+as you remember from our previous videos we were going to implement the run method.
+
+21:58.130 --> 22:05.020
+So in the run method I'm simply going to call our e-mail service and prepare and send e-mail.
+
+22:05.030 --> 22:06.420
+Simple as that.
+
+22:06.860 --> 22:10.450
+Let's rerun our application and see the action right now.
+
+22:13.910 --> 22:16.290
+Our application is starting up now.
+
+22:24.440 --> 22:26.160
+And we're finished.
+
+22:26.180 --> 22:34.410
+And as you can see in the log that e-mail sent to my personal e-mail address with them this low statement.
+
+22:34.790 --> 22:38.540
+So I have my e-mail opened in a separate tab.
+
+22:38.660 --> 22:43.020
+And let's take out if we delivered it as correctly.
+
+22:43.100 --> 22:53.450
+So I'm going to switch to Chrome right now and open up my tap and in my e-mails you should see the timely
+
+22:53.510 --> 22:54.930
+e-mail demo.
+
+22:54.950 --> 22:57.020
+So let's really call on it.
+
+22:57.020 --> 22:59.120
+And here we go.
+
+22:59.360 --> 23:06.240
+We have a great looking him out e-mail with time we've it's looking beautiful right.
+
+23:06.280 --> 23:15.040
+We have rendered our image and our text is rendered as the mail to as my personal e-mail address and
+
+23:15.310 --> 23:17.910
+the sender as timely email.
+
+23:18.040 --> 23:22.010
+And of course our exclamation points.
+
+23:22.020 --> 23:25.560
+So this is a where a simple demonstration with time.
+
+23:25.590 --> 23:27.790
+And spring emails.
+
+23:28.040 --> 23:34.310
+You should of course make some advance templates and great looking e-mails to deliver to your clients
+
+23:34.310 --> 23:37.310
+in your production grade applications.
+
+23:37.310 --> 23:44.570
+So use this application template as a starting point for your next application and make sure to provide
+
+23:44.630 --> 23:48.990
+a great email delivery tool for your next application for your system.

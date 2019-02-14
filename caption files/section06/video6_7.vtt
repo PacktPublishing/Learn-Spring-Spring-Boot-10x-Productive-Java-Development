@@ -1,0 +1,307 @@
+WEBVTT
+
+00:01.020 --> 00:06.710
+We know how three products in our repository in our database.
+
+00:07.170 --> 00:12.520
+So how are we going to update any of these products or all of them.
+
+00:14.590 --> 00:22.030
+Let's take out the options that we have for our products and let's see what spring data and JP offers
+
+00:22.030 --> 00:27.020
+us in the methods so that we can update our products.
+
+00:27.120 --> 00:35.410
+Let's come down here and let's take a look at the repository of methods that we can use within our application.
+
+00:35.540 --> 00:39.550
+And let's say you want to update.
+
+00:39.690 --> 00:41.280
+But here we go.
+
+00:41.280 --> 00:45.470
+We don't have any update methods.
+
+00:45.480 --> 00:47.270
+Let's take a look at it again.
+
+00:47.520 --> 00:52.280
+And we don't have any update methods offered to us.
+
+00:52.350 --> 01:00.010
+We have find all say and the methods that we provided as in the method.
+
+01:00.350 --> 01:14.870
+And we have count we have delete exists and alternatives for applying to all find one get one.
+
+01:15.020 --> 01:18.830
+And that's basically all we don't have any update methods.
+
+01:18.920 --> 01:21.480
+So how are we going to do that.
+
+01:21.650 --> 01:25.110
+The way to do that is fairly straightforward.
+
+01:25.520 --> 01:27.960
+Let's take a look at it.
+
+01:28.190 --> 01:37.790
+Sure we want to update a product let's say for a specific type and we have specific as the type for
+
+01:37.790 --> 01:42.630
+the current product and for the second product we have type custom.
+
+01:42.950 --> 01:48.560
+And for the first product we have general set as a type.
+
+01:48.560 --> 01:56.510
+So let's assume that we want to update the current product to do that let's just find the product in
+
+01:56.510 --> 02:04.310
+our repository in our database first and I'm going to use the name method that we used in our previous
+
+02:04.310 --> 02:07.560
+examples the find by type method.
+
+02:08.000 --> 02:22.430
+So that method is going to get me a product and I'll say product to update and I'll go to my repository
+
+02:23.150 --> 02:26.550
+and I'll say fine by type.
+
+02:26.780 --> 02:34.330
+And in the type I'll provide specific.
+
+02:34.340 --> 02:43.250
+All right this statement is going to get me the specific product and that is the third product.
+
+02:43.250 --> 02:44.700
+All right.
+
+02:44.810 --> 02:57.200
+So when you find us product and say you've It's not no and it exist in our repository then we want to
+
+02:57.290 --> 02:58.460
+update it.
+
+02:58.940 --> 03:00.760
+And let's check if it's not.
+
+03:00.770 --> 03:01.230
+No.
+
+03:01.250 --> 03:09.870
+And then we just simply say that we want to update this product and to do that.
+
+03:10.070 --> 03:16.290
+I'm simply going to set the new wearables the new properties that I want to update.
+
+03:16.430 --> 03:24.320
+That's basically all you have to do to update a product or update anything with spring data on JPA spring
+
+03:24.320 --> 03:32.510
+data and JPA is clever enough to know that if you want a saved product with a completely new one that
+
+03:32.540 --> 03:39.300
+you want to create it or you just simply want to update an existing data existing entity.
+
+03:39.290 --> 03:48.500
+Because what we've done in our product entity we said we want it to be distinct with our ID field that
+
+03:48.500 --> 03:52.520
+ID field is going to be our primary key in our database.
+
+03:52.520 --> 04:00.830
+So with that primarily at hand if we have the primary key in our entity and in this case we're going
+
+04:00.830 --> 04:08.540
+to repository with the find by method one by type method and that method repository is going to get
+
+04:08.540 --> 04:12.140
+us the complete product with the ID field.
+
+04:12.560 --> 04:16.400
+And of course the rest of the properties that we need.
+
+04:16.700 --> 04:25.070
+So with the ID field in the product you update variable we can just set the new wearables to our product
+
+04:25.070 --> 04:27.440
+so we can simply update it.
+
+04:27.830 --> 04:29.400
+So let's update it right now.
+
+04:30.320 --> 04:39.460
+So for the update process I'm going to say I want to give it a new name and I'll say update it
+
+04:41.970 --> 04:55.680
+product so that we can easily see it in our database and I'm also going to update the description so
+
+04:55.680 --> 04:56.430
+I'll say
+
+05:00.990 --> 05:05.400
+date it description.
+
+05:05.410 --> 05:06.520
+All right.
+
+05:06.520 --> 05:14.090
+So now all we have to do is to sell this product into our repository into our database.
+
+05:14.230 --> 05:19.650
+So let's say product repository and say.
+
+05:20.410 --> 05:21.160
+All right.
+
+05:21.550 --> 05:30.370
+In the same month it froze we're going to provide the the product that we want to update and to see
+
+05:30.370 --> 05:32.280
+that in our logs.
+
+05:32.620 --> 05:39.950
+Let's take the return value of the product and printed out to the console.
+
+05:40.630 --> 05:48.340
+And I'm going to say update it and I'll get back the updated product data.
+
+05:48.370 --> 06:03.430
+So let's look this out to our counsel and I'm going to say Lagat info update it product details and
+
+06:05.290 --> 06:11.100
+I'm going to say the updated list.
+
+06:11.350 --> 06:12.150
+All right.
+
+06:12.590 --> 06:21.070
+And so that we can see the product that we're going to update beforehand that before it's modified let's
+
+06:21.230 --> 06:24.940
+out to the console to so that we can see the difference.
+
+06:25.520 --> 06:28.340
+So I'm going to say look that info and
+
+06:31.150 --> 06:32.530
+before update
+
+06:34.920 --> 06:44.180
+product details and I'm going to give the product to date.
+
+06:44.200 --> 06:45.780
+All right.
+
+06:45.950 --> 06:53.810
+So with this way we can see the difference with the updated and pre updated products and you'll see
+
+06:53.810 --> 07:00.980
+that ID is not going to change and all the remaining fields in our product is not going to change all
+
+07:00.990 --> 07:06.850
+the things that's going to change as that description and the name field.
+
+07:07.720 --> 07:16.180
+All right let's see our changes in action and let's update our entity our data.
+
+07:16.750 --> 07:18.820
+So I'm going to run our application
+
+07:25.330 --> 07:31.360
+it's starting out right now.
+
+07:31.650 --> 07:41.120
+Here we go Indico also as you can see our select statement are filed by type method is printed out right
+
+07:41.120 --> 07:50.920
+here and right after that we have an update statement just as we expected in the update statement hibernates
+
+07:50.930 --> 08:01.790
+has update product asset category description name price type and do that with the idea that's brought
+
+08:01.790 --> 08:04.090
+from the product to update.
+
+08:04.370 --> 08:10.360
+So the actual logs we're interested in is before update product.
+
+08:10.370 --> 08:21.950
+The idea is this and the updated product ID is exactly the same as you can see here.
+
+08:22.140 --> 08:28.970
+It's not change because it's the same product and as the hybrid that says it's just update it.
+
+08:29.160 --> 08:33.820
+No new data created because the data already has an ID field.
+
+08:33.930 --> 08:36.120
+The primary key is already there.
+
+08:36.120 --> 08:38.240
+So it's just update it.
+
+08:38.580 --> 08:42.570
+And let's take out the other fields before the update process.
+
+08:42.570 --> 08:51.060
+And before we update the name of our product was test the product and after the update it now become
+
+08:51.720 --> 08:54.440
+updated product.
+
+08:54.560 --> 08:57.240
+And let's take out the description.
+
+08:57.470 --> 09:07.450
+The description was simply a description before and the new product the updated product description
+
+09:07.480 --> 09:20.150
+is now updated description as you can see here to verify the changes in our database in our actual data.
+
+09:20.150 --> 09:24.630
+Let's go to Ed to counsel and see what it looks like.
+
+09:24.740 --> 09:34.590
+So I'm going to fire up the Firefox and I'm going to say local HAUST ADHD and H-2.
+
+09:34.610 --> 09:35.540
+All right.
+
+09:36.480 --> 09:37.830
+Let's connect to our database
+
+09:40.520 --> 09:46.010
+and I'm going to click on the product table and we have this statement here.
+
+09:46.010 --> 09:55.260
+So I'm going to simply run the statement as you can see the turret product that we inserted in our database
+
+09:55.360 --> 09:56.330
+to compare it.
+
+09:56.360 --> 10:05.030
+I'm going to make it a little bit small and put it right here.
+
+10:05.890 --> 10:14.770
+As you can see the turret product is now named as a data product and you can see that from the price
+
+10:14.770 --> 10:22.780
+too because its price as 19 and the others are different and the type of the product was specific.
+
+10:22.840 --> 10:28.810
+And this is exactly the product that we're looking for and we want to update it.
+
+10:28.810 --> 10:29.490
+All right.
+
+10:30.340 --> 10:36.910
+Updating process of Jaypee and spring data is very simple as you've seen in this example.
+
+10:37.890 --> 10:41.180
+So let's take out the lead in the next video.

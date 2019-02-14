@@ -1,0 +1,310 @@
+WEBVTT
+
+00:00.620 --> 00:05.270
+Know it's time to actually create are ready for a spring board application.
+
+00:06.380 --> 00:09.870
+To do that let's just fire up the intelligence first
+
+00:20.850 --> 00:21.540
+OK.
+
+00:21.690 --> 00:23.820
+Now let's click Create new project
+
+00:27.380 --> 00:36.450
+and as you can see idea provided as a window that has spring initialiser spring initialiser is what
+
+00:36.450 --> 00:42.780
+we're going to use to create our project and all the other projects that we're going to develop in the
+
+00:42.780 --> 00:43.480
+future.
+
+00:45.100 --> 00:52.690
+Before I go into details of initialiser Now let's just create our project and I'll tell you more about
+
+00:52.750 --> 00:55.350
+in the next section.
+
+00:55.520 --> 01:02.480
+So as you can see we're going to select our SDK and you can choose the version that you installed on
+
+01:02.480 --> 01:03.560
+your machine.
+
+01:03.740 --> 01:12.890
+Initialiser is using a u r l it's start spring Daddy-O so you can just leave all as is.
+
+01:12.900 --> 01:15.010
+And now let's click next.
+
+01:18.520 --> 01:22.710
+OK here we're going to define our project.
+
+01:22.840 --> 01:30.800
+If you're familiar with MAVEN you have to define a group and you have to give an artifact name for your
+
+01:30.800 --> 01:32.030
+project.
+
+01:32.060 --> 01:40.210
+Don't worry if you don't know what artifact or group is we're going to get to that in the main section.
+
+01:40.230 --> 01:50.340
+So for now you can just use combed that example demo and we're going to select a Mavin project and for
+
+01:50.340 --> 01:57.200
+packaging we're going to use Jarre not war because that's why you and springboard exist.
+
+01:57.690 --> 02:04.930
+And we're going to use Java one that ate and language is of course Jawa.
+
+02:05.290 --> 02:10.420
+So you can just leave everything as is and we can click next.
+
+02:11.590 --> 02:17.580
+And as you can see we have lots of dependencies here to choose from.
+
+02:17.930 --> 02:22.790
+In our feature applications we're going to choose lots of different dependencies.
+
+02:22.920 --> 02:29.120
+But for now for our first project we're just going to use a web.
+
+02:29.330 --> 02:33.100
+And now let's click next.
+
+02:33.220 --> 02:41.600
+We're going to just define our project details for the module location file locations cetera.
+
+02:41.710 --> 02:52.100
+So our project name for demo is just fine and for location you can choose any location in your computer.
+
+02:52.210 --> 02:53.380
+It's all up to you.
+
+02:54.190 --> 03:01.870
+So for the module name we just going to have to change it to our root module so we can have all our
+
+03:01.870 --> 03:05.920
+projects under a certain directory.
+
+03:05.940 --> 03:08.280
+So let's just copy that.
+
+03:08.460 --> 03:16.400
+If your content route and module location isn't like this this structure you just have to replace it.
+
+03:16.440 --> 03:22.400
+Or you can have different modules and different routes for every other project that we're going to develop.
+
+03:22.400 --> 03:23.510
+It's all up to you.
+
+03:23.520 --> 03:25.840
+I'm just trying to use a commission here.
+
+03:25.860 --> 03:30.970
+It's not something that's paramount importance so we can now just create our project.
+
+03:31.020 --> 03:32.770
+And now let's click Finish
+
+03:38.780 --> 03:39.990
+as you can see.
+
+03:40.240 --> 03:46.540
+Intel provides us some useful tips when the application starts.
+
+03:46.660 --> 03:52.480
+You can learn lots of different options and lots of different great features of intelligence right here.
+
+03:52.810 --> 03:56.060
+So I'd just suggest you dat don't close that right.
+
+03:56.080 --> 03:56.650
+Yes.
+
+03:56.680 --> 04:00.660
+And how it open whenever you use the intelligence.
+
+04:01.180 --> 04:05.710
+So let's close this and check out our project structure.
+
+04:06.040 --> 04:10.690
+As you can see May one says that projects need to be imported.
+
+04:10.690 --> 04:18.520
+So what this says is that whenever you change the structure of your maven Let's say you add a new dependency
+
+04:18.520 --> 04:24.520
+to your project or you do anything else just change your Maimon file.
+
+04:24.520 --> 04:32.340
+The Palm file what auto import does that is fetches the dependencies that you changed and maybe removes
+
+04:32.350 --> 04:38.570
+the one that you get rid of all sorts of things as handled by this auto import option.
+
+04:38.610 --> 04:41.030
+So I highly encourage you to do that.
+
+04:41.040 --> 04:42.390
+So let's do that now.
+
+04:44.100 --> 04:49.230
+And as you can see Intel is resolving dependencies of demo.
+
+04:49.340 --> 04:58.580
+Now let's take out the structure of our code our source file has two subdirectories.
+
+04:58.810 --> 05:02.380
+One is the main and the other one is a test.
+
+05:02.380 --> 05:12.750
+Maine has all the implementation all the actual code you write and the test is for unit testing.
+
+05:13.040 --> 05:21.730
+So now let's just go to Jawa And here we have the D-Mo. application.
+
+05:21.910 --> 05:28.120
+This is what's printing all that generates this class is going to be our starting point for our spring
+
+05:28.120 --> 05:31.520
+boot application as you can see.
+
+05:31.530 --> 05:38.030
+And as we've talked about this before spring boot has its own notation.
+
+05:38.070 --> 05:42.000
+It's spring boot application and notation as you can see here.
+
+05:42.700 --> 05:50.300
+Into resources files you can see that be how application up properties and it's empty now.
+
+05:52.000 --> 05:57.460
+So how do we run this application to run your application.
+
+05:58.000 --> 05:59.980
+All you have to do is just run
+
+06:03.590 --> 06:06.920
+as you can see our first application is starting
+
+06:10.300 --> 06:11.400
+OK.
+
+06:11.500 --> 06:13.400
+Our application started.
+
+06:13.720 --> 06:14.380
+That's great.
+
+06:14.380 --> 06:18.230
+It's running on port ADHD.
+
+06:18.250 --> 06:23.210
+All right we've started our very first application isn't that great.
+
+06:23.450 --> 06:27.180
+But as you can see it's just doing nothing currently.
+
+06:27.220 --> 06:34.160
+So that's how something running and see our application in the action to do that.
+
+06:34.270 --> 06:41.290
+And the just for the purpose of this Tauriel I'm just going to create a new class in here and have a
+
+06:41.300 --> 06:49.740
+controller to say or request let's create an anonymous class and expose it as a web method.
+
+06:51.400 --> 06:55.380
+So now let's create a controller
+
+07:00.260 --> 07:12.530
+and have a method that's going to return a string and it's going to say hello to have this class as
+
+07:12.530 --> 07:13.130
+a weapon.
+
+07:13.130 --> 07:17.410
+At first we start saying that it's a risk controller
+
+07:19.860 --> 07:23.580
+and we have to give it a path.
+
+07:23.790 --> 07:31.360
+Ruth that and that's going to be request mapping and request mapping.
+
+07:31.630 --> 07:40.000
+We say the path is going to be just a backslash.
+
+07:40.000 --> 07:48.970
+So what this method is going to do is that it's going to take a string as an argument and just return
+
+07:48.970 --> 07:58.030
+that hello and whatever you name it.
+
+07:58.290 --> 08:05.110
+OK so let's just expose this method as a web method to do that.
+
+08:05.110 --> 08:16.780
+We're going to use request mapping again and say Our method is going to be hello and we say that hello
+
+08:17.500 --> 08:22.480
+and we're going to get the name as the argument
+
+08:26.820 --> 08:27.860
+OK.
+
+08:28.180 --> 08:34.720
+And this method is going to be a get method OK it's there.
+
+08:36.100 --> 08:44.740
+So now there's just one thing left that we have to do we have to say that this string argument is going
+
+08:44.740 --> 08:48.620
+to be a path variable so that we can get it from the path.
+
+08:49.000 --> 08:54.530
+And to say that it's an actual path where you will we're going to use the parameter.
+
+08:55.060 --> 09:00.310
+So we're going to say that this is going to be mapped with that name.
+
+09:00.880 --> 09:01.490
+OK.
+
+09:02.480 --> 09:06.520
+So we're good to go around the application
+
+09:10.410 --> 09:12.150
+Ok it's up.
+
+09:12.150 --> 09:17.220
+And as you can see our new method is mapped as a get method.
+
+09:18.290 --> 09:25.510
+And with the test controller so to test this out I'm just going to fire up the Firefox.
+
+09:25.920 --> 09:36.190
+So let's just go to our application let's say localhost ADHD and Hello.
+
+09:36.470 --> 09:37.670
+So this is our roof.
+
+09:37.670 --> 09:41.190
+That and we have to pass a parameter.
+
+09:41.210 --> 09:45.750
+You can just use your name anything and I'm just going to use mine.
+
+09:45.950 --> 09:48.320
+And let's hit enter.
+
+09:48.440 --> 09:49.660
+Here we go.
+
+09:49.910 --> 09:53.680
+We have our first spring Boot application open running.

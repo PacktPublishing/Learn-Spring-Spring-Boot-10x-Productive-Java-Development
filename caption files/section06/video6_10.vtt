@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.420 --> 00:07.200
+Now let's take an overview of what we learned so far in the section and this section will coward.
+
+00:07.200 --> 00:12.150
+One of the greatest components of spring family and that was spring data.
+
+00:12.150 --> 00:17.000
+We discussed what GPA is and what exactly spring data adds onto it.
+
+00:17.880 --> 00:25.800
+We also discovered the H-2 database again it was an in memory database and let either use it a file
+
+00:25.930 --> 00:34.030
+or simply in memory that was also what we use within our applications dummy moved on to creating an
+
+00:34.030 --> 00:39.870
+entity and had it created as an actual table within our H-2 database.
+
+00:39.910 --> 00:47.320
+We also created ourselves a repository and that repository we saved updated and basically manipulated
+
+00:47.320 --> 00:49.080
+our data in different ways.
+
+00:50.960 --> 00:57.740
+Down we moved on to queering our data with spring data and JPA with the repository we created in the
+
+00:57.920 --> 00:59.810
+creating repository section.
+
+00:59.960 --> 01:05.970
+We added our own named methods as queries and repository handled them all for us.
+
+01:06.140 --> 01:12.200
+After finishing our implementations I wanted you to go ahead and start implementing your own entities
+
+01:12.200 --> 01:15.620
+are repositories with this way.
+
+01:15.830 --> 01:19.540
+You could have a practical understanding of supplying data.
+
+01:19.560 --> 01:24.600
+I hope you did well on your exercise and if you have any problems with it I'll be more than happy to
+
+01:24.600 --> 01:26.350
+help you.
+
+01:26.370 --> 01:27.140
+All right.
+
+01:27.300 --> 01:29.790
+We're coming to an end of a productive session.
+
+01:29.790 --> 01:34.220
+And in the next section we're going to dive deep with the rest API.
+
+01:34.890 --> 01:37.840
+So to start 12 unrestful API as with spring.
+
+01:38.070 --> 01:39.420
+I'll see you on the next section.

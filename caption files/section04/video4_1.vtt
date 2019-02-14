@@ -1,0 +1,178 @@
+WEBVTT
+
+00:00.600 --> 00:07.410
+Welcome back to the fundamentals of spring boot in this section we'll be taking a closer look at the
+
+00:07.410 --> 00:10.610
+inner workings of a typical spring Boot application.
+
+00:10.950 --> 00:17.310
+We'll discover how dependency injection works in spring and how the immersion of control principle applied
+
+00:17.790 --> 00:23.880
+down will play spring boot on top of this architecture and link with the spring co-features.
+
+00:23.880 --> 00:29.670
+By doing so we'll get a full grasp on the spring boot way of things and applications that we're going
+
+00:29.670 --> 00:30.390
+to develop.
+
+00:31.510 --> 00:38.280
+Let's get to it and start with the spring boot Application Lifecycle.
+
+00:38.350 --> 00:42.620
+We'll analyze the sort of actions and events in three parts.
+
+00:42.670 --> 00:49.660
+So let's begin with the first part of when you run a standard Java application what basically JVM does
+
+00:49.660 --> 00:55.690
+is if you don't have explicitly provided it with the parameter finds the class with the main method
+
+00:56.080 --> 00:58.450
+and starts everything from there.
+
+00:58.480 --> 01:00.060
+Simple as that.
+
+01:00.070 --> 01:06.160
+On the other hand spring mood way of running an application is after a JVM finds the main class for
+
+01:06.160 --> 01:12.280
+your application to run spring intercepts the process and looks at the type of being configuration you
+
+01:12.280 --> 01:14.050
+use for your application.
+
+01:14.440 --> 01:19.330
+And of course there are two options for you to configure your application.
+
+01:19.350 --> 01:24.890
+You either provide a bean configuration ex-model or just use a Jawa annotation.
+
+01:24.900 --> 01:29.060
+So spring first tries to find any example you have for the beans.
+
+01:29.160 --> 01:36.680
+And if it cannot initializers the context as an annotation configure application context if you have
+
+01:36.680 --> 01:43.460
+used all the wiring in your applications before it also initialized auto wired annotation being passed
+
+01:43.460 --> 01:50.120
+processor so that it can wire all the beans that you need together no it's time to decide if you have
+
+01:50.120 --> 01:57.140
+a web application or anything else if you have a web application then it does prepare a web application
+
+01:57.140 --> 02:02.040
+context after Todrick configurations and deductions.
+
+02:02.040 --> 02:02.680
+Main method.
+
+02:02.700 --> 02:03.720
+Yet some won't.
+
+02:03.750 --> 02:10.560
+And basically the application is being run of course spring internally has a spring application wrongest
+
+02:10.620 --> 02:14.050
+under to see if the application has actually started.
+
+02:14.370 --> 02:18.210
+These listeners are basically observer pattern implementations.
+
+02:20.470 --> 02:25.870
+We now have a running application contacts to be configured more with the environment variables and
+
+02:25.870 --> 02:27.270
+so on.
+
+02:27.410 --> 02:29.390
+That brings us to the second part.
+
+02:29.780 --> 02:35.050
+It's time to search and load application up properties files so that we can initialize the where is
+
+02:35.060 --> 02:42.890
+application parameters such as the app name so report database connection information at Sudra spring
+
+02:42.890 --> 02:49.600
+then injects these to the desired variables and context and when it finished preparing all in one moment
+
+02:49.910 --> 02:54.270
+it fires another event saying that the environment is prepared.
+
+02:54.320 --> 03:00.170
+Spring application run list and are observed these events and moves forward with some more contextual
+
+03:00.170 --> 03:01.760
+actions.
+
+03:01.800 --> 03:08.150
+One of the interesting things that it does is preparing the banner and printing it out to the console.
+
+03:08.430 --> 03:14.900
+After doing some side work like preparing banner sprinklered now bood up the main application context.
+
+03:15.140 --> 03:21.020
+This is the spot where all your beans although wirings and injections become actually meaningful and
+
+03:21.020 --> 03:23.320
+ready to be used by your implementation.
+
+03:24.150 --> 03:29.610
+This is where the dependency injection principle gets applied souping does it so elegantly.
+
+03:29.610 --> 03:33.830
+All you have to do is annotate your dependencies just as we discussed earlier.
+
+03:34.790 --> 03:38.280
+Whenever spring finishes rire and all the beans up it far.
+
+03:38.300 --> 03:40.990
+Another event to say that the context is ready.
+
+03:42.810 --> 03:44.730
+That brings us to the last part.
+
+03:44.850 --> 03:51.540
+Now application wrongest and or knows that the context is loaded and ready in order to be a failsafe
+
+03:51.540 --> 03:54.370
+mechanism before running your own code.
+
+03:54.450 --> 04:00.270
+Spring refreshes the context that it created and make some final touches to the wiring and inject since
+
+04:00.450 --> 04:07.360
+basically fixes any missing components into context whenever refreshing ends that fires up the finished
+
+04:07.420 --> 04:07.800
+event.
+
+04:07.810 --> 04:09.210
+And here we are.
+
+04:09.550 --> 04:13.410
+Now you have a fully running application ready to be interact with.
+
+04:13.720 --> 04:19.060
+As you can see Sprint took over the control of preparing and configuring everything bottom to the top
+
+04:19.390 --> 04:22.610
+and we basically inversed to control over to spring.
+
+04:22.720 --> 04:26.660
+That's the main philosophy behind inversion of control mechanism.
+
+04:26.710 --> 04:31.450
+You get the control over to spring and it literally takes care of everything.
+
+04:31.510 --> 04:35.280
+That concludes our spring Boot application lifecycle.
+
+04:35.290 --> 04:40.240
+Now let's move on to the next section where we talk about dependency injection in detail.

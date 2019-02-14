@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00.360 --> 00:04.910
+Now let's take a moment to overview what we learned in the section up until now.
+
+00:05.970 --> 00:12.410
+In this section we have created our very first spring application to get it done.
+
+00:12.420 --> 00:18.030
+We've taken advantage of spring initialiser which helps us pick and choose what we want to include in
+
+00:18.030 --> 00:19.820
+our application very easily.
+
+00:20.700 --> 00:28.350
+We also discovered another way of creating our application and that was start at Spring Daddy-O We are
+
+00:28.350 --> 00:34.590
+taking a closer look at how to work with Mavin and how to clean install and build our application with
+
+00:34.590 --> 00:35.060
+it.
+
+00:35.430 --> 00:39.100
+And of course we're going to be using it more as we move along.
+
+00:40.040 --> 00:46.880
+With Mavin we bundled our application as a runnable Jeal file of course spring boot enabled us to do
+
+00:46.880 --> 00:47.670
+that.
+
+00:48.140 --> 00:53.450
+And finally you had an assignment to create your own spring Boot application.
+
+00:53.450 --> 01:00.640
+I hope you did well on your first application and ready to move onto the next chapter if you have any
+
+01:00.640 --> 01:03.560
+concerns or questions regarding your exercise.
+
+01:03.640 --> 01:07.040
+Please contact me about your problem and I can help you with it.
+
+01:08.110 --> 01:14.410
+To talk more on fundamentals of spring boom and the lifecycle of a typical springboard application I'll
+
+01:14.410 --> 01:15.640
+see you on the next section.

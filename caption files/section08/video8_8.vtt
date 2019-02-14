@@ -1,0 +1,292 @@
+WEBVTT
+
+00:01.420 --> 00:09.920
+Now let's take an overview of what we've done what we've implemented in this application in this application.
+
+00:09.920 --> 00:12.830
+We created a spring Boot application.
+
+00:12.950 --> 00:20.780
+And within that application we made use of spring data spring timely and of course for our application
+
+00:20.780 --> 00:30.220
+container we made use of spring web and after that we created ourselves a data loader and within that
+
+00:30.220 --> 00:38.620
+data loader we connected to our repository and after that when we run our application we created two
+
+00:38.620 --> 00:45.820
+products and saved them to our upholstery so that we can instantly have two products ready for us to
+
+00:45.820 --> 00:56.700
+serve our users and for that product we use a product model and market it at an entity which end up
+
+00:56.700 --> 01:04.130
+product we had fields like ID name description type category and price.
+
+01:04.250 --> 01:13.160
+And after that we moved on to creating our actual application UI and for doing that we started off with
+
+01:13.220 --> 01:14.240
+a head.
+
+01:14.300 --> 01:21.620
+A shot himself while within that header not aged himself while we first started with timely namespace
+
+01:21.800 --> 01:32.270
+which is ex-MIL name splays and T-H and after that we said we are using the Content-Type as a T.M. and
+
+01:32.270 --> 01:35.700
+then we included bootstrap into our application.
+
+01:35.900 --> 01:42.870
+And the way that we do it was with the bootstrap web jar with this dependency.
+
+01:43.110 --> 01:50.350
+And after that in our head down to himself while we referenced it our bootstrap web jar.
+
+01:50.760 --> 01:58.690
+And we also provided a full back method fallback ref for bootstrap mean that CSSA as you can see here.
+
+01:59.070 --> 02:08.140
+And we made it explicitly for screen so that any kind of DeWyze can automatically be adjusted with bootstrap.
+
+02:08.260 --> 02:16.720
+And after the bootstrap initialization we provided our own style sheet and within that style sheet if
+
+02:16.720 --> 02:24.590
+we go there we provided a couple of adjustments for our navigation bar.
+
+02:24.810 --> 02:32.800
+And if we go back to our head up a DML after we've finished our head actions in the body we created
+
+02:32.800 --> 02:40.110
+a couple of divisions and after that we actually started creating all navigation within our navigation.
+
+02:40.110 --> 02:44.830
+We had a homebuilder as the bigger one from the other ones.
+
+02:47.750 --> 02:54.530
+This humbug and as you remember was now getting us back to our actual initial page.
+
+02:54.780 --> 03:02.940
+And we also had two other buttons in the section in this navigation section and those were products
+
+03:03.090 --> 03:10.280
+and create product buttons and those we're again referring us back to other parts of our application.
+
+03:11.310 --> 03:20.840
+And after our navigation we had a Jumbotron from Bootstrap and you remember that Jumbotron was the indicator
+
+03:20.840 --> 03:26.600
+of an important content within your application within this Jumbotron.
+
+03:26.600 --> 03:35.060
+We used a H-2 header tag for spring and we see application text and after that we use the pubertal Java
+
+03:35.060 --> 03:41.810
+spring logo pian GMH so that we can have a nice weasel on our application.
+
+03:42.010 --> 03:52.020
+And after we set up our initial page it was looking like this if we go back to Firefox we had a page
+
+03:52.020 --> 03:52.980
+like this.
+
+03:52.980 --> 03:57.110
+When you finished our index page and headed up to him.
+
+03:57.800 --> 04:06.670
+If we go back to idea as you remember in our index our age to M-L all we had done was we provided a
+
+04:06.670 --> 04:15.610
+title and within a block statement we included our head up a L so that our navigation and the spring
+
+04:15.630 --> 04:21.670
+and the application text and also the image that we want should be included in every application that
+
+04:21.670 --> 04:24.160
+we had.
+
+04:24.420 --> 04:32.690
+After finishing our index our age DML we moved on to creating a new product page and for that we used
+
+04:32.690 --> 04:39.750
+to edit a shot himself while so that we could use and reuse it when we were developing our product edit
+
+04:39.750 --> 04:44.030
+page in our new product our product edit page.
+
+04:44.070 --> 04:50.550
+We first started with the timely namespace and then we did not forget to add our head.
+
+04:50.720 --> 04:59.340
+Tim elth page and after that we started off with creating a division and class that we use for division
+
+04:59.340 --> 05:01.210
+was container.
+
+05:01.320 --> 05:09.180
+And after that we took an object the product object from the controller and we post that object for
+
+05:09.180 --> 05:14.130
+creating a new product.
+
+05:14.220 --> 05:24.270
+And in this form we used a couple of this and inputs and labels for describing our product details as
+
+05:24.270 --> 05:25.590
+I mentioned earlier.
+
+05:25.710 --> 05:32.350
+We use this page as the edit page to see if we made a good reuse of our age HTML sources.
+
+05:33.970 --> 05:38.150
+And when we finished this page we moved on to our products.
+
+05:38.170 --> 05:41.040
+H Tim L in our products.
+
+05:41.110 --> 05:49.070
+H d m l we again started off with time we've name space and after that we included our heads up a Tim
+
+05:49.060 --> 05:55.650
+L and within our body we started off with a container as the division
+
+05:58.410 --> 06:00.200
+and then we made it timely.
+
+06:00.210 --> 06:08.040
+If check for our products list so that we shouldn't be displaying if the list as empty and after that
+
+06:08.460 --> 06:16.830
+we said we're going to be using the header as all products and within the all products we use a table
+
+06:17.870 --> 06:19.130
+within that table.
+
+06:19.280 --> 06:27.050
+We listed all the properties of our product and in the end of the properties we provided to other headers
+
+06:27.050 --> 06:33.480
+to our columns to our table and those were added and delete for EDID action.
+
+06:33.500 --> 06:43.160
+We used a button the script as default and redirected our click event to product slash edit and slash
+
+06:43.370 --> 06:52.190
+product ID and for our lead action we use the button Venger so that we could have a red button and the
+
+06:52.190 --> 07:02.660
+action for the delete was Products lasht delete slash ID and in our control or we provided the backing
+
+07:02.660 --> 07:10.280
+methods of our application for our index method we provide the default path the initial path of our
+
+07:10.280 --> 07:18.760
+application and we simply return our index stoutish to m l 40 product creation.
+
+07:18.830 --> 07:26.150
+We provided the product slash AB method the get method and within that method we simply turn a new product
+
+07:26.180 --> 07:32.640
+so that we can fill it in with the well use that we provided it to now user interface and then we simply
+
+07:32.640 --> 07:33.940
+return the edit.
+
+07:34.090 --> 07:42.980
+Jim elde that we reuse within the new and edit pages and after that we provided the same method the
+
+07:43.130 --> 07:48.150
+pulse method for the form that we created with the new product page.
+
+07:48.500 --> 07:55.490
+And when we finished saving our product to our repository we redirected our users to the initial page
+
+07:55.490 --> 07:56.570
+of our application.
+
+07:56.570 --> 07:57.800
+The index page.
+
+07:58.070 --> 08:05.690
+And after that we created the controller for getting the products and for the products we use these
+
+08:06.050 --> 08:06.990
+products.
+
+08:07.130 --> 08:16.410
+And then we simply add the property to our model with the product repository to find all Methot And
+
+08:16.560 --> 08:23.120
+so that we can return our result to products that HMO while for editing our products.
+
+08:23.240 --> 08:26.570
+We use the products slash edit slash ID.
+
+08:26.960 --> 08:33.320
+And with that ID we could find the product that we're interested in and then we could return the data
+
+08:33.350 --> 08:36.240
+to our edit age ASTM LH.
+
+08:36.460 --> 08:44.060
+And finally we said products slashed Leite slash ID to actually do eat a product.
+
+08:44.440 --> 08:52.030
+And with the idea that we get from the UI we simply go to our repository and to lead it to product and
+
+08:52.030 --> 08:53.320
+round me finish.
+
+08:53.320 --> 09:00.820
+We were directed our users to products listing PH No let's open up our application and navigate around
+
+09:00.820 --> 09:05.360
+it and see all the functionality that we have.
+
+09:05.370 --> 09:12.630
+So I'm switching to Firefox and we have the index page as this for our application.
+
+09:12.810 --> 09:20.610
+We have the navigation on top and we have the Jumbotron right below that 40 products list thing.
+
+09:20.680 --> 09:26.740
+We had the products button the navigation here and when we clicked that we had all the products listed
+
+09:26.740 --> 09:32.210
+for us and in the last section of our table we had two buttons.
+
+09:32.370 --> 09:40.170
+We had it and we have delete them we clicked edit we could see the details of our product and we could
+
+09:40.170 --> 09:42.320
+simply update it with the same one right.
+
+09:42.330 --> 09:50.260
+We have here and if we go back to our products this thing we also had to delete button and use that
+
+09:50.290 --> 09:57.480
+leap button we could simply delete the product that we're interested in and if we also wanted to create
+
+09:57.510 --> 10:04.370
+a new product we could use to create product one that we have here if we clicked on it.
+
+10:04.700 --> 10:09.580
+We're presented with the edit details page with MTA list of properties.
+
+10:09.650 --> 10:16.530
+Now we could simply fill in the properties and then say to create a new product.
+
+10:16.620 --> 10:22.140
+This has been a great product application the embassy application that we do all up here and I hope
+
+10:22.140 --> 10:23.760
+you really enjoyed it.
+
+10:24.000 --> 10:25.370
+And in the next with you.
+
+10:25.530 --> 10:28.400
+Let's talk about the exercise that you're going to develop.

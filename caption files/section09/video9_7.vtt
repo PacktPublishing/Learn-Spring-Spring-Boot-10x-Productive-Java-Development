@@ -1,0 +1,76 @@
+WEBVTT
+
+00:01.090 --> 00:08.970
+Now let's take a moment to overview what we learn in this extra section in this section.
+
+00:09.000 --> 00:15.980
+We've discovered some real co-features and projects that we can make use of in our own projects.
+
+00:16.020 --> 00:22.370
+We started off at Spring dev tools and we reload with Springdale tools and especially with the little
+
+00:22.380 --> 00:26.590
+plug in on top of it you could really simplify your development workflow.
+
+00:29.170 --> 00:35.860
+With a simple ID configuration and dependencies you can make any kind of change in your project and
+
+00:35.860 --> 00:41.630
+see the results instantly without restarting your whole application.
+
+00:41.650 --> 00:48.460
+Then we started documenting our API with swagger with swagger and a little bit of a configuration you
+
+00:48.460 --> 00:55.060
+could have real great working API documentation where you can even make your request and Syria but
+
+00:57.960 --> 01:05.310
+next we included spring actuator in our project and gain lots of great points for our application inherently
+
+01:06.670 --> 01:12.190
+actual endpoints were to give useful insights and metrics to our production applications.
+
+01:13.690 --> 01:19.360
+Down we scheduled our actions with spring scheduler so that we could have a separate thread for running
+
+01:19.360 --> 01:21.950
+some background actions for our application.
+
+01:23.720 --> 01:31.280
+We also got rid of some boilerplate code in our application we had project Lombok Lombok library we
+
+01:31.280 --> 01:37.280
+could simply annotate our class and how good are setters constructors much more without even writing
+
+01:37.280 --> 01:38.580
+a single line of code.
+
+01:40.440 --> 01:47.490
+We also used Time Wave and springs e-mailing to regenerate and send them all five templates and e-mails.
+
+01:47.670 --> 01:53.460
+That was also a great combination of what we learned with time leave and added mailing ability on top
+
+01:53.460 --> 01:54.020
+of it.
+
+01:55.380 --> 02:00.910
+With this extra section we did a great job of getting other libraries and projects that we can use within
+
+02:00.910 --> 02:02.160
+our applications.
+
+02:02.320 --> 02:08.500
+Those which make things tremendously easy for certain and even repetitive tasks that we have to do every
+
+02:08.500 --> 02:13.630
+day we learned a lot and covered a lot.
+
+02:13.660 --> 02:19.060
+I hope you enjoyed this extra section and highly encourage you to use them in your own projects to see
+
+02:19.060 --> 02:20.360
+the difference they make.
+
+02:21.670 --> 02:26.250
+To conclude and rough up our training I'll be seeing you in the next section.

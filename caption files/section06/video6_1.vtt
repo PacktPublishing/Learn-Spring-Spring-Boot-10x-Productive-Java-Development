@@ -1,0 +1,121 @@
+WEBVTT
+
+00:00.540 --> 00:07.440
+Welcome to spring data in this section we're going to dive into the amazing world of spring data spring
+
+00:07.440 --> 00:13.020
+data is one of the most active projects of spring family with spring data.
+
+00:13.080 --> 00:20.500
+You can connect to and use any database you want bring data is basically a wrapper around the JPA.
+
+00:20.500 --> 00:27.070
+The Jella persistence API spring takes all the base functionality from JPA and builds on top of it with
+
+00:27.070 --> 00:29.620
+its own way the simplicity.
+
+00:29.620 --> 00:34.630
+Now let's talk about the highlights of spring data and how we're going to use it.
+
+00:36.150 --> 00:39.980
+Spring data is an abstraction on top of Joe persistence API.
+
+00:40.500 --> 00:46.650
+As we said earlier spring data wraps around the JPA takes away the complexity of transaction managers
+
+00:46.830 --> 00:54.390
+and city managers and simplifies all the process of data persistence with a regular JPA backed application.
+
+00:54.420 --> 00:59.300
+You should explicitly say that you want to begin transaction before you can actually commit something.
+
+00:59.370 --> 01:04.570
+And of course you should also end the transaction that was started manually in each and every statement
+
+01:06.500 --> 01:13.430
+when data is a powerful repository and allows custom object mapping abstractions.
+
+01:13.470 --> 01:18.510
+What this means is that spring data handles all the transaction management for you.
+
+01:18.510 --> 01:25.380
+All you have to do is create an interface for your repository and define your entities with proper annotations.
+
+01:25.620 --> 01:32.130
+And so being takes care of managing the complexity so you can code to a repository and have your types
+
+01:32.130 --> 01:41.060
+cast it and on casts it automatically spin data allows dynamic query creation from repository interface
+
+01:41.090 --> 01:42.490
+method names.
+
+01:42.500 --> 01:45.900
+This is a very very powerful feature of spring data.
+
+01:45.950 --> 01:48.770
+You can just create an interface for your repository.
+
+01:48.770 --> 01:53.440
+And of course annotated as a repository and write are abstract methods.
+
+01:53.450 --> 01:59.780
+Just like a query into creating repositories an entity section will dig into that and I'll show you
+
+01:59.780 --> 02:01.980
+how you can make use of this great feature.
+
+02:03.020 --> 02:08.810
+Spring data allows you to implement domain based classes with their basic properties as you've discussed
+
+02:08.810 --> 02:10.500
+with the repository earlier.
+
+02:10.550 --> 02:16.160
+You can simply annotate your entities and hold them created for you by spring Deda will also do that
+
+02:16.160 --> 02:16.610
+a lot.
+
+02:16.610 --> 02:23.440
+When we start our implementation spring data also allows custom repository management.
+
+02:23.730 --> 02:29.010
+What this means is that if you think you need a very specific action that you want to apply other entities
+
+02:29.820 --> 02:35.400
+for example you need to build a very complex query and you found out that Spindler can't do it all by
+
+02:35.400 --> 02:35.960
+itself.
+
+02:36.030 --> 02:43.700
+So you can create a custom query very easily within the notation souping data also allows you to implement
+
+02:43.910 --> 02:45.740
+cross-talk persistence.
+
+02:45.830 --> 02:51.230
+So it basically means that you can manage multiple repositories at the same time with the same repository
+
+02:51.230 --> 02:56.640
+code and with a little bit of configuration.
+
+02:56.770 --> 02:59.660
+This is a long list of useful features for spring Deda.
+
+02:59.680 --> 03:03.030
+But in fact Spindler can do much more than that.
+
+03:03.040 --> 03:09.490
+These are just the highlights all right we've gained a good amount of knowledge and spin data and will
+
+03:09.490 --> 03:14.170
+definitely use these awesome features within our code in the following videos.
+
+03:14.170 --> 03:20.100
+So to talk about the databases that we're going to use for our implementations which is H-2 I'll see
+
+03:20.110 --> 03:20.980
+on the next video.

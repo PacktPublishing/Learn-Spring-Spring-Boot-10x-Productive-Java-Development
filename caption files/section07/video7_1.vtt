@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.450 --> 00:08.190
+In this section we will discover the world of recipes Ryssdal AP eyes have been industry standard for
+
+00:08.190 --> 00:13.710
+a very long time now and that's because it's being a set of design criteria not the physical implementation
+
+00:13.710 --> 00:14.940
+itself.
+
+00:14.940 --> 00:17.710
+Let's talk about what is race and its offerings.
+
+00:19.170 --> 00:26.840
+Rest is the relation of representational state transfer are from representational as from state.
+
+00:26.850 --> 00:28.560
+And of course from transfer
+
+00:31.860 --> 00:35.120
+rest is an architectural style for the web.
+
+00:35.130 --> 00:40.950
+What this says is as we talked about earlier Remote Procedure calls or soap based architecture days
+
+00:40.950 --> 00:47.300
+are over and rest is the standard now rest is not an implementation or a library that you can add to
+
+00:47.300 --> 00:49.270
+your project and use right away.
+
+00:50.310 --> 00:52.650
+It's rather a set of design areas.
+
+00:54.080 --> 01:01.880
+Rest is not tied to weap meaning that you don't even need a shitty P-T use rest but nearly all the applications
+
+01:01.880 --> 01:04.120
+you see on the Web today are respect.
+
+01:06.090 --> 01:12.710
+Rust architectures are defined depending on the resource they represent a resource should be important
+
+01:12.710 --> 01:21.870
+enough to be represented all by itself a resource can be a document and a role of a database or even
+
+01:21.870 --> 01:24.080
+the output of an algorithm.
+
+01:25.450 --> 01:32.830
+Recipes are defined around your eyes and your eye is a Uniform Resource indicator so a resource to be
+
+01:32.830 --> 01:36.980
+defined on the rest should have at least one you or I.
+
+01:37.120 --> 01:42.320
+If there is no cure why don't we simply cannot talk about a resource.
+
+01:42.350 --> 01:47.230
+Your eyes should be descriptive and human readable as we see in these examples.
+
+01:49.570 --> 01:55.660
+It started as a best practice to have some of your eyes as query parameters meaning that they should
+
+01:55.660 --> 02:04.860
+be optional for your requests and see how the query parameter example ridable as you can tell with just
+
+02:04.860 --> 02:06.020
+as example.
+
+02:06.150 --> 02:11.070
+Your eyes must be descriptive and easy to read when it comes to any client that will face rest.
+
+02:11.080 --> 02:14.180
+Interfaces fluoresce interfaces.
+
+02:14.250 --> 02:18.080
+Again the key abstraction of information is a resource named by a.
+
+02:18.090 --> 02:19.140
+You or I.
+
+02:19.260 --> 02:21.900
+Any information that can be named can be a resource
+
+02:24.900 --> 02:29.590
+every HTP request happens within a complete isolation from another.
+
+02:29.700 --> 02:30.620
+With this case.
+
+02:30.720 --> 02:36.510
+So we're never relies on the information passed in the previous request and there is no ordering of
+
+02:36.510 --> 02:38.310
+client requests.
+
+02:38.310 --> 02:43.040
+Whenever a response is generated for a resource then it's returned.
+
+02:43.290 --> 02:47.730
+If the server is trying to implement tracking of states then it should have relevant.
+
+02:47.730 --> 02:49.730
+Your eyes defined to be interacted with.
+
+02:51.610 --> 02:57.430
+All interactions are context free each interaction contains all the information necessary to understand
+
+02:57.430 --> 03:05.180
+a request independent of any request that may have preceded it resources are not data they they're an
+
+03:05.180 --> 03:10.880
+abstraction of how the implementation or data is split up or presentation or consumption.
+
+03:11.870 --> 03:17.990
+The web server must respond to requests by sending a series of bytes in a specific file format in a
+
+03:17.990 --> 03:19.500
+specific language.
+
+03:19.520 --> 03:30.680
+For example you have SML JS on DML PTF PPTA X and Doc X and languages can be English Turkish Spanish
+
+03:30.680 --> 03:33.810
+Portuguese or anything you want.
+
+03:35.660 --> 03:41.630
+Goliath at specific HTP request headers to signal what representation is willing to accept.
+
+03:41.720 --> 03:49.480
+For example you can accept a specific file format for your request or a specific data format and you
+
+03:49.480 --> 03:52.790
+can accept a specific language for your requests.
+
+03:54.320 --> 03:59.830
+Here we have a long list of specifications for resk interfaces and kumu on further.
+
+03:59.840 --> 04:05.180
+We now need to check out the requests methods of H-2 to be slow to understand how restful interfaces
+
+04:05.180 --> 04:08.370
+capture and process these requests.
+
+04:08.390 --> 04:12.560
+So to talk about a request types I'll see on the next video.

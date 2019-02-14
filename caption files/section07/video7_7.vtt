@@ -1,0 +1,508 @@
+WEBVTT
+
+00:00.480 --> 00:08.390
+In this section we're going to be developing our put and point put controller in this pitch control
+
+00:08.390 --> 00:13.030
+or we're going to be receiving an ID as the PATH variable.
+
+00:13.170 --> 00:21.030
+And of course in the requests body we're going to be receiving a product of Geck represented as a Jaisalmer
+
+00:21.030 --> 00:21.910
+strain.
+
+00:22.290 --> 00:27.360
+And with the idea that we receive from the path we're going to look for the product that we're going
+
+00:27.360 --> 00:34.710
+to update and if we find it we're going to update it with the values that we provided within the requests
+
+00:34.710 --> 00:36.090
+body.
+
+00:36.120 --> 00:53.960
+So let's start developing our controller I'll start by public and product update product and then I'll
+
+00:54.130 --> 01:00.500
+fill out our request mapping in our request mapping.
+
+01:00.560 --> 01:05.330
+I'm going to say request Methot dot
+
+01:10.700 --> 01:18.960
+and of course we're going to be using a path and that path variable is going to be ID.
+
+01:19.070 --> 01:20.600
+So it lets they do that now
+
+01:26.540 --> 01:29.570
+and what else do we need.
+
+01:29.570 --> 01:34.670
+We also need to consume a J-Zone formatted string.
+
+01:34.910 --> 01:41.980
+So let's say media type is application underscore Jason underscore well-you.
+
+01:42.080 --> 01:43.090
+All right.
+
+01:43.550 --> 01:50.710
+In the parameters of our update product method we're going to be receiving a request buddy just as we've
+
+01:50.710 --> 01:51.960
+discussed before.
+
+01:52.190 --> 02:00.920
+So let's just say that we're going to be getting a request body and request body is going to be a product
+
+02:00.920 --> 02:11.620
+object and I'm going to name it product to update so that we can reference that what we're going to
+
+02:11.620 --> 02:21.110
+do now we're going to go to our repository and find a product with that ID and then we're going to update
+
+02:21.110 --> 02:21.880
+the product.
+
+02:21.920 --> 02:24.480
+If we found that product with the ID.
+
+02:24.830 --> 02:29.810
+So let's first go to our repository with that ID to do that.
+
+02:29.840 --> 02:31.610
+I'm going to say
+
+02:34.490 --> 02:47.260
+product found product and product repository that find one and the find one method.
+
+02:47.300 --> 02:51.650
+Of course I'm going to be taking ID as the parameter.
+
+02:51.650 --> 03:02.270
+So we are also going to need to say that path variable and a variable is going to be named as ID.
+
+03:02.810 --> 03:05.320
+And it's going to be a string really.
+
+03:05.770 --> 03:07.130
+All right.
+
+03:07.350 --> 03:08.920
+And then to find one method.
+
+03:09.080 --> 03:13.450
+I'm going to provide this ID.
+
+03:13.490 --> 03:14.180
+All right.
+
+03:15.060 --> 03:20.350
+Let's check if we can actually find this product in film product is not.
+
+03:20.350 --> 03:21.920
+No.
+
+03:22.920 --> 03:35.810
+Then we're going to update this product so in this line we found a product so we can update it right
+
+03:35.810 --> 03:37.220
+now.
+
+03:37.220 --> 03:43.250
+Let's say I found a product that said Name
+
+03:46.200 --> 04:00.360
+is going to be product to update get name and then found product that said description is going to be
+
+04:01.230 --> 04:14.670
+product to update get description again found product got said type is going to be product to update
+
+04:14.900 --> 04:21.940
+and get type found product that said category.
+
+04:22.020 --> 04:28.410
+Finally product to update that get category.
+
+04:28.410 --> 04:29.590
+All right.
+
+04:29.790 --> 04:38.660
+We have successfully updated our product in the code and also we should return the product that we updated.
+
+04:38.790 --> 04:49.680
+So to do that I'm simply going to return product that we found within our repository product and in
+
+04:49.680 --> 04:59.380
+the else statement I'm going to say a long statement and there is no product found with this ID.
+
+04:59.610 --> 05:05.990
+So to do that I'm going to create a lager for our products controller.
+
+05:06.170 --> 05:17.110
+So I'm going to say private Logar for s.l 4G and name it as log.
+
+05:17.860 --> 05:26.720
+And then I'll go to a local factory 4G and get lager in the local method.
+
+05:26.830 --> 05:31.470
+I'm going to provide the controller class.
+
+05:31.480 --> 05:44.370
+All right and after that I'm going to go to our L's and LOEG this statement for our status.
+
+05:44.370 --> 06:00.050
+So I'll say no products found with given ID just notify the Consul and I can simply return the product
+
+06:00.050 --> 06:05.970
+to update.
+
+06:05.980 --> 06:13.870
+All right let's test our method in the browser and see what's happening to do that.
+
+06:13.880 --> 06:15.680
+I'm going to run our application
+
+06:24.850 --> 06:26.860
+Our application is starting up right now
+
+06:40.610 --> 06:47.350
+and it's almost crowded up here we go.
+
+06:47.470 --> 06:57.110
+Our application is open running so to update a product we should first need to know an idea of a product.
+
+06:57.140 --> 07:02.970
+So let's first go to our H-2 Council and move from there.
+
+07:03.030 --> 07:06.010
+So I'm going to open up Firefox right now.
+
+07:09.380 --> 07:14.600
+I'll go to my H-2 console locals ADHD slash H-2
+
+07:20.530 --> 07:28.610
+and I'm going to connect to our database in our database we have a product and this product has this
+
+07:28.700 --> 07:35.720
+I.D. So I'm going to use this I.D. within my statement within my put request.
+
+07:35.740 --> 07:38.310
+So let's copy that.
+
+07:38.480 --> 07:43.910
+And then in a new tab I'm going to go to my Rusk client
+
+07:47.480 --> 07:48.840
+and indirect client.
+
+07:48.860 --> 07:59.810
+Now we're going to use the put method and the URL for the method is going to be HTP local Haust ADHD
+
+08:02.650 --> 08:08.710
+and then of course we're going to provide the remaining part of our base API
+
+08:11.490 --> 08:22.770
+and products and after that we're going to be saying that we need to find and update the product with
+
+08:22.770 --> 08:24.840
+the given ID.
+
+08:25.350 --> 08:35.750
+So I'm pasting my ID here and in the body of course we're going to be providing a J sound string and
+
+08:35.760 --> 08:38.340
+in the chase on string I'm going to say
+
+08:44.280 --> 08:47.430
+name is going to be
+
+08:53.900 --> 08:54.470
+you name
+
+08:58.380 --> 08:59.030
+ascription
+
+09:02.200 --> 09:05.960
+is going to be updated description
+
+09:10.210 --> 09:17.300
+and my type is going to be new type
+
+09:21.180 --> 09:36.430
+and finally category is going to be and you category.
+
+09:36.480 --> 09:40.200
+All right we have our song string ready.
+
+09:40.200 --> 09:47.050
+And the last step before we actually send this request we're going to add Jason to our headers.
+
+09:47.340 --> 09:55.020
+So let's go to header's here and a custom header in the custom header as you remember we're going to
+
+09:55.020 --> 10:02.520
+use Content-Type And then as well you were going to use applications like Jason.
+
+10:02.550 --> 10:05.490
+All right I'll click OK.
+
+10:07.080 --> 10:10.970
+And we're now ready to send requests.
+
+10:10.980 --> 10:12.770
+So let's test out our method.
+
+10:12.810 --> 10:17.230
+If it's ok I'll hit send now.
+
+10:18.860 --> 10:19.880
+Here we go.
+
+10:19.880 --> 10:28.900
+We have received HTP 200 which is OK and as you can see Content-Type of the returned object is applications
+
+10:28.900 --> 10:30.560
+last Jaison.
+
+10:30.920 --> 10:35.130
+Now let's take out the response body the roll methods.
+
+10:36.100 --> 10:37.560
+And here we go.
+
+10:37.660 --> 10:45.700
+We have the idea that we requested return to us that is actually found object within our Depository.
+
+10:45.760 --> 10:52.080
+And as you can see we have the new name updated description new type and new category.
+
+10:52.210 --> 10:59.500
+And if we check out the highlight tab right next to it we have a beautiful white version of our updated
+
+10:59.560 --> 11:03.460
+object update a product to verify that.
+
+11:03.460 --> 11:08.970
+Let's just go to our database and see what it looks like.
+
+11:09.250 --> 11:18.640
+I'm going to go to my two console and I'm going to create my statement again and I run it.
+
+11:18.890 --> 11:21.110
+And we have a problem.
+
+11:21.110 --> 11:24.190
+Our object our entity is that updated.
+
+11:24.380 --> 11:25.520
+So what's going on.
+
+11:25.520 --> 11:27.500
+What is wrong with our code.
+
+11:28.010 --> 11:31.640
+Let's go back to intelligence and see what's going on
+
+11:35.020 --> 11:36.240
+in our code.
+
+11:36.550 --> 11:44.260
+We received an I.D. And with that I.D. We're finding the product that we're going to update and after
+
+11:44.260 --> 11:48.230
+we find it we actually set the fields to update it.
+
+11:48.610 --> 11:52.060
+But we have missed an important point.
+
+11:52.300 --> 11:56.620
+We did and saved a product actually into our repository.
+
+11:57.010 --> 11:58.420
+So let's fix this code.
+
+11:58.450 --> 12:01.120
+And how is it working back again.
+
+12:01.120 --> 12:02.080
+All right.
+
+12:02.200 --> 12:11.380
+So in this statement I'm going to say return product repository and say what I'm going to say is the
+
+12:11.410 --> 12:13.250
+product that you've found.
+
+12:13.300 --> 12:20.540
+All right this should solve our problem and we should now see that the product is updated.
+
+12:20.920 --> 12:21.910
+All right.
+
+12:22.570 --> 12:26.380
+Let's rerun our application to see that in effect.
+
+12:32.600 --> 12:34.790
+Our application is starting out now
+
+12:44.570 --> 12:47.220
+and it's almost done.
+
+12:48.400 --> 12:49.260
+Here we go.
+
+12:49.270 --> 12:53.150
+It started up so I'll switch back to Firefox again.
+
+12:54.690 --> 13:00.360
+And I'll go to rest client and I'll make my request again.
+
+13:00.750 --> 13:08.130
+As you remember we updated the fields already and we're ready to make request so I'll send a request
+
+13:08.130 --> 13:09.040
+now.
+
+13:10.580 --> 13:13.780
+Here we go we have 200 again.
+
+13:13.950 --> 13:22.760
+And if we go to the highlight tab you'll see that we have all the field that we need.
+
+13:22.760 --> 13:29.960
+The ID field is null because in the code we just returned the product that we're going to update credentials
+
+13:29.960 --> 13:31.360
+that we use to update.
+
+13:31.460 --> 13:36.270
+So the updated credentials are requests but it doesn't have an ID.
+
+13:36.290 --> 13:37.460
+So it's no.
+
+13:37.610 --> 13:40.190
+But let's take out the database.
+
+13:40.220 --> 13:49.000
+The H-2 cancel so that if we could update the product so I'll go to my H2 console and renew the session
+
+13:55.550 --> 13:58.080
+and I'm reconnecting to my database again.
+
+13:59.350 --> 14:00.480
+Also like my table
+
+14:03.290 --> 14:06.340
+Well our product still not update it.
+
+14:07.360 --> 14:10.120
+Let's take out what we're missing in this implementation.
+
+14:10.780 --> 14:19.860
+And actually what we missed was we forgot to update the ID here because the idea was change when we
+
+14:19.860 --> 14:22.010
+already started our application.
+
+14:22.300 --> 14:30.440
+So let's fix that and copy our new ID from the database and make a request with it.
+
+14:30.850 --> 14:38.850
+So I'll paste the idea that I just copied and I'm ready to send a request.
+
+14:38.900 --> 14:40.380
+Here we go.
+
+14:40.730 --> 14:50.520
+We have the ID name description type and category all set and of course our response status code is
+
+14:50.520 --> 14:51.800
+200.
+
+14:51.840 --> 14:52.590
+All right.
+
+14:52.770 --> 14:56.760
+Let's check out the actual data in our console.
+
+14:57.270 --> 15:02.490
+So I'll recreate our sequel and run it.
+
+15:02.540 --> 15:03.530
+Here we go.
+
+15:03.620 --> 15:10.090
+We have the same ID with new category with updated description new name.
+
+15:10.340 --> 15:15.430
+And of course new type that's easy as that.
+
+15:15.830 --> 15:19.410
+Let's go back to our implementation one more time.
+
+15:19.490 --> 15:26.060
+And in our implementation what we just use this we used a path variable as ID.
+
+15:26.360 --> 15:32.330
+And of course we use the push method always to try to make this request.
+
+15:32.720 --> 15:40.020
+And after that we said we're expecting to consume a application underscore Jason underscore well-you.
+
+15:40.130 --> 15:48.620
+And that was applications last Jason in our update product method we said we're also expecting a request
+
+15:48.620 --> 15:51.640
+body as a product object.
+
+15:51.860 --> 15:59.540
+And of course we didn't forgot to get our path variable after we get all the variables all the data
+
+15:59.540 --> 16:06.980
+that we need from our request we go to our repository and try to find the product with that given ID
+
+16:08.300 --> 16:10.610
+after we find the product.
+
+16:10.730 --> 16:15.320
+We're simply setting all the fields with the product that we're going to update.
+
+16:15.470 --> 16:18.330
+The one that we sent in the request body.
+
+16:18.410 --> 16:19.580
+All right.
+
+16:19.580 --> 16:27.510
+And after we finished setting all the parameters all the instance variables were simply saving our product
+
+16:27.510 --> 16:35.510
+that we update it all right and otherwise were simply printing out to the console that there is no product
+
+16:35.510 --> 16:43.420
+with the given ID and we will simply return the product that we're going to update making a put request
+
+16:43.420 --> 16:51.950
+with spring rest is simple as that you provide the method that requoting to use which you request you
+
+16:51.950 --> 16:53.860
+provide your request mapping.
+
+16:53.960 --> 16:56.650
+You say what you expect with your requests body.
+
+16:56.810 --> 17:03.590
+And of course if you need to you can provide a path variable or multiple of them and then you implement
+
+17:03.590 --> 17:05.180
+your logic.
+
+17:05.380 --> 17:10.000
+That's all there is to know about a to be put with spring rest.
+
+17:10.070 --> 17:14.760
+So I'll see you in the next video where we talk about HTP delete with spring rest.

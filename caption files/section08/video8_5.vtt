@@ -1,0 +1,292 @@
+WEBVTT
+
+00:01.090 --> 00:06.530
+Know it's timed out we create the product listing page so that we can list all the products that we
+
+00:06.530 --> 00:08.580
+have in our repository.
+
+00:08.990 --> 00:15.770
+So for doing that as you'll remember from our previous videos we have said we're going to be referencing
+
+00:15.980 --> 00:21.970
+slash products as the path for our products listing page.
+
+00:22.050 --> 00:27.320
+So to start off with it I'm going to first create the web page for our products list thing.
+
+00:27.900 --> 00:34.280
+And for that I'm going to go to my temples folder and create the products.
+
+00:34.350 --> 00:38.330
+A simple file within that 20:00 file.
+
+00:38.490 --> 00:44.080
+I'll start off at the time we've ex-MIL namespace for that.
+
+00:44.090 --> 00:47.340
+Again I'm going to use XML namespace.
+
+00:47.380 --> 01:02.990
+TH And then I'm going to say HTP slash slash WW time we've got Oracle in the hat again.
+
+01:03.160 --> 01:10.630
+I'm going to provide the page language as English and as you remember from the previous videos we don't
+
+01:10.630 --> 01:17.800
+need Diomed attack here because we have it on other pages that we reference from this page.
+
+01:17.800 --> 01:28.250
+So for that I'm going to provide the title as products and to include our header within our products
+
+01:28.250 --> 01:29.540
+listening page.
+
+01:29.600 --> 01:32.760
+I'm going to provide a PH block.
+
+01:33.100 --> 01:42.620
+But in that blog I'm going to use th include and that includes is going to be calling my header.
+
+01:42.630 --> 01:45.100
+All right.
+
+01:45.230 --> 01:53.120
+Now let's move on to our body part and start actually developing our Web page in our body.
+
+01:53.120 --> 02:01.910
+I'm going to first create a division and the class for that division is going to be container in that
+
+02:01.910 --> 02:13.070
+division I'm going to say I'll be having a product's objects that is going to be a list of products.
+
+02:13.180 --> 02:22.090
+So before I even display this table in the UI I first have to check it with the th if statement and
+
+02:22.330 --> 02:25.450
+use some special elements of time leave.
+
+02:25.510 --> 02:36.220
+So for doing that I'll say th f and then I'm going to provide my statement and that statement is going
+
+02:36.220 --> 02:51.850
+to be like dollar and not so the West's got is empty is going to be products object.
+
+02:51.870 --> 02:58.080
+So in this statement I'm checking if the products that I receive from the request mapping the controller
+
+02:58.350 --> 03:00.590
+is empty if that's empty.
+
+03:00.600 --> 03:06.430
+Dan I'm completely avoiding this thing with display in the UI.
+
+03:06.930 --> 03:15.930
+So let's assume that we have our products received from our backend and then we'll start by and to tack
+
+03:16.260 --> 03:17.840
+in that a stack.
+
+03:17.910 --> 03:19.950
+I'm going to say all products
+
+03:23.370 --> 03:24.300
+right below that.
+
+03:24.300 --> 03:27.810
+All products header.
+
+03:27.950 --> 03:38.480
+I'm going to say I'll have a table and that table is going to be classed as table and table Dasch striped
+
+03:41.730 --> 03:48.040
+destroyed glass is going to provide a nice way as the strifes around my table.
+
+03:48.850 --> 03:56.260
+So for my table I'm going to be providing some table rows within that table rows.
+
+03:56.290 --> 04:06.550
+I'm going to be providing my table headers first table header that I'm going to provide as the ID and
+
+04:06.550 --> 04:19.210
+after that I'm going to provide my product name and the next up as the description.
+
+04:19.970 --> 04:25.420
+After that I'm going to provide the type of my product
+
+04:29.520 --> 04:33.150
+and the next one is category
+
+04:36.210 --> 04:41.910
+and then I have my prize as the final part of my table.
+
+04:42.270 --> 04:46.650
+So now I can actually move on to the data on my table.
+
+04:46.650 --> 04:54.840
+So for doing that I'm going to create another table row and within that table row I'm going to iterate
+
+04:54.840 --> 05:01.980
+through all the products that I have from my repository or from my control or so forth that I'm going
+
+05:01.980 --> 05:08.850
+to use the iterator of time sleep and which is th's each within that teach each.
+
+05:08.850 --> 05:11.730
+This is like the for statement in Jalla.
+
+05:11.850 --> 05:16.630
+So you can write a natural query for your loop strategy.
+
+05:17.410 --> 05:21.700
+So for our purpose I'm going to say each product in
+
+05:24.680 --> 05:34.790
+products that I'm going to receive from my controller and then I'm going to say table data is going
+
+05:34.790 --> 05:41.660
+to be th text and that text is going to be dollar
+
+05:44.960 --> 05:48.380
+product and ID
+
+05:52.620 --> 06:00.480
+after that I'm going to be providing my other table data which is product name.
+
+06:00.570 --> 06:07.390
+So for that I'm going to use product that name.
+
+06:07.450 --> 06:15.850
+All right for of course the naming of that I'm going to be providing ID for the first field and for
+
+06:15.850 --> 06:24.850
+the second field I'm going to say this is the name pre-lit for the third one I'm going to say Gawler
+
+06:25.660 --> 06:31.960
+and product that description
+
+06:38.140 --> 06:44.680
+and of course this is going to be fallback if we can't what is the product.
+
+06:44.680 --> 06:50.610
+And after that I'm going to be providing the type of my product.
+
+06:50.650 --> 06:55.390
+So for saying that I'm going to use product
+
+06:59.470 --> 07:01.000
+dot type
+
+07:03.730 --> 07:12.500
+and for the fallback I'm going to say this is the type and 4-D category.
+
+07:12.880 --> 07:21.670
+I'm going to say dollar and product got category
+
+07:25.910 --> 07:33.510
+and for the last one I'm going to be providing the private data of my products.
+
+07:33.590 --> 07:42.050
+So for doing that I'm going to say product got price
+
+07:44.970 --> 07:48.390
+for the full back I'm going to say this is price.
+
+07:48.600 --> 07:53.970
+And one of all that is category.
+
+07:54.060 --> 07:54.850
+All right.
+
+07:56.550 --> 08:04.380
+We're almost finished with our table but before we move on to checking it out in UI we first have to
+
+08:04.380 --> 08:06.290
+create our controller for it.
+
+08:07.660 --> 08:15.070
+To create our controller I'm going to move on to my controller class and there I'm going to create a
+
+08:15.070 --> 08:19.180
+new request mapping that request mapping.
+
+08:19.330 --> 08:22.980
+I'm going to be returning all products.
+
+08:23.080 --> 08:31.270
+So my method is going to be get all products and within my method I'm going to be taking a model so
+
+08:31.270 --> 08:38.900
+that I can return it back to you why with all the products that I have from my repository so to say
+
+08:39.260 --> 08:47.660
+I'll say model that attribute and then I'm going to name this attribute as products and then I'm going
+
+08:47.660 --> 08:53.620
+to my product repository and I'll say find all.
+
+08:53.690 --> 08:54.930
+Simple as that.
+
+08:55.430 --> 08:59.870
+And then I'm going to be returning my products page.
+
+08:59.880 --> 09:03.860
+So I'll say return products.
+
+09:03.860 --> 09:05.910
+Simple as that.
+
+09:05.960 --> 09:10.540
+So that's also at the request mapping for this controller.
+
+09:10.730 --> 09:22.520
+And I'm going to say that there's going to be slash products and the method that I'm going to use for
+
+09:22.520 --> 09:26.600
+this method is going to be yet.
+
+09:26.870 --> 09:29.250
+All right.
+
+09:29.500 --> 09:33.780
+We're now ready to test our products listing page.
+
+09:33.780 --> 09:37.180
+So for doing that I'll first restart our application
+
+09:43.570 --> 09:46.660
+Our application is starting up now.
+
+09:46.880 --> 09:50.060
+And here we go.
+
+09:50.140 --> 09:54.880
+Let's go to our browser and check it out for.
+
+09:55.030 --> 10:01.050
+I'm opening up the Firefox and I'll refresh my application.
+
+10:01.090 --> 10:03.020
+Here we go.
+
+10:03.040 --> 10:09.960
+So now if we click our products button right now our navigation here we go.
+
+10:10.620 --> 10:17.310
+We now all the products that we have in our eyeballs literalistic right here with the ID field with
+
+10:17.310 --> 10:24.420
+the name description type category and a price just as we expect it.
+
+10:25.870 --> 10:30.100
+We're now finished with the product listing page ovine application.
+
+10:31.230 --> 10:37.320
+In the next video we're going to be taking a look at updating our product and actually implementing
+
+10:37.320 --> 10:37.940
+it.
+
+10:38.070 --> 10:39.510
+So I'll see in the next video.

@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.470 --> 00:06.300
+All right I think you get the idea here as to what spring is and what it solves.
+
+00:06.600 --> 00:09.390
+But did we solve our problems.
+
+00:09.390 --> 00:09.930
+Not quite.
+
+00:09.930 --> 00:16.860
+Actually we're still a couple and dependent on application containers to actually have a running application
+
+00:17.750 --> 00:20.700
+that's where spring comes into picture.
+
+00:20.700 --> 00:24.910
+Let's take a look at subring boot and what it does.
+
+00:24.940 --> 00:30.130
+Let's assume that you have a spring application that has worthless components.
+
+00:30.930 --> 00:38.190
+We're already drowned in the configuration of SML files and all that stuff we might have spring security
+
+00:38.280 --> 00:41.020
+spring data spring and we see and so on.
+
+00:41.310 --> 00:45.900
+But how are we going to deploy this and how are application running.
+
+00:46.140 --> 00:51.960
+Well as you're most probably familiar with the concept that we have to fire up an application server
+
+00:52.500 --> 00:58.770
+JBoss or glass fish or something else then we have a deployment descriptor for all of our different
+
+00:58.770 --> 01:01.520
+kind of application components.
+
+01:01.530 --> 01:09.420
+Next step is to deploy our application archive and what will be either a web archive or an ear which
+
+01:09.420 --> 01:16.270
+is an enterprise archive and have it up and running oh gosh look at all these steps.
+
+01:16.280 --> 01:19.220
+No no no big no.
+
+01:19.220 --> 01:21.010
+Why bother with all that stuff.
+
+01:22.010 --> 01:28.410
+For your application you already have the foundation with sping framework at the spring boot on top
+
+01:28.410 --> 01:30.730
+of it just as pictured in the diagram.
+
+01:30.780 --> 01:37.110
+And here you have it you have an application that doesn't require any kind of applications for or even
+
+01:37.110 --> 01:38.820
+a startup configuration.
+
+01:38.910 --> 01:43.460
+Imagine that simply executing a jar file to run you over applications.
+
+01:43.620 --> 01:44.870
+Isn't that cool.
+
+01:44.880 --> 01:46.270
+It definitely is.
+
+01:46.410 --> 01:52.350
+Spring boot makes it easy to create standalone production grade spring based applications that you can
+
+01:52.350 --> 01:53.880
+just run.
+
+01:53.880 --> 02:00.570
+It also takes an opinionated view of a spinning platform and took part to libraries so you can get started
+
+02:00.570 --> 02:06.970
+with minimal fuss most spring applications need were a little spring configuration.
+
+02:06.980 --> 02:10.160
+That's a really important part of what spring boose has to offer.
+
+02:12.350 --> 02:19.090
+So just to compile a list of highlights for spring boot tremendously easy to create standalone production
+
+02:19.090 --> 02:20.650
+grade applications.
+
+02:20.830 --> 02:22.520
+This is not some marketing keyword.
+
+02:22.570 --> 02:24.730
+This is what really the spring has to offer.
+
+02:24.940 --> 02:30.280
+When we start digging into development you'll see how beautiful and easy to create a functioning and
+
+02:30.280 --> 02:31.780
+resilient application.
+
+02:32.860 --> 02:39.640
+Create and run your application with just in notation Springboro has its own annotations specific application
+
+02:40.000 --> 02:42.770
+mainly at Spring Boot application.
+
+02:42.910 --> 02:49.450
+You annotate a class that you use as a starting point and Sprint considers that a Boot application.
+
+02:49.670 --> 02:57.560
+That said build any kind of application as a single runnable jar file be a command line application
+
+02:57.620 --> 03:02.100
+API get way or a highly complex web application you name it.
+
+03:02.120 --> 03:08.660
+Spring has the ability to combine all these together in a kind of magical way and all you have to do
+
+03:08.660 --> 03:13.330
+is just run the jar file very very little configuration.
+
+03:13.380 --> 03:20.130
+For most applications in earlier sections we discussed how hard it was to work with all those deployment
+
+03:20.140 --> 03:27.140
+descriptors and Exham else while no more unnecessary configuration with spring anymore spin configures
+
+03:27.150 --> 03:29.760
+your application to defaults automatically.
+
+03:29.790 --> 03:33.880
+So in some cases you don't even have to configure anything.
+
+03:33.900 --> 03:34.950
+Isn't that beautiful.
+
+03:36.740 --> 03:41.850
+Spring runs a custom embedded version of tomcat to contain your application.
+
+03:41.870 --> 03:45.530
+This is one of the most important benefits of swing boot itself.
+
+03:45.770 --> 03:51.150
+Having a single runnable job file for all of your application is made possible that way.
+
+03:51.320 --> 03:55.110
+All you have to worry about is your way of implementation.
+
+03:55.280 --> 04:02.810
+Well since brink takes care of almost everything from wiring up the BS to default configurations you
+
+04:02.810 --> 04:07.480
+can use your precious time to focus on the details of your application.
+
+04:07.550 --> 04:10.090
+So now it's time to practice with spring boot.
+
+04:10.220 --> 04:15.470
+But before we do we need to set up our development environment to do that.
+
+04:15.470 --> 04:17.040
+I'll see you on the next section.

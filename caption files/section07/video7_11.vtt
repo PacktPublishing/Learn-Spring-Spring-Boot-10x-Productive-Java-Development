@@ -1,0 +1,355 @@
+WEBVTT
+
+00:00.950 --> 00:08.720
+The last method that we're going to refactor is the method and method as you can see we're receiving
+
+00:08.720 --> 00:11.890
+an ID from our controller from our path.
+
+00:12.240 --> 00:20.160
+And with that ID we're going to our posit Tori and trying to bleed the product that we have.
+
+00:20.170 --> 00:21.230
+All right.
+
+00:21.430 --> 00:28.120
+So let's bring everything from here and move them to our service class.
+
+00:31.730 --> 00:40.850
+And I'm going to create a new method for our lead method and in our case we're not returning anything
+
+00:40.850 --> 00:42.250
+back to our users.
+
+00:42.320 --> 00:43.840
+So our method is void.
+
+00:43.880 --> 00:48.180
+So in our service method we don't have to return anything.
+
+00:48.230 --> 00:49.990
+So I'm going to keep it that way.
+
+00:50.060 --> 00:57.610
+And the lead product is going to be the name of our method in the product method.
+
+00:57.920 --> 01:05.210
+I'm going to be taking a simple string Id just as we did with an out and cruller.
+
+01:05.680 --> 01:11.850
+And in this method I'm simply going to paste everything we have from the control method.
+
+01:12.110 --> 01:19.030
+And in that method we have an unnecessary line we are trying to delete the same product again and again.
+
+01:19.400 --> 01:29.660
+So to get rid of that I'm simply going to refactor here and say I'm going to be deleting my product
+
+01:29.750 --> 01:31.020
+with my ID.
+
+01:31.040 --> 01:38.780
+I didn't get from the controller so I'll simply say product repository that delete all right
+
+01:41.690 --> 01:45.230
+and then switch back to our controller and say
+
+01:48.630 --> 01:53.140
+product service dot product.
+
+01:54.120 --> 01:54.780
+All right.
+
+01:58.280 --> 02:02.870
+We have gone over the basic refactoring of our controller.
+
+02:02.870 --> 02:10.370
+We have proper laid out the model controller and the service method that we're going to take advantage
+
+02:10.400 --> 02:12.700
+with tower controller.
+
+02:12.910 --> 02:20.500
+And as you can see with our application code our controller code our controller code as we're in much
+
+02:20.500 --> 02:25.550
+better looking now and we have of course a couple of things that we can get rid of.
+
+02:25.990 --> 02:32.290
+So in our case we don't make use of the product repository again and as you can see Intel is warning
+
+02:32.290 --> 02:36.360
+us that snow were used so we can easily get rid of that.
+
+02:36.400 --> 02:41.790
+And I'm actually going to do it now so I'll get rid of this line.
+
+02:42.160 --> 02:48.250
+And of course I am going to get rid of the older wiring line.
+
+02:48.280 --> 02:49.450
+Here we go.
+
+02:49.570 --> 02:55.290
+We have much more of a cleaner and cruller methods that we have with our application.
+
+02:55.300 --> 02:56.670
+Doesn't this look better.
+
+02:57.870 --> 03:04.170
+So let's check out what else we can do within our control or within our application so that you can
+
+03:04.440 --> 03:07.540
+act better and work better.
+
+03:07.560 --> 03:15.360
+So in our service class we can take advantage of logging and notify our system admins or anything that's
+
+03:15.360 --> 03:21.480
+going to make use of those low so that everything is low and everything is under direct threat.
+
+03:21.750 --> 03:32.460
+So to do that I'm going to create a s.l 4G logger and of course I'm going to say private lager from
+
+03:32.550 --> 03:41.730
+a cell away and I'll give it to name LUGG and this log or is going to be coming from the logger factory
+
+03:41.790 --> 03:48.240
+of self or J and I'll say lager and product service
+
+03:50.930 --> 03:52.000
+class.
+
+03:52.020 --> 03:59.790
+All right what I'm going to do now I'm going to log every action that we have within our application
+
+04:00.350 --> 04:07.200
+and by doing that I'm also going to be handling the exceptions within my application.
+
+04:07.280 --> 04:11.430
+So let's start by our first method our get product method.
+
+04:11.990 --> 04:19.130
+So in this case our get product method might not find anything within the repository but in that case
+
+04:19.760 --> 04:26.490
+spring doesn't bring us any error any problem within our application with our control response.
+
+04:26.510 --> 04:32.750
+So we're going to actually have to do anything with the exception handling in the get product method.
+
+04:33.200 --> 04:39.500
+But what we can do is we can provide a log statement that we're trying to find the product with a given
+
+04:39.500 --> 04:40.820
+ID.
+
+04:40.820 --> 04:52.070
+So what I'm going to do now is I'm going to say log that info and I can notify the users modify the
+
+04:52.430 --> 04:59.930
+system admin so that I'm trying to find a product from the repository and I can say
+
+05:03.460 --> 05:11.650
+getting the product with a given ID and of course that idea is going to be the idea that I see within
+
+05:11.650 --> 05:12.790
+my method.
+
+05:13.210 --> 05:14.800
+All right.
+
+05:15.030 --> 05:22.780
+And if I go down to our Save product method our same method is much more of an error prone method because
+
+05:23.140 --> 05:30.970
+spring can throw transaction exceptions under concurrency exceptions and much more trouble that we can
+
+05:30.970 --> 05:33.150
+have within our application.
+
+05:33.190 --> 05:38.990
+So to get rid of that I'm going to try and catch the exception that we're going to have.
+
+05:39.220 --> 05:52.700
+So I'm going to say try and I'll move the statement right up there so that I can handle much more better.
+
+05:52.700 --> 05:55.990
+All right I'm going to cut this.
+
+05:56.500 --> 06:04.080
+And and of course I'm going to be taking the product that I have from the repository.
+
+06:04.400 --> 06:11.600
+So I'll say product product to say all right.
+
+06:12.410 --> 06:20.720
+And what I'm going to do is I'm going to be getting the product to say to my property.
+
+06:20.720 --> 06:29.480
+And after that if an exception happens with my code I'm going to catch any exception that I'm going
+
+06:29.480 --> 06:33.920
+to have and I'll say
+
+06:36.920 --> 06:48.700
+log an error this time because we're in the catch statement and I'm going to say an error Kurupt
+
+06:53.190 --> 07:00.610
+during product saving and I can of course provide the stack trace.
+
+07:00.630 --> 07:01.670
+All right.
+
+07:01.830 --> 07:03.210
+So I'll say
+
+07:08.390 --> 07:11.710
+E dot message.
+
+07:11.760 --> 07:12.400
+All right.
+
+07:13.810 --> 07:21.370
+And of course and this line I'm going to say look that info saving
+
+07:24.770 --> 07:35.960
+product and actual That's more than enough and I can provide credit so that there is a interaction going
+
+07:35.960 --> 07:40.920
+on within the backend and in the last line.
+
+07:41.150 --> 07:46.330
+I'm simply going to say and return our product.
+
+07:46.340 --> 07:55.600
+All right and to handle the returning statement better I'm going to say I'll read the product right
+
+07:55.600 --> 08:00.860
+here and then in the last line.
+
+08:01.360 --> 08:10.990
+I'm simply going to be returning a product to say and that product to say is going to be a new product.
+
+08:11.320 --> 08:12.670
+So I'll say
+
+08:17.580 --> 08:18.060
+all right
+
+08:20.720 --> 08:26.180
+and let's go down to our last method which is the update product
+
+08:29.920 --> 08:38.350
+indie product method or going to our Depository and after going to our repository we're trying to get
+
+08:38.350 --> 08:46.770
+a product that we have within our repository with the given ID and after our Altec we're trying to set
+
+08:46.770 --> 08:53.970
+the properties one by one to our product and then we're simply trying to save our product to our repository
+
+08:55.310 --> 09:00.860
+and take care of everything within the null check with this saving process.
+
+09:00.860 --> 09:03.960
+I'm going to use try and catch statements.
+
+09:04.460 --> 09:15.650
+So I'll say try and within this try I'm not going to use the mall anymore because if a now takes place
+
+09:15.770 --> 09:25.490
+and then I'm going to be taking throwing an exception so I'll print it out so I'll copy all these lines
+
+09:25.490 --> 09:38.420
+right down low and I'm going to also catch the error that I'm going to have and I'll say exception.
+
+09:38.440 --> 09:39.780
+All right.
+
+09:40.060 --> 09:52.450
+So I can get rid of the statements right here and I can simply say that I'm going to be having a problem
+
+09:52.450 --> 09:54.140
+with my application.
+
+09:54.310 --> 10:03.160
+And of course this level of logging is going to be error and I'll say an error.
+
+10:03.370 --> 10:04.560
+Awkward.
+
+10:08.620 --> 10:13.020
+During the update product
+
+10:15.630 --> 10:25.970
+and of course I'm going to print the stack trace message that I have with the exception and also I'm
+
+10:25.970 --> 10:31.730
+going to be getting rid of the logging statements right here.
+
+10:34.290 --> 10:41.690
+And let's check out what else we can do with our application method.
+
+10:42.340 --> 10:44.840
+Let's get rid of the empty lines.
+
+10:46.210 --> 10:47.520
+And it looks good.
+
+10:48.900 --> 10:52.040
+We have everything we can do with this method.
+
+10:52.140 --> 10:56.490
+And let's go down to our delete method in our sweep method.
+
+10:56.610 --> 11:02.100
+We're trying to simply delete the object within ID from our repository.
+
+11:02.100 --> 11:08.020
+So to cover that much more better because we can have problems with tile repository.
+
+11:08.040 --> 11:17.270
+I'm going to move this to my try and catch statements and I'm going to handle it.
+
+11:17.680 --> 11:28.400
+And after the trying I'm going to say exception and I was the exception.
+
+11:32.370 --> 11:33.250
+An error
+
+11:36.090 --> 11:48.530
+during the meeting or product and of course I'm going to provide the exception and the message that
+
+11:48.530 --> 11:50.950
+I have with that exception.
+
+11:51.800 --> 11:52.370
+All right
+
+11:55.170 --> 11:59.780
+let's switch back to our controller and take a look.
+
+12:00.850 --> 12:05.690
+And as you can see we have much more of a cleaner looking controller.
+
+12:05.690 --> 12:13.040
+After couple of refactoring couple of minutes that we take to our controller we could have a much better
+
+12:13.040 --> 12:16.570
+problem handling within our controllers within our application.
+
+12:18.050 --> 12:24.670
+And we now have a full fledged controller that we can use within our applications within our environments
+
+12:26.030 --> 12:31.880
+and to make use of this controller to make use of this application in the next video we're going to
+
+12:31.880 --> 12:38.360
+be talking about the rest template from spring so that we can programmatically make requests to our
+
+12:38.360 --> 12:41.150
+controllers within this application.
+
+12:41.150 --> 12:42.650
+So I'll see in the next video.

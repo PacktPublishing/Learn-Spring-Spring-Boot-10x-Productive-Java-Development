@@ -1,0 +1,193 @@
+WEBVTT
+
+00:01.100 --> 00:09.260
+End this section we're going to be taking a look at spring down tools and we reload death tolls and
+
+00:09.450 --> 00:16.550
+we're reload when combined together are great do all the power tools when you actually developing web
+
+00:16.550 --> 00:19.870
+applications and any kind of spring applications.
+
+00:21.570 --> 00:28.410
+Their tools provides you the software capabilities that you can instantly change the application behavior
+
+00:29.070 --> 00:36.980
+and liberal out simply an extension of that in the browser so that you can see your changes that way.
+
+00:38.700 --> 00:47.050
+To show you how it works I'm going to be making use of our spring and we see application for doing that.
+
+00:47.070 --> 00:50.340
+I'm simply going to open up my spring and we see application
+
+00:55.750 --> 00:59.180
+and can make use of spring day tools and we reload.
+
+00:59.260 --> 01:01.370
+We have to do a couple of things.
+
+01:01.420 --> 01:09.340
+First we have to get the spring daybed tools dependency and for that I'm going to open up Firefox and
+
+01:09.640 --> 01:21.100
+go to maybe a repository and I'll say Mayrant repository and into maybe a repository.
+
+01:21.380 --> 01:24.680
+I'm going to be looking at spring day Tilse
+
+01:27.590 --> 01:40.200
+And here we have it and let's get the latest version which is 1.5 to and I'm going to copy dependency
+
+01:40.460 --> 01:50.940
+and switch back to my ID and in my palm file I'm going to add it right below the trap door.
+
+01:52.030 --> 01:52.790
+Here we go.
+
+01:52.940 --> 02:01.890
+We have our own tools dependency and Maybin as a result when you're right now to make use of their tools.
+
+02:02.030 --> 02:10.790
+We have to be enabling hot swapping in our ID and for doing that in the intelligence we have to be making
+
+02:10.790 --> 02:13.800
+a change in the registry of the application.
+
+02:13.910 --> 02:23.590
+So to do that I'm going to be searching for the registry and I'll use command shift and a and I'll be
+
+02:23.590 --> 02:32.250
+looking for registry and in the registry the property that I'm looking for is the compiler dot automake
+
+02:32.260 --> 02:36.970
+that allow dot when dot app running.
+
+02:36.990 --> 02:48.670
+So let's go down below and find the property that we're going to change and in decompiler I'm going
+
+02:48.670 --> 02:57.100
+to be switching on compiler automake allow went up is running so I'll hit the tech and I'm going to
+
+02:57.100 --> 02:58.370
+close.
+
+02:58.510 --> 03:04.420
+And as you can see from the notification right here we have to we're starting our ID to make changes
+
+03:04.420 --> 03:05.720
+in effect.
+
+03:05.960 --> 03:11.140
+So I'm simply going to close my ID and then restart it.
+
+03:22.110 --> 03:24.950
+And I'm going to open up my project again.
+
+03:27.430 --> 03:28.710
+Here we go.
+
+03:28.830 --> 03:36.090
+We are ready to test out their tools but before we actually see the changes in our browser we have to
+
+03:36.090 --> 03:41.710
+be using the literal load extension and for doing that I'm going to use.
+
+03:41.760 --> 03:53.960
+So far it is time and I'll open up Safari and I'll be looking for the reload and spring
+
+03:58.250 --> 03:59.970
+and his search results.
+
+03:59.970 --> 04:10.460
+We have the hot swapping options for spraying and in the official page I'm going to go to the world
+
+04:10.520 --> 04:19.640
+dot com and I'm going to get the Safari extension.
+
+04:19.820 --> 04:27.200
+I'm simply going to open it up and cross it so that it can be installed in my extensions list.
+
+04:27.200 --> 04:28.190
+All right.
+
+04:28.190 --> 04:31.440
+I have my little rural extension installed.
+
+04:32.000 --> 04:36.140
+And as you notice we have a new icon right here.
+
+04:36.190 --> 04:42.740
+It's for the literal load extension to test out our extension.
+
+04:42.800 --> 04:47.170
+I'm going to run my application and switch back to Safari again.
+
+04:47.390 --> 04:50.060
+So I'll simply run my application now.
+
+04:53.630 --> 05:00.170
+And our application is starting up.
+
+05:00.270 --> 05:06.570
+Here we go to see our changes in effect I'm going to use a side by side window.
+
+05:06.630 --> 05:12.920
+So I'm going to shrink down my intelligent window and put it right here.
+
+05:13.440 --> 05:21.560
+And let's shrink down our navigation and maybe we can even get rid of it and right next to it.
+
+05:21.720 --> 05:29.040
+I'm going to use my Safari window and to show you how it works.
+
+05:29.140 --> 05:38.830
+I'm going to run my application so far that I'm going to go to 80 89.
+
+05:39.050 --> 05:42.230
+And here we have our application.
+
+05:42.330 --> 05:46.800
+So let's try and change something and see it instantly.
+
+05:47.100 --> 05:55.950
+To do that I'll change my product's navigation and say it's going to be products list.
+
+05:55.950 --> 06:04.270
+And when I say it as you can see from the left side of the screen our navigation button is now updated
+
+06:04.630 --> 06:07.540
+with the products list that I just provided.
+
+06:08.630 --> 06:13.360
+And this also changed the spring in the application text right here.
+
+06:13.400 --> 06:18.440
+So for doing that I'm going to say and we see Kreta application.
+
+06:18.440 --> 06:28.070
+And when I hit say here we go we have our changes instantly appearing on our browser and you can really
+
+06:28.250 --> 06:33.340
+simply extend this behavior to any kind of spring component that you have.
+
+06:33.740 --> 06:38.040
+You're not just limited with the text or images in your application.
+
+06:38.180 --> 06:42.800
+You can simply swap your components and other things as well.
+
+06:42.800 --> 06:49.010
+Feel free to check out spring day tools and liberal out and play around with it in your development
+
+06:49.010 --> 06:55.760
+environment and make sure that you only keep your daily tools dependency only in your development purposes.
+
+06:56.150 --> 07:02.010
+Otherwise it's not a very nice thing to have it in a production grade application.
+
+07:02.060 --> 07:08.030
+Hope you can make use of this spring down tools and roll out in your projects and I'll be seeing you
+
+07:08.030 --> 07:09.130
+in the next video.

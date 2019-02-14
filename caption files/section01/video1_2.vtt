@@ -1,0 +1,37 @@
+WEBVTT
+
+00:01.940 --> 00:09.480
+Now let's talk about what we're going to Khowar on this course we have a lot to cover on this cause
+
+00:10.110 --> 00:11.530
+just to name a few.
+
+00:11.690 --> 00:19.170
+Spring Corps which provides the spring IOC container basically at the heart of Spring Framework itself
+
+00:19.790 --> 00:20.900
+spring web.
+
+00:21.150 --> 00:28.320
+And most importantly spring and we see for developing web applications spring data for handling all
+
+00:28.320 --> 00:36.000
+sorts of data operations spring actuator which gives you of control over your application by providing
+
+00:36.000 --> 00:38.900
+useful metrics and interfaces.
+
+00:38.910 --> 00:42.100
+Subring rest for build restful API.
+
+00:42.420 --> 00:48.910
+And of course spring boot which helps you develop production grade applications without the overhead.
+
+00:49.500 --> 00:52.730
+Well we'll actually be coloring much more than these.
+
+00:52.890 --> 00:55.340
+And I'm really excited to get you started.
+
+00:56.250 --> 01:00.430
+To understand what spring really is I'll see you on the next video.

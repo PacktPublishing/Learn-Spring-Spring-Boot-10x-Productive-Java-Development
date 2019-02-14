@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.770 --> 00:06.500
+Now we're going to talk about the database that we're going to use within our application from now on.
+
+00:06.710 --> 00:13.400
+Now we didn't really use any datasource and we created our data manually and after this with you we
+
+00:13.430 --> 00:19.460
+start digging into the world of spring data and see how great it is at handling all kinds of data operations.
+
+00:20.730 --> 00:28.760
+Now our focus in this video is H-2 in memory database H2 is an awesome database with lots of this thing
+
+00:28.760 --> 00:32.190
+features that lead us to choose it against others.
+
+00:32.190 --> 00:38.900
+Now let's take a look at what those features are H-2 is a very fast database.
+
+00:38.970 --> 00:46.300
+Thanks to its lightweight structure it's also an open source project act to develop by lots of contributors.
+
+00:49.150 --> 00:55.630
+H-2 makes use of JD B C API and what this means is that working with or developing wrapper classes with
+
+00:55.630 --> 00:57.760
+it for our project is very easy.
+
+00:57.760 --> 01:03.430
+Even if you don't use Spring data there are two modes of H-2 database.
+
+01:03.430 --> 01:09.880
+There is an embedded mode and there is also a server remote embedded mode of H-2 allows us to use it
+
+01:09.910 --> 01:19.040
+as an in memory database and that's one of the reasons of it as being lightweight H-2 comes with a browser
+
+01:19.040 --> 01:24.320
+based console application where you can manage short databases and do all kinds of thing that you could
+
+01:24.320 --> 01:27.140
+do with database management software.
+
+01:27.140 --> 01:32.330
+It even has a sequel command line where you can run all of your queries if you'd like to render manually
+
+01:33.930 --> 01:41.130
+one of the most important aspects of H too is that the size of its archive its jar file its files around
+
+01:41.500 --> 01:48.770
+1.5 megabyte and everything combined from a database engine to browser based console application.
+
+01:49.170 --> 01:53.370
+All of them are fit into the super lightweight char file.
+
+01:53.430 --> 01:57.200
+These are the highlights of the H-2 in memory database.
+
+01:57.480 --> 02:04.400
+In the upcoming sections we're going to make use of it heavily and do all kinds of things with it in
+
+02:04.400 --> 02:09.160
+order to start developing our first application with spring data JPA and H2.
+
+02:09.200 --> 02:10.740
+I'll see you on the next video.

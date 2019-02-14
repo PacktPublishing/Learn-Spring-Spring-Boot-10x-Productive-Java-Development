@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.400 --> 00:08.880
+In this video we're going to be talking about spring schedular spring schedular is a cool way to schedule
+
+00:08.880 --> 00:11.590
+the tasks that you repeated would do.
+
+00:12.960 --> 00:14.690
+Show you how it works.
+
+00:14.730 --> 00:19.840
+I'm going to create a new spring boot project and show you how.
+
+00:19.860 --> 00:21.640
+So let's do that now.
+
+00:21.900 --> 00:29.460
+And I'm creating a new project and the artifact is going to be schedular
+
+00:35.490 --> 00:39.000
+And of course let's update our description to
+
+00:42.230 --> 00:48.070
+and in the next step we actually only need the web dependency that's all.
+
+00:48.530 --> 00:51.930
+Let's hit next and let's hit finish
+
+01:02.300 --> 01:02.660
+here.
+
+01:02.660 --> 01:12.300
+How are project ready so let's go to our main class and in our main class as you can see this is a clean
+
+01:12.300 --> 01:14.850
+and simple spring boot project.
+
+01:15.960 --> 01:21.860
+To make use of spring schedular the first thing that we should do is we should be enabling the scheduling
+
+01:21.870 --> 01:31.460
+property the way to do that is with of course and annotation the annotation for that is enable scheduling
+
+01:32.470 --> 01:36.860
+the scheduling feature is built into the spring framework itself.
+
+01:36.860 --> 01:41.900
+So you don't have to use any special dependency or any sort of thing like that.
+
+01:42.880 --> 01:50.630
+So after you enable the scheduling you can provide a method anywhere in your application and annotated
+
+01:50.720 --> 01:56.690
+with scheduled annotation and how it's run by some timing rules.
+
+01:56.780 --> 02:00.070
+So let's make an example and see how it works.
+
+02:00.200 --> 02:08.900
+I'm coming down right here and I'm going to say I'll have a simple method which is not going to return
+
+02:08.900 --> 02:09.630
+anything.
+
+02:09.890 --> 02:13.530
+And it's just going to take some action.
+
+02:16.340 --> 02:22.160
+And what I want this take action method is to logout some statement to me.
+
+02:23.040 --> 02:29.970
+So for debt I'm going to create a logo right here.
+
+02:29.970 --> 02:38.240
+And it's also coming from the s.l for the local factory.
+
+02:38.500 --> 02:40.100
+And here we have it.
+
+02:40.690 --> 02:50.380
+And in the Take Action method what I'm going to do is I'm going to logout running the
+
+02:53.230 --> 02:56.700
+schedule task.
+
+02:57.010 --> 03:00.250
+All right.
+
+03:00.400 --> 03:08.260
+The way that we run this method with a specific interval and time delay all we have to do is provide
+
+03:08.260 --> 03:10.880
+the schedule annotation.
+
+03:11.030 --> 03:12.710
+Now let's do it now.
+
+03:13.090 --> 03:14.860
+We're going to say scheduled.
+
+03:15.130 --> 03:23.440
+And you can either provide an initial delay and as you can see with other properties you have the option
+
+03:23.440 --> 03:25.450
+to run a Krown job.
+
+03:25.660 --> 03:30.870
+You can provide a fixed delay fixed rate and initial outlay.
+
+03:30.910 --> 03:35.270
+These are cool options that you can take advantage of.
+
+03:35.430 --> 03:43.340
+But in our example I'm going to use an initial delay as 3 seconds which is in milliseconds.
+
+03:43.600 --> 03:47.910
+And the fixed delay is going to be like two seconds.
+
+03:49.040 --> 03:57.170
+So in my case the method that I want to be around is going to be running up to 3 seconds and after each
+
+03:57.170 --> 04:04.310
+two seconds it's going to print out the same result again and again sort of see it in action.
+
+04:04.470 --> 04:17.670
+Let's run our project and see what's going on.
+
+04:18.090 --> 04:19.470
+Our application is starting up
+
+04:24.080 --> 04:27.730
+and it's done.
+
+04:27.900 --> 04:35.210
+And as you can see in the console after three seconds and you can compare the seconds right here our
+
+04:35.220 --> 04:45.630
+scheduler is running with the test that we were given at schedular is a cool way to manage some background
+
+04:45.630 --> 04:47.560
+task within your application.
+
+04:47.700 --> 04:54.240
+But the only downside of schedular as you cannot persist data with schedular.
+
+04:54.420 --> 05:00.120
+So you should be careful about that and make sure that you can find a way to use scheduler in your next
+
+05:00.120 --> 05:01.050
+application.

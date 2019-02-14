@@ -1,0 +1,322 @@
+WEBVTT
+
+00:00.890 --> 00:09.410
+We now have our GET AND POINT our Get controller and in that controller we can find and return a product
+
+00:09.410 --> 00:12.620
+with this idea ID.
+
+00:12.650 --> 00:20.800
+So now let's take a look at how we can post some data to our controller to our rest API and how it's
+
+00:20.800 --> 00:22.790
+saved into our database.
+
+00:24.380 --> 00:32.940
+In this both API I'm going to send the product data as a string to our controller to our arrest API
+
+00:33.570 --> 00:43.260
+and then that risk API is going to go to our Abaza story than have it saved for me or our risk get started.
+
+00:46.620 --> 00:49.760
+I'm going to say public.
+
+00:50.190 --> 00:58.710
+And in return I'm going to return the product that we created and I'll say safe product
+
+01:04.350 --> 01:06.390
+in this method we're going to do.
+
+01:06.390 --> 01:10.330
+Couple of things different way and I'll show you how.
+
+01:10.470 --> 01:20.250
+Before we start we have to make it a request mapping and into request mapping what we're going to do
+
+01:20.250 --> 01:29.770
+is we're going to provide no path because we're just going to poll some data and that is going to be
+
+01:29.810 --> 01:34.200
+close to API slash products and point.
+
+01:34.980 --> 01:44.610
+And again with the API guidelines all you have to do to create a product a resource you have to post
+
+01:44.610 --> 01:47.460
+the data to the root of your API.
+
+01:47.940 --> 01:54.100
+That is the expected behavior and expected strategy for API definitions.
+
+01:54.110 --> 01:55.100
+Right.
+
+01:55.740 --> 02:00.140
+So for that I'm going to say request method
+
+02:03.000 --> 02:12.740
+and post what we're going to do with this request is we're going to get a request body and in the request
+
+02:12.740 --> 02:21.350
+body we're going to be receiving a product because that's what we're going to send to implement that
+
+02:22.250 --> 02:34.180
+we're going to go to our method signature and we're going to say request body and in the request body
+
+02:34.520 --> 02:47.770
+we're going to be getting a product and I'll say product to say all right now we have a reference to
+
+02:47.770 --> 02:56.450
+the product that is going to be delivered through to rest API to us that product object ready.
+
+02:56.510 --> 03:01.130
+We can simply go to our eyeballs story and have it create it.
+
+03:01.670 --> 03:12.330
+So let's do that now with our Abaza story let's say this product and to do that I'm going to return
+
+03:13.110 --> 03:15.940
+product repository that they say.
+
+03:16.140 --> 03:20.870
+And in the same method I'm going to provide a product to say.
+
+03:21.120 --> 03:25.510
+All right we have a very basic functionality for post.
+
+03:25.950 --> 03:32.490
+And as you remember when we started developing these posts and point we said that we're going to be
+
+03:32.490 --> 03:36.260
+receiving the data as a string.
+
+03:36.270 --> 03:41.030
+So how is this going to be handled by spring of course.
+
+03:41.130 --> 03:48.480
+Spring is clever enough to understand that you were sending a J sound formatted string but with the
+
+03:48.510 --> 03:56.850
+best practices and applications you have to be providing the consumed and produced types of objects
+
+03:56.850 --> 04:00.210
+that you're going to use within your controller.
+
+04:00.210 --> 04:06.600
+So in our case we're going to be consuming a Jason structured data.
+
+04:07.290 --> 04:14.840
+So let's just indicate that we're going to be consuming application Jason type of data.
+
+04:15.810 --> 04:21.350
+And in here I'm going to say media ties
+
+04:24.990 --> 04:34.310
+or it's this one an application underscore Jason underscore.
+
+04:35.150 --> 04:37.270
+As you can see here.
+
+04:37.310 --> 04:38.780
+All right.
+
+04:38.780 --> 04:44.550
+This is going to be the way the data that we're going to provide to our controller is formatted.
+
+04:45.050 --> 04:52.300
+Now let's take a look at our API and see what's going on behind the scenes when we make a request.
+
+04:52.310 --> 04:55.240
+All right let's run our application now.
+
+05:27.080 --> 05:31.960
+And our application is up in our application.
+
+05:32.060 --> 05:40.760
+As you notice we have a products post and point that is the end point that we just whelped.
+
+05:40.820 --> 05:52.590
+So let's check out in the Firefox I'm opening up Firefox now and into Firefox I'll go to my resk client.
+
+05:52.630 --> 05:53.400
+All right.
+
+05:53.490 --> 06:01.160
+In the rest client what we're going to do is we're going to select the method as post and
+
+06:07.830 --> 06:21.230
+dressed all the owl is going to be local housed and ADHD slash API slash products.
+
+06:21.580 --> 06:22.550
+All right.
+
+06:22.900 --> 06:26.050
+This is the signature of our method.
+
+06:26.830 --> 06:34.270
+But as you remember in our Pollsmoor that we're going to be providing a Jason structure of data.
+
+06:34.270 --> 06:39.560
+So in that data we're going to be providing the details of our product.
+
+06:39.670 --> 06:46.350
+So let's go back down here and let's create a J string.
+
+06:51.450 --> 06:59.410
+You know Jason streng what we're going to do is we're going to provide the properties and the values
+
+06:59.410 --> 07:02.100
+that we're going to use with those properties.
+
+07:02.410 --> 07:11.710
+So that way spring can understand and map the well-used to the actual properties of the product entity.
+
+07:11.740 --> 07:15.610
+So let's start with the name property.
+
+07:15.610 --> 07:24.700
+I'm going to say name and our new product is going to be the poster product
+
+07:27.480 --> 07:35.260
+and I'll put a coma and I'll start the description field.
+
+07:36.300 --> 07:41.250
+And in the description I'll say toasted scription
+
+07:46.750 --> 07:48.940
+and we had of course type
+
+07:52.980 --> 07:54.250
+a new type
+
+07:58.440 --> 08:03.120
+and we have of course category.
+
+08:03.820 --> 08:19.610
+And in that category I will say toast and the last one that we need is the price and for the prize I'm
+
+08:19.610 --> 08:23.660
+going to say I will use 20.
+
+08:23.660 --> 08:25.180
+All right.
+
+08:25.290 --> 08:33.260
+And you should notice that we're not providing any ID as we did in our programs before because what
+
+08:33.270 --> 08:34.830
+we post is entity.
+
+08:35.070 --> 08:40.900
+Spring is going to go to hibernate and have the ID created for us.
+
+08:42.170 --> 08:42.880
+All right.
+
+08:44.540 --> 08:47.980
+The last step before we actually test out this method.
+
+08:48.320 --> 08:56.660
+We're going to be providing the Content-Type which is the type of the object that we have here and the
+
+08:56.660 --> 09:02.230
+type of the object that we have here is Jason application slash Jaser.
+
+09:02.720 --> 09:12.380
+To do that you're going to go to header's right here and click custom header in the custom header.
+
+09:12.530 --> 09:16.210
+I will say I need Content-Type.
+
+09:16.400 --> 09:25.720
+And in the Content-Type I'm going to say application slash Jason and hit OK.
+
+09:25.820 --> 09:27.020
+Here we go.
+
+09:27.020 --> 09:29.000
+We have our header right here.
+
+09:29.090 --> 09:34.670
+And our Jason data is right below that.
+
+09:34.750 --> 09:38.820
+So let's send this request and see what's happening behind the scenes.
+
+09:41.690 --> 09:43.410
+And here we go.
+
+09:43.490 --> 09:46.650
+We have the status code as 200.
+
+09:46.880 --> 09:54.470
+And the content typed out returned to us is application slice Jaison and of course the character set
+
+09:54.470 --> 09:57.320
+is UTF 8.
+
+09:57.320 --> 10:04.410
+All right let's stick out here all day though that we receive from the rest control that we wrote enduros
+
+10:04.470 --> 10:05.240
+data.
+
+10:05.390 --> 10:13.710
+As you noticed we have the you ID field just as we expected and all the remaining parts of the creed
+
+10:13.730 --> 10:19.140
+that the repository handle product data in our response.
+
+10:19.640 --> 10:28.100
+Let's take out the highlight tab and highlight that we have again a beautified region of our product
+
+10:28.520 --> 10:30.500
+product that we just created.
+
+10:30.800 --> 10:40.160
+Its name is posted product and description posted type as new type and is category as post just as we
+
+10:40.430 --> 10:46.060
+send to the post and point post controller.
+
+10:46.100 --> 10:51.010
+So let's take out the actual data in our H2 database.
+
+10:51.020 --> 10:51.610
+All right.
+
+10:52.680 --> 10:55.500
+I'm going to go to h to counsel
+
+10:58.870 --> 11:07.810
+and I'll connect to my database then I'm going to select all the data from our Product table.
+
+11:07.810 --> 11:09.120
+And here we go.
+
+11:09.250 --> 11:12.970
+We have everything ready in our database.
+
+11:13.000 --> 11:21.370
+We have the ID generated we have the category as post we have the description and just as we sent to
+
+11:21.370 --> 11:28.090
+our resident point we had a name and we have a new typed.
+
+11:28.200 --> 11:29.410
+All right.
+
+11:33.310 --> 11:40.500
+This is basically how you can implement a post and point in the following videos.
+
+11:40.600 --> 11:48.690
+We're going to be implementing plot and delete and of course we're going to be elaborating the rest
+
+11:48.700 --> 11:55.300
+control or development and we're going to be digging into the broader aspects of risk control or wrasse
+
+11:55.330 --> 11:56.690
+API development.
+
+11:56.890 --> 11:58.440
+So I'll see on the next video.

@@ -1,0 +1,265 @@
+WEBVTT
+
+00:00.420 --> 00:08.270
+In this park we're going to talk about the elements of our API and I'm going to explain all the elements
+
+00:08.270 --> 00:11.240
+that we use within our controller or.
+
+00:11.310 --> 00:20.430
+So let's start by the main annotation that we use to create this controller which is the control sanitation.
+
+00:20.580 --> 00:29.870
+And if we go to the rest control annotation with CMT claque And you'll notice that the rest control
+
+00:29.890 --> 00:35.350
+annotation is inheriting from the controller annotation and building upon it.
+
+00:36.810 --> 00:44.610
+What this says to us as the rest control annotation is using the basic functionality of a controller
+
+00:44.620 --> 00:51.810
+in and we see which is model view controller and building upon it with the useful features that we use
+
+00:51.810 --> 00:55.280
+with the rest API.
+
+00:55.430 --> 01:03.110
+If we go back to our controller The other thing that we have with our controller as we have the request
+
+01:03.110 --> 01:11.030
+mapping and if we go to the request mapping annotation you'll see that it's inheriting from the mapping
+
+01:11.090 --> 01:19.580
+notation which is used with the endpoints in the web these endpoints can be anything from remote procedure
+
+01:19.580 --> 01:27.770
+calls to SML and points so and point and anything you provide the mapping with this mapping annotation
+
+01:27.770 --> 01:30.950
+is praying and we do request mapping.
+
+01:30.980 --> 01:36.090
+You have some extra features that ease the development with resk controllers.
+
+01:37.490 --> 01:44.150
+And as you notice below the interface we have some useful methods that we use within our controller
+
+01:44.600 --> 01:53.330
+such as the name of the end point that were defined and the path where you will the well-you the method
+
+01:53.360 --> 02:00.440
+that we use with the request which was like tels get put in the lead and the parameters that we can
+
+02:00.440 --> 02:08.290
+provide to our controllers Hedger wearables that we can also provide and consumes and finally produce
+
+02:08.280 --> 02:09.470
+those methods.
+
+02:09.860 --> 02:15.480
+These methods enabled us to do a full fledged risk API with spring.
+
+02:15.610 --> 02:23.830
+And let's go back to our controller again in our controller what we did was we simply underwired our
+
+02:23.830 --> 02:33.220
+eyeballs story our product repository and the repository was a JPA repository with the auto our product
+
+02:33.220 --> 02:34.510
+repository.
+
+02:34.510 --> 02:42.580
+We went back and forth within our repository within our database and find the entities with the IDs
+
+02:42.910 --> 02:47.280
+saved and these updated entities deleted entities and so on.
+
+02:48.480 --> 02:57.280
+First method that we provide within our controller was to get it just as we have here in the get method.
+
+02:57.360 --> 03:06.460
+We had the request mapping is going to be ID and the idea was again going to be build up upon the roof
+
+03:06.470 --> 03:14.300
+path of our request mapping and route out of our request mapping as defined within the top of the controller.
+
+03:14.460 --> 03:24.760
+And that was right below the rest control run rotation right here and our route that was slash API slash
+
+03:24.760 --> 03:26.270
+product slash.
+
+03:26.620 --> 03:34.930
+And before that Rafat of course our application was there the application that we had was on local holes
+
+03:35.320 --> 03:45.460
+ADHD and then we had API slash products and for the get method we have Slash Id just as we define here
+
+03:46.340 --> 03:55.130
+in your request mapping for ID forget we had to do path were you able ID within our method body fordoing
+
+03:55.180 --> 04:04.270
+that we use the PATH variable annotation the PATH variable annotation is coming from the spring family
+
+04:04.270 --> 04:14.560
+again as you can see Tafuri annotation has value name and a brilliant indicator so to say that if it's
+
+04:14.560 --> 04:16.280
+required or not.
+
+04:16.300 --> 04:25.510
+All right and in the get method we've simply said that we're going to take an idea from the path.
+
+04:25.780 --> 04:32.070
+And with that ID we're going to find the entity within our repository and then simply return it.
+
+04:34.130 --> 04:43.460
+After our get and point we develop the pulse and point pulsed request in the pulse method We set of
+
+04:43.460 --> 04:46.850
+cross request mapping is going to be toast.
+
+04:47.240 --> 04:52.250
+And in the requests body we think a Jason string.
+
+04:52.490 --> 04:57.940
+And so that we can consume it in the consumes parameter.
+
+04:58.080 --> 05:06.540
+We said we're going to be consuming a application underscore Jaison underscore well-you and that is
+
+05:06.540 --> 05:09.390
+as you can see applications last Jaison
+
+05:13.960 --> 05:15.680
+in the method signature.
+
+05:15.680 --> 05:22.160
+We said we're going to be expecting requests body and that requires body is going to be constructed
+
+05:22.190 --> 05:32.330
+with product object and we named a wearable of the product object as product to save in our method body.
+
+05:32.330 --> 05:39.710
+We said we're going to save that product object and for saving that we're going to be using the product
+
+05:39.740 --> 05:43.710
+repository that same method of the JPA repository.
+
+05:43.910 --> 05:53.390
+And now we simply return the same product to our user guitarist API after the pulse met that we went
+
+05:53.390 --> 05:58.450
+to the put of HDTV in the put method.
+
+05:58.520 --> 06:08.240
+We said we're going to be using the slash ID path and of course as I just said we use the SCDP put method
+
+06:09.410 --> 06:15.020
+and again in the request body we were expecting a Jason's.
+
+06:15.170 --> 06:22.700
+And that is again defined as the consumer's parameter and we provided the applications like Jason well-you
+
+06:24.980 --> 06:32.520
+and request body just like the pulse method we were expecting a product object and be named wearable
+
+06:32.540 --> 06:39.360
+of the product object as product to update so that we could use our massive body.
+
+06:39.500 --> 06:47.300
+And after that we said we're going to be taking an ID from our past and we do find a path right here.
+
+06:48.260 --> 06:54.800
+And in the method signature the method parameters we use that we're going to be taking this path variable
+
+06:54.800 --> 06:57.340
+as ID with the name.
+
+06:57.530 --> 07:08.670
+And then we provided the instance variable name as being as ID with that ID in the method body we said
+
+07:09.000 --> 07:19.060
+we're going to go to our Depository and find the single entity with this ID and we found producta object.
+
+07:19.240 --> 07:21.220
+We checked it not no.
+
+07:21.270 --> 07:30.300
+And then we went on to updating our entity with the product to update instance variables that we provided
+
+07:30.300 --> 07:33.040
+within our requests body.
+
+07:33.080 --> 07:38.560
+We set a name description type category one by one.
+
+07:38.750 --> 07:46.850
+And after that we simply saved a product that we updated within our request body and then we of course
+
+07:46.850 --> 07:51.650
+return the updated product to our users with terrorist API.
+
+07:51.830 --> 07:58.790
+If we couldn't find the entity within our database within our repository then we logged out that no
+
+07:58.790 --> 08:04.940
+products found that given I.D. and then we turned the product that we provide which in our requests
+
+08:04.940 --> 08:15.150
+body are final method of crowd operations with a ETP was delete in our method.
+
+08:15.510 --> 08:23.040
+We said we're going to be expecting again an ID in the path and with that I.D. We're going to be deleting
+
+08:23.130 --> 08:27.060
+an entity from our database from our Abaza Tory.
+
+08:27.290 --> 08:36.320
+And of course our method for providing this API providing this endpoint will be HTP delete in our method
+
+08:36.380 --> 08:39.520
+signature in our method parameters.
+
+08:39.590 --> 08:46.280
+We said we're going to be taking care of the ID with this ID string parameter with the parameter at
+
+08:46.280 --> 08:47.080
+hand.
+
+08:47.240 --> 08:55.190
+We go to our repository with the Feinman method that we're getting only a single entity and then we
+
+08:55.370 --> 08:59.960
+found that we made that check if not no.
+
+09:00.440 --> 09:08.140
+And after it's not no we simply went to our repository and we called the JPA repository delete method
+
+09:09.940 --> 09:15.850
+we could of course have done that with the JPA is delete one method.
+
+09:16.600 --> 09:19.330
+And that is done like this.
+
+09:19.330 --> 09:24.870
+We could also say delete and we could provide the ID.
+
+09:25.080 --> 09:30.560
+That's also the same thing with the JPA only a different implementation.
+
+09:32.250 --> 09:41.300
+These are the basic elements of a rest API with these elements you could do all of any kind of API that
+
+09:41.310 --> 09:45.270
+you need with your entities with your data.
+
+09:45.400 --> 09:52.000
+And of course in the next section where we refactor our risk controller we're going to be adding more
+
+09:52.000 --> 09:59.110
+on top of these API and we're going to actually improve our API so that it can be a production grade
+
+09:59.110 --> 10:05.010
+API so to refactor our wrest control or Oliver seeing you on the next video.

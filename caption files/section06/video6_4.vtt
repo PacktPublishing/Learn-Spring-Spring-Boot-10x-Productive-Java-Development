@@ -1,0 +1,859 @@
+WEBVTT
+
+00:01.310 --> 00:09.290
+All right we now know how to create entities which are simple POJO classes and have them created in
+
+00:09.290 --> 00:10.710
+the H-2 database.
+
+00:12.130 --> 00:19.110
+What we're going to do now is we're going to create a repository and interact with our entity and our
+
+00:19.120 --> 00:28.660
+data create it update it delete it and create within the database with the help of spring data to do
+
+00:28.660 --> 00:29.560
+that.
+
+00:29.560 --> 00:30.990
+I'm going to create a new project
+
+00:33.660 --> 00:47.840
+I'll click next and name this project as repository.
+
+00:47.870 --> 00:58.340
+So let's just use our name throughout the artifact and description.
+
+00:58.350 --> 01:00.550
+All right I'll click next.
+
+01:01.960 --> 01:04.180
+And inherited tendencies.
+
+01:04.450 --> 01:15.810
+I'm going to go to Web and how do web selected and I'm going to go to sequel and click JPA.
+
+01:16.040 --> 01:25.070
+And I'm also going to select age 2 which is our database so that's all we need for now and I'm going
+
+01:25.070 --> 01:29.710
+to click next.
+
+01:29.840 --> 01:41.370
+I'm all set with the directories and modules so I'm going to click Finish.
+
+01:41.410 --> 01:42.070
+All right.
+
+01:42.220 --> 01:49.150
+We have our project created and as you can see maybe one is resolving our dependencies.
+
+01:49.160 --> 01:51.280
+Let's take a look at our project structure.
+
+01:54.490 --> 02:02.830
+Under the source directory We have a Java package which has always been good application class and on
+
+02:02.860 --> 02:08.370
+the resources we have application up properties.
+
+02:08.390 --> 02:15.320
+So as I said in the beginning what we're going to do in this tutorial we're going to create a repository
+
+02:15.650 --> 02:21.700
+and for that repository of course we're going to need an entity how we're going to do this entity.
+
+02:21.860 --> 02:28.580
+We're going to use a simple poser class and have it created in the H-2 database then we're simply going
+
+02:28.580 --> 02:33.190
+to interact with this database throughout the spring data.
+
+02:33.200 --> 02:38.470
+Let's just start by our model object our simple POJO or our entity.
+
+02:38.480 --> 02:39.830
+All right.
+
+02:39.830 --> 02:46.370
+So I'm going to go to our base package and I'm going to create a package named Mottau
+
+02:49.740 --> 02:55.260
+and what I'm going to do now I'm going to create a product POJO.
+
+02:55.260 --> 02:57.060
+So let's do it.
+
+02:58.730 --> 03:09.250
+All right we have our Fozia So in this POJO what we're going to do is we're going to have some simple
+
+03:09.250 --> 03:12.700
+properties that a product can have.
+
+03:12.730 --> 03:16.540
+So let's just give this product and Id.
+
+03:17.980 --> 03:26.100
+And of course this product is going to have a name and let's do that too.
+
+03:26.740 --> 03:31.930
+And what else do we need we need of course a type for product
+
+03:35.810 --> 03:40.730
+and we also need a category so let's create a category object to
+
+03:48.540 --> 03:52.020
+and we should have a description
+
+04:00.560 --> 04:07.160
+and of course this product is going to have a price.
+
+04:07.240 --> 04:15.340
+So let's just define our prize as a double.
+
+04:15.350 --> 04:16.040
+All right.
+
+04:16.040 --> 04:20.150
+We have all of our simple answers wearables.
+
+04:20.150 --> 04:25.320
+So what we're going to do now we're just going to generate our getters and setters.
+
+04:28.230 --> 04:34.120
+So how select all and hit OK.
+
+04:34.190 --> 04:34.850
+There we go.
+
+04:34.910 --> 04:36.590
+We have our getters and setters.
+
+04:36.890 --> 04:46.370
+So what I'm going to do now is I'll just annotate this class POJO as an entity so I'm going to the top
+
+04:46.370 --> 04:48.550
+and I'll hit enter.
+
+04:48.550 --> 04:52.350
+We have our POJO as an entity now.
+
+04:52.430 --> 04:56.470
+So what else do we need for the ID field.
+
+04:56.510 --> 05:04.250
+We're going to have a generation strategy as we discussed in the creating section in this section we're
+
+05:04.250 --> 05:06.410
+going to do a little bit different thing.
+
+05:07.390 --> 05:15.100
+In this action we're going to have generated a you ID you know or so identifier string that is generated
+
+05:15.430 --> 05:18.620
+with a RACC format.
+
+05:18.700 --> 05:25.750
+So how we are going to do that we're going to first annotate our ID as ID.
+
+05:26.350 --> 05:36.270
+So we're going to use jaywalks that persistence and we're going to say generated value and it's also
+
+05:36.270 --> 05:40.060
+going to come from the persistence.
+
+05:40.170 --> 05:46.500
+So we're going to say a strategy that we're going to use for that strategy.
+
+05:46.500 --> 05:56.840
+I'm going to say generation type got Odo and for a generator This is new for this tutorial because in
+
+05:56.880 --> 06:00.280
+A.S. we didn't use any generators.
+
+06:00.450 --> 06:01.340
+We're going to use now.
+
+06:01.350 --> 06:13.800
+So I'm going to say I'm going to use system dash you ID.
+
+06:14.240 --> 06:22.840
+All right this generator name that I said here is going to be used with the generator that I'm going
+
+06:22.840 --> 06:25.420
+to provide to generate.
+
+06:25.430 --> 06:28.210
+I'm going to provide it this way.
+
+06:28.210 --> 06:34.890
+I'll say Generac generator from the hibernate annotations.
+
+06:34.980 --> 06:48.520
+I'm going to give the name to it as we define system dash you ID as you can see I'm using the same name
+
+06:49.030 --> 06:50.890
+with the generator here.
+
+06:50.890 --> 06:57.700
+So this generated value is going to be generated with this strategy with this generator.
+
+06:57.700 --> 06:59.970
+So what else do I need.
+
+07:00.310 --> 07:05.510
+I of course need the actual strategy for a generation.
+
+07:05.650 --> 07:12.290
+So the strategy is going to be you ID too.
+
+07:12.340 --> 07:16.030
+So this is the last version of the ID generator.
+
+07:16.120 --> 07:18.680
+So I'm going using it right now.
+
+07:19.030 --> 07:24.190
+That's the best idea generator you can find in the Java ecosystem.
+
+07:24.200 --> 07:24.920
+All right.
+
+07:25.670 --> 07:31.640
+As you can see it's all you have to do to have a you I.D. automatically created for you.
+
+07:31.810 --> 07:35.790
+And this is all going to happen in the database.
+
+07:35.840 --> 07:43.130
+We have our ID creation strategy ready so let's just fire up our application for the first time and
+
+07:43.340 --> 07:48.200
+see our data in a database to do that.
+
+07:48.200 --> 07:55.610
+Of course we're going to use some application properties in the application of properties.
+
+07:55.710 --> 08:01.710
+We're going to provide the similar things we provide in the entity section.
+
+08:01.710 --> 08:11.580
+So we're going to say spring that data source that you are l and that you're out is going to start with
+
+08:11.940 --> 08:22.300
+JTB C and we're going to say H-2 and we're going to say it's going to be persisted in a file.
+
+08:22.650 --> 08:35.900
+And also we're going to provide the name of our database so our database is going to be products.
+
+08:36.310 --> 08:38.530
+All right.
+
+08:38.650 --> 08:44.350
+And I'm also going to use a username and password of course.
+
+08:44.350 --> 08:55.870
+So for that I'm going to say spring dot datasource username and I'm going to use our same username from
+
+08:55.870 --> 08:57.660
+the previous Tauriel.
+
+08:57.760 --> 09:01.960
+So it's used as a for a password.
+
+09:01.960 --> 09:06.670
+I'm going to say spring got datasource out password.
+
+09:07.060 --> 09:09.280
+It's just going to be empty.
+
+09:09.310 --> 09:11.890
+So what else do I need.
+
+09:12.310 --> 09:15.650
+I need of course our driver you are.
+
+09:15.910 --> 09:26.730
+So I'm going to provide our driver class name just like this spring dot data source dark gray work dash
+
+09:26.730 --> 09:35.070
+class name and as you can see intelligence says that I'm going to use H-2 and it's showing us that option.
+
+09:35.190 --> 09:38.100
+I'm going to just hit enter.
+
+09:38.130 --> 09:39.030
+There we go.
+
+09:39.120 --> 09:42.380
+We have or dot dot Groer.
+
+09:42.450 --> 09:44.810
+All right.
+
+09:45.010 --> 09:46.610
+What else we're going to do.
+
+09:46.630 --> 09:55.060
+We're going to say that we want to enable the H2 console so we can see our entity created in the database.
+
+09:55.090 --> 09:58.570
+So let's just enable the console.
+
+09:58.600 --> 10:09.520
+And before we do let's just say that we're going to use the H2 as the path and for the console we're
+
+10:09.520 --> 10:10.390
+going to say
+
+10:14.030 --> 10:19.680
+spring that H-2 that console that enable to true.
+
+10:20.270 --> 10:26.020
+And of course we want the sequel to be showing on the console for us.
+
+10:26.030 --> 10:33.240
+So spring that JPA does show sequel is going to be true also.
+
+10:33.260 --> 10:34.020
+All right.
+
+10:35.020 --> 10:41.800
+We have everything ready to create our application create our entity in our database.
+
+10:41.800 --> 10:46.500
+So let's take out if everything is alright to do that.
+
+10:46.630 --> 10:48.310
+I'm going to run our application
+
+11:00.770 --> 11:13.010
+all right as you can see our database is up and it's created with the statements at table as dropped
+
+11:13.070 --> 11:27.430
+if it existed before and then it created again the ID category description name price type and the ID
+
+11:27.430 --> 11:29.140
+as the primary key.
+
+11:29.140 --> 11:29.820
+All right.
+
+11:29.980 --> 11:33.700
+Our application is up and running in Port 80 80.
+
+11:33.700 --> 11:42.680
+So let's take out our H2 console to see if our database Our table is created.
+
+11:42.730 --> 11:56.080
+So I'm going to open up the Firefox and I'll go to localhost ADHD and slash H-2
+
+11:58.860 --> 11:59.610
+here we go.
+
+11:59.610 --> 12:03.840
+We have our database ready to be connected.
+
+12:04.230 --> 12:06.500
+So let's just test our connection first.
+
+12:07.800 --> 12:08.910
+It's successful.
+
+12:09.330 --> 12:11.220
+So let's connect to our database
+
+12:13.920 --> 12:22.490
+here we have our product table created for us with all the fields that we want it to be created us with
+
+12:22.520 --> 12:28.420
+how Id category description name price and the type.
+
+12:28.700 --> 12:38.540
+And as you can see here we have our prize column as double and its size is 17 automatically Salles to
+
+12:38.540 --> 12:41.720
+select our data from the database first.
+
+12:42.140 --> 12:50.030
+And I'm going to collect the product here and I'm going to run our statement as you can see we don't
+
+12:50.030 --> 12:52.130
+have anything in our database.
+
+12:52.340 --> 12:55.060
+So let's just work on that now.
+
+12:56.160 --> 13:02.280
+What we're going to do is we're going to create a repository and that repository is going to allow us
+
+13:02.280 --> 13:06.360
+to interact with our database with our data.
+
+13:06.420 --> 13:08.390
+So let's do that now.
+
+13:09.850 --> 13:16.550
+To do that I'm going to create a new package and I'm going to name it as the repository.
+
+13:16.570 --> 13:24.330
+So let's just create a new package and name it as repository.
+
+13:24.330 --> 13:25.370
+All right.
+
+13:26.770 --> 13:38.000
+And in this package I'm going to click Create a new product repository.
+
+13:38.020 --> 13:39.380
+All right.
+
+13:39.480 --> 13:43.070
+And this time I'm not going to create a new class.
+
+13:43.350 --> 13:49.690
+I'm going to create an interface I'll just explain this in a minute.
+
+13:49.750 --> 13:53.080
+So let's just create our product repository interface.
+
+13:53.350 --> 13:54.370
+Here we go.
+
+13:54.370 --> 13:56.900
+We have our interface.
+
+13:56.940 --> 14:04.500
+So what this interface is going to do is we're going to extend the JPA repository with this interface
+
+14:05.880 --> 14:13.860
+and by extending that JPA repository we're going to have a full fledged JPA repository implementation
+
+14:14.190 --> 14:17.810
+with our product repository automatically.
+
+14:17.820 --> 14:22.690
+So let's just implement the JPA repository and see what it looks like.
+
+14:24.130 --> 14:31.060
+So what I'm going to do is now I'm going to extend the JPA repository.
+
+14:31.300 --> 14:35.460
+And as you can see it's receiving two parameters.
+
+14:35.650 --> 14:45.180
+The first one is a generic argument which is Martez t this argument is saying that you can receive any
+
+14:45.180 --> 14:47.670
+argument with your JPA repository.
+
+14:47.880 --> 14:52.300
+And that's becoming your product and tity we have here.
+
+14:53.790 --> 15:01.960
+Or any entity that you want to be created in the repository interface so that you can interact with.
+
+15:02.010 --> 15:10.260
+And the second argument is going to be the ID field of your database the distinct field that you want
+
+15:10.260 --> 15:17.580
+to be coring against the database so that your repository can be used with this unique identifier and
+
+15:17.790 --> 15:21.870
+you can query your data without any collision in your database.
+
+15:22.050 --> 15:28.240
+So you don't have to normalize or normalize your data with this is a distinct way.
+
+15:28.260 --> 15:36.030
+So what we're going to do now we're going to say you want the product entity as a reference of this
+
+15:36.030 --> 15:39.240
+database is JPA repository.
+
+15:39.540 --> 15:41.430
+So I'm going to say product first.
+
+15:41.790 --> 15:49.900
+And as you remember we said that we're going to be use the ID field as string.
+
+15:50.130 --> 16:00.570
+So this Krink field is ID field is going to be our querying the main queering method with that way.
+
+16:00.660 --> 16:09.000
+Even if we don't have any specific queries created in our JPA repository we can still query our database.
+
+16:09.070 --> 16:15.400
+We can still update or delete or create some data in our database.
+
+16:15.490 --> 16:20.200
+So let's just say that we want this to be strenge.
+
+16:20.320 --> 16:21.710
+There you go.
+
+16:22.890 --> 16:30.840
+The other thing that we're going to use with this repository and the last thing actually is the repository
+
+16:30.840 --> 16:31.690
+annotation.
+
+16:31.980 --> 16:38.790
+So that Sprint can understand that this is a bean and it's specifically marked as a repository so we
+
+16:38.790 --> 16:43.510
+can interact with the response of Torri with this annotation.
+
+16:43.800 --> 16:48.300
+So I marked this interface as a repository as you can see here.
+
+16:48.300 --> 16:53.450
+It's coming from the O'Dowd's Spring Framework that stereotype repository.
+
+16:53.460 --> 16:54.540
+All right.
+
+16:55.090 --> 16:58.360
+We How a very simple interface.
+
+16:58.530 --> 17:05.730
+Actually we didn't even do anything specific here with this product repository interface.
+
+17:06.820 --> 17:07.640
+All right.
+
+17:07.690 --> 17:12.260
+Now let's make use of this interface and work with our data.
+
+17:12.320 --> 17:15.720
+What would our product table to do that.
+
+17:15.850 --> 17:22.870
+I'm going to switch to our repository Application class our spring book class in this class I'm going
+
+17:22.870 --> 17:30.640
+to interact with our database and I'll although why are the JPA repositories that we created which is
+
+17:30.640 --> 17:32.520
+the product Depository.
+
+17:32.740 --> 17:39.660
+And then we can persist any data that we want we can say we can update and we can do it.
+
+17:39.700 --> 17:47.710
+So to do that I'm just going to extend it so we can see everything clearly and I'll start by all the
+
+17:47.710 --> 17:48.190
+wiring.
+
+17:48.190 --> 17:52.320
+Our product repository with this application main class.
+
+17:52.540 --> 17:58.260
+So to do that I'm going to create an instance variable for product repository
+
+18:04.260 --> 18:04.650
+Henrico
+
+18:08.270 --> 18:17.170
+and what I want to do this time as I'm going to use the Stettner injection with the other method of
+
+18:17.170 --> 18:21.170
+spreading to use a set or injection.
+
+18:21.190 --> 18:22.190
+You can do two things.
+
+18:22.200 --> 18:30.720
+You can write your own centers or you can let intill create a server for me to do that click command
+
+18:30.750 --> 18:34.570
+and and hit setter.
+
+18:34.650 --> 18:40.860
+And as you can see we have our product repository instance variable displayed here.
+
+18:40.860 --> 18:42.470
+So let's just hit OK.
+
+18:43.460 --> 18:44.670
+Here we go.
+
+18:45.380 --> 18:55.360
+You can just rename this central method name with the repository and we're all fine too although I read.
+
+18:55.400 --> 19:03.250
+Of course we're going to say that we want this to be otherwise pretty all over the annotation.
+
+19:03.260 --> 19:04.440
+All right.
+
+19:04.550 --> 19:13.010
+This is actually the way that spring to Alpers the Pillard all guys are encouraging you to use the injection.
+
+19:13.010 --> 19:23.450
+The other wired the bean injection type the autopilot as it's used like this.
+
+19:23.550 --> 19:31.290
+It's not healthy because with this way the dependencies that the product repository uses might get really
+
+19:31.290 --> 19:32.670
+complex and time.
+
+19:32.730 --> 19:38.820
+And when they got complex the divinest injection might get some problems with it.
+
+19:40.130 --> 19:46.760
+It might not how initialized all the billions that it's referring to are some other problems might occur
+
+19:46.760 --> 19:50.680
+in the future if your dependencies get really complex.
+
+19:50.780 --> 19:55.870
+So to avoid that the center injection is the best way.
+
+19:55.880 --> 20:03.800
+And as I've said before it's the way that are old guys they spring developers are encouraging us to
+
+20:03.800 --> 20:05.020
+do that.
+
+20:05.040 --> 20:05.830
+All right.
+
+20:05.870 --> 20:10.800
+From now on I'm going to use the celery injection in my other wirings.
+
+20:10.880 --> 20:13.660
+So you should use that too.
+
+20:14.330 --> 20:23.570
+After cleaning this out I'm moving on with my implementation and to do that I'm going to use another
+
+20:23.570 --> 20:29.950
+new thing with my class and that thing is the command line runner.
+
+20:30.020 --> 20:30.960
+It's an interface.
+
+20:30.980 --> 20:34.280
+And we're going to implement this interface.
+
+20:34.400 --> 20:36.570
+So I'll explain it in a minute.
+
+20:36.950 --> 20:45.720
+So let's just implement the command line run as you can see all dot Spring Framework up boot all right
+
+20:46.140 --> 20:53.810
+and as it's shown here we need to implement the run method of the command line interface.
+
+20:54.060 --> 21:01.100
+So let's do that now and I'm going to say implement methods.
+
+21:01.440 --> 21:07.770
+And as you can see we have just run and I'm going to hit OK here we go.
+
+21:09.880 --> 21:16.150
+What this command line runner interface is as the name suggests is a command line runner.
+
+21:16.160 --> 21:24.350
+And when I'm using this with the actual application class I'm saying that whenever the application is
+
+21:24.410 --> 21:31.560
+up I want this run method to be executed in the startup of the application.
+
+21:31.580 --> 21:37.910
+This is a very useful way for your prototypes for your testing's or anything that you want to try out
+
+21:37.940 --> 21:44.750
+with your applications or any new component that you want to test out before you actually include in
+
+21:44.750 --> 21:46.390
+your production process.
+
+21:46.640 --> 21:53.990
+So that's why I prefer the command line runner with the boss of Doree application this time so that
+
+21:54.230 --> 22:01.040
+whatever I do in this run method is going to be executed in the startup of the application right after
+
+22:01.040 --> 22:03.780
+these sorts of startup.
+
+22:03.780 --> 22:12.360
+All right so now let's just create some products and have them persisted in our database in our database.
+
+22:12.870 --> 22:14.010
+So I'm going to say
+
+22:16.580 --> 22:26.550
+product and this is going to be product one it's going to be a new product.
+
+22:27.890 --> 22:34.520
+And I'll set the name as the test their product
+
+22:38.430 --> 22:43.330
+and I'm going to read the description.
+
+22:43.560 --> 22:57.990
+This is a cluster product and I'm going to give it a category and that category is going to be test
+
+22:59.790 --> 23:13.380
+so I'm going to give the type and the type is going to be general and of course we're going to set the
+
+23:13.380 --> 23:21.500
+price and price is going to be zero because this is a test of product.
+
+23:21.500 --> 23:23.340
+All right.
+
+23:23.340 --> 23:28.180
+So what are we going to do to persist this in our database.
+
+23:30.150 --> 23:39.260
+What we're going to do is we're just going to call our product repository and we all need to say that
+
+23:40.490 --> 23:42.420
+we want this to be saved.
+
+23:42.920 --> 23:51.320
+And as you can see we don't have any method in our product repository all the save and other options
+
+23:51.320 --> 24:01.130
+we receive in here are coming from the JPA repository interface and this is a very nice way to have
+
+24:01.520 --> 24:09.620
+a repository even if you don't have any specific querying or persisting matters with your repository.
+
+24:09.620 --> 24:17.180
+So what we're going to do now is since we're going to persist a single object single product data we're
+
+24:17.180 --> 24:24.580
+going to use this option and say we just want to persist our product one.
+
+24:24.620 --> 24:26.410
+All right.
+
+24:26.410 --> 24:34.760
+So to see if everything is all right by now let's just rerun our application and see what's going on
+
+24:36.040 --> 24:37.580
+or click rerun
+
+24:49.950 --> 24:58.260
+and our application started at Port ADHD and you should notice that we have a new line appearing right
+
+24:58.260 --> 25:03.650
+here before the application started Loek printed out here.
+
+25:03.720 --> 25:13.590
+So what this look says that our data is inserted into a database inserted into a database with the help
+
+25:13.590 --> 25:16.370
+of our product repository right here.
+
+25:16.560 --> 25:22.440
+And that was extending the J-P repository with the product and string injection.
+
+25:22.950 --> 25:31.550
+And what we're going to do now is to check the data that if it's persisted in the data is actually to
+
+25:31.560 --> 25:40.770
+do that I'm going to bring up the Firefox again and I'm just going to refresh our session with the H-2
+
+25:40.770 --> 25:41.390
+database
+
+25:45.560 --> 25:51.940
+and let's just reconnect and let's just query our product database.
+
+25:51.980 --> 25:57.200
+I'm clicking again on the product name and our hit run.
+
+25:57.320 --> 25:58.660
+Here we go.
+
+25:58.880 --> 26:02.750
+We have all the data that we need in our product table.
+
+26:03.020 --> 26:10.940
+And the first thing you should notice is the ID field the ID field is a new ID with the standard definition
+
+26:11.480 --> 26:18.170
+and it's all generated with the helper of the generators in the jokes the persistence and the of course
+
+26:18.410 --> 26:20.620
+hibernate annotations.
+
+26:20.870 --> 26:26.300
+So let's just rewind back to it and see what was going on there.
+
+26:26.300 --> 26:36.020
+Our idea was a you I.D. and the generator is called System Dasch you ID as we named it when we started
+
+26:36.020 --> 26:40.640
+the implementation and the strategy was you did too.
+
+26:40.700 --> 26:48.920
+And this is just a strategy and you can use any other strategy available to you with the Joe definition
+
+26:48.920 --> 26:56.990
+Joe AJP definition and of course the generation type was Udoh and this ID this new idea was generated
+
+26:57.080 --> 26:59.590
+automatically by hibernate.
+
+27:00.050 --> 27:03.990
+So let's get back to Firefox again.
+
+27:05.040 --> 27:09.490
+And now let's just review all other columns in the database.
+
+27:09.780 --> 27:14.360
+And as you can see our test category is persisted.
+
+27:14.460 --> 27:24.290
+Our description is a this is a test product and our name is Tusser product again and our price is zero.
+
+27:24.360 --> 27:32.850
+And of course our type is general and we should remember that what we did to have this stayed up persisted
+
+27:32.850 --> 27:43.050
+to our database was we said we need a new product with this line and then we said our name.
+
+27:43.170 --> 27:44.790
+We said our description.
+
+27:44.910 --> 27:46.570
+We said our category.
+
+27:46.650 --> 27:47.460
+We said our type.
+
+27:47.460 --> 27:57.270
+And finally we at our price then all we had done was we called our repository with the of course injection
+
+27:57.330 --> 28:06.000
+of the underwired variable of the product repository and then we just called the same method and we
+
+28:06.000 --> 28:10.590
+passed in the product one as our persisting object.
+
+28:10.950 --> 28:19.320
+And it was all handled by spring data and again our console upload was showing us the insert statement
+
+28:19.320 --> 28:20.160
+right here.
+
+28:20.960 --> 28:21.790
+All right.
+
+28:22.010 --> 28:30.200
+This was the way to simply persist any data any POJO any entity that you want in the H2 database or
+
+28:30.200 --> 28:38.090
+any database that you want because of the help of the JP repositories and to move on further with updating
+
+28:38.150 --> 28:41.030
+and deleting all the seeing in the next video.

@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.510 --> 00:06.380
+In order to install Java we have to go to Oracle that come first.
+
+00:06.390 --> 00:07.590
+So now let's do that
+
+00:12.510 --> 00:18.110
+now let's go to download section and click Jobo for developers.
+
+00:22.540 --> 00:23.890
+Now let's click.
+
+00:23.990 --> 00:29.230
+Joe a platform JDK.
+
+00:29.280 --> 00:32.540
+Now we have to accept the agreement here.
+
+00:32.550 --> 00:34.380
+So let's do that.
+
+00:34.980 --> 00:41.130
+And for this tutorial I'll be installing the 64 bit version of Java.
+
+00:41.130 --> 00:49.760
+So if you how 32 bit version of Windows you can install this one but I'll download this one.
+
+00:50.050 --> 00:50.500
+OK.
+
+00:50.500 --> 00:52.010
+So let's do that now.
+
+00:53.250 --> 00:58.660
+Once the download is complete you'll be prompted with the installer.
+
+00:58.680 --> 01:08.180
+So now let's click next and Leawood as is and just verify that the installation path is correct.
+
+01:08.180 --> 01:14.480
+So when you do that click Next an installer will begin.
+
+01:14.720 --> 01:22.760
+Once the installation of JDK is complete you'll be prompted to install the Jerry so to do that click
+
+01:22.760 --> 01:28.570
+Next an installer will start instantly.
+
+01:28.610 --> 01:31.470
+Wait for it and it's finished.
+
+01:32.180 --> 01:38.780
+Now we have to verify that we have Java installed properly to do that.
+
+01:38.780 --> 01:40.700
+Now let's open a command prompt.
+
+01:41.990 --> 01:50.600
+Type ACMD and type Jawa minus version.
+
+01:50.690 --> 01:58.850
+You should be seeing this all right if you don't all you have to do is set D and y multivariable to
+
+01:58.850 --> 01:59.960
+do that.
+
+02:00.110 --> 02:09.820
+Go to your computer and open properties go to advanced system settings and click and what variables
+
+02:11.400 --> 02:14.660
+you see there is no Djala home installed here.
+
+02:16.420 --> 02:21.180
+To fix that let's go to the installation directory of Java
+
+02:25.570 --> 02:34.650
+go to your computer and program files Java and JDK.
+
+02:34.650 --> 02:48.970
+Now copy the path and use it to add a Java home namely Wymans variable as Java underscore home and paste
+
+02:48.970 --> 02:50.980
+the path.
+
+02:51.170 --> 02:56.460
+Click OK and OK again.
+
+02:56.600 --> 03:02.450
+Now if you reopened this command prompt like this.
+
+03:04.310 --> 03:08.850
+When you type Jawohl minus version you have to.
+
+03:08.850 --> 03:13.800
+Seeing as if you have any problems installing jello on your computer.
+
+03:13.800 --> 03:15.480
+Please let me know and I'll help you.

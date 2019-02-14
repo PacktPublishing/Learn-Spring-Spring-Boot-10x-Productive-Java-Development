@@ -1,0 +1,673 @@
+WEBVTT
+
+00:00.420 --> 00:08.440
+In this section we're going to start developing our first rest API and to do that I'm going to create
+
+00:08.470 --> 00:10.300
+a new project.
+
+00:10.300 --> 00:16.510
+So let's start by creating our project I hope spring initialiser and I'm clicking next.
+
+00:18.120 --> 00:29.910
+And to name the project I'm going to say rest the API and let's just rename the artifact to and of course
+
+00:30.390 --> 00:32.840
+our description.
+
+00:32.840 --> 00:34.880
+All right.
+
+00:35.000 --> 00:43.760
+And now from our dependencies Well we're going to use as the web artifact which is also going to bring
+
+00:43.760 --> 00:51.150
+us the arrest functionality along with the Tom-Kat and from the sequel tab.
+
+00:51.450 --> 00:55.770
+I'm again going to select JPA and H.
+
+00:56.240 --> 00:57.110
+All right.
+
+00:58.080 --> 01:00.090
+That's all we need for a rest.
+
+01:00.090 --> 01:01.960
+API application.
+
+01:02.070 --> 01:09.740
+And in this application we're of course going to use a repository and get and say our data from there
+
+01:12.550 --> 01:23.430
+so I'll click next and I'm ready to create my project so I'll click Finish.
+
+01:23.520 --> 01:25.560
+Our application is ready.
+
+01:26.310 --> 01:29.790
+And let's check out record structure again.
+
+01:30.730 --> 01:31.480
+Here we go.
+
+01:31.480 --> 01:40.370
+We have everything ready to create our application in this application what we're going to do is we're
+
+01:40.370 --> 01:48.380
+going to have a repository just as we did in the previous sections and what that repository we're going
+
+01:48.380 --> 01:53.570
+to have a rest API on top of it with that risk API.
+
+01:53.810 --> 02:03.290
+We're going to be able to get those put and delete something from our repository with the help of rest
+
+02:03.290 --> 02:05.540
+request mappings.
+
+02:05.590 --> 02:10.490
+So I'll start by creating our entity.
+
+02:10.600 --> 02:19.240
+So for that I'm going to have a model package in that model package.
+
+02:19.240 --> 02:29.670
+I'm going to have a product class and within the product class I'm going to provide a typical wearables
+
+02:29.670 --> 02:33.210
+that we use within our Bruja sections.
+
+02:33.390 --> 02:44.410
+So I'll say I need an ID I need of course a name.
+
+02:44.750 --> 02:47.590
+I'm going to have a description
+
+02:51.890 --> 02:53.360
+I'm going to have a type
+
+02:57.080 --> 03:01.780
+and we need a category.
+
+03:02.000 --> 03:06.690
+And that's basically all we need for a simple product.
+
+03:06.830 --> 03:09.310
+So let's create our getters and setters
+
+03:14.180 --> 03:14.970
+right.
+
+03:15.540 --> 03:23.730
+And let's say we want this ID field as the actual ID in our database.
+
+03:23.850 --> 03:36.510
+So I'm going to use the generated wellie and I'll say strategy is going to be audio and the generator
+
+03:36.600 --> 03:45.490
+is going to be system Dasch you ID for the actual generator.
+
+03:45.540 --> 03:59.640
+I'm going to say General generator and I'm going to name it as system Desch you ID and for the strategy
+
+03:59.820 --> 04:06.920
+the actual strategy I'm going to say you D2 The other thing we need.
+
+04:06.940 --> 04:14.700
+But our product class we need to set it as an entity so I'll say that too.
+
+04:15.420 --> 04:21.660
+And I'm going to move t our package and create a new package for our repository
+
+04:25.660 --> 04:36.330
+within our repository we're going to have a product repository just as we did before.
+
+04:36.410 --> 04:41.330
+So this is going to be an interface now created and right now
+
+04:44.230 --> 04:52.910
+in our repository of course is going to extend from the JPA repository with a peer repository.
+
+04:52.910 --> 04:58.300
+We're going to be interacting with our product.
+
+04:59.440 --> 05:08.870
+And of course for the identifier we're going to use string and to name it as an actual repository.
+
+05:08.920 --> 05:12.190
+I'm going to use the repository interface method.
+
+05:14.420 --> 05:19.220
+All right we have our repository set up.
+
+05:19.410 --> 05:27.510
+So let's switch back to our packages and start writing down our controller to do that.
+
+05:27.570 --> 05:30.510
+I'm going to create a controller package
+
+05:33.600 --> 05:42.020
+in this package I'm going to have a product controller and build up on our rest API methods.
+
+05:42.840 --> 05:54.340
+So I'll create a new class and I'll say it's going to be named as product controller.
+
+05:54.340 --> 05:54.990
+Right.
+
+05:56.670 --> 06:02.910
+And this controller what we're going to do is we're going to use some annotations and we provide the
+
+06:03.180 --> 06:12.630
+get put post and delete methods for our products so we can interact with those before we start.
+
+06:12.900 --> 06:18.650
+What we're going to do is we're going to annotate our controller as an actual controller.
+
+06:19.520 --> 06:22.740
+So let's do that now to do that.
+
+06:22.790 --> 06:27.620
+I'm going to use rest controller as we have here.
+
+06:28.220 --> 06:36.050
+Rest control or annotation is going to provide as the rest interface functionality so that we can provide
+
+06:36.050 --> 06:45.360
+the HTP methods with this product's controller class our products controller will have an entry point
+
+06:45.600 --> 06:54.780
+for our API and to get that an entry point we're going to use the request mapping on top of the class.
+
+06:54.900 --> 06:55.200
+Right.
+
+06:55.200 --> 06:57.990
+All of the rest controller and rotation.
+
+06:58.200 --> 07:00.760
+Let's do that now.
+
+07:00.870 --> 07:05.770
+We'll say request mapping and request mapping.
+
+07:05.820 --> 07:14.490
+We're going to provide the path and that path is going to be defined by the arrest API guidelines.
+
+07:15.120 --> 07:21.520
+And as the guideline says you have to be descriptive with your path.
+
+07:21.620 --> 07:26.480
+And since this is an API I'm going to start by API
+
+07:30.290 --> 07:38.850
+and after that you have to be defining the resource that you're going to control with this controller.
+
+07:38.850 --> 07:41.590
+That's what the API guideline says.
+
+07:41.610 --> 07:49.900
+So in this group troller we're controlling and manipulating the products the product entities.
+
+07:49.950 --> 07:56.770
+So our resource is a product or list of products you name it.
+
+07:57.180 --> 08:05.520
+So in our risk control or our next path is going to be product so that we can align with the rest API
+
+08:05.520 --> 08:06.570
+guidelines.
+
+08:06.600 --> 08:14.510
+So let's say we want products to be set as the next path.
+
+08:14.910 --> 08:15.730
+All right.
+
+08:15.990 --> 08:21.300
+No we can provide our methods to our best API.
+
+08:21.300 --> 08:28.220
+I'll start by the basic method of HTP and that one is HTP get.
+
+08:28.290 --> 08:31.930
+So I'm going to say public.
+
+08:32.370 --> 08:41.970
+And with this get there that I'm going to be returning a product object I'm going to look for a product
+
+08:41.970 --> 08:48.910
+with its ID and then I've funded from the repository then I'll simply return it.
+
+08:48.990 --> 08:59.160
+So I'll say I'm going to return a product and the method name is going to be kept product
+
+09:03.100 --> 09:04.140
+OK.
+
+09:04.760 --> 09:11.160
+So let's make this method a risk API and point methods to do that.
+
+09:11.180 --> 09:20.240
+I'm again going to say request mapping and the path for this method is going to be build on top of this
+
+09:20.480 --> 09:30.100
+API slash product slash and after that slash whatever we provide is going to be the end point.
+
+09:30.110 --> 09:37.580
+So our End Point is going to be named as ID.
+
+09:37.810 --> 09:47.880
+So the type of the method that we're going to use is going to be request method that get and for our
+
+09:47.880 --> 09:55.620
+requests we said we wanted to get a wearable and this is the way that you get a wearable from a wrist
+
+09:55.650 --> 09:58.560
+and point.
+
+09:58.580 --> 10:03.950
+So this really Bill is going to be made use by the path variable.
+
+10:04.100 --> 10:06.140
+So this is going to be a path variable.
+
+10:06.170 --> 10:07.710
+In our End Point.
+
+10:07.730 --> 10:13.070
+So the final product of this End Point is going to be like this.
+
+10:13.070 --> 10:21.760
+We will how API slash products and Id some ID that you provide.
+
+10:21.980 --> 10:27.170
+This is going to be the final endpoint that we're going to use to make requests.
+
+10:27.170 --> 10:28.550
+All right.
+
+10:30.180 --> 10:31.380
+Get rid of that.
+
+10:31.590 --> 10:38.690
+And as I've said to make use of this idea this idea is going to be a path variable.
+
+10:38.910 --> 10:48.480
+And we have to get that path variable as you can see we have a annotation as the path variable our path
+
+10:48.480 --> 10:52.550
+variable is going to be named as ID.
+
+10:52.740 --> 11:00.140
+As we said here so of course we're going to wrap it around double coats
+
+11:02.660 --> 11:12.590
+and our idea is going to be a string just as we provided here so that we can use this ID field in our
+
+11:12.590 --> 11:16.840
+method so that we can query our repository against it.
+
+11:19.310 --> 11:26.720
+In the remaining part of our method we're going to go to our Abaza Tori and query the entity with this
+
+11:26.720 --> 11:27.470
+ID.
+
+11:27.890 --> 11:32.270
+So to do that I'm going to wire our repository.
+
+11:32.270 --> 11:34.240
+So let's do that now.
+
+11:35.860 --> 11:43.440
+Private product repository in product repository again.
+
+11:43.570 --> 11:48.190
+So I'll provide a set or injection for that.
+
+11:48.190 --> 11:59.320
+I'll say setter and for the central method I'm going to use the product repository naming and of course
+
+11:59.410 --> 12:06.170
+I'm going to wire it our product repository is ready.
+
+12:06.260 --> 12:17.960
+So router repository we can go to our database and query with this ID so I can simply say I can return
+
+12:18.160 --> 12:24.290
+our product repository and find one.
+
+12:24.300 --> 12:29.170
+All right find one method is what I need.
+
+12:30.120 --> 12:35.180
+It gets an ID and returns the ends of the right back to you.
+
+12:35.610 --> 12:44.100
+So I'll provide the ID path variable to our method so that I can go to our database and bring it back
+
+12:44.100 --> 12:45.710
+to me.
+
+12:45.720 --> 12:56.800
+All right but before we actually test out this method we have to put an entity put a data into our database.
+
+12:57.040 --> 13:06.490
+So I'll go to our API application main class and have a command line runner to do that.
+
+13:06.730 --> 13:15.220
+I'm going to implement the command line run interface and with that interface I of course need to implement
+
+13:15.220 --> 13:16.520
+the run method.
+
+13:18.260 --> 13:26.470
+In the run method I'm going to go to our repository and say a new product but of course to do that I
+
+13:26.470 --> 13:29.720
+have to order wire our repository.
+
+13:29.890 --> 13:39.750
+So I'll say product repository and I'm going to have a setter injection for that.
+
+13:41.340 --> 13:49.180
+In the center injection I'm going to rename to product repository and provide the annotation.
+
+13:49.200 --> 13:55.540
+All right so in this method I'm going to have a new product
+
+14:00.210 --> 14:03.230
+and I'll name it as the test product
+
+14:06.830 --> 14:13.880
+this product is going to be named as simple product.
+
+14:15.650 --> 14:22.430
+And of course I'm going to describe it as this is a test product
+
+14:25.160 --> 14:30.870
+and test product is going to get a type.
+
+14:31.340 --> 14:34.760
+That type is going to be a custom type
+
+14:38.730 --> 14:46.060
+and for that category I'm going to say special.
+
+14:46.060 --> 14:46.790
+All right.
+
+14:48.570 --> 14:57.800
+And with the help of our product repository I'm going to save this and at the so I'll provide the test
+
+14:57.800 --> 15:04.060
+product to our repository and have it saved into our database.
+
+15:05.060 --> 15:08.770
+So to actually make use of a database.
+
+15:08.780 --> 15:15.510
+Let's go back to our application to our properties and provide the variables to our database.
+
+15:15.620 --> 15:30.330
+Spring got datasource dark your owl is going to be shady see at age 2 and file and then I'm going to
+
+15:30.330 --> 15:34.000
+provide the name of our data store.
+
+15:34.170 --> 15:41.100
+So it's going to be products and spring that
+
+15:46.340 --> 15:47.790
+datasource.
+
+15:48.290 --> 15:58.050
+Cried her class name is going to be H-2 and for our data source for our database I'm going to provide
+
+15:58.320 --> 16:09.970
+the user name as a say and I'm going to provide no passwords and KCET sequel in our command line.
+
+16:10.130 --> 16:22.410
+I'm going to say show sequel to true and for our H-2 council I'm going to say it's going to be enabled.
+
+16:23.380 --> 16:33.780
+And for the path over a Also I'm going to simply say it's going to be H-2 All right.
+
+16:35.300 --> 16:42.320
+We have everything ready to test out our rest and point our rest and end point.
+
+16:42.950 --> 16:45.140
+So let's test this out.
+
+16:45.140 --> 16:48.260
+To do that I'm going to start up our application
+
+17:04.680 --> 17:05.520
+here we go.
+
+17:05.680 --> 17:13.740
+We have started our application and our table has created after the creation of our table and to start
+
+17:13.750 --> 17:22.920
+above our Tomcat server we have inserted a data to our data store and was done with the run method of
+
+17:22.920 --> 17:25.680
+the command line runner.
+
+17:25.680 --> 17:31.020
+All right let's take out the day that we have in the database to do that.
+
+17:31.020 --> 17:33.880
+I'm going to start up the edge to cancel.
+
+17:34.170 --> 17:47.370
+So I'll start Firefox and go to our page to cancel local Howze ADHD slash age.
+
+17:47.540 --> 17:48.160
+All right.
+
+17:48.960 --> 17:59.940
+Let's test our connection and connect do our database in our database we how our product table let's
+
+17:59.940 --> 18:08.360
+select the data from that and we how our data created in our database with this ID.
+
+18:08.360 --> 18:09.520
+All right.
+
+18:09.860 --> 18:18.790
+So what we're going to do now is we're going to query our data with this ID field so to do that of course
+
+18:18.790 --> 18:28.670
+we can just use a simple browser but for the purpose of our next endpoints the posts put and delete.
+
+18:28.870 --> 18:37.930
+We're going to use a rest client to actually test out errors and point we're going to need a full fledged
+
+18:38.020 --> 18:44.020
+API tester so that we can use in our future controllers future polls.
+
+18:44.080 --> 18:47.180
+And police methods to do that.
+
+18:47.260 --> 19:00.760
+I'm going to go to search and say resk client for Firefox and see what's going on with how he rest client
+
+19:01.010 --> 19:13.660
+debugger services we can use that ad and I'm going to click it and I'll add it to Firefox.
+
+19:13.780 --> 19:18.690
+Let's install it and let's just drop the Firefox
+
+19:24.040 --> 19:24.820
+here we go.
+
+19:24.910 --> 19:31.850
+We have the risk aligned install to see teres client.
+
+19:31.950 --> 19:37.140
+You should notice that you have a new application icon appearing here.
+
+19:37.140 --> 19:44.890
+Let's click on that and we have the rest combined with the stress client as you can see.
+
+19:44.910 --> 19:53.370
+You can use it to make a get request post request put delete options had crays and connect requests
+
+19:54.150 --> 19:55.430
+you provide your out.
+
+19:55.560 --> 19:58.820
+And if you need to you provide the body.
+
+19:58.830 --> 20:12.190
+All right so ORUs end point was starting as API slash products and then the ID field so that's provided
+
+20:12.580 --> 20:14.330
+as we have it here.
+
+20:14.500 --> 20:21.780
+I'm going to copy our Roop path and I'll say localhost
+
+20:24.960 --> 20:29.360
+ADHD and slash of course.
+
+20:29.400 --> 20:38.510
+I can just paste it and then I'm going to provide the ID that we need the ID as in our database.
+
+20:38.820 --> 20:47.150
+So I'll click the double click the ID field in our database and copy it in a rest client.
+
+20:47.160 --> 20:52.680
+I'm going to paste it and we how our requests ready.
+
+20:52.680 --> 20:55.350
+So let's break down our requests.
+
+20:55.350 --> 21:08.160
+Again we have our server we have our port and then we have the root of our API which is API I-Slash
+
+21:08.160 --> 21:16.930
+products and right after that we have providing the id the actual ID that we're looking for.
+
+21:16.960 --> 21:20.240
+So let's run our requests and see what's going on
+
+21:26.000 --> 21:27.450
+in response.
+
+21:27.560 --> 21:35.660
+You can see that we don't have any headers because we didn't return any headers to our request but in
+
+21:35.660 --> 21:45.300
+the response from field response body as we clicked we have our product as you can see here as a Jason
+
+21:45.370 --> 21:46.430
+string.
+
+21:46.730 --> 21:54.670
+And if we go to the next tab as the highlight and not are all we can see a beautiful white version of
+
+21:54.690 --> 21:55.900
+our entity.
+
+21:56.150 --> 21:59.440
+And as you can see we have all the fees that we need.
+
+21:59.540 --> 22:03.800
+We have the ID we have name as simple product.
+
+22:03.800 --> 22:07.710
+We have a description type and category.
+
+22:07.850 --> 22:15.620
+And as you know there's there's no response code indicators or anything else within our response.
+
+22:15.620 --> 22:20.230
+That's basically because we didn't say you know you're all HTP.
+
+22:20.360 --> 22:26.490
+So let's put HTP in our request you're out and see what's going on.
+
+22:27.170 --> 22:34.090
+So I'll go to my URL and I'll say ETP slash slash.
+
+22:34.220 --> 22:40.660
+And the same request we had before so I'll send this request now.
+
+22:41.230 --> 22:45.970
+And we were receiving the same product same object in our database.
+
+22:46.250 --> 22:52.030
+But this time if we go to our response headers we have 200.
+
+22:52.070 --> 23:03.800
+And the status code which is OK and the content type is application SLAs Jaison as a default for spring.
+
+23:03.810 --> 23:04.950
+All right.
+
+23:04.950 --> 23:08.060
+We have made our first HTP request.
+
+23:08.160 --> 23:10.210
+Our first control or end point.
+
+23:10.620 --> 23:15.060
+Let's switch back to our ID and check out our request
+
+23:17.860 --> 23:19.570
+in our request.
+
+23:19.750 --> 23:22.400
+We simply said that we wanted to.
+
+23:22.450 --> 23:29.260
+On top of our route that of request mapping which was API slash products.
+
+23:29.260 --> 23:37.950
+And after the last slash we wanted to provide an idea so that we can request our entities and request
+
+23:37.960 --> 23:39.110
+method that we wanted.
+
+23:39.110 --> 23:48.920
+It was the get method and of course this ID field as indicating a path where you were with the curly
+
+23:48.920 --> 23:54.270
+braces around at to bring that races to our method.
+
+23:54.470 --> 23:57.920
+We used tath variable as the annotation.
+
+23:58.160 --> 24:05.390
+And of course the name of the property that we're going to use as the path we are able is ID and to
+
+24:05.570 --> 24:08.260
+actually get that ID in our methhead.
+
+24:08.450 --> 24:12.980
+We said it's a type of string and ID.
+
+24:13.150 --> 24:20.080
+And after that within our method which our controller we set that we wanted to find that entity from
+
+24:20.080 --> 24:21.330
+our repository.
+
+24:21.520 --> 24:30.430
+And after finding it as the find one method returns as a product object as you can see here we simply
+
+24:30.430 --> 24:35.520
+returned it and the result is just as we have here.
+
+24:35.800 --> 24:45.400
+We found our product as you know does writing down controllers well-spring and resk controllers is very
+
+24:45.400 --> 24:49.500
+easy to implement in our next three deals.
+
+24:49.550 --> 24:57.410
+We're going to dive into the other parts of rest and of course we're going to use other methods of TTP.

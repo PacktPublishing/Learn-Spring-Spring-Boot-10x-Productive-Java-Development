@@ -1,0 +1,208 @@
+WEBVTT
+
+00:01.120 --> 00:04.830
+In this video we're going to be talking about the project.
+
+00:04.840 --> 00:16.500
+Lombok project Lumbergh is an unnoticed project licensed under MIT Lomberg is a great Plug-In great
+
+00:16.500 --> 00:23.820
+project so that you can make use in your projects mean your Toyo's in your classes and get rid of lots
+
+00:23.820 --> 00:25.250
+of moral code.
+
+00:27.620 --> 00:36.500
+As you can see a list of annotations provided by Lombok you can provide a non-rule annotation you can
+
+00:36.680 --> 00:41.060
+provide getters and setters to string equals and hash code.
+
+00:41.200 --> 00:48.160
+No Ark's Deda and lots of other annotations in your objects and properties.
+
+00:50.500 --> 00:58.340
+To show you how all things work with Lombok I'm going to go to my main repository and first get the
+
+00:58.700 --> 01:07.100
+Lumbergh dependency so to do that I'll go to my repository and look for Project.
+
+01:07.220 --> 01:11.620
+Lombok and in the Lombok.
+
+01:11.640 --> 01:21.210
+I'm going to get the latest one which is one the 16 got 16 and I'm going to get to dependency and with
+
+01:21.220 --> 01:27.030
+that dependency what I'm going to do now is I'm going to create a new Mavin project
+
+01:29.600 --> 01:42.900
+and within that Navan project I'm going to say Lumbergh D-Mo. and the artifact is going to be Lombok.
+
+01:42.990 --> 01:50.280
+I'm all set and let's create the project.
+
+01:50.470 --> 01:58.600
+Here we have a template Mabon project and lets enable the auto import and in my profile the first thing
+
+01:58.600 --> 02:03.580
+I'm going to do is add the Lombok dependency so to do that.
+
+02:03.580 --> 02:10.060
+I'm going to create a dependency stack right here and within that dependency stack I'm going to put
+
+02:10.060 --> 02:12.030
+the dependency of Lumbergh.
+
+02:12.370 --> 02:20.620
+All right so my maven has already to resolve the dependency so I can make use of Lumbergh in my project.
+
+02:20.620 --> 02:25.830
+Now to check it out and hold things work with Lomborg.
+
+02:26.070 --> 02:28.610
+Let's go to a class.
+
+02:28.710 --> 02:29.760
+My main class
+
+02:32.420 --> 02:39.920
+and as you can see since this is a template project we don't have any classes so let's create one the
+
+02:40.130 --> 02:46.860
+product class that we use with all projects that were built and build up on it.
+
+02:46.870 --> 02:58.120
+All right in my product class as you would remember from my previous projects we had name we had a description
+
+03:03.040 --> 03:07.060
+and we also had type
+
+03:11.650 --> 03:14.060
+category.
+
+03:14.560 --> 03:20.870
+And finally a price.
+
+03:20.950 --> 03:21.980
+All right.
+
+03:22.200 --> 03:27.630
+That was the product class that we all built in the previous projects.
+
+03:27.760 --> 03:34.690
+But the other thing that we did with the product class before we provided the getters and setters methods
+
+03:35.170 --> 03:42.870
+all by our hands we generated them but they were all in here all in the class.
+
+03:43.010 --> 03:46.710
+Lundborg You don't have to do any of that.
+
+03:46.750 --> 03:50.240
+That is all done by the data adaptation of non-book.
+
+03:50.470 --> 03:59.710
+So remember that we have this class and let's put the data annotation right up on top of the class that
+
+03:59.710 --> 04:01.040
+we created.
+
+04:01.540 --> 04:08.050
+And as you can see the data annotation is coming from Lombok and if we build this project right now
+
+04:08.140 --> 04:16.010
+and check out the compiled class file we should be surprised by the changes that we did add.
+
+04:16.030 --> 04:23.350
+So let's say you are file and go to my own projects and let's build our project.
+
+04:23.530 --> 04:31.500
+So for building maven we should use install.
+
+04:31.660 --> 04:37.210
+And here we go let's stick out the source file and what we have there.
+
+04:38.830 --> 04:44.230
+And in the classes if we drag it right here.
+
+04:44.230 --> 04:45.310
+Here we go.
+
+04:45.460 --> 04:54.280
+We have a No our constructor we have all the getters and setters for our properties we have equals we
+
+04:54.280 --> 05:03.130
+have can equal we have hash code and to string all that you do with the methods that we could otherwise
+
+05:03.370 --> 05:08.380
+provide by hand they are all provided by lumber itself.
+
+05:08.380 --> 05:09.850
+Isn't that beautiful.
+
+05:09.850 --> 05:11.650
+Isn't that great.
+
+05:11.650 --> 05:15.750
+And let's look out some other properties under dietician's of Lombok.
+
+05:16.090 --> 05:24.590
+So to do that I'm going to go to my product class and I'll say all Ark's constructor.
+
+05:24.640 --> 05:25.290
+All right.
+
+05:26.400 --> 05:29.720
+And let's install our project again.
+
+05:35.820 --> 05:46.250
+And let's just reopen our product class and check out our all Ark's constructor.
+
+05:46.270 --> 05:47.150
+Here we go.
+
+05:48.270 --> 05:54.780
+You can see that there is a constructor properties annotation and we have all the properties of our
+
+05:54.780 --> 05:55.820
+product object.
+
+05:55.920 --> 06:01.920
+And as we expect the all Oxx constructor is right here.
+
+06:02.070 --> 06:10.260
+And as our last example let's assume that you are checking for an all in set of every object every property
+
+06:10.260 --> 06:16.860
+that you have and for that each property you have to be typing a lot of checks for no.
+
+06:17.280 --> 06:22.760
+So to avoid that let's use the non-null annotation of non-book.
+
+06:22.830 --> 06:28.220
+So we're doing that what I'm going to do is simply say no no.
+
+06:28.260 --> 06:33.700
+From Lombok and if I do that and install my project again
+
+06:39.890 --> 06:45.460
+we're now seeing that the set name it has if name it calls no.
+
+06:45.500 --> 06:53.120
+And then Crose some new in null pointer exception and otherwise it's simple setting the name longbows.
+
+06:53.140 --> 07:00.800
+And it's Annotations are cool and great ways to improve your code and get rid of lots of boilerplate.
+
+07:01.300 --> 07:07.270
+Otherwise you have to be taking a couple of minutes and even more depending on the number of your properties
+
+07:07.630 --> 07:11.370
+to write down all these boilerplate codes.
+
+07:11.470 --> 07:18.400
+So I highly encourage you to check out the lumber plug in and other alternatives other annotations that
+
+07:18.400 --> 07:20.170
+you can use within your projects.

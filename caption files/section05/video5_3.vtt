@@ -1,0 +1,100 @@
+WEBVTT
+
+00:00.400 --> 00:07.530
+In this video we're going to talk about thing and template engines which are integral parts of any web
+
+00:07.530 --> 00:15.310
+application template thing is a formal avoiding repetition and providing consistent experience to your
+
+00:15.310 --> 00:24.290
+users what templating means is that for Web page that you need for specific purposes you need not create
+
+00:24.290 --> 00:26.550
+a brand new page for all of them.
+
+00:26.680 --> 00:32.900
+You need to lay out all of your components that you intend to use as plates and create temple of pages
+
+00:32.990 --> 00:34.340
+of their different needs.
+
+00:35.170 --> 00:38.240
+So let's just think of an example for one moment.
+
+00:38.530 --> 00:43.710
+Let's assume that you were his original application in this reservation application.
+
+00:43.840 --> 00:50.470
+You're going to have a user sign up Logan reservation check in and a couple of other different pages
+
+00:50.470 --> 00:51.950
+for different purposes.
+
+00:52.240 --> 00:58.780
+So a template thing you can create a sign up page with your template data structure and let it be dynamically
+
+00:58.780 --> 01:03.380
+filled with actual data whenever your user requests the page.
+
+01:03.420 --> 01:05.990
+That's the basic idea behind thing.
+
+01:06.120 --> 01:11.670
+All you have to do is to choose a template engine for this purpose and let God handle all the rendering
+
+01:11.700 --> 01:19.500
+and pay generation tasks by itself templating is an important aspect of an embassy application.
+
+01:19.500 --> 01:25.720
+So what options do we have for template thing that we can use within our applications.
+
+01:25.900 --> 01:30.960
+Considering the market share and popularity we have four different alternatives.
+
+01:31.760 --> 01:39.550
+First is the Apache will also be velocity is Rhodora and all and not a very actively maintained project
+
+01:40.110 --> 01:41.270
+in velocity.
+
+01:41.290 --> 01:46.550
+Your template code is processed however not compiled into Java code.
+
+01:46.600 --> 01:49.540
+That's basically all there is to know about it.
+
+01:49.540 --> 01:57.180
+Next up is another Apache project which is the maker it's actively being developed with the incubator
+
+01:57.180 --> 02:03.250
+of Apache Foundation and thought as a replacement for Apache will also be.
+
+02:03.380 --> 02:10.460
+We also have a newcomer which is pebble pebble is rather new to the market and offers hend of features
+
+02:10.460 --> 02:15.270
+like inheritance and easy to read syntax.
+
+02:15.290 --> 02:19.310
+The last one and the engine that we're going to use is timely.
+
+02:19.700 --> 02:27.620
+Timely is the ideal combination when developing both 4G VM and asked them all five time leave has a
+
+02:27.620 --> 02:32.210
+very very good support and Spring Framework than any other engine in the list.
+
+02:32.300 --> 02:34.970
+So that's one of the reasons why we choose it.
+
+02:36.140 --> 02:36.890
+All right.
+
+02:37.050 --> 02:42.330
+We gained a good amount of understanding on templating and template engines available for us to choose
+
+02:42.540 --> 02:45.140
+and why we prefer time against others.
+
+02:46.360 --> 02:50.390
+To talk more about timely Venger always seeing you on the next video.

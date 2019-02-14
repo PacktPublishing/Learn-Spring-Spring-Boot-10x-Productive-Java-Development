@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00.320 --> 00:07.690
+Know it's time for you to work on spring Data think about either a simple or complex application and
+
+00:07.900 --> 00:15.070
+start implementing your entities and properties and I don't take them as you like create an interface
+
+00:15.100 --> 00:21.310
+for your repository to interact with your entities and at Korey's that you can use to find and manipulate
+
+00:21.310 --> 00:22.030
+your data.
+
+00:22.880 --> 00:27.090
+Set your own moment build upon your architecture as much as you want.
+
+00:28.230 --> 00:34.040
+While doing all these either use the code that I've provided within this section or start from the scratch
+
+00:35.500 --> 00:39.380
+I'm sure you'll do great on this exercise and how fun doing so.
+
+00:40.580 --> 00:45.360
+When you finish all the waiting for you to taken over we will have this section in the next video.

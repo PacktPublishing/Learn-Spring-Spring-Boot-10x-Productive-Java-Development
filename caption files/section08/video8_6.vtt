@@ -1,0 +1,166 @@
+WEBVTT
+
+00:01.430 --> 00:08.910
+For our edit page we're going to be creating a new column in our table and then we're going to be inserting
+
+00:08.910 --> 00:16.580
+a new button there the edit button and then we can redirect our user to our edit page.
+
+00:16.620 --> 00:25.440
+So for doing that I'm going to be adding a new header to our table and then I'm saying this is the edit
+
+00:25.440 --> 00:26.750
+one.
+
+00:26.940 --> 00:35.880
+And after that I'll go to my table data and there I'm going to be providing a new button and that burden
+
+00:36.180 --> 00:41.260
+is going to be provided with the ATAC within the ATAC.
+
+00:41.430 --> 00:46.820
+I'm going to be using a th reference within that reference.
+
+00:47.000 --> 00:56.190
+I'm going to be referencing my controller my new page for our added page so that controller is going
+
+00:56.190 --> 01:03.490
+to be slash products and slash edit.
+
+01:04.050 --> 01:12.240
+And after that I'm going to be providing the ID of the producta dime selecting in the table as simply
+
+01:12.240 --> 01:16.830
+passing it to the product that I'm interested in with editing.
+
+01:17.520 --> 01:22.430
+So to say that I'm going to say product that ID.
+
+01:22.460 --> 01:23.070
+All right.
+
+01:23.070 --> 01:24.490
+Simple as that.
+
+01:25.140 --> 01:37.420
+And for the class of this ATAC I'm going to say button and button defaults All right.
+
+01:37.530 --> 01:44.640
+And of course for the text of it I'm going to be saying edit.
+
+01:44.750 --> 01:46.570
+All right.
+
+01:46.720 --> 01:50.140
+We have created our button in the UI.
+
+01:50.470 --> 01:59.080
+So now let's create our edit controller and bind it with the added button on the UI so to do that I'm
+
+01:59.080 --> 02:05.140
+going to move on to my controller and I'm going to create I renew requests mapping.
+
+02:05.140 --> 02:11.900
+So for that I'm going to copy this and go to my controller in my controller.
+
+02:12.370 --> 02:14.510
+I'm going to be having a new method.
+
+02:14.800 --> 02:19.560
+And within that method I'm going to be editing my product.
+
+02:19.600 --> 02:30.260
+So let's say that product and within that edit product method I'm going to be taking a model for UI
+
+02:31.040 --> 02:34.870
+and also I'm going to be taking a path where you will.
+
+02:35.180 --> 02:46.390
+So saying that path variable and the variable that I'm taking is going to be id so value for that is
+
+02:46.390 --> 02:56.400
+going to be ID and it's say simple string ID right in the body of my method.
+
+02:56.590 --> 03:03.800
+I'm simply going to find our product and add it to my model so that I can display in an UI.
+
+03:03.940 --> 03:14.370
+So for that I'll say model an attribute and then I'm going to add this attribute as product.
+
+03:15.190 --> 03:26.050
+And for the actual attribute I'll go to my repository and find this product with the given ID so I can
+
+03:26.050 --> 03:34.210
+say find one an ID or right and return statement.
+
+03:34.330 --> 03:38.190
+I'm going to return my editor to.
+
+03:38.210 --> 03:45.950
+So for the last part let's provide the request mapping and D-pad for the request mapping is going to
+
+03:45.950 --> 03:47.840
+be this one.
+
+03:47.840 --> 03:52.710
+And also we're going to provide the ID as the path where you will
+
+03:55.600 --> 03:57.510
+all right.
+
+03:57.750 --> 04:05.220
+So for the matter of this request we're going to be using it as a get method.
+
+04:05.240 --> 04:23.490
+We're almost done with the edit page of our product so let's rerun our application and see it in action.
+
+04:23.560 --> 04:24.940
+Our application is starting up
+
+04:27.720 --> 04:30.110
+and here we go.
+
+04:30.240 --> 04:38.680
+Our applications start at let's switch back to Firefox and refresh our page.
+
+04:38.680 --> 04:39.570
+Here we go.
+
+04:39.670 --> 04:44.380
+We have our edit button displaying in our products page.
+
+04:44.530 --> 04:49.960
+So as you can see from the you are all on the left below of the screen.
+
+04:49.960 --> 04:54.720
+We how our product with the ID in the end.
+
+04:55.570 --> 05:05.510
+So we click our edit button here we go we have our product details and they are all inserted into impled
+
+05:05.510 --> 05:12.350
+fields and we can simply type our new parameters new well use for our properties then we can simply
+
+05:12.350 --> 05:13.170
+hit say.
+
+05:13.580 --> 05:20.640
+So for the purpose of editing let's just update the price of our product to ninety nine ninety nine
+
+05:21.020 --> 05:23.710
+and see if it's updated.
+
+05:23.750 --> 05:30.270
+So all now save this product and if I go to my product page again here we go.
+
+05:30.410 --> 05:34.880
+We have our new price listed right here.
+
+05:34.910 --> 05:41.570
+So this concludes the adult section of our product in the next video we're going to be taking a look
+
+05:41.570 --> 05:43.380
+at eating our product.
+
+05:43.460 --> 05:46.400
+So to do that I'll be seeing you in the next video.

@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.520 --> 00:06.570
+HTP is built in with a set of status codes for various types of scenarios.
+
+00:06.570 --> 00:15.150
+Now let's take out those deeper response codes are ranging from 200 to five hundreds and there are all
+
+00:15.150 --> 00:18.300
+this think coats to represent a unique situation.
+
+00:19.320 --> 00:25.190
+200 level codes are for successful cases where everything works as expected.
+
+00:25.380 --> 00:37.980
+For example 200 means simply that HTP OK and 201 represents H.T. to be created 300 level codes are used
+
+00:37.990 --> 00:45.420
+for redirection purposes and good indicators if resources relocated to somewhere else in the network.
+
+00:45.430 --> 00:53.020
+For example if your turn or C 303 it indicates that the resource you're looking for is moved to somewhere
+
+00:53.020 --> 00:53.380
+else.
+
+00:53.400 --> 01:01.010
+And of course we're bodies should contain the information regarding where do resources relocated 400
+
+01:01.010 --> 01:09.850
+level codes are indicators of glide errors collide here can be either a end user or an application request
+
+01:10.010 --> 01:11.500
+resource.
+
+01:11.610 --> 01:17.250
+For example if a user is searching for something and the field that the user is searching can be found
+
+01:17.250 --> 01:18.350
+within the resource.
+
+01:18.600 --> 01:28.530
+Dan 404 HTP not found is the return called Cline's she'll be receiving 500 codes are on the contrary
+
+01:28.790 --> 01:36.230
+server related status codes these code ranges used to indicate that the server is either incapable or
+
+01:36.560 --> 01:43.080
+not available to slow response to request 500 itself is very popular.
+
+01:43.080 --> 01:49.380
+And if you didn't know about ATP's telescopes before it's highly likely that you encountered this code
+
+01:50.310 --> 01:57.870
+Disko simply says that there is an internal server error as we just said a stupid response codes are
+
+01:57.930 --> 02:04.710
+built into the protocol meaning that even if you don't even use them they're still there and embedded
+
+02:04.710 --> 02:07.610
+to your response with HGP operations.
+
+02:08.950 --> 02:14.430
+Lee's response skills are useful indicators on the status of the requests you made towards the end point.
+
+02:15.310 --> 02:19.760
+From the developers perspective as being a best practice teres a prize.
+
+02:19.930 --> 02:22.530
+You should definitely make use of the response code when.
+
+02:22.620 --> 02:28.420
+So in response to your client depending on the status of your request you should be indicating your
+
+02:28.420 --> 02:31.660
+client within this range of status codes.
+
+02:31.670 --> 02:32.900
+All right.
+
+02:32.900 --> 02:38.120
+I think we're building a very nice foundation for HTP requests and responses that we're going to develop
+
+02:38.150 --> 02:40.080
+in the upcoming videos.
+
+02:40.870 --> 02:47.170
+So now we know what requests we can make with HTP and what are the possible outcomes as being the response
+
+02:47.170 --> 02:47.740
+code.
+
+02:48.910 --> 02:55.440
+To talk about the clients which make the requests and receive responses I'll see on the next media.

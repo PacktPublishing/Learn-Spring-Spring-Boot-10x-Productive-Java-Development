@@ -1,0 +1,82 @@
+WEBVTT
+
+00:00.600 --> 00:07.080
+Let's take an overview of what one has to offer and where it sits within our development lifecycle
+
+00:09.640 --> 00:13.920
+Maven is a build tool to manage your software builds.
+
+00:14.000 --> 00:19.430
+You can configure your build set up the way you need and and maybe takes care of running tasks on your
+
+00:19.430 --> 00:27.370
+code such as compiling testing and packaging maven manages all the dependencies you need within its
+
+00:27.370 --> 00:28.760
+Pamphile.
+
+00:28.870 --> 00:36.330
+This profile acts as the manifest of your application contains its dependencies and the boot procedure.
+
+00:36.430 --> 00:39.240
+You can add or remove dependencies easily.
+
+00:39.580 --> 00:45.210
+Version your software and how it bundled with a single line of command execution.
+
+00:45.490 --> 00:53.140
+You can add java files or name the dependencies to mavens pomme SML almost as a plain text within the
+
+00:53.410 --> 00:57.780
+dependency tag and it fetches them for you from the Mabon repository.
+
+00:57.790 --> 01:01.600
+Maybin first goes and checks for your local repository.
+
+01:01.600 --> 01:08.050
+If your dependency is not there and then it goes to the main online repository Maybin finds it there
+
+01:08.140 --> 01:10.610
+and downloads to your local repository.
+
+01:10.640 --> 01:17.350
+Then the simpler reference to your application from there as it can be seen it knows how to work with
+
+01:17.350 --> 01:20.320
+your external libraries and dependencies.
+
+01:20.560 --> 01:23.620
+No more classpath Joffe-Block club or any more.
+
+01:23.830 --> 01:30.160
+If you run made was compiled comment it first bring together all the dependency within the file and
+
+01:30.160 --> 01:32.970
+then starts the compilation with your code.
+
+01:33.980 --> 01:41.170
+Alongside to this you can run an install command or combine the two commands as mailand compile install.
+
+01:41.180 --> 01:48.140
+So Kim first compile then generate the jar archive for your application cleverly change the commands
+
+01:48.140 --> 01:49.920
+and stops execution.
+
+01:49.940 --> 01:57.380
+If the previous command fails by the help of its test command you can easily run all of your test cases
+
+01:57.590 --> 02:03.890
+with just the command typing may when tests such running them one by one and prints out the results
+
+02:03.950 --> 02:04.710
+in the end.
+
+02:04.820 --> 02:07.810
+As scamp's failures or successful ones.
+
+02:08.630 --> 02:11.470
+We now have a good amount of Norwegian Mabon.
+
+02:11.510 --> 02:14.870
+Now let's take a look at how we can build our code with MAVEN.

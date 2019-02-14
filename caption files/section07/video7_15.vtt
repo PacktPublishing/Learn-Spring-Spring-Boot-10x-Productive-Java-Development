@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.620 --> 00:06.750
+Know it's time for you to work on your own restful AAPI start by checking out the guidelines that were
+
+00:06.750 --> 00:13.080
+laid out when we started this section if you need to think about that application that backend you've
+
+00:13.080 --> 00:14.150
+been thinking about.
+
+00:14.190 --> 00:18.460
+You've been dreaming of to make your application come true.
+
+00:18.460 --> 00:24.040
+Break it down to is building blocks from components to the basic data models that you use run persisting
+
+00:24.040 --> 00:26.370
+data to a database.
+
+00:26.590 --> 00:32.110
+When you complete breaking it all down create your models prepare your repositories and the service
+
+00:32.110 --> 00:38.470
+classes that you use to manage your repositories and finally create your controllers your requests mappings
+
+00:38.470 --> 00:40.480
+for the actions that you're going to take.
+
+00:40.840 --> 00:46.260
+Of course when you're building the request path structures think carefully on HGTV requests methods
+
+00:46.330 --> 00:53.060
+and naming them if you need me to reveal your code and give me my feedback on it.
+
+00:53.260 --> 00:55.420
+I'll be more than happy to do that.
+
+00:55.600 --> 01:00.020
+Just create a room for me on get hopped up come so we can move on from there.
+
+01:01.360 --> 01:07.380
+All right I hope you do great on your exercise and we'll create a production rate EPR for yourself.
+
+01:08.020 --> 01:13.010
+To take an overview of what we learn and done in the section I'll see on the next video.

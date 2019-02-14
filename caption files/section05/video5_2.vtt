@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.210 --> 00:05.930
+Now let's take a look at resources and static content to do that.
+
+00:06.110 --> 00:12.950
+I just opened up our demo project to show you how spring handles resource instead of content.
+
+00:14.720 --> 00:20.110
+In the left pane on the window you see we have a resources path.
+
+00:20.110 --> 00:26.920
+This path as you remember from the previous videos is the path that we use to store application up properties
+
+00:26.920 --> 00:28.130
+file.
+
+00:28.360 --> 00:36.700
+So the same path is the one that we're going to store all over our static content and all of our TMLC
+
+00:36.750 --> 00:43.390
+SS all that stuff that we're going to use to hold our application together.
+
+00:43.600 --> 00:50.650
+So if you start up a web application from the spring initialiser just as we did before with the demo
+
+00:50.650 --> 00:59.190
+application you're going to have static and templates folder right away even if you don't use that you
+
+00:59.190 --> 01:05.560
+can how set that templates folder are created by yourself an added dependency in the palm that Exham
+
+01:05.550 --> 01:06.940
+all file.
+
+01:06.960 --> 01:11.310
+So let's see our static files in-action to do that.
+
+01:11.370 --> 01:18.920
+I'm going to create an HD file and use a stylesheet to show you how spring handles those contents.
+
+01:18.930 --> 01:27.430
+So now let's just go to static folder and create a new DML file.
+
+01:27.520 --> 01:30.280
+I'm going to name is a Tim file as an index.
+
+01:30.300 --> 01:35.680
+H HTML file and use a HTML5 of course.
+
+01:35.930 --> 01:40.050
+All right we are index Tim L5 create it.
+
+01:41.640 --> 01:48.660
+Spring and most of the other containers in the market has some mappings for their initial page files
+
+01:49.410 --> 01:50.370
+and index.
+
+01:50.380 --> 01:59.700
+HDMI will welcome HTL mail index GSP index GSF index excise DML and lots of other different files are
+
+02:00.150 --> 02:06.050
+automatically configured and used for the initial start up point for web applications.
+
+02:06.120 --> 02:11.170
+So our index ASTM L will be that point of our application.
+
+02:11.220 --> 02:17.960
+So now let's just edit this file and see if we can how it worked with springe let's Kadal
+
+02:20.670 --> 02:24.190
+and say resources.
+
+02:24.260 --> 02:36.430
+Test and of course we should have a header with H-1 tag.
+
+02:36.870 --> 02:43.910
+This is a HDMI resource right now.
+
+02:45.210 --> 02:52.950
+To have a CSSA file and to be able to use it in this extremal we're just going to have another folder
+
+02:52.980 --> 02:54.710
+created for us.
+
+02:55.290 --> 02:57.260
+And it's the CSSA folder.
+
+02:59.080 --> 03:07.270
+And this year's folder I'm going to create a stylesheet file and name it as our project name which is
+
+03:07.290 --> 03:10.170
+Lema OK.
+
+03:10.830 --> 03:23.590
+And this file I'm going to say that our H-1 should be styled as the background color of red.
+
+03:24.190 --> 03:24.950
+OK.
+
+03:26.830 --> 03:31.910
+And what I should do now is include the CSSA file in our index.
+
+03:31.950 --> 03:33.600
+ASTM L.
+
+03:33.820 --> 03:40.060
+So let's do that now in the head part of our index ASTM So of course that's the point where are we going
+
+03:40.060 --> 03:42.110
+to include our SS.
+
+03:42.490 --> 03:47.670
+Now let's link our style sheet to our M-L file to do that.
+
+03:47.710 --> 03:56.350
+I'm going to use the link tag and this link tag is going to use type of SS and I'm going to say relation
+
+03:56.410 --> 04:03.830
+as stylesheet and type as text slash.
+
+04:03.910 --> 04:13.420
+SS So all reference for the CSSA is going to be CSSA slash or D-Mo..
+
+04:13.490 --> 04:17.370
+SS So our Web page is loaded.
+
+04:17.560 --> 04:25.360
+It's going to load this style sheet and we're going to how are this is an HMO resource text style with
+
+04:25.390 --> 04:26.700
+Fred.
+
+04:26.710 --> 04:27.430
+All right.
+
+04:28.960 --> 04:34.050
+So let's No just brought up our application and see what it looks like.
+
+04:35.110 --> 04:42.440
+To do that I'm going to right click on our D-Mo. application and hit run.
+
+04:42.610 --> 04:49.500
+Our application is starting up.
+
+04:49.550 --> 04:50.720
+All right.
+
+04:50.720 --> 04:53.000
+Our application is up and running.
+
+04:53.270 --> 05:00.250
+And as you can see here springe printed out that it's adding a welcome page which is under classpath
+
+05:00.290 --> 05:08.800
+resource static slash index that HVM L and that's beautiful because spring handle everything by itself.
+
+05:08.800 --> 05:18.880
+Again so now let's just open up our browser and check out our Web page.
+
+05:18.910 --> 05:28.440
+Let's just type all root directory of our application which has local host and ADHD.
+
+05:28.610 --> 05:32.790
+When we hit enter here we go.
+
+05:33.050 --> 05:40.240
+We have our text our header H-1 tag and the background is read our initial page.
+
+05:40.250 --> 05:46.460
+Our index page is loaded and it's loaded with our CSSA while our stylesheet does.
+
+05:46.500 --> 05:51.680
+And not a great way of spring to handle static content in your web applications.
+
+05:52.220 --> 05:57.420
+And that's what we're going to use with timely template engine when we do all the upswing and we use
+
+05:57.420 --> 05:59.040
+the application.
+
+05:59.090 --> 06:00.850
+I hope you enjoyed this demo.

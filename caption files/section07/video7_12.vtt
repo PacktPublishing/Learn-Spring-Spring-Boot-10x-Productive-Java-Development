@@ -1,0 +1,418 @@
+WEBVTT
+
+00:00.910 --> 00:08.380
+Know it's time that we call our controllers call our endpoints programmatically for doing that and this
+
+00:08.380 --> 00:16.490
+with you we're going to discover the rest template from spring risk template is the cleanest and easiest
+
+00:16.490 --> 00:21.330
+way to call and points within spring.
+
+00:21.440 --> 00:27.570
+All you have to do to call an endpoint call our controller within an application programmatically.
+
+00:27.770 --> 00:34.040
+You have to be creating a rest template bean and then all the wiring in it so that you can use within
+
+00:34.040 --> 00:40.800
+your application so to show you how you can make requests with red template.
+
+00:41.060 --> 00:48.170
+I'm going to be making use of two services two applications and one of those applications is this one
+
+00:48.500 --> 00:56.270
+the rest API application and the other one is the one that we previously developed and that is the repository
+
+00:56.270 --> 00:58.310
+application.
+
+00:58.320 --> 01:04.800
+So from that repository application I'm going to be calling the rest API application in the endpoints
+
+01:04.800 --> 01:08.020
+that we developed with those endpoints.
+
+01:08.020 --> 01:14.690
+I'm expecting to get that data from our rest API application from the repository application.
+
+01:16.590 --> 01:26.560
+So to start I'm going to open up our repository application I'll go to response and I'll open the repository
+
+01:26.560 --> 01:30.550
+application and I'm going to open it in a window.
+
+01:32.560 --> 01:40.610
+Here we go and I'll switch to full screen mode so that we can switch back and forth easily.
+
+01:40.900 --> 01:46.970
+So in this application we're going to be making use self-direct template so to do that.
+
+01:47.170 --> 01:54.010
+I'll start off with commenting out these repository methods that we use to show how we can interact
+
+01:54.010 --> 01:55.900
+with our repository.
+
+01:55.960 --> 02:04.920
+So I'll use the block commenting here and I'll comment out the rest until the end.
+
+02:04.930 --> 02:06.370
+Here we go.
+
+02:07.110 --> 02:13.620
+So now what we're going to do is we're going to be creating a risk template instance variable with that
+
+02:13.620 --> 02:14.420
+variable.
+
+02:14.490 --> 02:17.500
+We're going to be creating a new rest template.
+
+02:17.880 --> 02:24.330
+And with that template we're going to be all the wiring it and then simply calling our endpoint.
+
+02:24.750 --> 02:35.250
+So I'll start by the rest template instance variable algo top and I'll say private rest template
+
+02:38.010 --> 02:40.040
+and rest template.
+
+02:40.680 --> 02:48.390
+So I have to be creating a bean for the rest template because in the latest version of spring spring
+
+02:48.390 --> 02:55.500
+developers decided to leave out the creation of a template to the user to the developer in previous
+
+02:55.500 --> 02:56.910
+versions of a template.
+
+02:57.150 --> 03:02.250
+You could simply use the Saturne injection forest template so you don't have to be writing anything.
+
+03:02.520 --> 03:06.900
+But with this way we're also not going to write any boilerplate code.
+
+03:07.080 --> 03:08.980
+It's going to be fairly easy.
+
+03:09.360 --> 03:13.770
+So to create arest template I'm going to be creating a bin for it.
+
+03:14.040 --> 03:26.460
+So to do that I'll go down right here and I'm going to say public rest template and rest template again.
+
+03:31.340 --> 03:38.310
+In the method body I'm going to be simply creating a new rest template and returning it.
+
+03:38.400 --> 03:43.690
+So I'll say return numerous template.
+
+03:43.990 --> 03:44.580
+All right.
+
+03:44.580 --> 03:45.800
+Simple as that.
+
+03:45.810 --> 03:52.910
+So to use it within our application I'm going to be annotating this with being annotation.
+
+03:53.310 --> 03:59.350
+So to do that I'm going to a top and saying that this is a bean.
+
+03:59.700 --> 04:06.330
+But of course I'm going to be on a wire in this with our instance wearable so that it can be found within
+
+04:06.330 --> 04:07.920
+the components scan.
+
+04:08.190 --> 04:12.280
+So I'll go top and I'll say auto wired.
+
+04:12.690 --> 04:18.050
+All right we have our press template ready to make requests.
+
+04:18.180 --> 04:28.140
+So to make requests I'm going to write below the same method all our repository and there I'm going
+
+04:28.140 --> 04:31.910
+to create a request to make that request.
+
+04:31.950 --> 04:41.090
+Let's switch back to our rest API application and see what we can request in arist API application after
+
+04:41.090 --> 04:48.630
+the rooftop of our application we're starting off with API slash products just as we see here.
+
+04:48.770 --> 04:57.320
+And after that we have the get Mathare with ID we can start off with this rest API method the get method
+
+04:57.470 --> 04:59.770
+of the API application.
+
+04:59.990 --> 05:04.440
+But before we start we should be considering a couple of things.
+
+05:04.460 --> 05:12.470
+Our method with the Get request path is actually returning a type of product and is accepting the ID
+
+05:12.470 --> 05:16.530
+as the parameter as we have here as the path variable.
+
+05:16.580 --> 05:23.630
+So we should be taking a product back from the rest temporal call and we should also be providing an
+
+05:23.630 --> 05:26.060
+ID to the request.
+
+05:26.060 --> 05:34.010
+So let's switch back to our repository application and build our request so I'll go down here.
+
+05:34.350 --> 05:39.160
+And I'm expecting a product from the requestor with the rest template.
+
+05:39.300 --> 05:40.620
+So I'll say product
+
+05:43.260 --> 06:01.260
+from rest template is going to be rest template got get for entity as you can see and what the rest
+
+06:01.260 --> 06:02.030
+template.
+
+06:02.090 --> 06:06.680
+Take out the alternative methods that we can use to make requests.
+
+06:07.470 --> 06:12.670
+The arrest template has weariest ways that you can use to make requests.
+
+06:12.810 --> 06:18.480
+You can set the properties of rest template with these methods you can use delete request.
+
+06:18.510 --> 06:20.700
+You can make HTP delete requests.
+
+06:20.790 --> 06:27.600
+You can simply call the exchange method and with there you can provide the type of the H.T. copy method
+
+06:27.600 --> 06:31.820
+that you're going to use and the type of the response of course.
+
+06:32.100 --> 06:40.230
+And right below the exchange method we can make get for entity requests and with those requests we can
+
+06:40.230 --> 06:46.090
+accept an entity in response and we're actually saying that we're expecting an entity.
+
+06:46.380 --> 06:52.530
+And after that we have now had four header's the ETP had requests.
+
+06:53.100 --> 07:02.280
+And of course we have HTP options implemented here and other than that we have postmaster's for GTP.
+
+07:02.490 --> 07:06.740
+And if we go down we have of course HTP puf method.
+
+07:08.050 --> 07:13.840
+And as you can see resk template has various methods that we can use to make requests.
+
+07:14.010 --> 07:18.660
+So to make our requests we're going to be making a get request.
+
+07:18.670 --> 07:24.730
+So let's start by typing get get for object.
+
+07:24.750 --> 07:33.120
+And of course we're expecting an object and in our case our End Point is simply faking an ID as the
+
+07:33.120 --> 07:37.850
+path variable and returning a product in response.
+
+07:38.010 --> 07:42.660
+So we can use the last method in our template.
+
+07:42.860 --> 07:50.690
+So I'll hit enter and I'm going to be providing to you Earl to make the request and you earlier is going
+
+07:50.690 --> 07:56.000
+to be the actual full path of the application that is up and running.
+
+07:56.450 --> 08:01.480
+So I'll say HTP localhost
+
+08:03.890 --> 08:10.270
+and ADHD slash API slash products.
+
+08:10.820 --> 08:16.730
+And of course I'm going to be providing the idea that I'm going to use which is the idea that we're
+
+08:16.730 --> 08:20.420
+going to take from the H2 database the actual data.
+
+08:20.600 --> 08:25.350
+So I'll leave out this part for now and I'll go back to it in a moment.
+
+08:25.640 --> 08:32.270
+And in the next part we're going to be taking the type of the response and that type of the response
+
+08:32.270 --> 08:34.410
+is going to be product.
+
+08:34.410 --> 08:40.980
+Let's say we're expecting a product class type of object in response area.
+
+08:41.340 --> 08:44.810
+So we're almost ready to make the request template.
+
+08:45.240 --> 08:52.340
+But before we do let's run our application with the rest API and get the idea from it.
+
+08:52.340 --> 08:55.690
+And also we can make the actual restaurant type request.
+
+08:55.920 --> 09:02.420
+So I'll switch back to the rest API application and I'm going to run the application
+
+09:18.400 --> 09:25.290
+or application is almost up and here we go our application is up and running.
+
+09:26.160 --> 09:31.550
+Let's go to H-2 counsel and see what ids we have in the database.
+
+09:31.680 --> 09:41.470
+So I'll go to Firefox for that and I'll say localhost ADHD slash H-2
+
+09:47.900 --> 09:57.200
+and I'm going to connect to my database here we go let's check out the product table in the product
+
+09:57.200 --> 09:58.160
+table.
+
+09:58.160 --> 10:01.980
+We have just a Bayda that we can make requests with.
+
+10:01.990 --> 10:11.850
+So let's copy that ID and switch back to our repository application in our repository application.
+
+10:11.850 --> 10:21.000
+I'm simply going to put you ID here so that we can make the request and I'll say I'm going to be providing
+
+10:21.000 --> 10:22.510
+this ID.
+
+10:22.540 --> 10:23.200
+All right.
+
+10:23.980 --> 10:31.750
+So our request is almost ready but to make both applications up or running we have to tweak the application
+
+10:31.750 --> 10:33.490
+properties a little.
+
+10:33.520 --> 10:39.630
+So let's go to our application properties files and switch the product tables.
+
+10:39.630 --> 10:43.230
+Product databases with something else.
+
+10:43.240 --> 10:50.350
+I'm going to name the ASP products the so our application won't crash when it starts up because if we
+
+10:50.530 --> 10:57.610
+keep the same naming with our tables entity manager for Hibernate is simply going to crash because it
+
+10:57.610 --> 11:04.780
+cannot create table again because we already have that table with the rest API application which is
+
+11:04.780 --> 11:06.450
+up.
+
+11:06.500 --> 11:09.520
+So I'm going to name this as products the B.
+
+11:09.650 --> 11:15.170
+And of course I'm going to change the path as to slash cons..
+
+11:15.230 --> 11:16.600
+All right.
+
+11:17.120 --> 11:18.030
+Let's say this.
+
+11:18.080 --> 11:25.930
+And we should also change the part of our application as you're well aware by now spring is using the
+
+11:25.970 --> 11:33.800
+port ADHD by default and we can simply all write this with the server down port property.
+
+11:33.910 --> 11:43.260
+So I'll go down here and I'm going to say server port as 80 81.
+
+11:43.270 --> 11:51.400
+All right let's run our repository application and make our request.
+
+11:51.400 --> 11:52.450
+All right.
+
+11:52.630 --> 12:00.610
+But of course before we do let's print out the resolve in the console so I'll go back to my code and
+
+12:01.030 --> 12:09.850
+I'm simply going to log out the statement log that info product
+
+12:12.190 --> 12:24.040
+received with rest template and I'm going to print out the object of the product product from rest template
+
+12:24.670 --> 12:31.130
+and string All right ready to run our application.
+
+12:31.130 --> 12:35.380
+So I'll hit on our application and see what's going to happen.
+
+12:39.330 --> 12:40.860
+Our application is turning up
+
+12:48.240 --> 12:49.710
+and here we go.
+
+12:50.650 --> 12:57.100
+And in the console walk before the application start up you should notice that arest template request
+
+12:57.130 --> 13:04.930
+is successful and it could turn down the product that we expected which is with the idea that we provided
+
+13:04.930 --> 13:13.410
+in the request and with the name as simple product and type as custom categories special description
+
+13:13.480 --> 13:20.780
+as this is a test or description and price is not because we didn't set any price with our entity to
+
+13:20.780 --> 13:22.140
+verify that.
+
+13:22.160 --> 13:29.410
+Let's switch back to our H2 and check out the namings in our database.
+
+13:29.470 --> 13:37.120
+As you remember with the console log we had special response as the category and description was this
+
+13:37.120 --> 13:38.720
+is a test or description.
+
+13:38.800 --> 13:48.120
+So our recent book requests is successful as you can see making requests with template is fairly simple.
+
+13:48.280 --> 13:55.600
+You can use the get for object method get for entity and you can use all the basic functionalities of
+
+13:55.800 --> 13:56.970
+GTP request.
+
+13:56.980 --> 14:05.060
+You can either use put post delete had and any other options with a TTP.
+
+14:05.110 --> 14:10.690
+So to take a look at a different way of making requests programmatically Olive is seeing in the next
+
+14:10.690 --> 14:15.910
+video where we talk about and making a request with fayned client from Netflix.

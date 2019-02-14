@@ -1,0 +1,856 @@
+WEBVTT
+
+00:00.320 --> 00:06.330
+Know it's time that we refactor our arrest the API for refactoring process.
+
+00:06.330 --> 00:08.990
+We're going to be doing a couple of things.
+
+00:10.440 --> 00:18.750
+One of those things with the exception handling and the other one is of course logging the actions that
+
+00:18.840 --> 00:27.930
+our users take on our risk API and other than that we're going to be implementing best practices in
+
+00:27.930 --> 00:29.160
+our API.
+
+00:29.310 --> 00:35.890
+So we're going to be making it more modular and more useful and more maintainable in the future.
+
+00:37.740 --> 00:48.000
+To do that I'm going to start by trying to break our API and to do that I'm going to crash one of our
+
+00:48.000 --> 00:58.580
+end points and that end point is going to be put and point which is this one and this endpoint as you
+
+00:58.580 --> 01:07.850
+notice we're checking for null and if the object that we're going to update is now then we're simply
+
+01:07.850 --> 01:12.460
+not updating and returning a dummy product.
+
+01:12.620 --> 01:20.630
+But let's assume for a second that we're not checking for null and our API just crashes and at least
+
+01:20.690 --> 01:23.630
+we're assuming that it's going to crash.
+
+01:23.660 --> 01:27.850
+So let's make it crash and see what's going on behind the scenes.
+
+01:28.640 --> 01:32.760
+To do that I'm going to comment out these lines.
+
+01:40.460 --> 01:47.850
+I'll just leave the find method and of course we should return something.
+
+01:49.390 --> 01:55.730
+And don't return actually can be the one that we're saving here.
+
+01:57.450 --> 01:57.980
+All right
+
+02:00.880 --> 02:07.710
+with this method to see what's going to happen let's run our application and make a request.
+
+02:14.800 --> 02:20.490
+Our application is starting up now and we're almost there.
+
+02:23.030 --> 02:23.840
+Here we go.
+
+02:23.900 --> 02:25.750
+Our application is up or running.
+
+02:26.150 --> 02:32.430
+So let's go to Firefox and make a request.
+
+02:32.430 --> 02:32.770
+All right.
+
+02:32.770 --> 02:36.400
+I'm going to open up our resk client right here.
+
+02:37.400 --> 02:41.020
+And I'm going to be making a put request.
+
+02:41.180 --> 02:52.550
+And in that request I'm going to be using this endpoint which was again if we go back it was API slash
+
+02:52.550 --> 03:01.820
+products slash ID the idea that the product that we're going to update and of course the product object
+
+03:01.850 --> 03:03.680
+in the request body.
+
+03:03.680 --> 03:05.240
+All right.
+
+03:05.240 --> 03:10.300
+So let's right to break our API for doing that.
+
+03:10.310 --> 03:20.540
+I'm of course going to be adding our heather and the header is going to be Content-Type and well you're
+
+03:20.590 --> 03:24.760
+going to be applications like Jason I'll hit.
+
+03:24.780 --> 03:26.130
+OK.
+
+03:26.160 --> 03:39.070
+And in our requests body I'm going to just say I will be providing an empty Jaison.
+
+03:39.130 --> 03:39.840
+All right.
+
+03:40.780 --> 03:43.330
+Let's make the requests and see what's going on.
+
+03:47.710 --> 03:48.550
+Here we go.
+
+03:48.610 --> 03:55.660
+There you see a 500 it response code which is the internal so rare.
+
+03:55.680 --> 04:03.880
+Basically let's take out the response body with the highlight in the highlight as you can see where
+
+04:03.880 --> 04:04.960
+is the a.
+
+04:05.030 --> 04:06.350
+Internal Server.
+
+04:06.350 --> 04:14.860
+But actually what was happening as we received a null pointer exception to see how bad the crash is.
+
+04:14.860 --> 04:24.490
+Let's switch back to our application Oh as you can see we have a ton of stack trace arms tight race
+
+04:24.500 --> 04:26.030
+doesn't look good.
+
+04:26.440 --> 04:30.010
+As you can see we have a null pointer exception.
+
+04:30.110 --> 04:39.700
+It basically says Now what was not here is the product that we're going to update because the find one
+
+04:39.700 --> 04:44.960
+method of the product repository couldn't find the product that we're going to update.
+
+04:44.980 --> 04:53.120
+So when it tried to say our product with that Null Object Of course it wrote us an error.
+
+04:53.500 --> 05:00.330
+There's long lists of track traces of null pointer exception to get rid of that.
+
+05:00.400 --> 05:03.250
+Of course we have several options.
+
+05:03.460 --> 05:12.820
+We can check the object for now and we can try and catch the statement but about all these options we
+
+05:12.820 --> 05:20.960
+have some other cool option from spring and that is the advice control read.
+
+05:21.860 --> 05:27.310
+Controller advisors are sitting on top of all the controllers in your application.
+
+05:27.470 --> 05:32.590
+They automatically bind themselves into the controls that you have in your application.
+
+05:32.750 --> 05:41.240
+And whenever a bad situation happens an exception for the most prominent example your control read Wise
+
+05:41.360 --> 05:47.420
+gets in the way and you can return whatever you want to your users so your users doesn't have to see
+
+05:47.780 --> 05:50.960
+such a long list of exceptions stack traces.
+
+05:50.960 --> 05:52.050
+All right.
+
+05:52.340 --> 05:53.990
+This is not a good API.
+
+05:54.440 --> 06:02.910
+This taquerias isn't going to make your clients happy so let's fix that with a controller advise to
+
+06:02.910 --> 06:03.870
+do that.
+
+06:03.900 --> 06:10.380
+I'm going to create a new package under controller and that package was of course going to be named
+
+06:10.410 --> 06:14.310
+as it was in the ED wise package.
+
+06:14.310 --> 06:24.960
+I'm going to create a new advise new controller advice and that's going to be product advice because
+
+06:25.350 --> 06:31.860
+as you just remember from couple of minutes ago this advice is going to attach itself all the controllers
+
+06:31.860 --> 06:39.480
+in our application whether it be a product controller or some other controller you name it it's going
+
+06:39.480 --> 06:45.720
+to attach itself so we don't have to do any specific actions for a specific controller.
+
+06:45.720 --> 06:49.490
+So let's create our class and move on from there.
+
+06:51.970 --> 07:01.060
+In our advice to name it as a controller advise we're going to use of course the controller advice annotation.
+
+07:01.240 --> 07:06.750
+And as you can see we have the rest controller advise annotation too.
+
+07:07.060 --> 07:11.610
+In our case our application is a restful API application.
+
+07:11.800 --> 07:16.450
+So we're going to be using the rest control Redware sanitation.
+
+07:16.510 --> 07:24.460
+So let's hit enter and have it in our class right after that what we're going to use as we're going
+
+07:24.460 --> 07:31.480
+to use a couple of annotations to annotate the methods that we're going to handle the problems in our
+
+07:31.480 --> 07:40.200
+application in our rush controllers so to do that I'm going to start by writing down a method that I
+
+07:40.200 --> 07:49.440
+want but before I actually return something and before I actually do anything I should have a data transfer
+
+07:49.440 --> 07:57.330
+object so that I can put in my message put in the level of the error and other stuff that I want to
+
+07:57.330 --> 08:06.750
+include in in my response so if we're doing that I'm also going to be creating a DTL and I'll go to
+
+08:06.750 --> 08:15.420
+my application package and I'll create a package named PTO and this the T-O I'm going to be creating
+
+08:15.420 --> 08:25.700
+a message to ETEO and that PTO is going to serve as the response for my problems in my rest API.
+
+08:26.130 --> 08:30.500
+So our risk controller advice is going to make use of this message.
+
+08:30.500 --> 08:46.420
+ETEO this video is going to be a plain old job object so I'll have a strong message and string type
+
+08:48.170 --> 08:51.780
+of course I'm going to have my getters and setters.
+
+08:51.860 --> 08:59.080
+So let's create them with command and here we go.
+
+09:01.540 --> 09:05.960
+And I'm also going to have a default constructor.
+
+09:06.290 --> 09:11.840
+So make sure that our message DTL can be constructed properly.
+
+09:12.070 --> 09:18.960
+So I'll have a basic constructor and I'll select none.
+
+09:19.040 --> 09:22.310
+If we go we have our message DTL.
+
+09:22.640 --> 09:29.600
+So let's switch back to our advice and in our advice I can now start writing down the method that I'm
+
+09:29.600 --> 09:31.630
+going to handle the response.
+
+09:32.120 --> 09:50.600
+So I'll say public and I'll be returning a message Tio and I'll say process null pointer exception.
+
+09:50.710 --> 09:52.210
+All right.
+
+09:52.660 --> 10:00.630
+But of course to handle the actual null pointer exception I have to inject that into my method parameters.
+
+10:00.910 --> 10:09.810
+So to do that I will say null pointer exception and I'll say exception.
+
+10:10.770 --> 10:13.920
+All right.
+
+10:14.150 --> 10:22.080
+But you actually have this method as the handler for door crashes in RSA API.
+
+10:22.330 --> 10:30.940
+I have to use a couple of annotations and first of the annotations that I'm going to use as the exception
+
+10:30.940 --> 10:39.190
+handler annotation as we have here this exception and the annotation is going to be the way that I actually
+
+10:39.190 --> 10:43.170
+provide the exception type that I'm going to handle with this method.
+
+10:43.180 --> 10:49.480
+So in that case you can handle all the specific exceptions that you have within your application with
+
+10:49.840 --> 10:52.090
+different methods that you're going to write.
+
+10:52.090 --> 10:55.460
+You don't have to handle everything with a single method.
+
+10:55.480 --> 11:03.730
+And in the controller device cases you can handle all the exceptions within a single method because
+
+11:03.940 --> 11:11.920
+in that case you're going to be handling the exception rule class and that's not a good practice.
+
+11:11.920 --> 11:20.590
+So to handle our null pointer exception I'm going to be providing it to our exception handler annotation.
+
+11:20.590 --> 11:24.250
+I'll say null pointer exception class.
+
+11:24.280 --> 11:25.330
+All right.
+
+11:25.810 --> 11:34.300
+And as I've just said this method is going to be returning a message you and that method Dutilleux is
+
+11:34.420 --> 11:36.250
+going to be our responsibility.
+
+11:36.460 --> 11:40.380
+So we should also annotate that to this method.
+
+11:41.200 --> 11:48.270
+So I'll say response body and what else do we need.
+
+11:48.420 --> 11:54.170
+We of course should notify our users that the request is not ok it's bad.
+
+11:54.330 --> 12:01.740
+So I'll say that HTP that is that a request is going to be the type of request.
+
+12:02.190 --> 12:07.370
+So to our users to our clients I'm going to indicate that the request is bad.
+
+12:07.500 --> 12:12.660
+So to do that I'm going to be making use of the response that is annotation.
+
+12:12.930 --> 12:15.570
+So let's also say that an
+
+12:19.350 --> 12:27.390
+and again this is from spring family and in this response to this annotation I'm going to be saying
+
+12:27.390 --> 12:31.550
+that HTP status and that request.
+
+12:31.830 --> 12:32.470
+All right.
+
+12:34.400 --> 12:35.460
+We'll read it to you.
+
+12:35.520 --> 12:37.020
+Create our response.
+
+12:38.000 --> 12:40.350
+Sort of create our response.
+
+12:40.350 --> 12:42.660
+I'm going to create a new message ETEO
+
+12:46.860 --> 12:53.980
+and I'm going to say it's a message and new message to ETEO in our message.
+
+12:54.210 --> 13:04.780
+I'm going to set the message as errors found in request try again later.
+
+13:05.100 --> 13:06.310
+All right.
+
+13:06.390 --> 13:12.880
+And in that type of our error message I'm going to simply say error.
+
+13:13.160 --> 13:14.280
+All right.
+
+13:14.280 --> 13:23.850
+And of course when I'm done I'm going to return our message to the users All right we how handle the
+
+13:23.850 --> 13:26.530
+exception within our risk controller.
+
+13:26.670 --> 13:34.540
+And actually in all of our controllers with the null pointer exception so let's rerun our application
+
+13:34.540 --> 13:35.960
+to see it in action.
+
+13:40.720 --> 13:47.480
+Our application is starting up now.
+
+13:47.550 --> 13:49.350
+We're almost there and
+
+13:54.630 --> 13:55.360
+here we go.
+
+13:55.440 --> 13:58.180
+We have our application up and running.
+
+13:58.260 --> 14:04.030
+So let's rerun our request again and see what's going to happen.
+
+14:04.050 --> 14:09.760
+All right I'm all set and I'm just going to hit send.
+
+14:12.710 --> 14:14.010
+Here we go.
+
+14:14.240 --> 14:19.170
+We have the message as the message DTL type this time.
+
+14:19.490 --> 14:27.500
+As you'll remember from a minute ago we said we're going to return a type of message to ETEO in our
+
+14:27.500 --> 14:34.610
+control read wise just as we said here and the method that's going to handle the exception is going
+
+14:34.610 --> 14:36.720
+to be named as anything you like.
+
+14:37.070 --> 14:44.720
+And in that method we're going to be handling the null pointer exception and we injected that into our
+
+14:44.720 --> 14:45.390
+method.
+
+14:47.220 --> 14:54.580
+And in our method we created a new message sitio and new POJO a new class that we just created.
+
+14:54.930 --> 15:04.630
+And in that class we just have simple properties just like type in message message to indicate the problem
+
+15:04.660 --> 15:12.670
+to our user and of course type is to indicate the severity of the problem with the crawler or in this
+
+15:12.670 --> 15:15.790
+case the request of the user.
+
+15:15.790 --> 15:24.160
+All right let's switch back to our advice and what else we did was we said we're going to be returning
+
+15:24.160 --> 15:27.690
+this message the as the body of response.
+
+15:27.820 --> 15:32.070
+And we said that with the response by the annotation.
+
+15:32.350 --> 15:40.550
+And of course to indicate the process null pointer exception to be a qualifier for the handling these
+
+15:40.750 --> 15:42.460
+now point are exceptions.
+
+15:42.490 --> 15:49.090
+We said that we're going to be using the exception handler annotation and within that annotation we
+
+15:49.150 --> 15:57.910
+were going to be using the null pointer exception class and of course we didn't forget to set the response
+
+15:57.910 --> 16:05.170
+status as a request and about requests as within the response headers.
+
+16:05.380 --> 16:16.420
+As you can see here with 400 code and if we go to our highlight have again the message is errors found
+
+16:16.420 --> 16:19.060
+on requests try again later.
+
+16:19.600 --> 16:26.570
+And the type is error just as we sat within our application.
+
+16:26.600 --> 16:29.360
+This is a beautiful way to handle exceptions.
+
+16:29.390 --> 16:37.820
+And as you can know this within the council you don't have any stacked traces or ugly messages for null
+
+16:37.820 --> 16:43.430
+pointer exception or any exception that you can encounter within your application.
+
+16:43.430 --> 16:49.650
+Soyou are users going to be facing just the custom messages that you built within your control Redway
+
+16:49.650 --> 16:50.500
+says.
+
+16:50.600 --> 16:56.640
+Let's say we're a nice way to handle problems within your arrest API with this way again.
+
+16:56.870 --> 17:02.930
+You can handle any kind of exceptions that your application is going to throw to your users and you
+
+17:02.930 --> 17:07.920
+can even handle the custom exceptions that you throw within your application.
+
+17:07.970 --> 17:14.690
+And before we finish the exception handlers the controller advises within our applications.
+
+17:15.320 --> 17:18.100
+You should also notice that with them are Lokes.
+
+17:18.350 --> 17:26.780
+We're seeing a new statement a new line and that line there is a exception handler exception resolver
+
+17:27.290 --> 17:35.420
+and within that statement we're seeing that a new exception handler protected and that detect that exception
+
+17:35.420 --> 17:40.830
+handler is the product it was the being that we created.
+
+17:41.010 --> 17:42.300
+And that's this way.
+
+17:42.570 --> 17:43.200
+All right.
+
+17:44.850 --> 17:52.910
+So again to wrap up all you have to do to how a control read wise for your application for your controllers.
+
+17:53.040 --> 18:00.930
+You first have to annotate your class as the control read wise and in the API space you're going to
+
+18:00.930 --> 18:03.270
+be using the rest control read wise.
+
+18:03.330 --> 18:11.070
+But if you're talking about a and b c applications let's say time leave or will also the be or anything
+
+18:11.070 --> 18:14.550
+else you're going to be using the simple controller.
+
+18:14.550 --> 18:16.710
+Why sanitation.
+
+18:16.850 --> 18:22.670
+And after that you provide the exception handler the type of the exception that you're going to handle.
+
+18:22.940 --> 18:30.960
+And you also should indicate the type of the response as the body and and of course you should notify
+
+18:30.960 --> 18:37.010
+your users about the status of their requests as a bad request or anything you like.
+
+18:37.280 --> 18:43.910
+And then you can simply handle the exception which in your application and you should also not forget
+
+18:43.910 --> 18:48.320
+to inject the exception within your application within your method.
+
+18:50.290 --> 18:57.760
+All right let's switch back to our controller and see what else we can improve within our application.
+
+18:57.760 --> 19:07.620
+And of course I'm going to be removing the comments in here so that we can have the previous functionality
+
+19:07.660 --> 19:17.390
+without rest API and for a production grade ISAPI you have to be separating your concerns.
+
+19:17.440 --> 19:25.200
+What I mean by that is breaking the tight coupling within your API within your controllers or any underclasses
+
+19:25.360 --> 19:36.300
+that you have in our case in our controller we have the repository as the coupling because the repository
+
+19:36.300 --> 19:38.910
+is everything to our controller.
+
+19:39.120 --> 19:42.870
+Without this repository we can't simply take any action.
+
+19:42.900 --> 19:47.600
+And the way that we access our repository is not the right way.
+
+19:47.640 --> 19:55.910
+This is against the best practices best practices says that your transactions should be separated from
+
+19:55.910 --> 19:58.750
+your controllers from all services.
+
+19:58.760 --> 20:05.360
+So in our case we should get rid of the Pottruck repository dependency and instead we should abstract
+
+20:05.360 --> 20:11.690
+it with a service class and that class should be the handler for all the actions that we're going to
+
+20:11.690 --> 20:13.430
+take within our controllers.
+
+20:13.970 --> 20:21.450
+So to do that I'm going to be creating a service class and of course for creating our service class.
+
+20:21.500 --> 20:29.660
+I'm going to be having a severance package so I'll go to my root package and create our service package
+
+20:30.650 --> 20:32.300
+in our service package.
+
+20:32.300 --> 20:43.860
+I'm going to be creating a product service all right is product service from now on will serve all the
+
+20:43.860 --> 20:48.180
+functionality of my product repository.
+
+20:48.270 --> 20:53.970
+So to say that this is an actual service this is a spring been with an application.
+
+20:54.120 --> 21:00.950
+We shouldn't annotate it as the service sanitation area.
+
+21:01.170 --> 21:08.340
+And what we're going to do in the service class is we're first going to auto wire our repository and
+
+21:08.340 --> 21:09.270
+to do that.
+
+21:09.600 --> 21:13.800
+I'm going to create a private repository be
+
+21:16.590 --> 21:18.960
+and repository.
+
+21:19.410 --> 21:25.350
+And of course to Although wire it I'm going to be using a set or injection and I'll create a set for
+
+21:25.350 --> 21:31.200
+it and then I'm going to use two other wired annotation.
+
+21:31.200 --> 21:31.950
+Here we go.
+
+21:33.450 --> 21:40.020
+And to move the functionality from our controller let's take out our controller code and see what we
+
+21:40.020 --> 21:49.650
+can do there in our controller and in our first method of the controller which is the get method we
+
+21:49.650 --> 21:57.360
+should get rid of the complete line within here and in that line we're simply using the find one method
+
+21:57.410 --> 21:58.950
+of our repository.
+
+21:58.950 --> 22:01.960
+So it's a very easy migration.
+
+22:02.070 --> 22:11.180
+We can just copy that line and we can switch back to our service and we can create the method the repr
+
+22:11.190 --> 22:16.020
+method for our repository and that method is going to be
+
+22:18.480 --> 22:22.330
+product and get product.
+
+22:22.710 --> 22:24.660
+All right.
+
+22:24.730 --> 22:31.040
+And within that product method we're going to be taking an ID from the controller.
+
+22:31.240 --> 22:35.190
+And of course we should use that ID to get the product that we need.
+
+22:36.150 --> 22:44.070
+And in the body of our get product method we're going to be using the return statement and we're going
+
+22:44.070 --> 22:46.890
+to be going to our repository.
+
+22:47.130 --> 22:48.250
+That's it.
+
+22:48.810 --> 22:58.460
+So let's go back to our controller and refactor D and point in our end point we're now going to be using
+
+22:58.460 --> 22:59.750
+our service.
+
+22:59.890 --> 23:05.720
+So to make use of our service we first have to order it with our controller.
+
+23:05.930 --> 23:17.220
+So I'm going to be creating private property here for control for service and I'll say product service
+
+23:17.670 --> 23:25.870
+and product service and then I'm going to be all the wiring with a set of injection.
+
+23:26.280 --> 23:34.840
+So to do that I'll say setter and I'll provide the product service.
+
+23:34.870 --> 23:36.160
+All right.
+
+23:36.170 --> 23:44.340
+And of course I should and if they did with all the wired sort when our get Methot what I'm going to
+
+23:44.340 --> 23:55.330
+do now is I'll get rid of this line and I'm going to just say product service and get product.
+
+23:55.440 --> 23:57.580
+And within that get product method.
+
+23:57.780 --> 24:00.110
+I'm going to be providing the ID.
+
+24:00.180 --> 24:01.910
+Simple as that.
+
+24:01.920 --> 24:02.850
+All right.
+
+24:02.850 --> 24:12.900
+We have refactored our first controller and let's go to our second controller in our second controller
+
+24:13.080 --> 24:15.310
+the pulse method.
+
+24:15.480 --> 24:23.700
+We're simply taking a product from the request body from our user from our applications that makes use
+
+24:23.700 --> 24:32.070
+of our ISAPI then we're simply going through repository and saving it so to do that.
+
+24:32.070 --> 24:41.660
+I'm going to go to my product service and create a new method and within that method what I should return
+
+24:41.660 --> 24:47.410
+is the actual type of the control method which is the product.
+
+24:47.480 --> 24:55.460
+In that case I'm going to be returning a product so I'll go back to my service method and I'm going
+
+24:55.460 --> 24:59.120
+to say save product.
+
+24:59.570 --> 25:06.630
+And of course I'm going to be taking a product from the request body from the controller.
+
+25:06.790 --> 25:20.470
+So I'll say product and then what I'm going to do is I'm going to say product repository let's say end
+
+25:20.470 --> 25:21.930
+product.
+
+25:21.940 --> 25:31.260
+All right let's switch back to our controller and get rid of this product repository and what I will
+
+25:31.260 --> 25:37.680
+say is product service that same product.
+
+25:37.680 --> 25:43.930
+And in that case our product to say is going to be this object.
+
+25:43.950 --> 25:44.820
+All right.
+
+25:45.780 --> 25:55.260
+And let's go down to our push method in our math that we have a bit of a long line of actions that we
+
+25:55.260 --> 25:57.710
+take.
+
+25:57.850 --> 26:00.440
+So let's take out what we can do here.
+
+26:01.620 --> 26:08.610
+As the first step of our method of our control or we're trying to find the product within our database
+
+26:08.610 --> 26:16.620
+with the find one method and then we're trying to update our product one by one with all the single
+
+26:16.620 --> 26:24.870
+properties and then we're going to our repository and trying to save our product to our repository and
+
+26:24.870 --> 26:32.980
+otherwise of course we're logging the problems with our code and we're turning a dummy product.
+
+26:33.050 --> 26:39.190
+So let's get rid of all that and move it to our service method to do that.
+
+26:39.230 --> 26:47.600
+I'm going to go to my service code and provide a new method here and that method is of course going
+
+26:47.600 --> 26:56.460
+to be returning back a product and I'll say update product in the update product method.
+
+26:56.460 --> 27:02.960
+Of course I'm going to be taking a product object that I'm going to update right.
+
+27:04.830 --> 27:06.160
+In the body.
+
+27:06.440 --> 27:14.950
+Let's check out what we can do and what we can't underbody Let's try with moving everything to our service
+
+27:14.950 --> 27:16.010
+method.
+
+27:16.520 --> 27:25.330
+And I'm going to cut everything here and then I'm simply going to paste it.
+
+27:25.400 --> 27:30.460
+So let's get rid of our errors within our code.
+
+27:31.070 --> 27:39.890
+And as you can see here we missed the ID screen ID from our controller as you can see here.
+
+27:39.890 --> 27:50.990
+So we should also take that from our method and to say that I'm going to be putting string ID and then
+
+27:50.990 --> 27:53.070
+we can send it to our method later.
+
+27:54.360 --> 27:59.090
+And after that we're going to be updating our product.
+
+27:59.220 --> 28:08.140
+So to break it convenience here I'm going to update the property name to product to update and then
+
+28:08.410 --> 28:13.320
+we have our luggin statement as a problem here.
+
+28:13.390 --> 28:20.970
+So I'm just going to comment up for now so we can get back to it and couple of minutes later.
+
+28:21.790 --> 28:23.520
+All right.
+
+28:23.760 --> 28:30.570
+So what this method does is the almost the exact same thing with our control or method.
+
+28:31.050 --> 28:37.140
+So in our control method let's make use of this update product method.
+
+28:37.140 --> 28:47.430
+So I'm going to say return product service and update product in our Uplay product.
+
+28:47.430 --> 28:52.510
+I'm going to provide product update and of course the ID.
+
+28:52.530 --> 28:53.520
+All right.
+
+28:53.520 --> 28:54.340
+Simple as that.

@@ -1,0 +1,277 @@
+WEBVTT
+
+00:00.670 --> 00:10.520
+In order to show you how timely for X I'm just going to create a new project and this project is going
+
+00:10.520 --> 00:12.780
+to be named as timely.
+
+00:17.380 --> 00:31.230
+Let's just rename our artifact as timely to and just copy that and rename the description.
+
+00:31.230 --> 00:36.320
+All right let's click next to dependencies and dependencies.
+
+00:36.350 --> 00:41.550
+I'm going to choose web and in the template engines I'm going to choose time.
+
+00:42.830 --> 00:43.550
+OK.
+
+00:43.640 --> 00:45.370
+Now let's just it next.
+
+00:45.500 --> 00:50.190
+And just HOW ARE project created by Intel.
+
+00:50.380 --> 00:57.610
+That's click Finish and open this project in new window.
+
+00:58.280 --> 01:03.480
+All right we have our basic project structure created by intill.
+
+01:03.860 --> 01:11.480
+Let's just check out our palm products some efile in our point that Exham Elf while we have springboards
+
+01:11.480 --> 01:14.480
+starter time leef dependency.
+
+01:14.480 --> 01:21.690
+This dependency is going to allow us to use time with what we're going to do in this project is we're
+
+01:21.690 --> 01:27.850
+going to have a controller and we're going to serve a time we've template from that controller.
+
+01:28.290 --> 01:36.170
+We're going to map that request to a path and that path is going to serve our Web page so our template
+
+01:37.180 --> 01:45.380
+we're going to create our templates under the temple's folder and our control to serve that.
+
+01:45.510 --> 01:46.220
+All right.
+
+01:46.260 --> 01:51.180
+To do that I'm going to create a package and just name it.
+
+01:51.270 --> 01:59.320
+Controller and this controller I'm going to create a halo controller.
+
+02:02.080 --> 02:10.000
+All right this controller is going to be it of course with a controller rotation
+
+02:13.530 --> 02:14.730
+in this controller.
+
+02:14.910 --> 02:23.470
+What I want to do is I'm going to map the request to a u r l and your L is going to.
+
+02:23.490 --> 02:25.350
+So my template.
+
+02:25.350 --> 02:35.430
+So I'll say that I went to serve this as hello and I'll just going to create a method.
+
+02:36.740 --> 02:38.890
+To be mapped as a web method.
+
+02:39.080 --> 02:48.110
+And let's just say that this is the hello moated and we're going to inject the time live model here
+
+02:48.410 --> 02:57.230
+so we can insert and inject our data to our model.
+
+02:57.430 --> 03:04.070
+And in this model we're going to add some data so that our template can resolve it and display it to
+
+03:04.070 --> 03:08.710
+our users to show some actual data to our users.
+
+03:08.720 --> 03:13.030
+We're going to add our data to our template to do that.
+
+03:13.190 --> 03:16.150
+We're going to use an attribute method.
+
+03:19.000 --> 03:27.190
+This method is going to serve our template as the data source we can inject any type of data to our
+
+03:27.190 --> 03:29.450
+template with this attribute method.
+
+03:30.810 --> 03:36.290
+So to do that in this attribute method we have to provide two things.
+
+03:36.330 --> 03:40.570
+First one is the property that we want to inject into.
+
+03:40.770 --> 03:43.850
+And the second one is the actual data.
+
+03:44.160 --> 03:52.230
+So for property we're just going to say that our property name will be message and the data that we
+
+03:52.230 --> 03:57.490
+want to show is hello from Sprint.
+
+03:57.540 --> 04:01.310
+And we see in time we've.
+
+04:01.310 --> 04:02.150
+All right.
+
+04:05.390 --> 04:15.170
+And what we want to do now is we have to return our team L5 our template and I'm going to name our template
+
+04:15.200 --> 04:17.220
+as Halo.
+
+04:17.360 --> 04:21.880
+So as you can see we just returned string hello.
+
+04:22.130 --> 04:29.530
+And spring is going to understand that we want to turn a template named Halo and try to locate it under
+
+04:29.540 --> 04:31.830
+resources and templates.
+
+04:31.850 --> 04:38.440
+So what we want to do now is we have to create a template for our halo.
+
+04:38.780 --> 04:45.680
+And now let's just create a stem cell file we have to name this file as hello.
+
+04:45.850 --> 04:49.250
+Because we're returning a hello template.
+
+04:49.420 --> 04:54.460
+So let's just have it created now we need to do two things.
+
+04:54.520 --> 05:04.190
+The first thing is that we have to at the time leave namespace to our team of while to do that I'm just
+
+05:04.190 --> 05:13.570
+going to edit this line and say that our ex-Muslims namespace is going to be timely.
+
+05:13.640 --> 05:18.280
+And we're going to be using t h for short.
+
+05:19.400 --> 05:21.470
+So let's just say HTP
+
+05:24.030 --> 05:28.080
+and terrible UWW timely.
+
+05:35.340 --> 05:36.790
+Got it.
+
+05:37.240 --> 05:38.170
+All right.
+
+05:38.840 --> 05:46.040
+That's going to be our namespace and the other thing that we're going to do is we're going to inject
+
+05:46.100 --> 05:47.160
+our message.
+
+05:47.210 --> 05:51.900
+We're going to provide our actual template and into body.
+
+05:52.290 --> 05:57.500
+I'm going to say that we're going to provide a message to our user
+
+06:04.110 --> 06:16.910
+I'm just going to spend here and say that time we've text is going to be our template and our template
+
+06:16.910 --> 06:20.870
+was again message.
+
+06:20.900 --> 06:23.290
+So let's just use our template
+
+06:34.780 --> 06:38.680
+and provide it to our template engine.
+
+06:39.310 --> 06:52.340
+And now let's just rename our title as the time leaf demo and OK we're ready to run our application
+
+06:52.370 --> 06:54.890
+and see if everything is OK.
+
+06:55.760 --> 06:58.120
+So let's run our application
+
+07:13.400 --> 07:21.540
+as you can see our help that is mapped as a web method and the model is injected to it.
+
+07:23.740 --> 07:28.320
+So to test it out let's just open up to Firefox
+
+07:31.900 --> 07:37.880
+and let's go to localhost ADHD and our path was.
+
+07:38.000 --> 07:40.200
+Hello.
+
+07:40.240 --> 07:49.430
+And let's just hit enter here we go with how our message from our code from our template let's just
+
+07:49.430 --> 07:56.510
+take an overview of what we've done in this demo we have created a controller to serve our template
+
+07:57.750 --> 08:02.970
+this template is going to be preserved from the Hello Pat or what they were to.
+
+08:03.000 --> 08:09.900
+We're going to choose to serve it and we're going to inject our model to this request to the method
+
+08:09.990 --> 08:13.110
+that it's going to handle the request.
+
+08:13.680 --> 08:21.960
+And in this injected model variable we're going to add our attribute which is going to be injected into
+
+08:21.960 --> 08:29.070
+our template and processed by our template engine which is timely and we're providing this.
+
+08:29.160 --> 08:35.640
+Hello from spring and we see time leave message to our message we're able and we're simply returning
+
+08:35.640 --> 08:44.610
+the string hello as the math of the return and that return is going to be understood by spring and timely
+
+08:44.820 --> 08:52.590
+and timely if we'll go and check that we have to have a halo that HVM L5 ready for this template to
+
+08:52.590 --> 08:54.570
+be processed.
+
+08:54.570 --> 08:58.480
+And this is our actual template file in the sample file.
+
+08:58.700 --> 09:08.920
+What we basically that we said at the time we've template namespace is this and we use the time we've
+
+09:08.940 --> 09:14.180
+text tack to inject our message to our view to our template.
+
+09:14.550 --> 09:19.680
+Basically that's all there is to process a message process at Dedo with time.
+
+09:19.680 --> 09:21.900
+Leave it simple as that.
+
+09:22.020 --> 09:27.140
+You can process any kind of data anything with this template engine.
+
+09:27.140 --> 09:33.520
+All right we took a sneak peak of what we can do with time live in the next section.
+
+09:33.530 --> 09:39.140
+I'll give you an exercise where you can play around with Springhill and we see and create your own views
+
+09:39.200 --> 09:41.860
+and process with time vengeance.
+
+09:42.170 --> 09:43.680
+So I'll see you on the next video.

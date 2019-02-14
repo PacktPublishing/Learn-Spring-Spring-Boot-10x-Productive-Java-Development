@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00.380 --> 00:05.100
+Now let's take a moment to overview what we learned in this section up until now.
+
+00:06.250 --> 00:12.820
+In this section we've taken an overview of and we see and Springhill we see Application Development
+
+00:14.350 --> 00:21.730
+Dan we learned how spring handles resources and static content with resources directory.
+
+00:21.750 --> 00:26.570
+We understood what template thing is and what a template engine does.
+
+00:26.670 --> 00:29.570
+And as a result we took a closer look at time.
+
+00:29.570 --> 00:35.770
+We have template engine which is the one that we choose and keep using in the following sections.
+
+00:35.820 --> 00:41.540
+With time we've we worked on a simple application to test out the capabilities of time we've Anggun
+
+00:41.790 --> 00:44.810
+and certainly a template page with our controller.
+
+00:45.090 --> 00:52.750
+And finally I gave you an exercise so that you could check out and play around with timely engine.
+
+00:52.820 --> 00:57.830
+I hope you did well on your assignment and created everything you need to serve a template from your
+
+00:57.830 --> 00:59.200
+web application.
+
+01:00.300 --> 01:07.520
+In order to dive into another ryd aspect of spring and that is spring data then Alcyone the next section.

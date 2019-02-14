@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00.770 --> 00:06.650
+Now let's take a moment to review what we learned in this section in this section.
+
+00:06.840 --> 00:11.630
+We put together everything we learn together and build a web application with it.
+
+00:12.440 --> 00:17.900
+Before that we checked out the application that we're going to build and what it will look like when
+
+00:17.900 --> 00:18.790
+we finish it.
+
+00:20.200 --> 00:27.700
+Down we started the implementation and we did it by creating the operations down re-implemented read
+
+00:27.940 --> 00:35.030
+update and delete respectively we written our model service and the controller following the.
+
+00:35.030 --> 00:38.420
+And we see pattern by doing all these.
+
+00:38.510 --> 00:47.200
+We made use of spring boot spring and we see spring Deda and spring rest on top of our application.
+
+00:47.260 --> 00:54.700
+We put a nice UI and interface that we built with a team L5 CSSA bootstrap and of course time we've
+
+00:56.590 --> 00:58.750
+it's been a great journey up until now.
+
+00:58.840 --> 01:04.690
+And this section including everything we covered combined into an application has definitely been awesome
+
+01:04.690 --> 01:06.240
+for us.
+
+01:06.250 --> 01:12.800
+We now know how all these components are brought together and how they interact internally.
+
+01:12.810 --> 01:13.790
+All right.
+
+01:13.900 --> 01:18.140
+This was a long and a real great section to combine everything we know together.
+
+01:19.030 --> 01:27.070
+And yet for this course we know how our extra is waiting for us these extras include spring deltas live
+
+01:27.120 --> 01:36.000
+reload project Lombok spring actuator swaggerer for restful documentation and much more other great
+
+01:36.000 --> 01:40.930
+tools and utilities that we can make use of in any project that we're going to develop.
+
+01:41.190 --> 01:46.860
+So if you feel you're ready to move on let's move on to our extra section and I'll be seeing you in
+
+01:46.860 --> 01:47.390
+there.

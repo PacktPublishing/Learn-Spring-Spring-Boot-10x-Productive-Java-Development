@@ -1,0 +1,226 @@
+WEBVTT
+
+00:00.530 --> 00:10.130
+In our previous video we talked about updating our data and use put requests for that in this video.
+
+00:10.130 --> 00:16.430
+We're going to be talking about the last operation of crowd operations and which is the.
+
+00:16.520 --> 00:23.890
+And delete delete and entity to delete some data from our database.
+
+00:23.900 --> 00:31.310
+We're going to be implementing a delete and point and with that delete and point we're going to be expecting
+
+00:31.340 --> 00:34.210
+an idea again with that ID.
+
+00:34.310 --> 00:38.390
+We're going to go to our repository to our database.
+
+00:38.600 --> 00:45.760
+And then first David Deda with that ID after we find the anti-Tea with that ID.
+
+00:45.920 --> 00:48.570
+We're going to simply delete it.
+
+00:48.610 --> 00:49.700
+All right.
+
+00:49.700 --> 00:53.750
+So let's start by adding our method.
+
+00:53.960 --> 01:01.810
+I'm going to say public and this time we're not going to return anything.
+
+01:02.270 --> 01:14.560
+So we're simply going to say we need an elite product.
+
+01:14.720 --> 01:23.900
+Let's take care of our request mapping and in our requests mapping we're again going to xpect and ID
+
+01:26.500 --> 01:33.860
+and our method of course is going to be delete all right.
+
+01:36.170 --> 01:43.790
+Since we're simply taking an ID and deleting the entity with that human ID we're not going to be expecting
+
+01:43.820 --> 01:50.900
+any requests body or anything about consuming data just as we did here.
+
+01:50.930 --> 02:02.430
+So we're going to say we're expecting a path we're able and that path variable is going to be named
+
+02:02.460 --> 02:09.610
+as ID and of course its type of a string.
+
+02:09.620 --> 02:10.920
+All right.
+
+02:11.370 --> 02:17.820
+In our math it what we're going to do is we're first going to go to our repository and try to find that
+
+02:17.820 --> 02:22.380
+product that entity within our database.
+
+02:22.380 --> 02:34.250
+So let's say product found product and then product repository and find one and find one method.
+
+02:34.260 --> 02:40.480
+Again we're going to ask the repository with the idea that we pursued in the path where you will.
+
+02:40.860 --> 02:51.360
+All right after we find the product within our database and check if it's not know then we're going
+
+02:51.360 --> 02:56.610
+to go to our repository and simply delete it.
+
+02:56.760 --> 03:06.450
+To do that I'm going to call our repository method and that's going to be product repository and delete
+
+03:07.430 --> 03:08.580
+in the sleep method.
+
+03:08.820 --> 03:14.410
+I'm simply going to provide the product that I'm going to delete.
+
+03:14.430 --> 03:16.660
+All right.
+
+03:16.840 --> 03:25.440
+That's where basic delete method with the API is and let's test out our method to do that.
+
+03:25.460 --> 03:27.200
+I'm going to run our application
+
+03:46.910 --> 03:48.300
+application is starting now
+
+03:51.810 --> 03:54.070
+and start it.
+
+03:54.420 --> 04:00.680
+And as you can see we have mapped delete methhead right here in the console.
+
+04:00.690 --> 04:05.540
+So spring recognize our End Point and map the endpoint for us.
+
+04:06.880 --> 04:14.710
+So before we actually make a request we should first go to our database our age to console and get the
+
+04:14.710 --> 04:17.280
+idea of our sort of product.
+
+04:17.530 --> 04:21.070
+So let's do that now and open up the Firefox
+
+04:26.910 --> 04:31.710
+and I'm going to go to my age to console and let's refresh the session
+
+04:37.810 --> 04:42.800
+and I'm connecting to my database and I'm selecting the product.
+
+04:42.830 --> 04:46.570
+All right we have this product with this ID.
+
+04:46.670 --> 04:52.860
+So I'm going to be making a request with this idea so I'm going to delete this data.
+
+04:52.880 --> 04:58.730
+And after we finish our request we're not going to see any data in our table.
+
+04:58.730 --> 05:02.920
+So let's switch back to Arrius client and an arrest flight.
+
+05:02.920 --> 05:08.770
+Now we're going to be making a delete request an endless delete request.
+
+05:08.930 --> 05:17.780
+We're going to be providing ID just that we copied the ID and the previous parcel the request is going
+
+05:17.780 --> 05:27.170
+to be same because if we switch back to our ID you'll notice that we only provided ID as the latter
+
+05:27.170 --> 05:28.580
+part of the request.
+
+05:28.610 --> 05:36.410
+So previous part of the request is going to be provided as the slash IPs slash products and slash the
+
+05:36.410 --> 05:37.670
+ID that we provide.
+
+05:37.790 --> 05:38.380
+All right.
+
+05:39.360 --> 05:46.610
+Let's switch back to rest client and we can now make the request put before we make the request.
+
+05:46.730 --> 05:55.490
+We can get rid of the Content-Type header in our request so I'm going to click this close button and
+
+05:55.490 --> 05:56.630
+here we go.
+
+05:56.750 --> 06:02.600
+And of course we're not going to need a request but just as we did with the put request in the previous
+
+06:02.610 --> 06:06.340
+video so I'm getting rid of that too.
+
+06:06.950 --> 06:12.880
+And now I'm ready to make the request so I'll send a request now.
+
+06:14.370 --> 06:15.690
+Here we go.
+
+06:15.690 --> 06:17.030
+We have 200.
+
+06:17.190 --> 06:18.330
+As the response.
+
+06:18.360 --> 06:26.400
+And you should notice now we don't have any content in response because we simply said in our code that
+
+06:26.460 --> 06:28.020
+we're not returning anything.
+
+06:28.020 --> 06:37.700
+So our method was wanted and in our response let's take out the response body and response highlights.
+
+06:37.700 --> 06:46.760
+And as you notice we don't have anything about the response in our request so to verify if we could
+
+06:46.760 --> 06:48.500
+delete the object.
+
+06:48.500 --> 06:52.520
+Let's go to our two console and see what's going on there.
+
+06:54.190 --> 07:00.090
+So I'm going to rerun our query again and here we go.
+
+07:00.130 --> 07:07.540
+We don't have any entity left in our database because we simply deleted our entity with the request
+
+07:07.540 --> 07:10.420
+of HTP of spring rest.
+
+07:10.420 --> 07:15.620
+All right that's a very basic and very simple delete request.
+
+07:15.630 --> 07:24.390
+With spring rest of course we can extend these examples we can provide much more detailed request types
+
+07:24.810 --> 07:29.550
+with our entities with our controllers in the upcoming videos.
+
+07:29.550 --> 07:33.650
+We're going to dig into more of the rest API development with spring.
+
+07:34.080 --> 07:41.040
+But before we do that let's take a look at the elements of arrest API in our next video where I'm going
+
+07:41.040 --> 07:45.260
+to explain all the elements that we use within our controller.

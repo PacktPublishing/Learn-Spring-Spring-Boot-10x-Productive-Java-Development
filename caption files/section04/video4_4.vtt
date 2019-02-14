@@ -1,0 +1,43 @@
+WEBVTT
+
+00:00.480 --> 00:04.320
+Now let's take a moment to overhear what we learn in this section.
+
+00:04.320 --> 00:12.950
+Up until now in this section we've taken a very close look at Spring Application Lifecycle and how everything
+
+00:12.950 --> 00:17.580
+is brought together seamlessly by Spring Framework for any Boot application.
+
+00:18.600 --> 00:23.920
+Then we went in-depth with dependency injection and inversion of control.
+
+00:24.000 --> 00:29.970
+We discussed what the issue with the software development and how spring tackle this problem in its
+
+00:29.970 --> 00:31.510
+own way.
+
+00:32.060 --> 00:39.060
+We analyzed application of properties and application that YAML files and considered our alternatives
+
+00:39.060 --> 00:43.320
+for different environments and different setups.
+
+00:43.350 --> 00:51.110
+We checked outsprint configuration and holstering provides us another great way to configure our application.
+
+00:51.490 --> 00:57.370
+Then with spring profiles we discovered a beautiful way to separate our application environments and
+
+00:57.370 --> 01:03.330
+dependencies whenever we need taking a look back on what we've done in this section.
+
+01:03.470 --> 01:10.250
+Well Khowar a lot of great aspects of our fundamental springboard application development scenario.
+
+01:10.250 --> 01:16.220
+If you're ready to get hands on with spring and see and start developing with spring in no time then
+
+01:16.220 --> 01:17.900
+I'll see on the next section.

@@ -1,0 +1,583 @@
+WEBVTT
+
+00:02.060 --> 00:08.330
+So to actually make a request from another application I'm going to be creating a fake client application
+
+00:08.660 --> 00:16.180
+so that I can clearly make requests to my API application so I'll switch back to Intel.
+
+00:16.420 --> 00:29.570
+And I'm going to say I want a new project for feyne client so new project next and this is going to
+
+00:29.570 --> 00:32.710
+be a faint light.
+
+00:32.870 --> 00:36.540
+And let's also update the artifact.
+
+00:36.610 --> 00:38.400
+Here we go.
+
+00:38.530 --> 00:39.680
+I'll quit next.
+
+00:40.240 --> 00:49.260
+And after that I want this to be a web application so that we can have the Tom-Kat functionality right
+
+00:49.270 --> 00:50.430
+after that.
+
+00:50.590 --> 00:59.590
+Let's check out the phone client annotation Fink line Dep. for inclined as you can see we don't have
+
+00:59.590 --> 01:06.160
+anything appearing right here but in the routing section we actually have the client and as you can
+
+01:06.160 --> 01:11.460
+see from its description it say take the risk client from Netflix.
+
+01:11.890 --> 01:18.200
+So let's check out that and let's just create our application.
+
+01:18.210 --> 01:25.270
+All right we're ready and I'll hit finish and I'm going to be opening up in this new window here we
+
+01:25.330 --> 01:27.670
+go.
+
+01:27.710 --> 01:30.530
+So our project doesn't seem to be managed by me.
+
+01:30.590 --> 01:35.310
+And let's just hit refresh and have it here.
+
+01:35.390 --> 01:35.980
+All right.
+
+01:37.710 --> 01:41.910
+So let's check out our structure of our application and to do that.
+
+01:41.910 --> 01:48.450
+I'll first start by the Palm and in the palm file you should notice that we have a new dependency for
+
+01:48.470 --> 01:52.310
+Fein and that is spring clouds Trotter feyne.
+
+01:52.620 --> 01:58.300
+With that the Ben is he will be able to make request with our feyne client.
+
+01:58.320 --> 02:05.350
+So now to make a request with feyne client what I'm going to do is I'm going to create an accessory
+
+02:05.370 --> 02:10.680
+package and in that package I'm going to be creating an interface for fayn client.
+
+02:10.800 --> 02:20.430
+So let's go to our project and I'm going to be creating a new package and that package is going to be
+
+02:20.430 --> 02:24.480
+the accessor package in the accessory package.
+
+02:24.480 --> 02:31.450
+I'm going to create the API accessor.
+
+02:31.830 --> 02:32.670
+All right.
+
+02:32.670 --> 02:39.630
+And of course this is going to be an interface why this is an interface because fayn client automatically
+
+02:39.630 --> 02:46.530
+generate code to call your service behind the scenes and all you have to do is create an interface for
+
+02:46.530 --> 02:53.820
+the application that you're going to call it Eureka and then annotated properly and mimic the request
+
+02:53.820 --> 02:56.200
+mapping for your application.
+
+02:56.310 --> 03:00.530
+It might seem like fuzzy for now but let's take a look at how we can implement.
+
+03:00.540 --> 03:02.770
+And you'll see how easy it is so i'll hit.
+
+03:02.800 --> 03:03.510
+OK.
+
+03:04.550 --> 03:05.450
+Here we go.
+
+03:05.450 --> 03:10.010
+We have our fayn client accessor indebt accessor.
+
+03:10.040 --> 03:17.990
+The first thing that we're going to do is we're going to annotate our accessor as the client in that
+
+03:18.080 --> 03:19.680
+way inclined annotation.
+
+03:19.820 --> 03:24.030
+We're going to be providing the application that we're going to be connecting.
+
+03:24.050 --> 03:33.410
+And of course you have other options as qualifier you are all configuration fallback and path for our
+
+03:33.410 --> 03:38.110
+case the application that we're going to register is the nearest API application.
+
+03:38.270 --> 03:42.830
+So let's switch back to our STPI application and get the actual name for it.
+
+03:44.350 --> 03:47.500
+Arest API application is named as this.
+
+03:47.530 --> 03:54.280
+So we're going to be simply using this name to make our requests so that Eureka is going to understand
+
+03:54.280 --> 03:58.760
+that we're trying to reach turist API application that is registered with.
+
+03:58.990 --> 04:02.870
+And then we can simply make our requests to that application.
+
+04:03.310 --> 04:11.730
+So I'll copy that and I'll say I want to be a frank line for STPI application.
+
+04:11.740 --> 04:12.550
+All right.
+
+04:12.760 --> 04:13.880
+What else do we need.
+
+04:14.110 --> 04:20.460
+What we need now is the type of request type of end points that we want to use Woodcrest API application
+
+04:21.960 --> 04:22.770
+for that.
+
+04:22.770 --> 04:26.730
+Let's switch back to arest API application and see what we can do.
+
+04:26.790 --> 04:37.770
+And let's go to our controller and in RSA be-I application we have the jet endpoint post and point and
+
+04:37.770 --> 04:39.590
+point and delete and point.
+
+04:40.050 --> 04:47.340
+So let's start off with the basic example that we have and which is the get and point forget and point
+
+04:47.760 --> 04:51.620
+what we need to do is we need to provide the request mapping for that.
+
+04:51.630 --> 04:56.450
+And that is going to be API slash product slash ID.
+
+04:56.460 --> 04:57.150
+All right.
+
+04:58.210 --> 05:03.540
+And of course we're going to be taking back a product in result.
+
+05:03.550 --> 05:10.600
+So for that case I'm going to be creating a product object in my finish line so that it can map the
+
+05:11.020 --> 05:14.110
+request data back successfully.
+
+05:14.150 --> 05:22.580
+So I'll go to my product class and I'm simply going to copy it and even better let's copy the package
+
+05:22.670 --> 05:28.970
+and have everything ready there so I'll paste the package right here.
+
+05:29.860 --> 05:36.320
+And of course in this case we don't have to be having an entity to make requests.
+
+05:36.340 --> 05:42.280
+We just need a simple POJO so that it can map the response state up to our product object.
+
+05:42.340 --> 05:51.200
+So let's get rid of all these annotations configuration for JPA and have a simple POJO.
+
+05:51.200 --> 05:51.990
+All right.
+
+05:52.240 --> 05:59.770
+And also let's get rid of the imports statements that we don't use anymore here we go.
+
+05:59.880 --> 06:04.410
+We have a clean POJO object for our product.
+
+06:04.490 --> 06:12.260
+So if we go back to our Estadio accessor we should be creating a new method and that method is going
+
+06:12.260 --> 06:16.020
+to be taking back the product with an ID.
+
+06:16.040 --> 06:28.960
+So I'll say I need a product back and I'll simply say Get product from rest API so that we can clearly
+
+06:28.980 --> 06:32.280
+understand that we're fetching it from there.
+
+06:32.290 --> 06:36.510
+So in that method we're going to be taking a screaming argument.
+
+06:36.730 --> 06:44.150
+So what we should do now is we should take the request mapping as full from the rest API application.
+
+06:44.200 --> 06:49.260
+So let's switch back to our STPI application and copy the path.
+
+06:49.780 --> 06:55.470
+And actually we can copy the whole line so that we can use it easily.
+
+06:55.490 --> 07:04.260
+Let's get back to it and I'll paste it right here and then I'm going to be saying that I want this to
+
+07:04.260 --> 07:06.420
+be ID
+
+07:12.260 --> 07:20.480
+and of course the request method is going to be get.
+
+07:20.920 --> 07:22.510
+All right.
+
+07:22.820 --> 07:31.190
+And also what I should say that this idea is going to be a path variable and the value for that path
+
+07:31.190 --> 07:34.570
+variable is ideal of course.
+
+07:34.600 --> 07:36.590
+All right.
+
+07:36.760 --> 07:40.580
+We're actually ready to make our request with thin client.
+
+07:40.810 --> 07:47.800
+But before we do that let's verify that if we can connect to our Eureka server and I'll switch back
+
+07:47.800 --> 07:57.530
+to my application class and I'll also say enable Eureka client.
+
+07:58.360 --> 08:02.530
+But as you notice we don't have the dependency for it.
+
+08:02.680 --> 08:07.130
+So let's get the dependency from our ISAPI application.
+
+08:07.260 --> 08:15.070
+I'll go to my Palm file and in my palm file I'm going to copy the Eureka dependency.
+
+08:15.070 --> 08:23.810
+All right let's switch back to our feyne application and in our palm file let's paste the dependency
+
+08:23.810 --> 08:26.080
+for Eureka.
+
+08:26.120 --> 08:26.660
+All right.
+
+08:26.750 --> 08:31.290
+And I'm going to enable all the imports so that it can get the dependency right away.
+
+08:37.330 --> 08:42.940
+Intel is asking me to insert the class for your Ricca client.
+
+08:43.150 --> 08:44.620
+So let's do that now.
+
+08:46.280 --> 08:46.760
+All right.
+
+08:46.800 --> 08:54.240
+I hit alt enter and we have our Eureka client and actually we have left one more thing to do and that
+
+08:54.240 --> 08:56.960
+is our application properties.
+
+08:57.030 --> 09:04.830
+So let's go to our application properties and in here I'm going to say that I want to use the port as
+
+09:05.250 --> 09:11.210
+80 ADHD and the application name that I want to use is swinged application.
+
+09:11.210 --> 09:16.680
+That name is going to be feyne client.
+
+09:16.680 --> 09:17.760
+All right.
+
+09:18.000 --> 09:21.530
+The other things that I need to do is regarding Eureka.
+
+09:21.750 --> 09:26.460
+I have to provide a couple of properties so that it can register itself at Eureka.
+
+09:26.490 --> 09:39.830
+So let's go down there and I'm going to say eureka got client enabled is through and then I'm going
+
+09:39.830 --> 09:44.900
+to say client registered Derica as also true.
+
+09:45.200 --> 09:49.590
+And then eureka Quine's infects registry.
+
+09:49.640 --> 09:51.170
+It's also true.
+
+09:51.830 --> 09:58.900
+And then I'm going to enable the non secure part and I'll provide as true.
+
+09:58.910 --> 09:59.720
+All right.
+
+10:00.980 --> 10:05.390
+Let's run our application and see if we can connect to our Eureka's server.
+
+10:07.800 --> 10:16.160
+And let's make our laws a little bit higher and we can see everything clearly.
+
+10:16.390 --> 10:26.590
+And as you notice our Finke line just registered itself at Eureka and the status is 200 HTP OK and its
+
+10:26.590 --> 10:28.590
+name is feyne client.
+
+10:28.690 --> 10:35.220
+So let's go to our Eureka server for a second and verify our application if it registered itself.
+
+10:35.290 --> 10:36.990
+So I'll hit refresh.
+
+10:37.240 --> 10:38.390
+And here we go.
+
+10:38.470 --> 10:42.340
+We have our feyne client application.
+
+10:42.390 --> 10:49.110
+So what we need to do now is we're simply going to make our feyne client requests to RSA API application
+
+10:50.270 --> 10:55.490
+so to do that is super simple right now because we have set everything up.
+
+10:55.490 --> 11:03.820
+Now let's go back to our fayned client and actually make the request in my client application.
+
+11:03.950 --> 11:09.830
+I'm going to implement the command line runner so that we can make our requests easily.
+
+11:10.490 --> 11:17.420
+And I of course have to implement the run method command line runner and in the run method I'm going
+
+11:17.420 --> 11:24.840
+to be calling our accessor API accessor so to do that I'll have to provide the instance variable for
+
+11:24.840 --> 11:30.570
+it private rest API accessor
+
+11:33.320 --> 11:35.810
+and rest the API accessor.
+
+11:35.900 --> 11:39.970
+And of course I have to be using the injection for all the wiring.
+
+11:40.220 --> 11:46.170
+So I'll use solder injection and I'm simply going to order wire it.
+
+11:46.330 --> 11:53.990
+All right and right down in the run method what we're going to do is we're going to make a call to our
+
+11:53.990 --> 11:57.740
+product and get a product back.
+
+11:57.740 --> 12:10.720
+So for this purpose I'm going to be taking a product back product from feyne client and the product
+
+12:10.770 --> 12:20.820
+that I'm going to get is rest API accessor get product from ISAPI and you should remember that we're
+
+12:20.820 --> 12:24.710
+going to be needing an I.D. to get the actual product.
+
+12:24.720 --> 12:30.330
+So let's go to our console forest API application and get an ID from the database
+
+12:33.390 --> 12:36.630
+RSA application is already up and running.
+
+12:36.660 --> 12:43.160
+And let's go to h to console localhost ADHD
+
+12:45.830 --> 12:48.980
+and to.
+
+12:49.200 --> 12:55.820
+Let's go back to our database and in our product table we already have a single record.
+
+12:55.850 --> 13:04.640
+So I'll copy the idea from here and go to my finish line project and I'll place the ID to make the request
+
+13:04.760 --> 13:08.930
+and now let's test out our feyne Colline.
+
+13:08.930 --> 13:16.650
+So it does work but to actual test it out I'm going to be actually adding a logger's so that we can
+
+13:16.650 --> 13:19.590
+see the result in our statements.
+
+13:19.620 --> 13:26.110
+So if we're doing that I'm going to be using a logger from a cell for a J.
+
+13:27.300 --> 13:37.420
+And I'll take the local factory and get logger Fraenkel on the application class.
+
+13:37.430 --> 13:50.330
+All right so the statement below here I'm going to be logging out product info and product
+
+13:53.070 --> 14:10.020
+product from Ras API application as going to be product from feyne client to streng.
+
+14:10.020 --> 14:17.570
+All right let's run our application and see our finish line in action.
+
+14:17.650 --> 14:24.770
+So I'll hit pre-run.
+
+14:24.810 --> 14:26.780
+Our application is starting up now.
+
+14:30.750 --> 14:39.480
+And we have a problem with our application Sprint could not although our recipient accessor.
+
+14:39.770 --> 14:47.010
+And that's because we forgot to use the Nabl Finkle and sanitation in our main class.
+
+14:47.120 --> 14:50.980
+So let's fix that and renew our application.
+
+14:51.470 --> 14:54.520
+So I'll say enable points.
+
+14:54.580 --> 14:55.370
+All right.
+
+14:55.610 --> 15:01.970
+That annotation is going to be enabling the faint line functionality and actually going to scan and
+
+15:01.970 --> 15:04.830
+find the Fank line that I've annotated.
+
+15:05.240 --> 15:07.800
+All right let's rerun our application.
+
+15:07.810 --> 15:14.910
+But before we rerun let's also provide the spring method to our product so that we can see it easily.
+
+15:15.500 --> 15:23.120
+So I'll go to my product object and right below I'm going to be saying that I want to string and with
+
+15:23.180 --> 15:28.350
+all the objects all the properties of my product I'll hit enter.
+
+15:28.460 --> 15:31.020
+And here we go.
+
+15:31.040 --> 15:35.170
+So let's switch back to our fayned going to application and rerun it.
+
+15:43.470 --> 15:45.260
+Our application is almost up.
+
+15:48.240 --> 15:49.800
+And here we go.
+
+15:50.600 --> 15:59.290
+Our application started itself and connected to discovery client the Eureka server and it started itself
+
+15:59.360 --> 16:07.360
+and for 80 and 88 after that we have our result from the client.
+
+16:07.640 --> 16:13.240
+We could actually get it get the data from our STPI application with Faid client.
+
+16:13.430 --> 16:21.820
+And as you can see within these low statement we have the product from ISAPI application and the data
+
+16:21.820 --> 16:29.740
+is with the idea that we've given and the name is simple product and this is a test product and type
+
+16:29.810 --> 16:39.420
+as custom and the category is special as you know is that calling an application with Freyne client
+
+16:39.840 --> 16:48.600
+with the help of Eureka server is just a line of code but behind the back of that line of code we of
+
+16:48.600 --> 16:55.650
+course created our fear inclined accessor which was an interface so that we can make our requests to
+
+16:55.650 --> 16:59.260
+receive the API application or any application that you want.
+
+17:00.540 --> 17:09.300
+In this interface what we use this we use the client annotation spring clouds Todder fayn within the
+
+17:09.300 --> 17:17.240
+annotation we provided the application name so that you raquet can understand the name and direct us
+
+17:17.250 --> 17:25.010
+to that application which is running under local housed ADHD our ISAPI application.
+
+17:25.130 --> 17:32.560
+And after that we use a request mapping and we clone the request mapping from RSA application.
+
+17:32.720 --> 17:39.840
+And the thing that we copied is the get Mathare or waras API application in the get method.
+
+17:40.070 --> 17:42.290
+We were receiving an ID from the path.
+
+17:42.500 --> 17:50.670
+And with that ID we were going through our repository and bringing back new product with different ID.
+
+17:50.690 --> 18:00.310
+So in this method we sat were going to be using the functionality of API application and we provided
+
+18:00.310 --> 18:10.020
+the method same as their as you're well aware by now creating a fake client is fairly simple we just
+
+18:10.020 --> 18:19.140
+added the co-features of Eureka's over to our mix to our cooking so that we could have a actual working
+
+18:19.230 --> 18:26.020
+finish line because the other way making a request would fain quite as simple as making a request WordPress
+
+18:26.040 --> 18:33.740
+template we wanted to make it a little bit different from this template and we use Eureka's or this
+
+18:33.740 --> 18:42.110
+time you Rakha handled our connection and found the application within its registry Dan redirected our
+
+18:42.110 --> 18:44.470
+requests to that application.
+
+18:44.480 --> 18:45.730
+Simple as that.
+
+18:46.220 --> 18:54.160
+And also you should notice that we can create all the methods from the rest API application right here
+
+18:54.430 --> 19:02.790
+and interface methods so that actually is all about that you should know from Fank line from Netflix
+
+19:04.170 --> 19:09.030
+to talk about the exercise that I'm going to give you and make an overview.
+
+19:09.150 --> 19:10.140
+I'll see on the next.

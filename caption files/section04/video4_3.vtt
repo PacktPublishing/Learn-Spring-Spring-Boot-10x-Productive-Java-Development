@@ -1,0 +1,325 @@
+WEBVTT
+
+00:00.270 --> 00:07.320
+In order to show you have spring profiles and the configuration work together and give you a demo I
+
+00:07.320 --> 00:10.320
+just created that profiles application.
+
+00:10.420 --> 00:14.220
+This is just like the demo application we created before.
+
+00:14.470 --> 00:20.890
+So you can just follow those steps and create an application for yourself and follow along with me from
+
+00:20.890 --> 00:21.320
+there.
+
+00:22.460 --> 00:29.690
+In this application what we're going to do is we're going to have a halo service and we're going to
+
+00:29.690 --> 00:32.870
+provide a method to it with this method.
+
+00:32.870 --> 00:39.050
+We're going to say our name or anything that we want to greet and we're going to have two different
+
+00:39.050 --> 00:44.930
+implementations behind one for the English and one for the German one.
+
+00:44.930 --> 00:51.800
+So the English one is going to say hello and your name and the general one is going to say hello and
+
+00:51.800 --> 00:53.010
+your name.
+
+00:53.300 --> 01:01.640
+So to do that we're going to have an interface and that interface is going to serve us as a service.
+
+01:01.640 --> 01:12.710
+So let's just create a package and name this package a service and have an interface there and this
+
+01:12.800 --> 01:16.900
+interface is going to be grading service.
+
+01:18.450 --> 01:20.210
+Okay.
+
+01:20.420 --> 01:25.700
+And of course to spring to skandhas we're going to annotated as a component
+
+01:29.390 --> 01:33.980
+this interface is going to have a single method.
+
+01:34.050 --> 01:43.320
+This method is going to say hello and take our name or anything you like as the parameter.
+
+01:43.740 --> 01:44.370
+OK.
+
+01:45.450 --> 01:47.190
+This is our greeting service.
+
+01:47.520 --> 01:55.470
+So now we have to make two different implementations for service one for the English
+
+01:58.070 --> 02:01.800
+and one for the German reading service.
+
+02:04.000 --> 02:06.410
+English OK.
+
+02:06.460 --> 02:07.550
+Simple as that.
+
+02:07.990 --> 02:13.920
+And this has to be also marked as that component.
+
+02:14.680 --> 02:25.560
+And we have to implement our grading service So intelligence is warning us and lets us implement those
+
+02:26.100 --> 02:26.600
+methods.
+
+02:26.640 --> 02:29.630
+And here we go.
+
+02:29.700 --> 02:38.370
+So in this English version of this service we're going to say hello and the name that we provide.
+
+02:39.080 --> 02:53.120
+That said now let's just create the German version and we're going to say creating service German OK
+
+02:54.320 --> 03:02.220
+and let's just implement all grading service and override the method.
+
+03:02.730 --> 03:04.590
+OK.
+
+03:05.040 --> 03:15.180
+In this method we're going to say hello and the named pro-white of course we're going to annotate this
+
+03:15.270 --> 03:16.810
+as a component.
+
+03:17.070 --> 03:17.760
+OK.
+
+03:19.200 --> 03:27.870
+All right we have our basic structure for our profiles test and now what we're going to do is we're
+
+03:27.870 --> 03:35.870
+going to create a controller and test our application from there to do that.
+
+03:35.910 --> 03:46.620
+That's just critical scroller package and a class stare and say that it's a greeting controller.
+
+03:50.280 --> 03:56.250
+What this controller is going to do is we're going to expose this controller as a web service web method
+
+03:56.370 --> 04:05.400
+and we're going to take our name as a parameter and we're going to call our service to create responses
+
+04:05.400 --> 04:07.090
+for English and German one.
+
+04:07.230 --> 04:12.690
+So to do that let's just make this web method.
+
+04:12.690 --> 04:19.740
+And of course we're going to use request mapping for that and the path is going to be a backslash.
+
+04:19.980 --> 04:23.590
+And of course this is going to be a risk control.
+
+04:24.630 --> 04:31.040
+Right now let's just have a method to say hello.
+
+04:31.830 --> 04:36.970
+This method is going to return a string.
+
+04:37.000 --> 04:48.050
+Let's make this method a web method and use request mapping and the path for this method is going to
+
+04:48.050 --> 04:54.600
+be low and slash name.
+
+04:55.370 --> 05:01.320
+And of course the method for this path is going to get.
+
+05:01.810 --> 05:03.120
+OK.
+
+05:03.410 --> 05:08.570
+So let's just take our path where you will and
+
+05:11.320 --> 05:14.380
+say that it's the name one.
+
+05:14.710 --> 05:21.030
+And of course we're going to get this as a parameter to our method.
+
+05:21.100 --> 05:27.820
+So D'Errico we have our basic web method here.
+
+05:27.880 --> 05:34.450
+Now what we want to do is we want to get our reading service we want to make use of our reading service
+
+05:35.620 --> 05:47.790
+to do that let's just create a instance variable for our grading service and to actually make use of
+
+05:47.790 --> 05:48.160
+it.
+
+05:48.270 --> 05:52.920
+Let's just all the wire at OK.
+
+05:53.390 --> 06:00.560
+Now with this greeting service what we want to do is we want to say hello and we're going to use our
+
+06:00.560 --> 06:04.500
+name as the parameter.
+
+06:04.500 --> 06:14.030
+All right we have our application of course we're going to return this to our users and to our selves
+
+06:14.030 --> 06:14.970
+of course.
+
+06:16.230 --> 06:25.290
+To actually make use of it we have to say that one of them is going to be used as English profile and
+
+06:25.290 --> 06:28.790
+the other one is going to be used as the German profile.
+
+06:28.800 --> 06:32.630
+So now let's do that right here.
+
+06:32.810 --> 06:40.040
+We're going to say profile and since this is the English one we're going to say this is the English
+
+06:40.040 --> 06:41.290
+profile.
+
+06:42.290 --> 06:48.660
+And in the German one we're going to say this is the German profile.
+
+06:48.680 --> 06:49.440
+All right.
+
+06:52.530 --> 07:00.890
+To activate these profiles all we have to do is just go to application up properties or application
+
+07:00.900 --> 07:09.900
+the yemo whatever you file you choose to create you're going to say spring dot profiles that active
+
+07:12.070 --> 07:22.650
+and in their spring is going to automatically complete this for us for the first test.
+
+07:22.690 --> 07:25.110
+We're going to use the English profile
+
+07:28.940 --> 07:32.870
+and as you can see this profile is right here.
+
+07:35.400 --> 07:46.150
+We have our active profile as English so our controller is going to go to the English one for the implementation.
+
+07:47.720 --> 07:49.460
+So now let's just test this method.
+
+07:49.630 --> 07:51.960
+So to see if everything is OK.
+
+07:53.480 --> 08:13.060
+To do that let's just go to our profiles application and run our application.
+
+08:13.080 --> 08:13.960
+All right.
+
+08:14.190 --> 08:16.530
+Our application is up and running.
+
+08:16.530 --> 08:19.970
+Now let's just open up to Firefox to test our methods.
+
+08:23.720 --> 08:29.860
+So we're going to say localhost ADHD hello and slash your name.
+
+08:29.930 --> 08:39.540
+So if he had to enter as you can see we're seeing Hello Yazzie as a response that's just because we
+
+08:39.540 --> 08:46.760
+set the act to profile as English one an English one is going to turn us.
+
+08:46.840 --> 08:52.750
+Hello and your name just as we said here in this profile section.
+
+08:53.130 --> 08:54.950
+That's the magic of profiles.
+
+08:54.960 --> 09:01.140
+You have two different implementations and you say that one of them is active and spring.
+
+09:01.140 --> 09:03.000
+Just use that one.
+
+09:03.000 --> 09:03.880
+Simple as that.
+
+09:04.050 --> 09:09.490
+So now let's just try this out with a German one.
+
+09:09.880 --> 09:13.770
+OK let's just restart our application.
+
+09:24.360 --> 09:25.380
+All right.
+
+09:25.400 --> 09:28.190
+Our application is up and running.
+
+09:28.190 --> 09:28.970
+That's great.
+
+09:29.180 --> 09:33.580
+And as you can see here German profile is set to act two.
+
+09:33.770 --> 09:41.690
+And in the previous startup we had English one as set as active here and that's a nice way to know that
+
+09:41.900 --> 09:46.500
+which one is active which one of your profiles is active.
+
+09:46.520 --> 09:47.180
+All right.
+
+09:47.180 --> 09:51.310
+So to test our method let's just go to Firefox again.
+
+09:51.530 --> 10:00.490
+And now let's just hit enter as you can see we're seeing hello as the response this time.
+
+10:00.710 --> 10:04.910
+That's just because that were said the to profile as German.
+
+10:04.910 --> 10:06.590
+Isn't that beautiful.
+
+10:06.680 --> 10:14.480
+You're setting your profile to anything you want and Spring's just picking up the bean for your application
+
+10:14.510 --> 10:20.030
+and presenting you to that implementation for your application.
+
+10:20.060 --> 10:24.140
+That's a great and beautiful way to separate your environments.
+
+10:24.140 --> 10:28.260
+Your implementations anything you want in your application.
+
+10:29.490 --> 10:31.560
+To make an overview of what we learn.
+
+10:31.590 --> 10:36.060
+Up until now I'll be seeing you on this section over in the next video.

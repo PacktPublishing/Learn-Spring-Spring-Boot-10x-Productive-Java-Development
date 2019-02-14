@@ -1,0 +1,403 @@
+WEBVTT
+
+00:00.910 --> 00:08.180
+In this video we're going to be laying out the foundation for our application namely bootstrapping it
+
+00:09.560 --> 00:11.000
+for doing that of course.
+
+00:11.180 --> 00:17.040
+I'm going to create a new project for our application I'll hit next
+
+00:19.590 --> 00:25.660
+and the name of our project is going to be spring and we see.
+
+00:25.750 --> 00:29.670
+And let's also change the artifact to match it.
+
+00:30.870 --> 00:35.690
+And the name of our project is also going to be spring and we see.
+
+00:35.700 --> 00:38.240
+All right let's click next.
+
+00:39.500 --> 00:45.610
+Within the dependencies what we're going to need is of course we need the web dependency.
+
+00:45.920 --> 00:52.580
+And after that we're going to be using timely to develop our interface so we're going to select a time
+
+00:52.610 --> 01:01.460
+we've And from the sequel to app we're of course going to use the JPA and to.
+
+01:01.660 --> 01:04.950
+These are all the basic dependencies that we need right now.
+
+01:05.020 --> 01:11.310
+And of course we're also going to be adding a couple of more dependencies in the next video.
+
+01:11.680 --> 01:23.610
+So for now I'm going to hit next and everything is ready for me so I'll hit finish to create our project.
+
+01:23.630 --> 01:24.990
+Our project is created.
+
+01:25.010 --> 01:33.340
+And let's go to our navigation and in our profile we have all of dependencies that we need for our application
+
+01:33.340 --> 01:34.070
+right now.
+
+01:35.010 --> 01:44.070
+So bootstrap our application to lay out the foundation I'm going to be creating the model and the product
+
+01:44.070 --> 01:50.640
+loader for our application so it can Strout itself it can insert the data into a database.
+
+01:50.790 --> 01:53.110
+Before even I need to do anything.
+
+01:53.250 --> 02:01.080
+And then we can work our interface working our controllers with the application with our embassy application.
+
+02:01.170 --> 02:07.920
+So to do that I'll go to my source for victory and I'll start by creating our model.
+
+02:08.060 --> 02:16.420
+So I'll say I want a new package and it's going to be the model in the model package.
+
+02:16.580 --> 02:26.410
+I'm going to be creating our product model and of course the product is going to be our entity.
+
+02:27.150 --> 02:35.510
+And in this product object product entity we're going to be having an ID private screening ID.
+
+02:36.220 --> 02:39.700
+And of course this product is going to have a name
+
+02:42.580 --> 02:45.100
+and we also have the description
+
+02:51.350 --> 02:52.910
+we have type
+
+02:55.830 --> 02:57.840
+we have category
+
+03:03.370 --> 03:12.000
+and we have the price as double.
+
+03:12.010 --> 03:20.840
+All right let's create our getters and setters and I'll select all the properties that I have and hit
+
+03:20.900 --> 03:22.450
+OK.
+
+03:22.880 --> 03:34.830
+This also has an empty constructor for our application for our model and I'll select none go.
+
+03:34.850 --> 03:46.540
+So there are things that I should do is annotate my ID as ID so I'll do that and I'll say generated
+
+03:46.550 --> 03:47.380
+Wehle.
+
+03:48.010 --> 03:52.700
+And within the generated value I'm going to provide a generator.
+
+03:52.700 --> 03:59.150
+But before that I'm going to say that generation type is automatic and the generator that I'm going
+
+03:59.150 --> 04:04.610
+to use is system dash you ID.
+
+04:04.820 --> 04:12.340
+Let's get the actual generator and the generator is going to be coming from a generic generator.
+
+04:12.780 --> 04:19.280
+And and this generator I'm going to be giving it the name that I provided within the generated value
+
+04:19.280 --> 04:20.420
+annotation.
+
+04:20.420 --> 04:30.090
+It's going to be system dash you ID and of course the strategy is going to be you I.D. too.
+
+04:30.470 --> 04:38.970
+All right we have our entity and actually the model so let's create our repository for this model for
+
+04:38.970 --> 04:40.080
+this entity.
+
+04:40.250 --> 04:43.590
+For that I'm going to create our repository package
+
+04:47.500 --> 04:52.740
+and this repository package I'm going to create our product repository interface
+
+04:57.220 --> 05:01.450
+and select interface from dropdown.
+
+05:01.450 --> 05:02.740
+Here we go.
+
+05:03.400 --> 05:11.680
+So what we should do now we should extend the J-P repository and we should provide the product model
+
+05:11.680 --> 05:20.270
+to it and then we also need to say that we're going to be using string as ID.
+
+05:20.410 --> 05:26.990
+And lastly we should annotate this class as the repository annotation.
+
+05:27.100 --> 05:27.980
+Here we go.
+
+05:28.150 --> 05:34.730
+We have our repository ready to be working with the last thing we're going to do before we move on to
+
+05:34.760 --> 05:38.920
+creating our index page and the actual Estill Mel.
+
+05:39.010 --> 05:44.200
+I'm going to be creating a data lower class in the previous videos.
+
+05:44.200 --> 05:51.040
+We were just creating our data within the application class but this time I'm going to be creating a
+
+05:51.040 --> 05:53.400
+new package within that package.
+
+05:53.530 --> 05:57.580
+I'm going to be creating a new component with that component.
+
+05:57.580 --> 06:01.820
+Our data is going to be loaded whenever we run our application.
+
+06:01.900 --> 06:10.570
+So to do that I'm going to be creating a new package and that package is going to be boot with this
+
+06:10.570 --> 06:11.740
+boot package.
+
+06:11.740 --> 06:16.000
+I will have my day down whenever I run our application.
+
+06:16.000 --> 06:25.890
+So in this package I'm going to create a new class and give it the name as data loader as I've said
+
+06:25.890 --> 06:28.230
+before in this data loader class.
+
+06:28.320 --> 06:33.990
+We're going to be connecting to our repository and have some data created before we interact with our
+
+06:33.990 --> 06:35.730
+application.
+
+06:35.730 --> 06:42.210
+So if we're doing that and before everything else I should annotate this class as a component so that
+
+06:42.480 --> 06:48.100
+spring component scan finds it and creates it as a mean.
+
+06:48.280 --> 06:53.920
+And after that what I'm going to do is I'm going to be implementing the command line runner.
+
+06:54.190 --> 07:00.250
+So let's do that now and I'll say implements command line runner.
+
+07:00.250 --> 07:06.730
+And of course as you can remember from the previous videos we should be overriding the run method of
+
+07:06.730 --> 07:08.300
+the command line runner.
+
+07:08.470 --> 07:10.070
+So let's do that now.
+
+07:10.360 --> 07:18.410
+And I just created our own method so to actually make use of our repository.
+
+07:18.500 --> 07:25.580
+Let's create a instance variable for our repository and other worrit so to do that.
+
+07:25.620 --> 07:34.830
+Say private product repository and repository and then I'm going to create these self-injection for
+
+07:34.850 --> 07:42.200
+at I'll create a center for repository and then simply auto wire it.
+
+07:42.220 --> 07:43.180
+Here we go.
+
+07:44.380 --> 07:52.200
+Knowing the run method of our command line runner we're going to be creating two products basically.
+
+07:52.220 --> 07:54.330
+Now let's do that now.
+
+07:55.040 --> 08:07.990
+I'll say product and product one is a new product and that product is going to be named as milky bar
+
+08:12.410 --> 08:16.730
+and the description for that product is going to be
+
+08:19.550 --> 08:29.340
+milky bar where hot chocolate and hazelnut.
+
+08:29.920 --> 08:34.650
+I'm going to set the type of this product as Candie's
+
+08:37.870 --> 08:48.730
+and for a category of this product I'm going to provide bars and for the price let's say we want this
+
+08:48.730 --> 08:52.520
+to be one that 99.
+
+08:52.750 --> 08:55.620
+All right we have our first product.
+
+08:55.690 --> 09:01.960
+So let's say to our repository for do debt to do that.
+
+09:02.070 --> 09:08.500
+I'm going to call our product repository the same method and simply give it the product one.
+
+09:08.510 --> 09:09.330
+Here we go.
+
+09:10.780 --> 09:22.500
+A Let's move on to creating our second product I'll say product product to add a new product.
+
+09:22.660 --> 09:29.190
+The second product is going to be named as almond bar
+
+09:33.510 --> 09:39.300
+and description for the second product is going to be
+
+09:42.740 --> 09:46.370
+almond bar with
+
+09:49.870 --> 09:53.980
+chocolate and honey
+
+09:57.510 --> 10:03.830
+and the type of the second product is also going to be candies.
+
+10:05.010 --> 10:06.030
+And let's say that
+
+10:09.540 --> 10:20.280
+for a category I'm going to be providing the first category again and for the price of this second product
+
+10:21.720 --> 10:31.130
+I'm going to say to the 99 Let's save the second product to our repository for that are called Product
+
+10:31.170 --> 10:35.680
+repositories same method and simply provide the second product.
+
+10:35.970 --> 10:36.700
+Here we go.
+
+10:39.680 --> 10:42.220
+Our application is almost ready to start up.
+
+10:42.560 --> 10:48.930
+But before we do anything we should check out our application properties and set some variables there.
+
+10:50.230 --> 10:56.820
+So let's open up our application up properties in there.
+
+10:57.190 --> 11:06.730
+Let's first say we want our application to be running on port 80 89 different from the other projects
+
+11:06.730 --> 11:08.190
+that were built.
+
+11:09.190 --> 11:15.300
+And after that I'm going to provide our our data source properties.
+
+11:15.300 --> 11:27.780
+So I'll start with spring dot datasource dot driver class name is going to be H2 and after that I'm
+
+11:27.780 --> 11:39.680
+going to say spring that datasource dot you are out is going to be shady b c H2.
+
+11:39.900 --> 11:48.600
+And after that I'm going to say it's going to be a file store and then I'll provide the database name
+
+11:48.690 --> 11:57.090
+as products and we see database right.
+
+11:57.440 --> 12:00.920
+And we are also going to set the username and password
+
+12:04.770 --> 12:15.210
+datasource thought user name is going to be say and then spring dot datasource
+
+12:17.940 --> 12:21.900
+dot password is going to be empty.
+
+12:21.950 --> 12:26.650
+And let's also enable our age to cancel and set the path.
+
+12:27.140 --> 12:37.340
+So I'll say spring that a student council enabled is through and then spring that a student council
+
+12:37.460 --> 12:48.800
+that path is going to be slash H-2 and then we're also going to set the J-P sequel outlook for that
+
+12:49.310 --> 12:55.460
+I'll provide spring that JP That shows sequel to true.
+
+12:55.460 --> 12:57.020
+All right.
+
+12:57.020 --> 13:07.910
+Our application is ready to run now and we can we should expect to have our data stored into our database.
+
+13:07.940 --> 13:16.020
+So let's run our application and see what's going to happen.
+
+13:16.110 --> 13:23.520
+Our application is starting up now.
+
+13:23.710 --> 13:31.210
+And as you can see within these statements our data is brought into our H-2 database.
+
+13:31.210 --> 13:35.920
+Let's just quickly verify the data if it actually store into our database.
+
+13:35.920 --> 13:45.340
+So for that I'm going to fire up the Firefox and then go to localhost ADHD 9 and do
+
+13:48.970 --> 13:49.680
+our database.
+
+13:49.680 --> 13:58.110
+This time is going to be product and we see database.
+
+13:59.270 --> 14:05.570
+And let's quickly we're that in our application of properties that was actually products and we see
+
+14:05.570 --> 14:12.840
+database so let's copy that and switch back to Firefox and paste it right here.
+
+14:13.000 --> 14:21.060
+Here we go and let's go back to our database in our database if we query our product table.
+
+14:21.390 --> 14:24.700
+We have two records just as we expected.
+
+14:25.020 --> 14:27.390
+So let's switch back to our ID.
+
+14:27.630 --> 14:34.500
+And as you can see here we have bootstrapped our application and ready to build on top of it with spring
+
+14:34.500 --> 14:40.470
+and we see and other great technologies such as a DML CSX and bootstrap.
+
+14:40.590 --> 14:45.570
+So to start off with creating our index page I'll be seeing you in the next video.

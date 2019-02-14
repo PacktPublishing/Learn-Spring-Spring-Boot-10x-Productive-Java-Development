@@ -1,0 +1,727 @@
+WEBVTT
+
+00:00.850 --> 00:10.870
+OK now let's start to helping our first entity and connected to a database to do that I'm going to create
+
+00:10.870 --> 00:12.020
+a new project.
+
+00:12.130 --> 00:19.190
+So let's click Create new project and we have initialiser o click next.
+
+00:21.270 --> 00:33.990
+And this project is going to be A.D. And I'm also going to name the artifact to anti-Tea OK.
+
+00:36.040 --> 00:40.030
+And also let's just update the description too.
+
+00:40.200 --> 00:41.000
+And it's the
+
+00:44.750 --> 00:56.330
+all right now with squid next and indeed dependencies that we have to just pick what we want and what
+
+00:56.330 --> 00:57.470
+we need.
+
+00:57.560 --> 01:03.990
+And of course we're going to use edge too and with embedded support as you can see here.
+
+01:04.010 --> 01:11.910
+So let's just click to and let's check out what other things that we can make use of.
+
+01:12.090 --> 01:21.030
+And let's just check out core and refine here and let's check out the web in the web dependencies.
+
+01:21.180 --> 01:30.730
+We need weap because as you can see here we need Tom-Kat we need our embedded server so that we can
+
+01:30.730 --> 01:36.580
+run our speed good application and have it running all the time even if we don't use it.
+
+01:36.580 --> 01:39.250
+So make sure you click the Web.
+
+01:40.180 --> 01:50.010
+And let's also pick the JPA because that's going to provide us the abstraction layer on top of H-2 database.
+
+01:50.170 --> 01:51.820
+So we're fine here.
+
+01:51.820 --> 01:53.930
+And now let's click next.
+
+01:56.340 --> 02:00.580
+And our project is going to be named as entity.
+
+02:00.590 --> 02:03.680
+I'm just going to make this upper case here.
+
+02:04.410 --> 02:05.200
+All right.
+
+02:05.920 --> 02:11.640
+So let's click Finish to create our project.
+
+02:11.640 --> 02:12.620
+All right.
+
+02:13.150 --> 02:20.560
+Our dependencies are being resolved by Intel and may well of course so let's just check out our profile
+
+02:21.160 --> 02:22.840
+and see what it looks like here.
+
+02:25.530 --> 02:34.440
+In our profile as you can see we have spring boots Todder JPA artifact this artifact is going to provide
+
+02:34.440 --> 02:39.270
+us all the skills of the JPA and spring data JPK of course.
+
+02:39.270 --> 02:44.690
+And as you can see here we have H-2 database artifact.
+
+02:44.730 --> 02:47.550
+And as you can see the scope is runtime.
+
+02:47.550 --> 02:52.270
+So this will provide us the embedded database that we need.
+
+02:52.270 --> 02:53.170
+All right.
+
+02:53.170 --> 03:01.150
+Our dependencies are being Rizo right now and we can just move on to our project in our project where
+
+03:01.190 --> 03:08.300
+we're going to do is we're going to create an entity and have it created to a database.
+
+03:08.310 --> 03:14.750
+Now I'm going to create an entity and connected with the H2 database and I'll show you all the steps.
+
+03:14.880 --> 03:24.490
+So let's just start by creating a package and this package is going to be named as entity.
+
+03:24.490 --> 03:33.030
+All right and in this package what we need is a class that class as we discussed in the previous sections
+
+03:33.150 --> 03:43.450
+is just a plain POJO let's just name our POJO as product and how to create it.
+
+03:43.470 --> 03:48.540
+All right we have a POJO and it's all empty now.
+
+03:48.660 --> 03:56.760
+What we need to do is we need to have this set as an entity and have it created by H-2 database.
+
+03:56.760 --> 04:03.450
+Before we dig into that let's just how are properties for this product object product entity.
+
+04:03.870 --> 04:12.740
+And of course a product is going to have an ID and identifier for it that says it's a unique thing.
+
+04:12.830 --> 04:18.420
+So we're going to say that this idea is going to be an integer.
+
+04:19.250 --> 04:23.180
+And of course this product has a name
+
+04:26.330 --> 04:32.420
+and we should have a category so that we can fit it into
+
+04:36.500 --> 04:40.640
+and we can have a property like type
+
+04:43.420 --> 04:54.010
+and we can say that the sector is going to be a factor in this product so let's just say sector and
+
+04:54.400 --> 04:58.660
+we have all the basic properties of a product.
+
+04:58.810 --> 05:04.930
+Of course we can extend this list to a huge list of properties but for the sake of this Tauriel I'm
+
+05:04.930 --> 05:09.720
+just going to keep it simple and you are just five properties.
+
+05:09.780 --> 05:17.340
+All right so now let's just create our getters and setters for this product where are POJO and I'm going
+
+05:17.340 --> 05:29.010
+to hit command and for Mac OS and I'll say Getaround center and I'll pick all our properties and it.
+
+05:29.040 --> 05:30.200
+OK.
+
+05:30.240 --> 05:31.050
+All right.
+
+05:31.050 --> 05:34.900
+We have all of our centers and getters for his product.
+
+05:34.900 --> 05:35.800
+All right.
+
+05:35.800 --> 05:44.980
+What we need to do to have this product as an entity is we're going to market as an entity.
+
+05:44.980 --> 05:45.410
+All right.
+
+05:45.430 --> 05:53.110
+And this entity annotation is going to come from jaywalks persistence and that's going to provide us
+
+05:53.110 --> 06:01.150
+the basic functionality of the JPA and on top of that spring is going to implement our repository crowd
+
+06:01.180 --> 06:04.400
+operations with this entity.
+
+06:04.420 --> 06:11.530
+You can name your table because this entity is basically going to be a table in our database and we
+
+06:11.530 --> 06:13.140
+can provide any name you want.
+
+06:13.270 --> 06:20.090
+But basically what JPA does is it takes your class name and creates a table with the name.
+
+06:20.200 --> 06:23.600
+You don't have to provide a specific name for your POJO.
+
+06:23.650 --> 06:24.530
+All right.
+
+06:24.650 --> 06:30.480
+Now let's just annotate our properties so that they can be understood by JPA.
+
+06:30.490 --> 06:36.160
+And of course even if we don't use any annotation for our properties they're going to be created by
+
+06:36.160 --> 06:42.810
+JPA as table columns and we have to explicitly say that we don't want them to use as columns.
+
+06:42.810 --> 06:47.140
+Otherwise they're going to be created by JPA in the database.
+
+06:47.530 --> 06:52.790
+So our ID field is going to be an actual ID.
+
+06:52.870 --> 07:00.460
+We're going to use our ID annotation this annotation marks that this property is going to be created
+
+07:00.640 --> 07:08.510
+as an identifier in the table so that you can use this identifier to make it a primary key foreign key.
+
+07:08.560 --> 07:12.200
+Or you can index this table index this product.
+
+07:12.220 --> 07:13.760
+With this ID field.
+
+07:13.980 --> 07:15.150
+All right.
+
+07:15.190 --> 07:19.130
+And of course this ID has to be generated somehow.
+
+07:19.480 --> 07:26.650
+Either you do it by hand or you can make use of the generated value annotation that's generated Twilley
+
+07:26.660 --> 07:35.240
+the annotation is basically just like you say the generated value and you provide the strategy intelligence
+
+07:35.240 --> 07:42.390
+suggesting that we can use the other generation strategy and which is that the Paul what this strategy
+
+07:42.390 --> 07:42.820
+does.
+
+07:42.870 --> 07:50.070
+Whenever you go to save your entity and you should be creating a new one it goes and creates a new ID
+
+07:50.070 --> 07:51.740
+for you and persist.
+
+07:51.750 --> 07:53.340
+It's the database.
+
+07:53.640 --> 07:56.310
+That's basically what it does and it's very useful.
+
+07:57.140 --> 08:00.060
+So let's say that we want is to regenerate it.
+
+08:00.100 --> 08:05.900
+Although as you can see we have sequence identity and table types.
+
+08:07.700 --> 08:11.240
+All the other types has different meanings for JPA.
+
+08:11.330 --> 08:17.360
+For example if we say we want to be created as a sequence it follows a pattern.
+
+08:17.480 --> 08:20.000
+So let's say that if you want it to be created one by one.
+
+08:20.000 --> 08:26.020
+After all the IDs and let's say we how Id want ID to ID tree etc..
+
+08:26.210 --> 08:27.910
+That's what it's going to do.
+
+08:28.040 --> 08:34.740
+But in our case we're just going to use Ardo and it's going to be created for us whenever we persist
+
+08:34.830 --> 08:35.930
+our product.
+
+08:35.930 --> 08:37.140
+All right.
+
+08:37.320 --> 08:42.470
+These are basically what you need to have your entity created.
+
+08:42.640 --> 08:46.410
+Actually you don't even need these annotations.
+
+08:46.540 --> 08:50.540
+All these properties are going to be generated in the database as columns.
+
+08:50.590 --> 08:56.020
+But we want to say that our ID field is going to be distinct from other fields.
+
+08:56.080 --> 08:57.820
+It's a unique property.
+
+08:57.820 --> 09:00.630
+That's why we used our idea notation.
+
+09:00.730 --> 09:07.670
+All right we have our entity ready to be created by H-2 But how is that going to be happening.
+
+09:08.810 --> 09:18.480
+In order for this to be happening we have to say that we are using to as you can see how our H-2 artifact
+
+09:18.500 --> 09:24.830
+here that artifacts says that we can use H.T. functionally but it doesn't say that we're connecting
+
+09:24.830 --> 09:27.450
+to H-2 database right away.
+
+09:27.590 --> 09:33.510
+We have to provide some properties so that Brinkmann know and understand that we're using H-2 database.
+
+09:33.590 --> 09:39.500
+So let's do that now in our resource application properties file.
+
+09:39.710 --> 09:46.640
+We're going to need some properties so that we can say we're using H-2 before we start we should say
+
+09:46.640 --> 09:56.070
+that we're using the age to dry we're so to say that spring has a property and that property is spring.
+
+09:56.100 --> 09:59.460
+Dot datasource
+
+10:05.260 --> 10:08.320
+dot griper class name.
+
+10:08.320 --> 10:09.070
+Here we go.
+
+10:10.040 --> 10:15.550
+In this class name as you can see until intelligent understood that we want to use H-2 because of our
+
+10:16.000 --> 10:17.980
+dependency.
+
+10:18.040 --> 10:18.970
+So that's it.
+
+10:18.970 --> 10:29.870
+Enter now we provided our edge to dry wood to spring and it can now connect to H-2 database but we have
+
+10:29.870 --> 10:32.450
+to provide a data source a data source.
+
+10:32.460 --> 10:39.410
+You're out for our H-2 because otherwise Sprint can't know what to connect to and it still will throw
+
+10:39.410 --> 10:41.180
+an exception for that.
+
+10:41.330 --> 10:53.760
+So to do that I'm going to use another property and say spring that data source that you are el and
+
+10:54.120 --> 11:06.900
+as you can see here we see your database and you're out is going to be Jaydee b c and h 2 and for this
+
+11:06.900 --> 11:15.270
+application and in general when I'm working with H-2 I use a file store so that I can how my data available
+
+11:15.270 --> 11:16.200
+all the time.
+
+11:16.200 --> 11:29.490
+So let's just do that again and let's say file an and let's just provide a database name and this database
+
+11:29.580 --> 11:39.150
+is going to be named as products Arite in order to connect to our database.
+
+11:39.210 --> 11:42.660
+We have to of course provide username and password.
+
+11:43.380 --> 11:45.050
+And let's just provide those.
+
+11:45.060 --> 11:48.050
+Now spring got
+
+11:50.680 --> 12:01.050
+datasource that username and for the convention to connect into H-2 database we have as a as the field
+
+12:01.380 --> 12:10.790
+and we can say that for the datasource is password we can leave it blank it doesn't really need a password.
+
+12:10.890 --> 12:12.880
+Let's just keep it simple OK.
+
+12:13.680 --> 12:21.390
+What else do we need to do now is we should enable the H2 console so that we can access our data and
+
+12:21.390 --> 12:24.680
+see what's going on to do that.
+
+12:24.930 --> 12:33.150
+Let's just use H-2 properties as you can see here we have a couple of alternatives for H-2 Council and
+
+12:33.420 --> 12:38.240
+let's just enable the console first because it's disabled by default.
+
+12:38.270 --> 12:47.700
+And and for the console to be appearing in a specific directory we say that Springle.
+
+12:47.760 --> 12:57.630
+It stood up console that path and we're going to say H-2 and there are just one more thing missing in
+
+12:57.630 --> 13:03.170
+our properties file and that's the show Seacole property.
+
+13:03.940 --> 13:16.660
+J-P has spring dot JPA dot shows sequel this property basically says that on your console on your application
+
+13:16.660 --> 13:23.440
+server console you either showreel sequel that's going around in your database that your application
+
+13:23.440 --> 13:27.850
+uses the connect to you either say true or false.
+
+13:28.030 --> 13:33.550
+If you say true it basically brings out the statements that the database engine creates.
+
+13:33.550 --> 13:37.060
+So for our Tauriel we're going to set it to true.
+
+13:37.520 --> 13:38.140
+OK.
+
+13:39.060 --> 13:46.660
+Now world on here we can just run our application to see what's going on with our database and our application.
+
+13:46.950 --> 13:48.290
+Let's run our application now
+
+13:55.250 --> 14:01.390
+our application is starting and there are a couple of things that we should note here.
+
+14:02.750 --> 14:10.850
+This is the actual important part that we need to focus spring is building the JPA container for and
+
+14:10.870 --> 14:12.820
+to to measure factory.
+
+14:13.040 --> 14:21.000
+If you previously qualified for JPA and plain JPA was on persistence API that you should remember that
+
+14:21.030 --> 14:29.000
+manager factory because that factory is going to provide you and entity manager and and manager is going
+
+14:29.000 --> 14:33.820
+to be going around to your database and handling all the transactions.
+
+14:34.730 --> 14:42.080
+As you can see here in our implementation we didn't say anything about an entity manager because spring
+
+14:42.080 --> 14:51.220
+data persistence API providing us all the benefits of abstraction Sprint created us a hibernate abstraction
+
+14:51.670 --> 14:55.470
+with the spin data API and the most important part.
+
+14:55.530 --> 14:58.470
+Hibernate as creating our database.
+
+14:58.660 --> 15:02.730
+And as you can see here it's dropping the table if it exists.
+
+15:02.770 --> 15:07.500
+Our product table and then it's creating our table with this statement.
+
+15:07.750 --> 15:13.510
+And when it completes the process it says the schema export is complete.
+
+15:13.690 --> 15:17.830
+In the end we have our application at Port 80 80.
+
+15:17.830 --> 15:19.500
+So let's check out our application
+
+15:26.120 --> 15:31.820
+local Hulst ADHD and slash h to
+
+15:36.190 --> 15:37.230
+and here.
+
+15:37.260 --> 15:49.680
+How are two console on the par Fox as you can see we used localhost ADHD slash edge to access this console.
+
+15:49.710 --> 15:59.070
+That's because we said that we want to access this console from slash H-2 and the first part is our
+
+15:59.310 --> 16:05.290
+route that of our application which is localhost ADHD as you can see here.
+
+16:06.340 --> 16:07.070
+All right.
+
+16:07.340 --> 16:15.650
+And the remaining part of our connection is that our driver is or that to the driver and that's the
+
+16:15.650 --> 16:18.170
+fault you don't have to do anything about it.
+
+16:18.170 --> 16:25.370
+But we said that we wanted to use that H2 because that's the name of the driver.
+
+16:25.910 --> 16:35.570
+And for the data source we said that we wanted to use Jaydee B and efile database for our products database.
+
+16:35.570 --> 16:40.050
+And we have to copy and paste this.
+
+16:40.300 --> 16:42.550
+You are all really busy girl.
+
+16:42.740 --> 16:44.280
+If you don't already have it.
+
+16:44.570 --> 16:45.090
+OK.
+
+16:45.140 --> 16:51.860
+And of course we provide our username and we didn't say anything about the password and it's empty by
+
+16:51.860 --> 16:52.860
+default.
+
+16:52.940 --> 16:58.430
+So let's just test our connection and our test is successful.
+
+16:58.460 --> 17:03.320
+So now let's connect to our database here we go.
+
+17:03.720 --> 17:06.320
+We have our H-2 database.
+
+17:06.500 --> 17:10.410
+And as you can see here our product table is created.
+
+17:10.700 --> 17:11.940
+Isn't that beautiful.
+
+17:12.680 --> 17:22.410
+So let's take out our product table our product table as we describe as ID category name sector and
+
+17:22.530 --> 17:23.620
+type fields.
+
+17:23.850 --> 17:27.840
+All these fields are now columns in our database.
+
+17:27.840 --> 17:37.370
+In our product table and let's take out our fields one by one ID is 10 and not all by default.
+
+17:37.540 --> 17:47.150
+That's just because we said we wanted our ID field as an actual ID and generated by the JPA.
+
+17:47.320 --> 17:55.710
+So it automatically said that it cannot be null and the default for an ID field is 10 characters.
+
+17:55.810 --> 17:57.010
+All right.
+
+17:57.010 --> 18:07.890
+So our category field is by the fall War car and two hundred and fifty five characters on our main field
+
+18:07.890 --> 18:16.140
+is the same sector and type would be the same because we didn't say anything about the length or the
+
+18:16.590 --> 18:21.890
+limitations of our other fields or sector type category or name.
+
+18:21.900 --> 18:27.120
+We just said that that they're going to be created in the database as columns.
+
+18:27.120 --> 18:28.060
+All right.
+
+18:29.770 --> 18:31.980
+So let's just query our table.
+
+18:32.120 --> 18:39.030
+And as you can see here when I click the table name here it automatically created a query for us.
+
+18:39.040 --> 18:46.700
+So let's just run our query as you can see our table has no rows currently because we didn't persist
+
+18:46.790 --> 18:48.640
+anything into our database.
+
+18:48.830 --> 18:54.820
+That's perfectly normal so now let's just review what we've done up until now.
+
+18:54.850 --> 19:03.300
+We create our entity and to the H-2 database and it's Konsole for us.
+
+19:03.430 --> 19:12.070
+We created an entity and that entity started out as a POJO our closure was product and that product
+
+19:12.070 --> 19:19.610
+had an ID as an integer field name a string category a string type and sector as things.
+
+19:19.840 --> 19:24.190
+So we said that we wanted to provide getters and setters for these fields.
+
+19:24.610 --> 19:33.340
+And then the most important part was the entity annotation as we have in our import here this entity
+
+19:33.350 --> 19:39.070
+annotations said everything about our table to the H-2 database and JPA.
+
+19:39.400 --> 19:45.620
+And then for our ID field we said that we wanted this to be created as an ID.
+
+19:45.700 --> 19:54.610
+And as we come over it you can see that Hibernate JPA is used to create this ID and we wanted it to
+
+19:54.610 --> 19:59.050
+use a auto generation strategy and we did what you want.
+
+19:59.050 --> 20:07.930
+In the creation of an ID and then we come to our application up properties in our application properties.
+
+20:07.990 --> 20:16.380
+We said that we wanted to use the H-2 database driver and that's only made possible by our dependency
+
+20:16.390 --> 20:28.900
+right here and let me just scroll down a little bit and that dependency was H-2 database and H-2 artifact.
+
+20:29.120 --> 20:30.930
+All right.
+
+20:31.090 --> 20:36.880
+And then you wanted our database to be created as products.
+
+20:37.250 --> 20:41.350
+And we also said that we want it to be created as a file.
+
+20:41.540 --> 20:44.110
+We have actually three options here.
+
+20:44.150 --> 20:52.160
+We can also say that we want to be created in the memory completely in the memory and that's how we
+
+20:52.160 --> 20:54.920
+can say that it's going to be created in the memory.
+
+20:54.920 --> 20:56.050
+All right.
+
+20:56.330 --> 20:59.750
+And then we provided our user name as a.
+
+20:59.750 --> 21:01.870
+And we didn't provide any passwords.
+
+21:01.880 --> 21:05.650
+And that allowed us to connect to the database right away.
+
+21:07.200 --> 21:15.170
+On the other hand we said that we wanted to be Konsole to be available and we said that we wanted to
+
+21:15.180 --> 21:23.090
+use a different path than the full on and default one is H-2 dash console.
+
+21:23.170 --> 21:28.480
+You don't even have to change this and you can just use a default one but I just want to say that I
+
+21:28.480 --> 21:29.960
+want to use a different one.
+
+21:31.420 --> 21:38.400
+Let's just switch back and in the last part of our application up properties we said that we want to
+
+21:38.400 --> 21:47.520
+sort of Siku that the person's API is generating and that siecle as you can see here as the wizard earlier
+
+21:47.820 --> 21:52.580
+is generated by hibernate.
+
+21:52.780 --> 21:56.180
+And if we just disable that for now.
+
+21:56.350 --> 22:03.190
+And the way to do that by the way to do way to disable your application properties and any property
+
+22:03.190 --> 22:06.370
+that you want is by the sharp character.
+
+22:06.640 --> 22:13.340
+So let's just disable the show's sequel and restart our application to see what difference it makes.
+
+22:15.860 --> 22:24.430
+Our application is starting up and we shouldn't be seeing any output of sequel.
+
+22:24.440 --> 22:25.910
+Here we go.
+
+22:25.910 --> 22:33.380
+We're just seeing that our G.P.A. containers being created and our Hibernate is being created and our
+
+22:33.380 --> 22:37.080
+schema export is started and then complete.
+
+22:38.290 --> 22:45.280
+As you can see there is no sequel shown in our console and that's again managed by this property.
+
+22:45.280 --> 22:48.100
+So I'm just going to enable that back again.
+
+22:49.400 --> 22:50.420
+All right.
+
+22:50.540 --> 22:53.060
+Our product table is created.
+
+22:53.090 --> 22:57.290
+And that was way too simple with spring data JPA.
+
+22:57.500 --> 23:03.230
+And the next video we're going to be digging into more of the spring data JPA and we're going to create
+
+23:03.230 --> 23:08.340
+a repository for our entities and we're actually going to manipulate some data.
+
+23:08.840 --> 23:10.340
+So I'll see on the next video.

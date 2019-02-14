@@ -1,0 +1,529 @@
+WEBVTT
+
+00:01.260 --> 00:09.150
+As you remember from our previous video for our create product page we said that we're going to be looking
+
+00:09.150 --> 00:17.580
+for the reference slash products slash ad and that's going to be sobering point for our create product
+
+00:17.580 --> 00:18.810
+page.
+
+00:18.810 --> 00:22.910
+So to do that let's start off with creating our controller.
+
+00:23.310 --> 00:32.680
+So I'll copy this path and I'll move on to my controller and within the controller I'm going to create
+
+00:32.740 --> 00:39.400
+a new request mapping and the path of that request mapping is going to be this one.
+
+00:39.440 --> 00:47.650
+And of course I'm going to be using the get method for that request mapping and after that I'm going
+
+00:47.650 --> 00:51.830
+to say this is going to be the create product at
+
+00:56.140 --> 01:06.350
+and as the injection I'm going to be taking a UI model from spring and we see so that I can return an
+
+01:06.590 --> 01:11.200
+empty model empty product model to my interface.
+
+01:11.200 --> 01:20.540
+So for doing that I'm going to say I need a new attribute and that attribute is going to be named as
+
+01:20.690 --> 01:28.280
+product and then I'm simply going to say I'm returning a new product.
+
+01:28.340 --> 01:29.400
+All right.
+
+01:30.200 --> 01:34.720
+And after that I'll actually return the web page that I'm interested in.
+
+01:35.460 --> 01:41.580
+For our create product page we're actually going to be sharing that interface with the added product
+
+01:41.580 --> 01:42.900
+page.
+
+01:42.900 --> 01:49.380
+So 40 asked him M-file I'm going to simply create a single page him I'll file and then I'm going to
+
+01:49.380 --> 01:53.550
+use that with the new page and the edit page.
+
+01:53.550 --> 02:00.860
+So for doing that I'll go to my templates folder and I'm going to create a new ways to him L5.
+
+02:01.380 --> 02:04.230
+And I'm simply going to name it as added.
+
+02:04.270 --> 02:05.040
+H t m l
+
+02:07.780 --> 02:12.660
+within that HMO file I'll start off with the timely namespace.
+
+02:12.670 --> 02:29.610
+So for doing that again SML namespace and th Then HTP w w w dot time we've got or write and after that
+
+02:29.970 --> 02:34.700
+I'm going to say the language is going to be English.
+
+02:34.800 --> 02:38.180
+I already have the Met attack and my other pages.
+
+02:38.250 --> 02:41.680
+So I'm simply getting rid of this in here.
+
+02:42.330 --> 02:49.010
+And after that I'll say the title of my page is going to be added product details.
+
+02:49.020 --> 02:50.460
+All right.
+
+02:50.850 --> 02:56.910
+And the other crucial part of our application is to include our header that age to mail.
+
+02:57.000 --> 03:05.700
+So for doing that I'm going to create a new block from time we've.
+
+03:05.850 --> 03:10.320
+And within that block I'm going to use de-th include Ptak
+
+03:15.260 --> 03:18.110
+and within that Keech include tech.
+
+03:18.230 --> 03:28.420
+I'm going to provide the header that a Steimle way out slash header.
+
+03:28.890 --> 03:35.100
+And actually we missed a part in our link for time namespace.
+
+03:35.220 --> 03:42.140
+So to fix that I'll add my backslashes and here we go.
+
+03:42.150 --> 03:48.440
+Now let's move on to the body part of our application and provide the details of our product.
+
+03:49.880 --> 03:54.950
+I'll start by creating a new division within that equation.
+
+03:54.980 --> 04:05.030
+I'm going to be using the container class and inside that division I'll first say I'll use a a two header
+
+04:05.360 --> 04:11.100
+and within that header I'm going to say edit product details.
+
+04:13.180 --> 04:21.810
+After that attack I'm actually going to provide the product details table this table is going to be
+
+04:22.350 --> 04:24.490
+shaped as a form.
+
+04:24.600 --> 04:28.320
+So within that I'm going to create a new form
+
+04:32.600 --> 04:43.080
+and for the form I'm going to be using the form horizontal will trap class.
+
+04:43.150 --> 04:44.570
+Let's fix that.
+
+04:45.880 --> 04:53.470
+And the object that I'm going to be using within this form is the product object that returning from
+
+04:53.470 --> 04:55.520
+our request mapping.
+
+04:55.550 --> 05:04.490
+It's just one so let's reference it with a T-H object within that object.
+
+05:04.600 --> 05:12.300
+I'm going to provide dollar and then curly braces and product.
+
+05:12.400 --> 05:21.200
+All right after that I'm going to be providing the action for this form and the action that the form
+
+05:21.200 --> 05:27.120
+is going to take when we submit this form is going to be products endpoint.
+
+05:27.350 --> 05:41.710
+So to say that I'm going to say th action is going to be at and kill the braces slash products.
+
+05:41.900 --> 05:47.550
+So you should notice that this products end point is going to be a POS standpoint.
+
+05:47.600 --> 05:53.960
+And let's also say the method that we're going to use and the method that we're going to use as I said
+
+05:53.990 --> 05:57.030
+a minute ago as post.
+
+05:57.290 --> 06:06.470
+All right within our forum I'll start by creating another division and that division is going to be
+
+06:06.560 --> 06:09.320
+a form group.
+
+06:09.320 --> 06:18.870
+So that was Rapkin group my form elements and within the group I'm going to use the bootstraps.
+
+06:18.980 --> 06:29.200
+Another beautiful way of Gretz I'll say this is going to be small medium column with the tent size of
+
+06:29.200 --> 06:32.450
+an element.
+
+06:32.670 --> 06:39.320
+For more details on which rap styles I definitely encourage you to check out their web page.
+
+06:39.390 --> 06:45.970
+They have greater Tauriel and sources so that you can learn and understand bootstrap deeply so far our
+
+06:45.970 --> 06:54.940
+first element in our Form I'm going to provide an input within that input I'm going to provide it's
+
+06:54.950 --> 06:58.270
+time as hidden.
+
+06:58.910 --> 07:05.720
+This is going to be our ID field so we don't actually need to see when we create a new product.
+
+07:05.810 --> 07:14.150
+And after that I'm going to say this is a form control for the actual field that we're going to use
+
+07:14.410 --> 07:15.620
+with this element.
+
+07:15.620 --> 07:27.010
+Is th field so that one is going to be Asterix and curly braces ID.
+
+07:27.060 --> 07:35.970
+All right let's close our input tack and move on with our next element for our next element.
+
+07:36.000 --> 07:40.710
+As you can guess from now we're going to provide another form group
+
+07:43.380 --> 07:45.070
+within our group.
+
+07:45.180 --> 07:53.820
+We're not going to provide a label and the first property of our product class is the name so for a
+
+07:53.820 --> 08:03.990
+name we're going to first start by providing the class that's going to be called S-M 2 and then I'm
+
+08:03.990 --> 08:06.800
+also going to provide another class here.
+
+08:06.900 --> 08:10.600
+It's going to be control and label.
+
+08:11.040 --> 08:19.820
+This is going to be indicating that this is a label and it's a control element and for the text of this
+
+08:19.820 --> 08:24.460
+element I'm going to say name all right
+
+08:28.360 --> 08:35.740
+for the input text of this label the element right next to it is going to be and in fulfilled.
+
+08:35.760 --> 08:42.390
+So to hold that input field I'm going to provide another division within that division I'm going to
+
+08:42.390 --> 08:53.470
+say call S.M. and 10 and right in that division I'll provide my input field to Type of this input field
+
+08:53.470 --> 09:06.080
+is going to be taxed and the class that I'm going to use is again from control let's fix our form.
+
+09:06.160 --> 09:07.930
+Here we go.
+
+09:07.930 --> 09:16.590
+And after that I'm going to be providing the field that I'm going to use sort of field is going to be
+
+09:17.220 --> 09:23.310
+Asterix and description.
+
+09:23.310 --> 09:24.520
+All right.
+
+09:25.140 --> 09:29.830
+Let's close our task and move on with our next element.
+
+09:31.410 --> 09:35.310
+For our next element I'm going to create another.
+
+09:36.000 --> 09:40.980
+And declasse as you know by now is going to be a form group
+
+09:45.600 --> 09:54.190
+that I'm going to start by creating a label and this field is going to be for Type of our product.
+
+09:54.410 --> 09:59.420
+So I'll say class call S-M 2.
+
+09:59.570 --> 10:10.490
+And then the other class that I'm going to be providing is control and waybill.
+
+10:10.530 --> 10:11.300
+All right.
+
+10:13.480 --> 10:24.440
+So I'm going to say detax is type and then I'll provide a division to hold my input within that division
+
+10:24.980 --> 10:36.140
+I'm going to say the class is going to be call S.M. and 10 within that division I'm going to be providing
+
+10:36.140 --> 10:46.170
+my input as type text and then class is going to be form control
+
+10:50.970 --> 11:04.440
+the field that I'm going to be referencing for this element yes th field Asterix and type Let's close
+
+11:04.460 --> 11:09.460
+our input tech and move on with the next element of our form.
+
+11:10.800 --> 11:16.340
+Our next element is the category for our category.
+
+11:16.520 --> 11:18.740
+I'm starting a new division.
+
+11:18.740 --> 11:23.330
+So that equation is going to be classed as form group
+
+11:26.560 --> 11:27.790
+within that day.
+
+11:28.080 --> 11:39.730
+I'm going to provide another label and that label is going to be classed as call S.M. and 2 for addition.
+
+11:39.820 --> 11:48.730
+I'm going to say this is going to be also classed with control waybill and for the text of this label
+
+11:49.180 --> 11:55.280
+I'm going to be providing category.
+
+11:55.300 --> 11:56.040
+All right.
+
+11:58.050 --> 12:06.990
+Let's also create another dare to hold our input and A-class for that there is going to be called S
+
+12:06.990 --> 12:10.980
+M and 10 within that there.
+
+12:11.380 --> 12:22.150
+I'm going to be providing the input and the type of that input is going to be text declasse that I'm
+
+12:22.150 --> 12:33.850
+going to use as for them dash control and the actual field I'm referencing what this input element is
+
+12:34.060 --> 12:37.270
+going to be Asterix and
+
+12:39.920 --> 12:42.880
+category.
+
+12:42.950 --> 12:43.480
+All right
+
+12:47.180 --> 12:48.500
+what else do we have.
+
+12:48.500 --> 12:51.780
+We have price left for our form.
+
+12:51.800 --> 12:53.390
+So that's great.
+
+12:53.390 --> 13:04.610
+Our final division and division again is going to be a form group within that division.
+
+13:04.610 --> 13:14.100
+I'm going to be providing a label again and declasse for that label is going to be call S-M 2 and also
+
+13:14.330 --> 13:20.410
+provide the control label Takk for the text.
+
+13:20.600 --> 13:24.030
+I'm willing to say this is price.
+
+13:24.710 --> 13:34.870
+And for our input I'm creating another div and the class for that call is 10 written that day.
+
+13:35.100 --> 13:46.010
+I'm going to provide an input as type of text and the class for that input is going to be from control
+
+13:48.590 --> 14:03.600
+the actual field to them referencing for that input is going to be Asterix and price right.
+
+14:03.630 --> 14:05.570
+We're almost done with our form.
+
+14:05.790 --> 14:14.120
+But before we finish we should provide a submit button for our form that our users can create new products.
+
+14:14.580 --> 14:21.970
+So to do that I'll create another day right below that one and I'm going to put a button inside it.
+
+14:23.300 --> 14:30.350
+So for that day I'm going to also use form group class and
+
+14:33.010 --> 14:42.550
+inside that div I'm going to have another day and provide it as call S-M to
+
+14:45.340 --> 14:47.140
+INSIDE MY FINAL DAY.
+
+14:47.770 --> 14:57.220
+I'm going to say I want a button and the type of guy pudden is going to be submit and declasse for it
+
+14:57.500 --> 15:05.250
+is going to be button and Button primary.
+
+15:05.280 --> 15:09.530
+So for the name of that palm I'm going to use save.
+
+15:10.020 --> 15:11.570
+All right.
+
+15:11.690 --> 15:19.280
+We're almost finished with our create product page but to actually how we're working we should be exposing
+
+15:19.280 --> 15:20.570
+a new endpoint.
+
+15:20.720 --> 15:27.900
+As we said earlier and this is the slash product standpoint this is going to be posted.
+
+15:27.950 --> 15:35.120
+This forum is going to be posted to that end point and then we can create our product in our database.
+
+15:36.070 --> 15:43.930
+So to finish off it or create product page I'll switch back to my controller and within that controller
+
+15:44.260 --> 15:49.930
+I'll first say I'm going to be returning the added page.
+
+15:49.930 --> 15:59.510
+All right so that controller can refer us back to our create product pitch for the actual creation of
+
+15:59.570 --> 16:00.860
+our product.
+
+16:00.920 --> 16:09.770
+I'm going to be creating a new method and that method is going to be say product get it within that
+
+16:09.770 --> 16:11.170
+same product method.
+
+16:11.300 --> 16:19.520
+I'm going to be taking a product object and with product object I can simply say that I can save this
+
+16:19.520 --> 16:26.320
+product but for doing that we should have a reference to our repository.
+
+16:26.320 --> 16:39.730
+So for doing that I'll go right up and I'll say private product repository and product repository for
+
+16:39.730 --> 16:41.050
+the injection.
+
+16:41.260 --> 16:46.170
+I'll create a setter and then I'm simply going to order it.
+
+16:46.560 --> 16:48.440
+All right.
+
+16:48.550 --> 16:57.670
+For our product repository I'll say product repository save and pass the product from our UI to our
+
+16:57.670 --> 16:58.550
+method.
+
+16:58.900 --> 17:00.250
+All right.
+
+17:00.250 --> 17:05.030
+In the end I'll be redirecting our users to our index page.
+
+17:05.110 --> 17:17.330
+So for doing that I'll use return and direct and then I'll simply say slash for the actual request mapping.
+
+17:17.360 --> 17:26.550
+Let's go up to our Methot and say request mapping is going to be the path products.
+
+17:27.550 --> 17:32.590
+And the method that we're going to use is toast.
+
+17:32.620 --> 17:34.450
+All right.
+
+17:34.940 --> 17:39.870
+We're almost done with creating our product to see it in action.
+
+17:39.890 --> 17:54.520
+Let's read on our application and see what's going on.
+
+17:54.610 --> 18:04.100
+Our applications started up and let's switch back to Firefox and refresh our page.
+
+18:04.110 --> 18:12.610
+All right now let's click Create product page in create product page as we expect it.
+
+18:12.620 --> 18:21.020
+We have our added product details as you can see here with the labels on the left and import tax on
+
+18:21.020 --> 18:21.990
+the right.
+
+18:22.220 --> 18:25.530
+And we also have the same one right below.
+
+18:26.090 --> 18:32.250
+So let's create a new product with our new web page for that product.
+
+18:32.390 --> 18:39.430
+I'm going to say great product for description.
+
+18:39.500 --> 18:41.960
+This is a great product
+
+18:45.070 --> 18:55.630
+and for this category I'm going to say greatness and the price is going to be 10.
+
+18:55.640 --> 18:57.390
+All right.
+
+18:57.640 --> 19:02.860
+Now let's say our product and see it within our repository.
+
+19:02.860 --> 19:12.040
+So I'll hit say and as you can see our application redirected us to our index page.
+
+19:12.050 --> 19:16.450
+Now let's check out our new product in our repository.
+
+19:16.510 --> 19:25.400
+So for doing that I'm going to open up a new tab and that tap I'm going to go to my H-2 database localhost
+
+19:25.600 --> 19:27.830
+1889 slash to
+
+19:30.790 --> 19:41.840
+and now this connect to our database in our database if we select our product table we have three products.
+
+19:42.220 --> 19:48.200
+And as you can see we sell our product in our repository.
+
+19:48.330 --> 19:55.960
+So that concludes our create product page for the implementation of listing products.
+
+19:56.070 --> 19:57.740
+I'll be seeing you in the next video.

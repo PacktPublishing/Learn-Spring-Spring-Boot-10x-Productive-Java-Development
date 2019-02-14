@@ -1,0 +1,421 @@
+WEBVTT
+
+00:01.290 --> 00:10.190
+And this video we're going to be taking a look at swagger and documenting our restful API swagger is
+
+00:10.190 --> 00:19.400
+a beautiful implementation on top of any restful API so that people using your API can get a sense of
+
+00:19.550 --> 00:24.290
+what it looks like with its operation and the data coming in and out.
+
+00:25.560 --> 00:31.680
+To make use of swaggerer in our projects I'm going to open up my restful API project
+
+00:35.610 --> 00:42.440
+to enable swaggerer in our application all first going to get the dependencies swaggerer from our member
+
+00:42.540 --> 00:43.740
+repository.
+
+00:43.740 --> 00:54.380
+So for doing that I'll open up Firefox and go to maybe a repository and into maybe a repository to dependences
+
+00:54.380 --> 00:55.370
+that we're looking for.
+
+00:55.380 --> 01:06.750
+As spring Fox and swagger and the UI of the swaggerer
+
+01:09.480 --> 01:11.970
+All right lets go it.
+
+01:12.020 --> 01:22.900
+And the last version is 2.6 that one and let's copy dependency right here and include it in our project
+
+01:24.110 --> 01:25.980
+you know upon file.
+
+01:26.230 --> 01:33.460
+I'm going to go down to the dependencies part and simply paste it.
+
+01:33.640 --> 01:35.220
+All right.
+
+01:35.300 --> 01:45.050
+And the other dependency that we need is the spring forks swagga to which is the main dependency and
+
+01:45.280 --> 01:59.870
+I'll say spring Fox swaggered to and here we have it and we're also going to get the 2.6 to 1 and I'll
+
+01:59.890 --> 02:11.150
+chapati dependency and switch back to my ID and let's also paste it right here and here we go.
+
+02:11.340 --> 02:19.510
+We have our swaggerer dependencies ready to build upon so to actually start building swaggerer in our
+
+02:19.510 --> 02:20.740
+application.
+
+02:21.070 --> 02:24.720
+We have to be starting off with a configuration class for swagger.
+
+02:25.570 --> 02:33.890
+So for that purpose I'm going to create a configuration package and name it as Confed.
+
+02:34.400 --> 02:40.730
+And in that config package I'm going to have a swagger config class
+
+02:44.770 --> 02:52.190
+within that class let's first say this is a configuration class.
+
+02:52.440 --> 02:53.120
+All right.
+
+02:54.240 --> 02:59.910
+Now we are going to do a swagger conflagration within this entire class.
+
+03:00.000 --> 03:08.670
+The starting point for all the configuration that we have is the Enable swaggerer to annotation with
+
+03:08.760 --> 03:09.820
+sanitation.
+
+03:10.050 --> 03:17.700
+We're getting the most functionality for swaggerer 2 and after that we're going to be including our
+
+03:17.700 --> 03:24.630
+controller in the components scan so that swaggerer configuration can scan our controllers and attach
+
+03:24.630 --> 03:26.900
+itself to them.
+
+03:26.910 --> 03:38.340
+So for doing that I'm going to say component scan components scan and I'll provide the base package
+
+03:38.340 --> 03:42.110
+classes as product
+
+03:44.830 --> 03:47.670
+controller class.
+
+03:47.680 --> 03:50.040
+All right.
+
+03:50.120 --> 03:56.090
+And the last thing that we're going to do is we're going to provide a property source for swaggerer
+
+03:56.090 --> 03:57.730
+properties.
+
+03:57.860 --> 04:06.930
+So if we're doing that I'm going to say property source and within that property source I'm going to
+
+04:06.930 --> 04:16.650
+be including my properties which in my class that and the properties file is going to be named as swaggerer
+
+04:17.540 --> 04:19.540
+properties.
+
+04:19.620 --> 04:26.290
+Let's copy the name and create this class create properties file right away.
+
+04:26.750 --> 04:28.340
+So Copy that.
+
+04:28.380 --> 04:36.870
+And in my research files I'll create a new file and simply paste the name.
+
+04:36.870 --> 04:44.040
+All right let's switch back to our swaggerer configuration and start configuring our swagger.
+
+04:45.790 --> 04:53.980
+For any API that you have you have to be providing a version and license tax for those tags.
+
+04:54.310 --> 05:12.550
+I'm going to be providing private properties here so private static and final string swaggerer API version.
+
+05:12.630 --> 05:27.250
+So let's name our API version as 1.0 and also provide a license that so private's that final and license
+
+05:27.250 --> 05:27.840
+text
+
+05:32.700 --> 05:39.840
+and our license tax is simply going to say license.
+
+05:39.900 --> 05:42.520
+All right.
+
+05:42.760 --> 05:48.610
+We're also going to provide a title and a description for our swaggerer documentation.
+
+05:48.690 --> 05:59.920
+So for doing that I'm going to say private static final string and that title is going to be products
+
+06:01.780 --> 06:02.610
+ISAPI
+
+06:05.600 --> 06:14.890
+and for a description I'm going to say string again and description is going to be
+
+06:17.560 --> 06:18.190
+restful
+
+06:20.950 --> 06:27.470
+and let's fix that and restful API for products.
+
+06:27.520 --> 06:37.560
+All right we have our static variables so that we can use our configuration for our configuration.
+
+06:37.790 --> 06:40.490
+We're going to be doing two things.
+
+06:40.490 --> 06:48.770
+First we're going to be creating an API info and with that API info we're going to be creating a docket
+
+06:48.920 --> 06:56.150
+which is the main type of swagger with that Duckett we're going to be providing the specifics of our
+
+06:56.150 --> 07:03.020
+restfully API and like the path that we're going to serve our restful documentation for swagger and
+
+07:03.050 --> 07:05.810
+all the other configurations that we're going to have.
+
+07:07.070 --> 07:13.250
+Let's start by our API info and say private API info
+
+07:16.700 --> 07:23.960
+and our API info is going to be simply named as API in full so that we can reference it within our Luckett
+
+07:23.960 --> 07:34.230
+configuration and within our API in-fill I'm going to say return new API.
+
+07:36.620 --> 07:37.240
+BUILDER.
+
+07:37.410 --> 07:48.630
+And after that I'm going to provide my title as the title that I read it and description as the description
+
+07:48.630 --> 07:56.880
+I have and then license as the license variable that my creative write about.
+
+08:00.320 --> 08:10.100
+And after that I'm going to provide the version as the swaggerer API version I provide it and then I'm
+
+08:10.100 --> 08:12.110
+simply going to say build
+
+08:15.780 --> 08:21.920
+all right we have our API info and to make use of our API info.
+
+08:22.130 --> 08:26.690
+I'm not going to create a bucket for that docket.
+
+08:26.930 --> 08:29.050
+Let's say public
+
+08:32.530 --> 08:40.040
+docket is going to be products API.
+
+08:40.040 --> 08:46.120
+And then let's start configuring our docket in our docket.
+
+08:46.150 --> 08:51.860
+I'm going to say return new Duckett.
+
+08:52.230 --> 09:00.090
+And inside it I'm going to be saying the documentation type and the documentation type is going to be
+
+09:00.350 --> 09:02.370
+for swaggerer too.
+
+09:03.060 --> 09:07.050
+And after that I'm going to be providing my API info.
+
+09:07.200 --> 09:17.130
+The one that I provided above and I'm also going to be providing my path mapping the actual path that
+
+09:17.130 --> 09:27.790
+I'm going to be serving my API and I'm going to be using my roof path and then I'm going to be saying
+
+09:27.790 --> 09:37.600
+that selectees configuration and then add the paths for my restful documentation and those paths is
+
+09:37.600 --> 09:41.600
+going to be done by the regular expressions.
+
+09:42.190 --> 09:48.560
+So I'm going to use a path selectors and I'll provide a regular expression now.
+
+09:49.430 --> 09:54.020
+And that regular expression is going to be like API
+
+09:56.940 --> 09:59.530
+dot and Asterix.
+
+09:59.580 --> 10:07.950
+So I'm simply saying that anything after API is included in my swaggerer documentation and I'm fine
+
+10:07.950 --> 10:08.530
+with it.
+
+10:08.610 --> 10:18.200
+So I can say simply build that the final step in our swaggerer configuration is we're going to say that
+
+10:18.230 --> 10:26.760
+our docket is a spring being so that it can be component scanned and adjusted as the way we like it.
+
+10:26.900 --> 10:31.190
+All right we have our swagger configuration right now.
+
+10:32.270 --> 10:41.200
+For the final touches we have to go to our controller and provide some specific details of our operations.
+
+10:41.300 --> 10:45.950
+So let's go to our control class in our controller class.
+
+10:45.950 --> 10:50.180
+The first thing that we're going to provide is the API annotation
+
+10:53.810 --> 10:55.420
+with this API annotation.
+
+10:55.560 --> 11:04.140
+We can simply say about the API that we have and for the value I'm going to say this is the products
+
+11:04.330 --> 11:16.050
+controller API and for the producers I'm going to say this is going to be providing a J sound to my
+
+11:16.050 --> 11:27.960
+users and I'm going to say application Jason well-you and in my actual operations I'm going to say the
+
+11:28.170 --> 11:34.620
+get operation that I have is going to be returning my users
+
+11:38.070 --> 11:47.660
+get an operation that I have is going to be annotated as API operation and this API operation gets the
+
+11:48.140 --> 12:04.430
+product with specific ID all right and of course I can provide some API responses and within the API
+
+12:04.430 --> 12:07.760
+responses I'm going to provide de-value as
+
+12:10.880 --> 12:19.990
+let's say API response and the first response that we're going to have is 200.
+
+12:20.450 --> 12:24.990
+And the message for that 200 is ok.
+
+12:28.930 --> 12:29.580
+All right.
+
+12:30.860 --> 12:31.840
+Response time.
+
+12:31.950 --> 12:37.340
+We're going to returning to our user ears type of product that class.
+
+12:37.350 --> 12:39.480
+All right.
+
+12:39.630 --> 12:45.550
+Now let's check out our swaggerer documentation and see what it looks like to do that.
+
+12:45.570 --> 12:47.600
+I'm going to run my application now.
+
+12:52.600 --> 13:02.540
+Our application is starting up now.
+
+13:02.720 --> 13:05.870
+And here we go.
+
+13:05.920 --> 13:15.380
+And as you can see from the console output we have some new console outputs right here Dyllon says that
+
+13:15.640 --> 13:24.320
+found one custom documentation plug ins and that plug in is the swaggerer configuration that we included
+
+13:24.320 --> 13:26.090
+in our application.
+
+13:26.300 --> 13:30.530
+So to check it out I'm going to open up the Firefox
+
+13:35.830 --> 13:38.310
+and go to my application.
+
+13:38.560 --> 13:46.390
+So it is under localhost and ADHD for swagger.
+
+13:46.730 --> 13:54.570
+I'm going to be using swagger dash y dot as Timo.
+
+13:54.750 --> 14:01.050
+This is the default page for swaggerer annotations so you can simply override it.
+
+14:01.050 --> 14:07.970
+But if you don't want to make any specific configuration you can use swaggerer dash Hawai.
+
+14:08.010 --> 14:14.670
+So let's hit enter and see our swaggerer API documentation.
+
+14:14.840 --> 14:16.370
+And here we go.
+
+14:16.580 --> 14:19.820
+We have our beautiful UI with swagger.
+
+14:20.240 --> 14:27.270
+And as you can see we have our product controller scanned and listed right here.
+
+14:27.350 --> 14:30.330
+Let's click on it and here we go.
+
+14:30.380 --> 14:33.710
+We have all of our operations for our products.
+
+14:33.770 --> 14:38.270
+We have post-operation we have our delete operation.
+
+14:38.270 --> 14:45.350
+We have our Get operation with the tax that we provided the API operation annotation.
+
+14:45.440 --> 14:53.450
+Now we also have the put operation for the title routine see the tile that we provide it and for the
+
+14:53.450 --> 14:58.230
+description we provided the rest will API for products.
+
+14:58.430 --> 15:07.260
+And as you can see here our version is 1.0 as you can see with this very basic configuration working
+
+15:07.260 --> 15:12.340
+with swagger and documenting your API is very easy.
+
+15:12.480 --> 15:19.920
+And if we go to the details of any of your operation you can see the response class that we provided
+
+15:20.130 --> 15:28.500
+within our API operations and you can see the beautified version of your example well-you of your entity
+
+15:28.500 --> 15:35.800
+model and you can easily make requests for your API within this beautiful section.
+
+15:36.240 --> 15:43.470
+You can provide an ID and you can simply hit the tried out button as you can see even with the simple
+
+15:43.470 --> 15:51.750
+configuration you can have a full fledge restful API documentation with swagger and it has a beautiful
+
+15:51.930 --> 15:57.060
+and nice UI for showing and displaying your operations.
+
+15:57.060 --> 16:03.650
+I hope you enjoyed it and you can use this ragged documentation in any of your application with ease.
+
+16:03.650 --> 16:05.510
+Just like I did in my project.

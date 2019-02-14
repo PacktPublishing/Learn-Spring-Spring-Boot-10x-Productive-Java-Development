@@ -1,0 +1,889 @@
+WEBVTT
+
+00:01.410 --> 00:09.220
+Know it's time that we actually start developing our web application for our web application we're going
+
+00:09.220 --> 00:13.930
+to be developing a couple of interfaces within those interfaces.
+
+00:14.110 --> 00:18.280
+We're going to be listing our products we'll be creating our products.
+
+00:18.280 --> 00:25.720
+And of course we're going to be just wheeling and editing our products before all we're going to start
+
+00:25.720 --> 00:29.170
+with our index page within our index page.
+
+00:29.170 --> 00:33.400
+We're going to be having a navigation with that navigation.
+
+00:33.400 --> 00:41.030
+We're going to be exploring all parts of our application with a single interface to make our navigation
+
+00:41.030 --> 00:41.960
+usable.
+
+00:42.140 --> 00:48.470
+We're going to have a header page DML file and within that file We're going to include everything we
+
+00:48.470 --> 00:51.770
+need for our header and navigation.
+
+00:51.800 --> 00:58.730
+So after we create our header that Tim will file then we can include it within our other pages of the
+
+00:58.730 --> 00:59.680
+application.
+
+01:00.690 --> 01:06.760
+So to start to bring our navigation and index page I'm going to first start with our header that Tim
+
+01:06.860 --> 01:07.620
+file.
+
+01:07.770 --> 01:16.560
+So to do that I'm going to create a new folder under templates and folder is going to be named as way
+
+01:16.560 --> 01:17.130
+out.
+
+01:20.280 --> 01:27.600
+And within that layout folder I'm going to be creating a new HMO file and dump file as I've said in
+
+01:27.600 --> 01:28.470
+a minute ago.
+
+01:28.650 --> 01:29.950
+It's going to be had not.
+
+01:29.970 --> 01:33.730
+H tim l within this header.
+
+01:33.760 --> 01:34.950
+A stem cell File.
+
+01:34.960 --> 01:38.710
+We're going to be designing our navigation.
+
+01:38.750 --> 01:44.010
+Let's first start with defining time we've written our header that a Tim L.
+
+01:44.240 --> 01:53.100
+So to do that I'm going to go to our team Altec and I'm going to move the language to have in a in later.
+
+01:53.120 --> 02:01.160
+So I'll say X-amount namespace and the name space is going to be referenced with Ph.
+
+02:01.250 --> 02:12.340
+And then I'm going to provide the URL of time wave and that is HTP last lash w w w time alleve
+
+02:15.050 --> 02:16.590
+dot org.
+
+02:17.000 --> 02:18.430
+All right.
+
+02:18.560 --> 02:25.910
+And after that I'm going to move wanty had section and there I'm going to say the language of the page
+
+02:25.910 --> 02:27.960
+is going to be English.
+
+02:27.990 --> 02:29.400
+All right.
+
+02:29.490 --> 02:34.360
+And after that our next stop is the med attack within this medtech.
+
+02:34.560 --> 02:41.050
+We're going to be defining the characteristics of the HTL m.p.h. within the Met attack.
+
+02:41.120 --> 02:43.500
+We're going to be saying a couple of things.
+
+02:43.670 --> 02:47.640
+First of those things is the Content-Type within the Content-Type.
+
+02:47.750 --> 02:50.670
+We're going to be providing it as a team.
+
+02:50.840 --> 02:56.400
+And we're of course going to provide our character set as UTF 8.
+
+02:56.440 --> 03:06.880
+So let's do that and then I'm going to say HTP coolant is going to be Content-Type for this matter and
+
+03:06.880 --> 03:13.740
+then I'm going to say contact is going to be tech slash T.M..
+
+03:13.910 --> 03:20.430
+And after that as you can see we have character set UTF 8 as defined for us automatically.
+
+03:20.510 --> 03:26.810
+LS also close this pack because in some browsers this can be rendered very well.
+
+03:26.810 --> 03:29.730
+So our attack would be useless.
+
+03:29.770 --> 03:35.440
+So to avoid that we're simply close and emet attack.
+
+03:35.600 --> 03:41.050
+And since this is a system and include a html file We're not going to be using any tidal.
+
+03:41.150 --> 03:44.380
+So I can simply get rid of the title right here.
+
+03:44.450 --> 03:45.710
+So let's just delete that
+
+03:49.190 --> 03:56.210
+and after that we're of course going to include some stylesheets within our application since we have
+
+03:56.420 --> 04:04.730
+nothing right now but let's say we're going to have a style that says and let's create that.
+
+04:04.850 --> 04:12.530
+So I'm going to go to this tatic part of our application and I'm going to create a new directory and
+
+04:12.530 --> 04:20.330
+that directory is going to be named Garcia says and within that directory I'm going to create a stylesheet.
+
+04:20.370 --> 04:22.400
+This is going to be named best pilots.
+
+04:22.490 --> 04:23.710
+SS All right.
+
+04:25.050 --> 04:30.490
+The content of style that CSL is empty for now but don't worry about that.
+
+04:30.600 --> 04:35.280
+We'll get back to this style CSSA file and we'll make our application look better.
+
+04:35.280 --> 04:36.420
+All right.
+
+04:36.870 --> 04:38.600
+So I'll move back to our Heather.
+
+04:38.730 --> 04:39.880
+HMO.
+
+04:40.080 --> 04:47.800
+And what I'm going to do now I'm going to reference our CSSA file and that is done by the linked back
+
+04:48.460 --> 04:49.770
+button linked back.
+
+04:49.800 --> 04:57.870
+Our relationship is going to be a stylesheet and then I'm also going to say that this is going to be
+
+04:57.870 --> 05:01.260
+used by time we've as a fallback method.
+
+05:01.260 --> 05:04.980
+So to do that I'm going to use th Tref.
+
+05:05.380 --> 05:12.660
+And within that I'm going to use this specific markdown of time leave so for doing that I'm going to
+
+05:12.660 --> 05:19.170
+use sign and then I'm going to use curly braces within those curly braces.
+
+05:19.260 --> 05:27.740
+I'm going to say that this is under CSSA and then it's going to be named as style that's ss.
+
+05:27.780 --> 05:28.520
+All right.
+
+05:30.270 --> 05:36.950
+So for our general browser purposes I'm going to also say that we're going to reference it as the all
+
+05:36.950 --> 05:37.800
+the way.
+
+05:37.830 --> 05:45.080
+So if we're doing that I'll use the Etra of TAC within the edge of Takk I will say that this is to level
+
+05:45.180 --> 05:52.770
+of all our heads not a symbol so to show you that I can move back to our navigation and within our navigation
+
+05:52.800 --> 06:00.900
+if we go one level up we have our templates folder and if we go one more level up we how are static
+
+06:01.380 --> 06:02.730
+within the static.
+
+06:02.730 --> 06:09.690
+We're moving into the CSSA folder and within that pool there we have our style that CSSA.
+
+06:09.960 --> 06:18.510
+So to say that you our extra stack I'm going to use double dots and then slash double dots and then
+
+06:18.510 --> 06:29.400
+static Obus be have one more slashes and after that I'm going to say C Ss and as you can see Intel is
+
+06:29.730 --> 06:34.140
+automatically understanding what I'm trying to say and I'll hit enter.
+
+06:34.230 --> 06:36.140
+And here we go.
+
+06:36.150 --> 06:37.150
+All right.
+
+06:37.470 --> 06:44.040
+So let's close this stack too because as I said minutes ago some browsers can understand that if you're
+
+06:44.040 --> 06:48.220
+trying to provide a tag or nothing at all.
+
+06:48.270 --> 06:54.920
+So now it's time we moved to our buddy section of our application within the body section.
+
+06:55.000 --> 06:59.190
+I'm going to provide a couple of divisions and navigation.
+
+06:59.400 --> 07:04.790
+So for doing that are moving to do our body tag within the body attack.
+
+07:04.840 --> 07:10.200
+I'll start with a division within that division.
+
+07:10.330 --> 07:14.270
+I'm going to create a fragment with a division again
+
+07:17.830 --> 07:27.360
+so the fragment is going to be set as th fragment fragment is going to indicate that I'm trying to provide
+
+07:27.390 --> 07:31.390
+a header for our application.
+
+07:31.860 --> 07:40.740
+So if I moved down a bit in the hierarchy I'm going to say that I'm actually providing a navigation
+
+07:40.860 --> 07:46.210
+to the application so I'll use now Takk for our header.
+
+07:46.290 --> 07:54.510
+And within that Natak I'm also going to create a division within that doing that will actually be having
+
+07:54.540 --> 07:59.330
+our buttons or actions for navigation.
+
+07:59.350 --> 08:08.800
+So to make it real I'm going to provide another Dev and within that Deb I'm also going to provide another
+
+08:08.800 --> 08:13.250
+div so that we can easily manage our divisions individually
+
+08:15.780 --> 08:22.640
+within this that I'm actually start providing our navigation the first part of our navigation is going
+
+08:22.640 --> 08:30.110
+to be our home button which is like the logo of your application the logo that you see within almost
+
+08:30.140 --> 08:31.900
+every Web page.
+
+08:32.030 --> 08:41.150
+So I'm going to provide it as an A within the ATAC I'm going to reference our home page which is going
+
+08:41.150 --> 08:51.260
+to be referenced as the shark character and then I'm going to use a simple HSF track of time leave within
+
+08:51.260 --> 08:52.670
+that x ray tech.
+
+08:52.880 --> 08:57.570
+I'm going to say this is going to be referencing to our home page.
+
+08:57.590 --> 09:00.140
+And it's like is untimely.
+
+09:00.470 --> 09:06.770
+And then of course I'm going to say which web page it's going to be displaying as a text.
+
+09:07.130 --> 09:15.290
+And I'm going to be displaying it at home right after I finish our home button and I'm going to go to
+
+09:15.290 --> 09:18.530
+our other parts of navigation.
+
+09:18.530 --> 09:24.500
+We're going to be having two more buttons in our navigation and those navigation buttons are going to
+
+09:24.500 --> 09:29.070
+be provided with an ordered list pack for an ordered list.
+
+09:29.090 --> 09:34.470
+We're using the you all tag or h t m l within the Haq.
+
+09:34.910 --> 09:38.610
+I'm going to be providing two elements.
+
+09:39.890 --> 09:49.880
+First of those elements is going to be provided with a and within that a I'm going to say again th reference
+
+09:50.900 --> 09:57.060
+within that th reference I'm going to provide the you are out and I'm going to use for my application.
+
+09:57.560 --> 10:07.430
+So to do that I'm going to say this is going to be linked as Slash products and of course I'm going
+
+10:07.430 --> 10:12.610
+to be naming this page as products.
+
+10:12.650 --> 10:14.860
+All right.
+
+10:14.890 --> 10:21.280
+And after that I'm going to provide another list element and within that element I'm going to provide
+
+10:21.370 --> 10:34.790
+another ATAC within that ATAC I'm again reference this page as th ref and then products slash add.
+
+10:34.840 --> 10:35.960
+All right.
+
+10:36.370 --> 10:42.760
+And then of course I'm going to name this page as create product
+
+10:46.650 --> 10:54.440
+OK we're done with our basic navigation after our no EDITION I'm going to be providing a text and an
+
+10:54.450 --> 11:01.430
+image right below that and this is all going to be placed right below our navigation.
+
+11:01.510 --> 11:08.520
+So for doing that I'm going to go down to our navigation and after that I'm going to be providing and
+
+11:08.520 --> 11:11.240
+not a division.
+
+11:11.460 --> 11:20.040
+And within that division I'm going to be providing a couple of divisions too so that we can easily manage
+
+11:20.280 --> 11:21.640
+those divisions.
+
+11:23.180 --> 11:28.860
+And after that I'm going to provide a a two TAC text.
+
+11:28.910 --> 11:31.300
+The two is Heather level two.
+
+11:31.400 --> 11:35.640
+So it's going to be large enough to see when we open our application.
+
+11:36.140 --> 11:40.760
+So within that text I'm going to say spring and we see application
+
+11:44.890 --> 11:53.530
+and after that I'm going to go down to our second Dev and then I'm going to provide another depth so
+
+11:53.530 --> 11:58.210
+that we can provide an image to our application.
+
+11:58.210 --> 12:00.220
+So I'll say dev.
+
+12:01.120 --> 12:07.720
+And within that I'm going to provide the image tech within the image stack.
+
+12:07.750 --> 12:14.740
+I'm going to use an image that I've downloaded over the Internet and that image is simply a spring Lego
+
+12:14.740 --> 12:16.040
+image.
+
+12:16.250 --> 12:22.890
+So for holding that image which in our application I'm going to create another folder and that folder
+
+12:22.890 --> 12:27.730
+is going to be under resources with them there.
+
+12:27.780 --> 12:35.070
+I'm going to create another directory and that directory is going to be named as images within that
+
+12:35.110 --> 12:36.400
+images folder.
+
+12:36.540 --> 12:41.510
+I'm going to move the image did-I downloaded over to Internet.
+
+12:41.640 --> 12:48.380
+So let me bring that up and I'm moving it to the images folder.
+
+12:48.420 --> 12:52.320
+Let me fix the navigation of this image folder.
+
+12:52.750 --> 12:58.810
+That's going to be placed right below the static for there so I'll hit OK.
+
+13:00.050 --> 13:00.680
+And
+
+13:04.190 --> 13:07.830
+let's leaked that one because we don't need it anymore.
+
+13:09.220 --> 13:10.520
+And here we go.
+
+13:10.810 --> 13:15.600
+We have our image right below the images folder.
+
+13:15.620 --> 13:18.890
+So now it's time that we actually referenced it.
+
+13:19.040 --> 13:24.270
+So the reverend said we're again going to go to levels a ball.
+
+13:24.290 --> 13:33.920
+So for doing that I'm going to use two dots slashes and then I'm going to say static and then images
+
+13:34.610 --> 13:43.160
+and the image name that I provided as per adult Jawa spring logo and of course since this is a big image
+
+13:43.670 --> 13:52.210
+I'm going to shrink down it's a little bit and I'm going to say it's going to be 30 percent large.
+
+13:52.220 --> 13:55.130
+All right.
+
+13:55.150 --> 14:03.870
+And also we're going to say that time we can understand this image at its own included within its contacts.
+
+14:03.880 --> 14:08.510
+So for doing that I'm going to use th's horse tack.
+
+14:08.740 --> 14:19.030
+So for that ph source stack I'm going to go down a little bit and then ph source is going to be at and
+
+14:19.030 --> 14:22.390
+curly braces and then images
+
+14:25.140 --> 14:33.710
+and pubertal And let's just copy the name of our image and we can move on from there.
+
+14:36.760 --> 14:37.550
+Here we go.
+
+14:39.530 --> 14:46.390
+Let's close our image Takk and we're almost finished our navigation.
+
+14:46.490 --> 14:52.140
+Now let's actually create our index page and include our header within it.
+
+14:52.290 --> 14:59.490
+So to do that I'm going to go to our templates folder and create our new Tim old file and it's going
+
+14:59.490 --> 15:09.300
+to be named as index that HMO and for the structure of it we have a little bit of a problem let's fix
+
+15:09.360 --> 15:12.910
+our structure of the index HMO file.
+
+15:12.990 --> 15:19.910
+I'm going to refactoring it and I'm going to be moving it within that movement.
+
+15:19.950 --> 15:21.890
+I'm getting rid of the layout.
+
+15:21.960 --> 15:24.260
+And then there it is
+
+15:29.200 --> 15:33.370
+all right it's under the temples for the right away.
+
+15:33.540 --> 15:37.810
+So now we can work on our index that a stem cell file.
+
+15:37.830 --> 15:42.630
+So first I'll start off with our timely for timely.
+
+15:42.660 --> 15:51.000
+As you remember we're going to use X-amount name space and then and within that th I'm going to say
+
+15:51.440 --> 15:54.950
+HTP slash slash.
+
+15:55.080 --> 16:01.940
+W w w time we've got all week.
+
+16:02.010 --> 16:02.820
+All right.
+
+16:03.870 --> 16:05.320
+And up your debt.
+
+16:05.520 --> 16:08.970
+I'm going to just close this med attack as you can remember.
+
+16:08.970 --> 16:16.160
+Couple of minutes ago that we set some browsers can render it and after that I'm going to provide a
+
+16:16.190 --> 16:18.920
+title for our application.
+
+16:19.010 --> 16:31.580
+So this is going to be named as products spring and we see application and after that is the actual
+
+16:31.580 --> 16:39.410
+part that we're interested in and that is the header include park for doing that of first start by creating
+
+16:39.410 --> 16:49.040
+a timely block and within that timely block I'm going to say that I'll be including a a simplified to
+
+16:49.040 --> 16:50.940
+my index page T.M..
+
+16:51.350 --> 16:57.680
+So doing that I'll use th include and within that include.
+
+16:57.770 --> 17:06.290
+I'm going to say it will be under the layout folder and then it's named as header.
+
+17:06.620 --> 17:14.300
+All right now we're almost done with the basic navigation and appearance of our application.
+
+17:14.300 --> 17:21.420
+Now let's also create our controller for the index page and start serving our application from there.
+
+17:21.800 --> 17:25.740
+So for doing that I'm going to create our control class.
+
+17:26.030 --> 17:35.600
+So for that I'll create a new package and named as controller which in that controller I'm going to
+
+17:35.600 --> 17:42.580
+create a new class and it's going to be pro-law controller
+
+17:46.140 --> 17:52.120
+or controller class is going to be annotated with the simple controller annotation.
+
+17:52.280 --> 18:00.830
+And so to do that I'll go up and say this is a controller this controller will be able to search the
+
+18:00.830 --> 18:04.800
+pages of our application and the data to our users.
+
+18:06.390 --> 18:14.560
+So for our index page I'm going to create a new request mapping and for the request mapping I'm simply
+
+18:14.560 --> 18:22.340
+going to create a method returning a string and that string is going to be a stem Elf while.
+
+18:22.470 --> 18:31.830
+So for the method name I'm going to use as index and then I'll simply return our index page.
+
+18:31.860 --> 18:33.600
+Right.
+
+18:33.900 --> 18:42.960
+And in the request mapping I'm going to be navigating it as the route that so is going to be just a
+
+18:42.960 --> 18:43.920
+slash.
+
+18:43.950 --> 18:44.550
+All right.
+
+18:46.150 --> 18:51.730
+So we're almost done with our controller to serve our indexed r h t m l file.
+
+18:52.300 --> 18:56.990
+Let's run our application for the first time and see what it looks like.
+
+19:04.510 --> 19:06.030
+Our application is starting up
+
+19:09.320 --> 19:10.470
+and here we go.
+
+19:11.890 --> 19:15.330
+Let's open up Firefox and see what it looks like.
+
+19:25.470 --> 19:29.410
+Localhost eighty eighty nine.
+
+19:32.710 --> 19:34.120
+And here we go.
+
+19:34.270 --> 19:42.580
+We have a simple page with navigation and an image right below that but this doesn't look good at all
+
+19:42.580 --> 19:43.220
+right.
+
+19:44.760 --> 19:51.390
+So no it's time that we include bootstrap to our application to beautify it and have a great looking
+
+19:51.390 --> 19:53.370
+application.
+
+19:53.410 --> 20:00.860
+So for doing that I'll switch back to my ID before we start including built up into our application
+
+20:01.600 --> 20:10.350
+I should first take a moment to talk about web jar's web jobs are great ways to include CSSA javascript
+
+20:10.410 --> 20:16.370
+and other web libraries into your web application as the job away DJR files.
+
+20:17.040 --> 20:20.450
+To take a look at it I'll switch back to Firefox.
+
+20:20.670 --> 20:25.650
+And in a new tab I'll go to Web jar's
+
+20:28.540 --> 20:37.210
+and if we go to do the full page of the web jar's as you can see web jobs are defined as client side
+
+20:37.210 --> 20:45.850
+web libraries such as a query and bootstrap package into Jarre archive files and as you can see from
+
+20:45.850 --> 20:52.000
+the highlights it says explicitly an easily managed decline site dependencies in Jay re-embrace web
+
+20:52.000 --> 20:54.160
+applications.
+
+20:54.260 --> 21:01.040
+So for our bootstrap need we're going to be including the bootstraps latest version into our application
+
+21:02.740 --> 21:03.850
+so we're doing that.
+
+21:03.880 --> 21:05.010
+I'll go to do.
+
+21:05.110 --> 21:06.590
+And we are a repository
+
+21:11.560 --> 21:19.880
+and then I'm going to be looking at the bootstrap web or.
+
+21:20.090 --> 21:22.060
+And we have it.
+
+21:22.070 --> 21:29.290
+So let's take a look at it and we have Creedle 3.7 Dash 1 as the latest version.
+
+21:29.540 --> 21:39.040
+And I'm simply going to take the dependency and switch back to my ID now and then I'll go to my Palm
+
+21:39.040 --> 21:44.620
+file and include it.
+
+21:44.680 --> 21:45.940
+And here we go.
+
+21:51.250 --> 21:57.440
+Let's enable the auto import and maybe we can download it over to internet.
+
+21:57.440 --> 21:58.170
+All right.
+
+21:58.190 --> 21:59.100
+It's already done.
+
+22:01.390 --> 22:07.500
+So now let's switch back to our heads up as to your mail and include bootstrap into our application
+
+22:09.430 --> 22:10.640
+for doing that.
+
+22:10.660 --> 22:16.280
+I'm going to be adding a link to Jack within that linked back.
+
+22:16.310 --> 22:20.090
+We're going to be referencing bootstrap to our application.
+
+22:20.090 --> 22:29.330
+So for doing that I'm going to be using th Tref within that ph as SRF I'm going to be saying Webb jar
+
+22:31.160 --> 22:42.640
+and of course we have to be using the slash before it and then I'm going to say bootstrap and then I'm
+
+22:42.650 --> 22:45.200
+providing the version of it.
+
+22:45.430 --> 22:54.050
+This is going to be $3.3 7 Dash 1 and then I'll say See assess and bootstrap
+
+22:57.690 --> 23:01.200
+dot men that's VSS.
+
+23:01.300 --> 23:02.760
+All right.
+
+23:02.870 --> 23:08.810
+And also I'm going to be referencing the web version of the unified bootstraps VSS.
+
+23:09.140 --> 23:15.670
+So for doing that I'm going to be using the actual Atra stack within that extra deck.
+
+23:15.680 --> 23:22.850
+I already copy the location of our CSSA the minute flight version and I'm simply going to paste it right
+
+23:22.850 --> 23:23.770
+here.
+
+23:23.900 --> 23:32.990
+So this is going to be acting as the fallback for RC SS if the web job somehow fails to load RC SS and
+
+23:32.990 --> 23:41.540
+after that I'm of course going to be providing the relation and within that relation I'm going to be
+
+23:41.540 --> 23:47.750
+saying that this is a stylesheet.
+
+23:47.900 --> 23:48.980
+All right.
+
+23:48.980 --> 23:56.280
+And then I'm going to be providing an extra attack which is media with this media attack bootstrap is
+
+23:56.520 --> 24:04.860
+going to apply its own rules sets of CSSA within any kind of interface be a mobile phone tablet desktop
+
+24:05.220 --> 24:06.260
+whatever.
+
+24:06.270 --> 24:15.600
+If we say screeding which can navigate itself and any web page and it displaying DeWyze so I'll also
+
+24:15.600 --> 24:16.820
+close this tag.
+
+24:17.340 --> 24:24.000
+And then I'm going to start by adding the classes for bootstrap to our navigation so that to make them
+
+24:24.000 --> 24:33.190
+beautiful so now go down to our division tax and first I'm going to say the first division is going
+
+24:33.190 --> 24:42.220
+to be a container container class indicates that this division is containing lots of other attacks including
+
+24:42.230 --> 24:44.320
+additives to.
+
+24:44.360 --> 24:52.470
+So right after that I'm going to go to our navigation and within that navigation I'm going to use to
+
+24:52.490 --> 25:03.360
+know bar classes or bootstrap and I'm going to also say this is a default now or and after that I'm
+
+25:03.360 --> 25:12.170
+going to go to other dev and say that this is a container and it's say Flude 1.
+
+25:12.210 --> 25:19.520
+So this Flude one says are contained elements can be adjusted as we want.
+
+25:19.530 --> 25:29.250
+So after our vision I'll move on to our next division and I'm going to say this is going to be the harder
+
+25:29.250 --> 25:40.250
+part or we're now bar so I'll say no bar Desch header and for our homework I'm going to be providing
+
+25:40.280 --> 25:48.320
+a special task special class and that class is going to be no bar Brant as you can understand from the
+
+25:48.320 --> 25:52.910
+name this is going to be the main burden of our application.
+
+25:52.910 --> 26:00.350
+So you're probably going to put a logo for your website but for our case our home button is going to
+
+26:00.350 --> 26:08.430
+be a little bit different from other navigation buttons in our UI and after our home button I'm moving
+
+26:08.430 --> 26:13.150
+on to our on order list in our on order at last.
+
+26:13.290 --> 26:15.300
+I'm going to be using the now.
+
+26:15.780 --> 26:18.630
+And now we are now tax
+
+26:21.800 --> 26:33.950
+right and within our other Dave right below I'm going to be providing a special tag again and that tag
+
+26:34.110 --> 26:42.770
+is going to be Jumbotron Jumbotron Ptak indicates that you have some important content within that division.
+
+26:43.880 --> 26:48.930
+So it highlights it and makes it clear that you have something important there.
+
+26:50.400 --> 26:59.280
+And the division after that I'm going to be providing world class and then it's going to be centered
+
+26:59.340 --> 27:07.830
+text and a deal before the age to tack on going to providing the rope again so that it can be adjusted
+
+27:08.370 --> 27:10.650
+as a role in the UI.
+
+27:12.200 --> 27:21.500
+And after that I'll move on to my image and the division that holding the image is going to be named
+
+27:21.500 --> 27:31.290
+as Ro and tech center so that the image can be displayed on the center of the web page.
+
+27:31.310 --> 27:32.600
+All right.
+
+27:32.600 --> 27:37.400
+No we can rerun our application and see the changes in effect.
+
+27:37.670 --> 27:42.450
+So to do that I'm going to rerun our application and see what's going to happen.
+
+27:45.760 --> 27:50.460
+Our application is starting up now.
+
+27:50.710 --> 27:54.700
+And here we have it.
+
+27:54.770 --> 27:56.760
+Now let's go to Firefox again.
+
+27:56.990 --> 28:08.360
+And if you go to localhost A.D. 89 and here we go we have much more of a clean and a beautiful Web page
+
+28:09.010 --> 28:13.140
+and within that web page you should notice couple of things.
+
+28:13.310 --> 28:19.260
+We have our navigation right arrow and it's on the top of our Web page.
+
+28:19.370 --> 28:26.740
+And as you know there's our now our brand Clast home button is a little bit bigger than the other buttons.
+
+28:26.960 --> 28:36.300
+And we also have our products and create product buttons with some style and right after our navigation
+
+28:36.690 --> 28:38.940
+we have a jumbotron.
+
+28:39.060 --> 28:44.320
+As I've said this is a clear separation from other parts of the UI.
+
+28:44.430 --> 28:52.050
+It's highlighted with gray by default and we have our spring and we see application and our spring logo
+
+28:52.260 --> 28:55.440
+center into our web page.
+
+28:55.540 --> 29:03.150
+Now we've created the initial page of our application in navigation and another content right below
+
+29:03.150 --> 29:03.590
+it.
+
+29:04.410 --> 29:09.240
+So to me all with create product page I'll be seeing you in the next video.

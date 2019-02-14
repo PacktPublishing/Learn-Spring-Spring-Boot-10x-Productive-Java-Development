@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00.240 --> 00:03.370
+Let's take an overview of what we will learn so far.
+
+00:04.360 --> 00:11.070
+As you've seen spring is an amazing framework with the features allowing dependency injection and inversion
+
+00:11.080 --> 00:12.370
+of control of the heart.
+
+00:13.700 --> 00:15.590
+You took control away to spring.
+
+00:15.770 --> 00:20.770
+And it takes care of all the wiring all the beans and managing the complexity all by itself.
+
+00:21.840 --> 00:28.320
+On the other hand Springboro sits on top of the Spring Framework as an extension of it and provides
+
+00:28.320 --> 00:34.990
+the ease of developing production grade applications for every type of task be it a complex web app
+
+00:35.400 --> 00:42.490
+an API or a web service spring boot gives you the flexibility to combine all these components together.
+
+00:44.680 --> 00:48.510
+You get the jars as the output and simply run it.
+
+00:48.520 --> 00:56.630
+That said I hope you now have the foundation of the spring world and rather to build on top of it.
+
+00:56.650 --> 01:01.060
+Now let's start by setting up our development and wireman to do that.
+
+01:01.060 --> 01:02.430
+I'll see you on the next section.

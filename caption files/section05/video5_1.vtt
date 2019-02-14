@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.330 --> 00:03.330
+Welcome back to spring when we see development.
+
+00:03.330 --> 00:07.010
+Before we start I should say that you come a very long way.
+
+00:07.010 --> 00:07.980
+Up until now.
+
+00:08.130 --> 00:10.680
+And a lot more great news coming ahead.
+
+00:10.680 --> 00:12.740
+You should be really proud of yourself.
+
+00:14.630 --> 00:21.960
+Now let's talk about what spring in years and what we're going to be developing before we go into details
+
+00:21.960 --> 00:23.310
+of our application.
+
+00:23.370 --> 00:29.130
+We must take a moment to discuss what we see stands for and what's the motivation behind it.
+
+00:30.090 --> 00:34.720
+And we see is actually a design pattern in software engineering principles.
+
+00:35.040 --> 00:39.660
+So what we see stands for is model we one controller.
+
+00:39.660 --> 00:45.720
+Basically it says that you are part of one application code must be separated from the underlying backend
+
+00:45.750 --> 00:49.110
+or the actual implementation.
+
+00:49.110 --> 00:56.450
+So what is and we see no am for model model is your data model in principle.
+
+00:56.690 --> 01:02.360
+Let's say that you have a reservation application and a ticket would be one of the models in the sense
+
+01:03.850 --> 01:11.890
+we we you we you as it sounds the user facing interface over application considering the similar analogy
+
+01:11.890 --> 01:21.110
+for reservation we would be a ticket purchasing interface C4 controller controller is the remaining
+
+01:21.110 --> 01:27.590
+part and is the actual implementation part of your application for a reservation application.
+
+01:27.590 --> 01:33.150
+You would have a reservation controller where you get to purchasing data from the UI and then persist
+
+01:33.170 --> 01:35.960
+it to a database.
+
+01:35.980 --> 01:37.200
+I think you get the point.
+
+01:37.270 --> 01:38.700
+And we see a pattern by now.
+
+01:39.670 --> 01:42.920
+Now we know what we see is and how it works.
+
+01:42.940 --> 01:49.730
+Now let's see what Springhill we see has to offer spring and we see is built on top of this foundation.
+
+01:49.760 --> 01:55.970
+And one of the richest and greatest components in the Spring Framework as you'll see when we start developing
+
+01:56.390 --> 02:04.150
+spring applies and we see principle very well it separates the model we would control or elegantly so
+
+02:04.200 --> 02:08.050
+we can take care of individual parts of your application independently.
+
+02:08.580 --> 02:10.550
+These are the very basics of spring.
+
+02:10.560 --> 02:16.200
+And we see so what we're going to be developing with spring and we see we'll be developing a spring
+
+02:16.200 --> 02:22.020
+and we'll the application making use of time leaf template engine and we'll build more on top of that
+
+02:22.170 --> 02:24.410
+throughout the following tutorials.
+
+02:25.450 --> 02:31.080
+To check out and understand how resources and static web content handling spring and we see I'll see
+
+02:31.080 --> 02:32.080
+you on the next video.

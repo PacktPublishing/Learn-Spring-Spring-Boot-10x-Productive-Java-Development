@@ -1,0 +1,133 @@
+WEBVTT
+
+00:01.110 --> 00:07.610
+You know how to build our application with me well let's just first open up our last project our demo
+
+00:07.610 --> 00:08.120
+project
+
+00:19.180 --> 00:22.640
+let's close the tip.
+
+00:22.810 --> 00:32.650
+And as you can see we have may we have here and this that you can see all the comments for Maybin from
+
+00:32.680 --> 00:40.490
+cleaning or project compiling testing packaging and creating all jar file.
+
+00:40.520 --> 00:48.340
+So if we go over clean and you'll see that we have lots of different options we can arrange it just
+
+00:48.350 --> 00:52.450
+command run after a rebuild or perform a rebuild.
+
+00:52.490 --> 01:01.200
+Or we can even do a custom action but for the sake of this Glorio I'm just going to run this individual
+
+01:01.200 --> 01:02.030
+command.
+
+01:02.050 --> 01:10.150
+So if you double click this command and as you can see we have a console coming up and Mavin will run
+
+01:10.600 --> 01:15.580
+clean up as you can see we have a success.
+
+01:15.580 --> 01:17.720
+This is the cleaning process with MAVEN.
+
+01:18.280 --> 01:25.180
+So Howard going to package our application to have a jar file to do that.
+
+01:25.430 --> 01:38.370
+You can run install command and just double click it.
+
+01:38.510 --> 01:46.950
+Maybe it will do it's downloading and installing some jar files some dependencies that it needs to package
+
+01:46.950 --> 01:47.980
+your application
+
+01:59.640 --> 02:04.390
+and in the end as you can see how our test results.
+
+02:04.590 --> 02:12.990
+If we had tests in our application then we would have our results within this line as if they passed
+
+02:13.080 --> 02:15.790
+or crashed or skipped.
+
+02:16.000 --> 02:22.110
+As you see with this line our focus is on packaging or application.
+
+02:22.110 --> 02:32.400
+So you can see that our job file is built and it's a success and it's installed under this directory.
+
+02:32.400 --> 02:37.790
+Also Maybin has copied our application to its repository.
+
+02:37.950 --> 02:44.100
+As you can see here so we can be a reference from our applications too.
+
+02:44.190 --> 02:48.810
+So let's just check out our job file and see what it looks like.
+
+02:49.590 --> 02:57.930
+So you'll notice that we have a target folder here which is actually we're Mavin says say use your application
+
+02:57.930 --> 02:59.550
+package.
+
+02:59.550 --> 03:08.250
+Let's check it out and see how all the sources that Mabon create it are class files palm files and other
+
+03:08.250 --> 03:09.960
+source files.
+
+03:09.960 --> 03:13.050
+You can also have your test results here.
+
+03:13.050 --> 03:18.810
+Our main focus is our application package to run this jar file.
+
+03:18.810 --> 03:24.710
+We can do a lot of different things and we can run this chart from the command line.
+
+03:24.740 --> 03:29.510
+So now let's do that and give you a good practice.
+
+03:29.570 --> 03:31.030
+Open up a command prompt.
+
+03:31.040 --> 03:34.220
+Let's go to our project directory
+
+03:45.880 --> 03:53.220
+and our project is demo and just check out the directory for and Ryke rectory.
+
+03:53.230 --> 03:59.700
+And let's just go to Target and check it out once again.
+
+03:59.830 --> 04:00.530
+Here we go.
+
+04:00.580 --> 04:08.370
+We have our char file to run this application to run this package over our application.
+
+04:08.380 --> 04:16.300
+All we have to do is say Jawa minus jar and our jar file Eurico.
+
+04:16.360 --> 04:24.490
+If we had to enter and our application will start running.
+
+04:24.700 --> 04:25.660
+Here we go.
+
+04:25.660 --> 04:37.140
+We have our application running from the command line to Erica as you can see it's really easy to clean
+
+04:37.350 --> 04:44.160
+test and package your application with maven and you have all the beauty of the command line to run
+
+04:44.160 --> 04:45.150
+your application.

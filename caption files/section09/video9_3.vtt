@@ -1,0 +1,151 @@
+WEBVTT
+
+00:00.550 --> 00:08.020
+The next thing that we're going to take a look at is spring actuator spring actuator as the official
+
+00:08.020 --> 00:16.390
+page says allows you to monitor and interact with your application with pre-build in endpoints for any
+
+00:16.390 --> 00:18.220
+application that you're going to build.
+
+00:19.450 --> 00:26.710
+And if we check out the last say whose list of alternatives for any application that you're going to
+
+00:26.710 --> 00:31.580
+provide and you can even customize the endpoints for any application
+
+00:34.470 --> 00:37.340
+to make use of Springboro actuator.
+
+00:37.770 --> 00:42.970
+Let's go to our Maybin repository.
+
+00:43.220 --> 00:54.390
+And what we're looking for as spring boot starter an actuator
+
+00:58.640 --> 01:03.610
+and let's take out the latest one 1 8 5 2.
+
+01:04.130 --> 01:07.530
+And this copy the dependency.
+
+01:07.540 --> 01:10.830
+Now let's switch back to our ID now.
+
+01:10.900 --> 01:15.110
+And I opened up my spring and we see Project right here.
+
+01:15.520 --> 01:26.170
+And if I go to my Palm file in my palm file I'm simply going to provide my dependency right below.
+
+01:26.330 --> 01:37.170
+And if you say you read Maven is already resolved that so check out our actuator endpoints.
+
+01:37.200 --> 01:48.230
+I'm going to run my application.
+
+01:48.440 --> 01:49.900
+Our application is starting up
+
+01:53.900 --> 02:01.370
+and as you can see here we have a map lots of different points for our application even if we didn't
+
+02:01.370 --> 02:02.230
+provide them.
+
+02:03.170 --> 02:14.540
+And if we take a closer look at them we how Heldt beans luggers trace conflict Propes dump info mappings
+
+02:14.870 --> 02:22.450
+and lots of water and points for applications to use so to check out dam.
+
+02:22.800 --> 02:24.430
+Let's go to Firefox now
+
+02:27.430 --> 02:38.220
+and I'm going to be opening up a new window and in a new window I'll go to my application and provide
+
+02:38.230 --> 02:45.440
+the port as 80 89 and then I'm simply going to say mappings.
+
+02:46.720 --> 02:51.300
+And in the mappings we can see that were unauthorized.
+
+02:51.340 --> 02:55.300
+The reason for that the end point is a secured one.
+
+02:55.300 --> 02:59.720
+We have to be all right in the security role for our testing purposes.
+
+03:00.500 --> 03:10.310
+To do that I'll switch back to my ID and in my ID I'll go to my application properties
+
+03:13.340 --> 03:15.460
+in my application properties.
+
+03:15.590 --> 03:25.250
+I'm going to say and points that mappings and sensitive is going to be false.
+
+03:25.250 --> 03:35.620
+So if you switch back to Firefox again and if the refresh to page Rigaud we have the full mappings for
+
+03:35.620 --> 03:43.750
+our application and you can see everything we have and the things that we don't have in our actual configuration
+
+03:44.080 --> 03:46.410
+the ones that provide it with spring.
+
+03:46.510 --> 03:54.430
+And the cool thing about actuator endpoints as you've seen here you can simply override their configurations
+
+03:54.490 --> 04:00.700
+with couple of alternatives and you can disable or enable the ones that you don't need.
+
+04:01.000 --> 04:08.530
+Let's take out another endpoint and this time I'm going to be enabling the environments and point and
+
+04:08.860 --> 04:18.960
+I'll say endpoints environment and sensitivity is going to be false.
+
+04:19.030 --> 04:26.590
+So if I say that our application context is going to be refreshed as you can see in our console and
+
+04:26.890 --> 04:33.150
+when it's done I can be able to go to my endpoint.
+
+04:33.350 --> 04:49.520
+So if I go to my browser and I'll say localhost A.D. 89 and slash environment here we go we have a full
+
+04:49.520 --> 04:52.280
+list of our environment variables.
+
+04:52.280 --> 04:56.390
+And as you can see we have our application port.
+
+04:56.450 --> 04:58.690
+We how our Joe on time.
+
+04:58.910 --> 05:04.750
+And we how lots of other environment variables that we weren't even aware of.
+
+05:06.480 --> 05:14.820
+As you can see with this simple example spring actuator is a great way to extend your application so
+
+05:14.880 --> 05:20.720
+that you can monitor and get some real time statistics about your application usage.
+
+05:21.790 --> 05:28.770
+Main purpose of spring actuator endpoints is about the cloud park for spraying.
+
+05:28.870 --> 05:34.210
+So for that part I'm planning on the walloping a Macra services training.
+
+05:34.270 --> 05:39.000
+So in that training we're going to be digging into these actuator endpoints.
+
+05:39.130 --> 05:41.840
+So make sure to check that out.
+
+05:41.980 --> 05:43.480
+I'll be seeing you in the next video.

@@ -1,0 +1,367 @@
+WEBVTT
+
+00:01.560 --> 00:09.520
+So now let's just make things a little bit interesting and try to make use of inquiries in named methods.
+
+00:10.410 --> 00:20.850
+To do that I'm going to provide the names of each product as a list and I'm going to use that against
+
+00:20.850 --> 00:24.050
+the category as an inquiry.
+
+00:24.050 --> 00:28.400
+All right let's do that now.
+
+00:28.460 --> 00:46.910
+So again I'm going to get a list of products and find by category and I'm going to say name in.
+
+00:47.280 --> 00:56.940
+All right I'll just explain what this method is in a second so I'll get as the first argument here is
+
+00:56.940 --> 01:05.580
+category so I'll say category and the second one is going to be name.
+
+01:05.790 --> 01:08.200
+But here is the trick.
+
+01:09.390 --> 01:19.230
+This way I can provide either a string of name or I can provide a list of objects so that I can actually
+
+01:19.230 --> 01:22.680
+do an inquiry just like we have in sequel.
+
+01:22.890 --> 01:32.910
+So to have new functionality like just the sequel I'm going to provide a list of strings these named
+
+01:32.950 --> 01:43.290
+method and I'll say a list of string and category.
+
+01:43.540 --> 01:44.910
+Sorry about that.
+
+01:46.140 --> 01:47.210
+I'm going to say
+
+01:50.390 --> 01:52.000
+name all right.
+
+01:54.480 --> 01:55.850
+Let's make use of that too.
+
+01:55.920 --> 02:00.470
+But before we move on to that let me just explain to Corey again.
+
+02:02.180 --> 02:14.390
+We wanted to get a list of products in the slide and we're searching against the category and name but
+
+02:14.420 --> 02:22.870
+in this case we want to find category as an end statement just like we have in sequel.
+
+02:23.090 --> 02:28.910
+But for the name we want to do a sequel statement so that we can
+
+02:33.200 --> 02:42.470
+provide a list of names and within that names the JP name that it can find and bring us the result of
+
+02:42.470 --> 02:43.820
+product objects.
+
+02:43.820 --> 02:45.300
+All right.
+
+02:45.510 --> 02:50.100
+So let's make use of that method to to do that.
+
+02:50.100 --> 03:05.830
+I'm again back in our application class and I'll say list of products and results products and I'll
+
+03:05.830 --> 03:14.220
+say product repository and our method is find by category and name in
+
+03:17.100 --> 03:27.840
+so our category was test for both objects but for the list of names we're going to do a little bit different
+
+03:27.840 --> 03:29.660
+thing here.
+
+03:29.790 --> 03:37.050
+We're going to provide the list of the names of our products as the parameter.
+
+03:37.110 --> 03:49.270
+So to do that I'm going to create a list of names and I'd say I need a new array list and in that array
+
+03:49.290 --> 03:59.250
+list I'm going to say first I need the name of the first product and that is the test product
+
+04:02.260 --> 04:10.750
+Eurico and the second name is going to be another test product.
+
+04:10.750 --> 04:15.480
+All right that's copy and paste that too.
+
+04:15.520 --> 04:21.460
+Here we go and let's just provide the names list.
+
+04:21.490 --> 04:24.790
+The Israelis too are named method.
+
+04:24.790 --> 04:26.220
+Here we go.
+
+04:27.980 --> 04:31.360
+To see the method in action.
+
+04:31.430 --> 04:34.700
+Let's print out the result and to do that.
+
+04:34.790 --> 04:45.620
+I'm again going to use a For Each loop for each product product and result products and I want to see
+
+04:45.620 --> 04:55.130
+that the log printed out as the matching
+
+05:00.850 --> 05:10.210
+matching results for and let me just provide the name of the method so that we can see the difference
+
+05:10.210 --> 05:10.510
+here
+
+05:14.340 --> 05:20.920
+I'll say product to string.
+
+05:20.930 --> 05:21.690
+All right.
+
+05:22.730 --> 05:30.350
+And let's just get rid of these two and comment out these lines so we can see again clearly what we've
+
+05:30.350 --> 05:31.110
+done.
+
+05:33.270 --> 05:33.870
+All right.
+
+05:34.840 --> 05:37.000
+So I'm going to rerun our application
+
+05:45.210 --> 05:46.830
+and it's starting up now.
+
+05:56.180 --> 06:05.160
+As you can see here the query work and two of our products found in our repository in our database.
+
+06:05.190 --> 06:06.370
+Isn't that beautiful.
+
+06:06.450 --> 06:14.260
+You just provide the query with a natural language way and it finds everything you need.
+
+06:15.230 --> 06:21.170
+I'd say we're a beautiful way to Qurei against the database any database that you need.
+
+06:21.170 --> 06:22.280
+All right.
+
+06:22.520 --> 06:32.180
+So to break this query let's just try to get rid of a name in our list and see what it looks like.
+
+06:32.360 --> 06:40.580
+And I commented out the second name in our list which was the product to name and that was another tensor
+
+06:40.580 --> 06:41.610
+product.
+
+06:41.960 --> 06:47.060
+And I'm going to provide this list and I'll try to run our query like this.
+
+06:47.180 --> 06:49.700
+And let's see the result.
+
+06:49.700 --> 06:51.460
+I'm rerunning our application now
+
+07:00.420 --> 07:08.480
+and it's booting up.
+
+07:08.500 --> 07:09.290
+Here we go.
+
+07:10.110 --> 07:13.840
+We just have a single matching result.
+
+07:13.840 --> 07:21.370
+So it couldn't match the name with anything with these tester product.
+
+07:21.670 --> 07:29.390
+But in the list we only had tests for product and that name was belonging to the product one.
+
+07:29.650 --> 07:31.650
+To see it more clearly.
+
+07:31.810 --> 07:34.060
+Let's add the third product
+
+07:36.430 --> 07:37.030
+and
+
+07:40.540 --> 07:49.100
+our current product is going to brand name as the tester product too.
+
+07:49.270 --> 07:55.410
+So we can find it against the query that we just wrote.
+
+07:55.600 --> 08:07.350
+So the remaining parts of this product is going to be a little bit different.
+
+08:07.550 --> 08:24.870
+I'm just going to say description and for the category I'm going to say usual and for the type I'll
+
+08:24.870 --> 08:29.100
+say it's going to be
+
+08:31.470 --> 08:32.400
+specific
+
+08:37.340 --> 08:40.520
+and for the price
+
+08:43.160 --> 08:53.470
+I'm going to say it's going to be 10 or 19 still right now.
+
+08:53.480 --> 09:02.030
+Clearly we were curing against the category and name so our category is set as usual.
+
+09:02.030 --> 09:08.350
+So that let's just make it back to test so we can get this object to our query.
+
+09:08.540 --> 09:14.660
+And as you can see the name is the same with the first product.
+
+09:14.990 --> 09:22.480
+So if we persist this product into our repository we should be receiving this as a result.
+
+09:22.580 --> 09:24.540
+So let's persist that to.
+
+09:25.040 --> 09:32.520
+And to do that I'm going to go to repository and say the Prada tree.
+
+09:32.570 --> 09:33.220
+All right.
+
+09:35.120 --> 09:39.140
+So let's reroute our query and see what it looks like.
+
+09:39.160 --> 09:48.570
+Again with this way without the third product we were just getting the result for the first product.
+
+09:48.750 --> 09:55.080
+So in this case we should be receiving the first product and the third product.
+
+09:55.080 --> 09:56.150
+All right.
+
+09:56.550 --> 10:00.500
+So let's rerun our application and see what it looked like.
+
+10:09.130 --> 10:10.750
+Our application is starting up again
+
+10:18.990 --> 10:20.370
+and here we go.
+
+10:20.400 --> 10:29.840
+We have too much results and the names are the same because we wanted to we wanted it to be so.
+
+10:29.900 --> 10:39.170
+And as you can see type is general for the first one which was the first product and the second one
+
+10:39.290 --> 10:42.950
+is specific and that was the Turke product.
+
+10:42.950 --> 10:49.000
+So we could find the products that were interested in very easily and beautifully.
+
+10:49.460 --> 10:59.410
+So now let's take a recap of what we've done to query our data in our repository in our repository.
+
+10:59.910 --> 11:04.530
+We provide named methods against our JPA repository.
+
+11:04.530 --> 11:13.320
+And with that repository we extend it product repository product repository is just an interface of
+
+11:13.320 --> 11:16.660
+methods that we can either provide or not.
+
+11:16.890 --> 11:25.410
+And it is marked as a repository so that Sprint can understand it's a repository and actually being
+
+11:26.970 --> 11:31.080
+so for the name methods we said we wanted to return.
+
+11:31.170 --> 11:41.220
+We want to get a specific type of objects as a result and we said we naturally try to query our data
+
+11:41.520 --> 11:44.840
+query our properties in our database.
+
+11:44.880 --> 11:52.710
+So for the first query we said we wanted to find by type and that type is going to be injected with
+
+11:52.710 --> 12:00.910
+this property with the string property here and in our second query we said we wanted to get a list
+
+12:00.910 --> 12:11.050
+of products as a result and we wanted to find by description and category and the way that this works
+
+12:11.050 --> 12:16.430
+is it at as and queries just like we have in sequel.
+
+12:16.440 --> 12:24.020
+And it says Select and description and category.
+
+12:24.070 --> 12:24.810
+All right.
+
+12:24.880 --> 12:31.590
+And the description is going to inject it with this and the category is going to be injected with the
+
+12:31.590 --> 12:32.580
+stew.
+
+12:33.280 --> 12:41.680
+And for the last one what we said is again we wanted a list of products and this time we wanted to find
+
+12:41.680 --> 12:44.020
+by a specific category.
+
+12:44.170 --> 12:54.490
+And this is our and statement and the other one was name and the name was going to be a list of objects.
+
+12:54.540 --> 13:02.070
+This was an optional way of providing names in the other way you can just say a string of name because
+
+13:02.460 --> 13:07.730
+it accepts a list of arguments or a single argument too.
+
+13:07.810 --> 13:17.410
+All right as you've seen with these examples and named methods and the way that we query our database
+
+13:17.530 --> 13:26.350
+in our code it's where we continue to work with spring data and JPA repositories because all you have
+
+13:26.350 --> 13:33.180
+to do is define your interface against your object against your entity and work from there.
+
+13:33.340 --> 13:35.960
+Just like these simple line of queries.
+
+13:36.230 --> 13:36.970
+All right.
+
+13:38.660 --> 13:45.650
+To see what it looks like updating your entity with JPA and repositories of shipping data.
+
+13:45.650 --> 13:47.180
+I'll see you on the next video.
